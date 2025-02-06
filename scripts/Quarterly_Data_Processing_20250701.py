@@ -38,7 +38,7 @@ def EU_format(data, indicator):
             tmp = tmp.rename(columns = {"OBS_VALUE": f"Euro Area {indicator}"})
         else:
             tmp = tmp.rename(columns = {"OBS_VALUE": f"{region} {indicator}"})
-        tmp = tmp.drop(["na_item", "geo"], axis=1)
+        tmp = tmp.drop(["geo"], axis=1)
         if formatted_data.empty:
             formatted_data = tmp
         else:
@@ -48,14 +48,16 @@ def EU_format(data, indicator):
 EU_OPH_OPW = pd.read_csv('../src/EU OPH OPW.csv')
 EU_OPH_OPW = EU_OPH_OPW.rename(columns={"TIME_PERIOD": "Quarter"})
 EU_OPH_OPW["Quarter"] = EU_OPH_OPW["Quarter"].str.replace("-", " ", regex=False)
-EU_OPH_OPW = EU_OPH_OPW[["na_item", "Quarter", "geo", "OBS_VALUE"]]
+# EU_OPH_OPW = EU_OPH_OPW[["na_item", "Quarter", "geo", "OBS_VALUE"]]
 EU_OPH = EU_OPH_OPW.loc[EU_OPH_OPW['na_item'] == 'Real labour productivity per hour worked']
 EU_OPW = EU_OPH_OPW.loc[EU_OPH_OPW['na_item'] == 'Real labour productivity per person']
+EU_OPH = EU_OPH[["Quarter", "geo", "OBS_VALUE"]]
+EU_OPW = EU_OPW[["Quarter", "geo", "OBS_VALUE"]]
 
 EU_GVA = pd.read_csv('../src/EU GVA.csv')
 EU_GVA = EU_GVA.rename(columns={"TIME_PERIOD": "Quarter"})
 EU_GVA["Quarter"] = EU_GVA["Quarter"].str.replace("-", " ", regex=False)
-EU_GVA = EU_GVA[["na_item", "Quarter", "geo", "OBS_VALUE"]]
+EU_GVA = EU_GVA[["Quarter", "geo", "OBS_VALUE"]]
 
 print(EU_format(EU_OPH, "OPH"))
 EU_OPH = EU_format(EU_OPH, "OPH")
@@ -64,7 +66,6 @@ EU_GVA = EU_format(EU_GVA, "GVA")
 Dataset = Dataset.merge(EU_OPH, on=["Quarter"])
 Dataset = Dataset.merge(EU_OPW, on=["Quarter"])
 Dataset = Dataset.merge(EU_GVA, on=["Quarter"])
-print(Dataset)
 
 Dataset.to_csv("../out/Dataset.csv", index=False)
 
@@ -72,3 +73,4 @@ Dataset.to_csv("../out/Dataset.csv", index=False)
 Dataset["Year"] = Dataset["Quarter"].str.extract(r"(\d{4})").astype(int)  # Extracts the 4-digit year
 Dataset["Quarter_Num"] = Dataset["Quarter"].str.extract(r"Q(\d)").astype(int)  # Extracts the quarter number
 Dataset["Quarter"] = pd.to_datetime(Dataset["Year"].astype(str) + "-" + (Dataset["Quarter_Num"] * 3 - 2).astype(str) + "-01")
+
