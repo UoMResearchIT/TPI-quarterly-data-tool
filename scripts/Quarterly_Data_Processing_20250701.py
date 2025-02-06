@@ -4,6 +4,22 @@ import plotly.express as px
 
 pd.set_option('future.no_silent_downcasting', True)
 
+
+def EU_format(data, indicator):
+    formatted_data = pd.DataFrame()
+    for region in data["geo"].unique():
+        tmp = data.loc[data['geo'] == region]
+        if "Euro area" in region:
+            tmp = tmp.rename(columns = {"OBS_VALUE": f"Euro Area {indicator}"})
+        else:
+            tmp = tmp.rename(columns = {"OBS_VALUE": f"{region} {indicator}"})
+        tmp = tmp.drop(["geo"], axis=1)
+        if formatted_data.empty:
+            formatted_data = tmp
+        else:
+            formatted_data = formatted_data.merge(tmp, on=["Quarter"], how="outer")
+    return formatted_data
+
 # Import all Quarterly US productivity data since Q1 1997 (consistent with ONS data)
 # Need to change cause this is only one specific industry
 US_data = pd.read_excel('../src/US Labour Productivity.xlsx', sheet_name='Quarterly', usecols='A,C,D, GW:LC', skiprows=2)
@@ -30,21 +46,6 @@ ONS_Data = ONS_Data.merge(ONS_OPW, on=["Quarter"])
 ONS_Data = ONS_Data.merge(ONS_OPJ, on=["Quarter"])
 Dataset = ONS_Data.merge(US_data, on=["Quarter"])
 
-def EU_format(data, indicator):
-    formatted_data = pd.DataFrame()
-    for region in data["geo"].unique():
-        tmp = data.loc[data['geo'] == region]
-        if "Euro area" in region:
-            tmp = tmp.rename(columns = {"OBS_VALUE": f"Euro Area {indicator}"})
-        else:
-            tmp = tmp.rename(columns = {"OBS_VALUE": f"{region} {indicator}"})
-        tmp = tmp.drop(["geo"], axis=1)
-        if formatted_data.empty:
-            formatted_data = tmp
-        else:
-            formatted_data = formatted_data.merge(tmp, on=["Quarter"], how="outer")
-    return formatted_data
-
 EU_OPH_OPW = pd.read_csv('../src/EU OPH OPW.csv')
 EU_OPH_OPW = EU_OPH_OPW.rename(columns={"TIME_PERIOD": "Quarter"})
 EU_OPH_OPW["Quarter"] = EU_OPH_OPW["Quarter"].str.replace("-", " ", regex=False)
@@ -59,7 +60,6 @@ EU_GVA = EU_GVA.rename(columns={"TIME_PERIOD": "Quarter"})
 EU_GVA["Quarter"] = EU_GVA["Quarter"].str.replace("-", " ", regex=False)
 EU_GVA = EU_GVA[["Quarter", "geo", "OBS_VALUE"]]
 
-print(EU_format(EU_OPH, "OPH"))
 EU_OPH = EU_format(EU_OPH, "OPH")
 EU_OPW = EU_format(EU_OPW, "OPW")
 EU_GVA = EU_format(EU_GVA, "GVA")
