@@ -44,6 +44,6 @@ print(GDP_USD)
 
 # Hours worked!
 # UK data is already quarterly, hours per week - so need to times by 13 to get quarterly
-# US data is annually, so divide by 4 to get quarterly
+# US data is quarterly, in billions of hours
 # EU data is quarterly, in thousands of hours worked
 
