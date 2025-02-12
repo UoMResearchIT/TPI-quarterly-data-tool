@@ -47,3 +47,11 @@ print(GDP_USD)
 # US data is quarterly, in billions of hours
 # EU data is quarterly, in thousands of hours worked
 
+EU_Hours = pd.read_csv("../src/EU Hours worked.csv")
+EU_Hours = EU_Hours[["TIME_PERIOD", "geo", "OBS_VALUE"]]
+EU_Hours = EU_Hours.rename(columns={"TIME_PERIOD": "Quarter"})
+EU_Hours = EU_format(EU_Hours, "hours worked")
+print(EU_Hours)
+
+UK_Hours = pd.read_excel("../src/ONS GVA and hours worked.xlsx", sheet_name="Table_18", usecols="A,B", skiprows=6, names=["Quarter", "Value"])
+print(UK_Hours)
