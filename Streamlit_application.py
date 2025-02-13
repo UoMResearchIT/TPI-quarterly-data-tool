@@ -2,14 +2,38 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-import numpy as np
-import io
-import time
+import time 
+
+def quarter_to_numeric(q):
+    year, qtr = q.split(" ")
+    return int(year) + (int(qtr[1]) - 1) / 4  # Converts "1997 Q3" → 1997.5
+
+def numeric_to_quarter(n):
+    year = int(n)
+    qtr = int((n - year) * 4) + 1
+    return f"{year} Q{qtr}"
+
+
+def data_format(data, QorY, time_period, data_option):
+    if QorY == "Quarterly":
+        # Convert the quaters to numeric
+        data["quarter_numeric"] = data["Quarter"].apply(quarter_to_numeric)
+        # Convert the time periods to numeric
+        time_period = list(time_period)
+        time_period[0] = quarter_to_numeric(time_period[0])
+        time_period[1] = quarter_to_numeric(time_period[1])
+        # Filter out period requested
+        data = data[(data["quarter_numeric"] >= time_period[0]) & (data["quarter_numeric"] <= time_period[1])]
+        data = data[['Quarter', *data.columns[data.columns.str.contains(data_option, case=False)]]]
+    elif QorY == "Yearly":
+        data = data[(data["Year"] >= time_period[0]) & (data["Year"] <= time_period[1])]
+        print(data)
+    return data
 
 def create_quarterly_fig(data):
     fig = px.line(data, 
               x="Quarter", 
-              y=["UK OPH", "Euro Area OPH", "Germany OPH", "Italy OPH"], 
+              y=data.columns.drop('Quarter').tolist(), 
               title="Time Series Comparison")
     return fig
 
@@ -78,6 +102,7 @@ def main():
             "Yearly labour productivity",
         ],
     )
+
     st.session_state.show_quarter_slider = False
     st.session_state.show_yearly_slider = False
 
@@ -86,37 +111,19 @@ def main():
     elif QorY == "Yearly":
         st.session_state.show_yearly_slider = True
 
-    # # Convert quarter format to a numeric value (e.g., "1997 Q1" → 1997.1)
-    # def quarter_to_numeric(q):
-    #     year, qtr = q.split(" ")
-    #     return int(year) + (int(qtr[1]) - 1) / 4  # Converts "1997 Q3" → 1997.5
-
-    # # Convert numeric value back to quarter string
-    # def numeric_to_quarter(n):
-    #     year = int(n)
-    #     qtr = int((n - year) * 4) + 1
-    #     return f"{year} Q{qtr}"
-
-    # # Apply transformation
-    # quarterly_data["quarter_numeric"] = quarterly_data["Quarter"].apply(quarter_to_numeric)
-
-    # # Get min/max for slider
-    # min_quarter = quarterly_data["quarter_numeric"].min()
-    # max_quarter = quarterly_data["quarter_numeric"].max()
-
-    # Filter data based on selection
-    # filtered_df = quarterly_data[(quarterly_data["quarter"] >= selected_range[0]) & (quarterly_data["quarter"] <= selected_range[1])]
-    # print("MIN", min_quarter)
-    # print("MAX", max_quarter)
     quarters = quarterly_data["Quarter"].tolist()
     if st.session_state.show_quarter_slider:
         quarter = st.sidebar.select_slider(label = "Quarterly slider", options = quarters, value=(quarters[0], quarters[-1]), label_visibility="collapsed")
         # if quarter[0] == quarter[1]:   # remove - need to update this for quarters
         #     quarter = [quarter[0], quarter[0] + 1] if quarter[0] < max(yearly_data["Year"]) else [quarter[0] - 1, quarter[0]]
+        quarterly_options = ["OPH", "OPW", "GVA"]
+        quarterly_option = st.sidebar.selectbox("Select data", options=quarterly_options)
     if st.session_state.show_yearly_slider:
         year = st.sidebar.slider(label="Yearly slider!", min_value=yearly_data["Year"].iat[0], max_value=max(yearly_data["Year"]), value=[yearly_data["Year"].iat[0], max(yearly_data["Year"])], label_visibility="collapsed")
         if year[0] == year[1]:
             year = [year[0], year[0] + 1] if year[0] < max(yearly_data["Year"]) else [year[0] - 1, year[0]]
+        yearly_option = yearly_options = ["GDP per Hour worked"]
+        st.sidebar.selectbox("Select data", options=yearly_options)
 
     #Figure formatting tools
     st.sidebar.divider()
@@ -133,8 +140,10 @@ def main():
     figure = st.empty() 
     print(QorY)
     if QorY == "Quarterly":
+        quarterly_data = data_format(quarterly_data, QorY, quarter, quarterly_option)
         fig = create_quarterly_fig(quarterly_data)
     else:
+        yearly_data = data_format(yearly_data, QorY, year, yearly_option)
         fig = create_yearly_fig(yearly_data)
     
 
