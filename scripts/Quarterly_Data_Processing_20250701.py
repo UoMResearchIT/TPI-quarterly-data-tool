@@ -69,8 +69,8 @@ Dataset = Dataset.merge(EU_GVA, on=["Quarter"])
 
 Dataset.to_csv("../out/Dataset.csv", index=False)
 
-# Reformating quarters to datatime so can be used by Plotly
-Dataset["Year"] = Dataset["Quarter"].str.extract(r"(\d{4})").astype(int)  # Extracts the 4-digit year
-Dataset["Quarter_Num"] = Dataset["Quarter"].str.extract(r"Q(\d)").astype(int)  # Extracts the quarter number
-Dataset["Quarter"] = pd.to_datetime(Dataset["Year"].astype(str) + "-" + (Dataset["Quarter_Num"] * 3 - 2).astype(str) + "-01")
+# Reformating quarters to datatime so can be used by Plotly - remove?
+# Dataset["Year"] = Dataset["Quarter"].str.extract(r"(\d{4})").astype(int)  # Extracts the 4-digit year
+# Dataset["Quarter_Num"] = Dataset["Quarter"].str.extract(r"Q(\d)").astype(int)  # Extracts the quarter number
+# Dataset["Quarter"] = pd.to_datetime(Dataset["Year"].astype(str) + "-" + (Dataset["Quarter_Num"] * 3 - 2).astype(str) + "-01")
 

@@ -28,12 +28,14 @@ def data_format(data, QorY, time_period, data_option, country_options):
     elif QorY == "Yearly":
         data = data[(data["Year"] >= time_period[0]) & (data["Year"] <= time_period[1])]
     countries_data = pd.DataFrame()
+    # data = data.reset_index()
+    print(data)
     for country in country_options:
         country_data = data.loc[:, data.columns.str.contains(country, case=False)]
         print("COUNTRY", country_data)
         countries_data = countries_data + country_data if not countries_data.empty else country_data
     print("HERE", countries_data)
-    data = data[[data.columns[0], *countries_data]]
+    data = data[[data.columns[0], *countries_data]].dropna()
     print(data)
     return data
 
@@ -45,32 +47,32 @@ def create_quarterly_fig(data):
     return fig
 
 def create_yearly_fig(data):
+    print(data)
     fig = px.line(data, 
               x="Year", 
-              y="GDP per Hour Worked", 
-              color="Country",
+              y=data.columns.drop('Year').tolist(), 
               markers=True,
               title="GDP per Hour Worked (2015=100) Over Time")
 
-    fig.add_shape(
-        go.layout.Shape(
-            type="line",
-            x0=2015, x1=2015,  # Vertical line at 2015
-            y0=data["GDP per Hour Worked"].min(), 
-            y1=data["GDP per Hour Worked"].max(),
-            line=dict(color="gray", width=2, dash="dash"),
-        )
-    )
+    # fig.add_shape(
+    #     go.layout.Shape(
+    #         type="line",
+    #         x0=2015, x1=2015,  # Vertical line at 2015
+    #         y0=data["GDP per Hour Worked"].min(), 
+    #         y1=data["GDP per Hour Worked"].max(),
+    #         line=dict(color="gray", width=2, dash="dash"),
+    #     )
+    # )
 
     # Add annotation for 2015 Base Year
-    fig.add_annotation(
-        x=2015, 
-        y=data["GDP per Hour Worked"].max(),
-        text="2015 = 100 (Base Year)",
-        showarrow=False,
-        font=dict(size=12, color="gray"),
-        xshift=10
-    )
+    # fig.add_annotation(
+    #     x=2015, 
+    #     y=data["GDP per Hour Worked"].max(),
+    #     text="2015 = 100 (Base Year)",
+    #     showarrow=False,
+    #     font=dict(size=12, color="gray"),
+    #     xshift=10
+    # )
     return fig
 
 
@@ -128,7 +130,7 @@ def main():
         quarter = st.sidebar.select_slider(label = "Quarterly slider", options = quarters, value=(quarters[0], quarters[-1]), label_visibility="collapsed")
         # if quarter[0] == quarter[1]:   # remove - need to update this for quarters
         #     quarter = [quarter[0], quarter[0] + 1] if quarter[0] < max(yearly_data["Year"]) else [quarter[0] - 1, quarter[0]]
-        quarterly_options = ["OPH", "OPW", "GVA"]
+        quarterly_options = ["OPH", "OPW", "GVA", "GDP per hour"]
         quarterly_option = st.sidebar.selectbox("Select data", options=quarterly_options)
 
     # Year time series selection
@@ -136,7 +138,7 @@ def main():
         year = st.sidebar.slider(label="Yearly slider!", min_value=yearly_data["Year"].iat[0], max_value=max(yearly_data["Year"]), value=[yearly_data["Year"].iat[0], max(yearly_data["Year"])], label_visibility="collapsed")
         if year[0] == year[1]:
             year = [year[0], year[0] + 1] if year[0] < max(yearly_data["Year"]) else [year[0] - 1, year[0]]
-        yearly_option = yearly_options = ["GDP per Hour worked"]
+        yearly_option = yearly_options = ["GDP per hour worked"]
         st.sidebar.selectbox("Select data", options=yearly_options)
 
     # Country display selection
@@ -165,9 +167,10 @@ def main():
     # Display the figure
     if fig:
         # Save session state variables and load figure
-        st.session_state.fig = fig
-        st.session_state.df = quarterly_data
-        figure.plotly_chart(st.session_state.fig, use_container_width=True)
+        with st.spinner('Loading visualisation'):
+            st.session_state.fig = fig
+            st.session_state.df = quarterly_data
+            figure.plotly_chart(st.session_state.fig, use_container_width=True)
     
 if __name__ == '__main__':
     main()

@@ -23,6 +23,8 @@ US_GDP["US GDP USD"] = US_GDP["US GDP USD"] * 1000
 GDP = UK_GDP.merge(US_GDP, on=["Quarter"], how="left")
 GDP = GDP.merge(EU_GDP[["Quarter", "Germany GDP"]], on=["Quarter"])
 GDP = GDP.merge(EU_GDP[["Quarter", "France GDP"]], on=["Quarter"])
+GDP = GDP.merge(EU_GDP[["Quarter", "Spain GDP"]], on=["Quarter"])
+GDP = GDP.merge(EU_GDP[["Quarter", "Italy GDP"]], on=["Quarter"])
 
 PPP = pd.read_csv("../src/OECD PPP.csv")
 PPP = PPP[["TIME_PERIOD", "Country", "OBS_VALUE"]]
@@ -34,11 +36,12 @@ PPP = PPP.rename(columns={"Quarter": "Year"})
 GDP["Year"] = GDP["Quarter"].str.extract(r"(\d{4})").astype(int)
 GDP = GDP.merge(PPP, on="Year")
 GDP["UK GDP"] = pd.to_numeric(GDP["UK GDP"], errors="coerce")
-print(GDP.dtypes)
 GDP["UK GDP USD"] = round(GDP["UK GDP"] * GDP["United Kingdom PPP"], 2)
 GDP["Germany GDP USD"] = round(GDP["Germany GDP"] * GDP["Germany PPP"], 2)
 GDP["France GDP USD"] = round(GDP["France GDP"] * GDP["France PPP"], 2)
-GDP_USD = GDP[["Quarter", "UK GDP USD", "US GDP USD", "Germany GDP USD", "France GDP USD"]]
+GDP["Spain GDP USD"] = round(GDP["Spain GDP"] * GDP["Spain PPP"], 2)
+GDP["Italy GDP USD"] = round(GDP["Italy GDP"] * GDP["Italy PPP"], 2)
+GDP_USD = GDP[["Quarter", "UK GDP USD", "US GDP USD", "Germany GDP USD", "France GDP USD", "Spain GDP USD", "Italy GDP USD"]]
 
 # Hours worked!
 # UK data is already quarterly, hours per week - so need to times by 13 to get quarterly
@@ -71,9 +74,14 @@ US_Hours = (
 US_Hours["Hours worked"] = pd.to_numeric(US_Hours["Hours worked"], errors='coerce')
 
 GDPPH = GDP_USD.copy()
-GDPPH["US GDP USD"] = GDPPH["US GDP USD"] / US_Hours["Hours worked"]
-GDPPH["UK GDP USD"] = GDPPH["UK GDP USD"] / UK_Hours["Hours worked"]
-GDPPH["Germany GDP USD"] = GDPPH["Germany GDP USD"] / EU_Hours["Germany hours worked"]
-GDPPH["France GDP USD"] = GDPPH["France GDP USD"] / EU_Hours["France hours worked"]
-GDPPH = GDPPH.dropna().round(2)
-print(GDPPH)
+GDPPH["US GDP per hour"] = GDPPH["US GDP USD"] / US_Hours["Hours worked"]
+GDPPH["UK GDP per hour"] = GDPPH["UK GDP USD"] / UK_Hours["Hours worked"]
+GDPPH["Germany GDP per hour"] = GDPPH["Germany GDP USD"] / EU_Hours["Germany hours worked"]
+GDPPH["France GDP per hour"] = GDPPH["France GDP USD"] / EU_Hours["France hours worked"]
+GDPPH["Spain GDP per hour"] = GDPPH["Spain GDP USD"] / EU_Hours["Spain hours worked"]
+GDPPH["Italy GDP per hour"] = GDPPH["Italy GDP USD"] / EU_Hours["Italy hours worked"]
+GDPPH = GDPPH.dropna().drop(["US GDP USD", "UK GDP USD", "Germany GDP USD", "France GDP USD"], axis=1).round(2)
+
+dataset = pd.read_csv("../out/Dataset.csv")
+dataset = dataset.merge(GDPPH, on="Quarter", how="left")
+dataset.to_csv("../out/Dataset.csv", index=False)
