@@ -74,12 +74,12 @@ US_Hours = (
 US_Hours["Hours worked"] = pd.to_numeric(US_Hours["Hours worked"], errors='coerce')
 
 GDPPH = GDP_USD.copy()
-GDPPH["US GDP per hour"] = GDPPH["US GDP USD"] / US_Hours["Hours worked"]
-GDPPH["UK GDP per hour"] = GDPPH["UK GDP USD"] / UK_Hours["Hours worked"]
-GDPPH["Germany GDP per hour"] = GDPPH["Germany GDP USD"] / EU_Hours["Germany hours worked"]
-GDPPH["France GDP per hour"] = GDPPH["France GDP USD"] / EU_Hours["France hours worked"]
-GDPPH["Spain GDP per hour"] = GDPPH["Spain GDP USD"] / EU_Hours["Spain hours worked"]
-GDPPH["Italy GDP per hour"] = GDPPH["Italy GDP USD"] / EU_Hours["Italy hours worked"]
+GDPPH["US GDP per hour (TPI calculation)"] = GDPPH["US GDP USD"] / US_Hours["Hours worked"]
+GDPPH["UK GDP per hour (TPI calculation)"] = GDPPH["UK GDP USD"] / UK_Hours["Hours worked"]
+GDPPH["Germany GDP per hour (TPI calculation)"] = GDPPH["Germany GDP USD"] / EU_Hours["Germany hours worked"]
+GDPPH["France GDP per hour (TPI calculation)"] = GDPPH["France GDP USD"] / EU_Hours["France hours worked"]
+GDPPH["Spain GDP per hour (TPI calculation)"] = GDPPH["Spain GDP USD"] / EU_Hours["Spain hours worked"]
+GDPPH["Italy GDP per hour (TPI calculation)"] = GDPPH["Italy GDP USD"] / EU_Hours["Italy hours worked"]
 GDPPH = GDPPH.dropna().drop(["US GDP USD", "UK GDP USD", "Germany GDP USD", "France GDP USD"], axis=1).round(2)
 
 dataset = pd.read_csv("../out/Dataset.csv")

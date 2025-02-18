@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import time 
+import re
 
 def quarter_to_numeric(q):
     year, qtr = q.split(" ")
@@ -14,7 +15,9 @@ def numeric_to_quarter(n):
     return f"{year} Q{qtr}"
 
 
-def data_format(data, QorY, time_period, data_option, country_options, qoq, yoy):
+def data_format(data, QorY, time_period, data_option, country_options, qoq= False, yoy= False):
+    print("search", data.columns)
+    print("search", data_option)
     if QorY == "Quarterly":
         # Convert the quaters to numeric
         data["quarter_numeric"] = data["Quarter"].apply(quarter_to_numeric)
@@ -24,7 +27,8 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq, yoy)
         time_period[1] = quarter_to_numeric(time_period[1])
         # Filter out period requested
         data = data[(data["quarter_numeric"] >= time_period[0]) & (data["quarter_numeric"] <= time_period[1])]
-        data = data[['Quarter', *data.loc[:, data.columns[data.columns.str.contains(data_option, case=False)]]]]
+        regex_escaped_options = escaped_option = re.escape(data_option)
+        data = data[['Quarter', *data.loc[:, data.columns[data.columns.str.contains(regex_escaped_options, case=False)]]]]
     elif QorY == "Yearly":
         data = data[(data["Year"] >= time_period[0]) & (data["Year"] <= time_period[1])]
     countries_data = pd.DataFrame()
@@ -33,6 +37,7 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq, yoy)
         country_data = data.loc[:, data.columns.str.contains(country, case=False)]
         countries_data = countries_data + country_data if not countries_data.empty else country_data
     data = data[[data.columns[0], *countries_data]].dropna()
+
     if qoq or yoy:
         qoq_data = data.copy()
         qoq_data = qoq_data.rename(columns=lambda x: x.split()[0])
@@ -54,8 +59,7 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq, yoy)
     print(data)
     return data
 
-def create_quarterly_fig(data, qoq, yoy):
-    print("Search", data)
+def create_quarterly_fig(data, qoq, yoy, show_legend):
     if qoq:
         fig = px.bar(data, x='Quarter', y="QoQ Growth (%)", color='Country',
              barmode='group', title="QoQ vs YoY Growth Across Countries")
@@ -67,10 +71,10 @@ def create_quarterly_fig(data, qoq, yoy):
                 x="Quarter", 
                 y=data.columns.drop('Quarter').tolist(), 
                 title="Time Series Comparison")
+    fig.update_layout(showlegend=show_legend)
     return fig
 
-def create_yearly_fig(data):
-    print(data)
+def create_yearly_fig(data, show_legend):
     fig = px.line(data, 
               x="Year", 
               y=data.columns.drop('Year').tolist(), 
@@ -96,6 +100,7 @@ def create_yearly_fig(data):
     #     font=dict(size=12, color="gray"),
     #     xshift=10
     # )
+    fig.update_layout(showlegend=show_legend)
     return fig
 
 
@@ -163,7 +168,7 @@ def main():
         quarter = st.sidebar.select_slider(label = "Quarterly slider", options = quarters, value=(quarters[0], quarters[-1]), label_visibility="collapsed")
         # if quarter[0] == quarter[1]:   # remove - need to update this for quarters
         #     quarter = [quarter[0], quarter[0] + 1] if quarter[0] < max(yearly_data["Year"]) else [quarter[0] - 1, quarter[0]]
-        quarterly_options = ["OPH", "OPW", "GVA", "GDP per hour"]
+        quarterly_options = ["GDP per hour (TPI calculation)", "OPH", "OPW", "GVA"]
         quarterly_option = st.sidebar.selectbox("Select data", options=quarterly_options)
 
     # Year time series selection
@@ -178,34 +183,20 @@ def main():
     country_options = ["US", "UK", "Germany", "France", "Italy", "Spain"]
     country_selection = st.sidebar.multiselect(label = "Select countries to display (where applicable)", options = country_options, default=country_options)
 
-    # qoq, yoy options
-    # qoq_option = st.sidebar.radio(label="Year on year or quarter on quarter comparisons?", 
-    #                        options= ["Quarter on quarter comparison", "Year on year comparison"],
-    #                        index= None,
-    #                        horizontal= True)
-    st.sidebar.write("Select data view options")
-    st.sidebar.write("Line graph")
+    if QorY == "Quarterly":
+        st.sidebar.write("Select data view options")
+        st.sidebar.write("Line graph")
+        st.sidebar.checkbox("Line graph", 
+                value=(st.session_state.selected == "Line graph"), 
+                on_change=lambda opt="Line graph": update_selection(opt))
 
-    options = ["Line graph", "Quarter on quarter", "Year on year"]
-
-    # for option in options:
-    #     st.sidebar.checkbox(option, 
-    #                 value=(st.session_state.selected == option), 
-    #                 on_change=lambda opt=option: update_selection(opt)) 
-    
-    st.sidebar.checkbox("Line graph", 
-            value=(st.session_state.selected == "Line graph"), 
-            on_change=lambda opt="Line graph": update_selection(opt))
-
-    st.sidebar.write("Bar graph")
-
-    st.sidebar.checkbox("Quarter on quarter", 
-            value=(st.session_state.selected == "Quarter on quarter"), 
-            on_change=lambda opt="Quarter on quarter": update_selection(opt))
-    
-    st.sidebar.checkbox("Year on year", 
-            value=(st.session_state.selected == "Year on year"), 
-            on_change=lambda opt="Year on year": update_selection(opt))
+        st.sidebar.write("Bar graph")
+        st.sidebar.checkbox("Quarter on quarter", 
+                value=(st.session_state.selected == "Quarter on quarter"), 
+                on_change=lambda opt="Quarter on quarter": update_selection(opt))
+        st.sidebar.checkbox("Year on year", 
+                value=(st.session_state.selected == "Year on year"), 
+                on_change=lambda opt="Year on year": update_selection(opt))
 
     qoq = False
     yoy = False
@@ -217,20 +208,19 @@ def main():
     #Figure formatting tools
     st.sidebar.divider()
     st.sidebar.subheader('Configure layout')
-    legend = st.sidebar.toggle(label='Show legend', value=True)
-    showtrend = st.sidebar.toggle(label='Show trendline', value=False)
-    showlabel = st.sidebar.toggle(label='Show labels', value=False)
+    show_legend = st.sidebar.toggle(label='Show legend', value=True)
+    # showtrend = st.sidebar.toggle(label='Show trendline', value=False)
+    # showlabel = st.sidebar.toggle(label='Show labels', value=False)
     
     #Define main content
     st.header('TPI Quarterly data tool for US, UK and European labour productivity')
     figure = st.empty() 
-    print(QorY)
     if QorY == "Quarterly":
         quarterly_data = data_format(quarterly_data, QorY, quarter, quarterly_option, country_selection, qoq, yoy)
-        fig = create_quarterly_fig(quarterly_data, qoq, yoy)
+        fig = create_quarterly_fig(quarterly_data, qoq, yoy, show_legend)
     else:
         yearly_data = data_format(yearly_data, QorY, year, yearly_option, country_selection)
-        fig = create_yearly_fig(yearly_data)
+        fig = create_yearly_fig(yearly_data, show_legend)
     
     # Display the figure
     if fig:
