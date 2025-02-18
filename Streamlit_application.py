@@ -29,14 +29,32 @@ def data_format(data, QorY, time_period, data_option, country_options):
         data = data[(data["Year"] >= time_period[0]) & (data["Year"] <= time_period[1])]
     countries_data = pd.DataFrame()
     # data = data.reset_index()
-    print(data)
     for country in country_options:
         country_data = data.loc[:, data.columns.str.contains(country, case=False)]
-        print("COUNTRY", country_data)
         countries_data = countries_data + country_data if not countries_data.empty else country_data
-    print("HERE", countries_data)
     data = data[[data.columns[0], *countries_data]].dropna()
-    print(data)
+    # Have these as user inputs:
+    qoq = True
+    yoy = True
+    if qoq or yoy:
+        qoq_data = data.copy()
+        qoq_data = qoq_data.rename(columns=lambda x: x.split()[0])
+        qoq_data = qoq_data.melt(id_vars = "Quarter", var_name = "Country")
+        qoq_data = qoq_data.sort_values(['Country', 'Quarter']).reset_index(drop=True)
+        if qoq:
+            # Calculate QoQ Growth (GDP change from the previous quarter)
+            qoq_data['QoQ Growth (%)'] = qoq_data.groupby('Country')['value'].pct_change().mul(100).round(2)
+        if yoy:
+            # Calculate YoY Growth (GDP change from the same quarter last year)
+            qoq_data['YoY Growth (%)'] = qoq_data.groupby('Country')['value'].pct_change(4).mul(100).round(2)
+        data = qoq_data
+        print("Here", qoq_data)
+        qoq_data.to_csv("out/qoq_data.csv", index = False)
+        # qoq_data = qoq_data.melt(id_vars=['Quarter', 'Country'], 
+        #              value_vars=['QoQ Growth (%)', 'YoY Growth (%)'], 
+        #              var_name='Metric', 
+        #              value_name='Growth Rate')
+    # print(data)
     return data
 
 def create_quarterly_fig(data):
