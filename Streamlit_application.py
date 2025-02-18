@@ -14,7 +14,7 @@ def numeric_to_quarter(n):
     return f"{year} Q{qtr}"
 
 
-def data_format(data, QorY, time_period, data_option, country_options):
+def data_format(data, QorY, time_period, data_option, country_options, qoq, yoy):
     if QorY == "Quarterly":
         # Convert the quaters to numeric
         data["quarter_numeric"] = data["Quarter"].apply(quarter_to_numeric)
@@ -33,9 +33,6 @@ def data_format(data, QorY, time_period, data_option, country_options):
         country_data = data.loc[:, data.columns.str.contains(country, case=False)]
         countries_data = countries_data + country_data if not countries_data.empty else country_data
     data = data[[data.columns[0], *countries_data]].dropna()
-    # Have these as user inputs:
-    qoq = True
-    yoy = True
     if qoq or yoy:
         qoq_data = data.copy()
         qoq_data = qoq_data.rename(columns=lambda x: x.split()[0])
@@ -47,21 +44,29 @@ def data_format(data, QorY, time_period, data_option, country_options):
         if yoy:
             # Calculate YoY Growth (GDP change from the same quarter last year)
             qoq_data['YoY Growth (%)'] = qoq_data.groupby('Country')['value'].pct_change(4).mul(100).round(2)
-        data = qoq_data
-        print("Here", qoq_data)
-        qoq_data.to_csv("out/qoq_data.csv", index = False)
+        # print("Here", qoq_data)
+        # qoq_data.to_csv("out/qoq_data.csv", index = False)
         # qoq_data = qoq_data.melt(id_vars=['Quarter', 'Country'], 
         #              value_vars=['QoQ Growth (%)', 'YoY Growth (%)'], 
         #              var_name='Metric', 
         #              value_name='Growth Rate')
-    # print(data)
+        data = qoq_data
+    print(data)
     return data
 
-def create_quarterly_fig(data):
-    fig = px.line(data, 
-              x="Quarter", 
-              y=data.columns.drop('Quarter').tolist(), 
-              title="Time Series Comparison")
+def create_quarterly_fig(data, qoq, yoy):
+    print("Search", data)
+    if qoq:
+        fig = px.bar(data, x='Quarter', y="QoQ Growth (%)", color='Country',
+             barmode='group', title="QoQ vs YoY Growth Across Countries")
+    elif yoy:
+        fig = px.bar(data, x='Quarter', y="YoY Growth (%)", color='Country',
+             barmode='group', title="QoQ vs YoY Growth Across Countries")
+    else:
+        fig = px.line(data, 
+                x="Quarter", 
+                y=data.columns.drop('Quarter').tolist(), 
+                title="Time Series Comparison")
     return fig
 
 def create_yearly_fig(data):
@@ -112,6 +117,13 @@ def quarterly_process_data(data, start, end):
 
 def main():
     t0 = time.time()
+
+    def update_selection(option):
+        if st.session_state.selected == option:  # If clicked again, deselect
+            st.session_state.selected = None
+        else:
+            st.session_state.selected = option
+
     st.set_page_config(layout="wide")
 
     # Load datasets
@@ -124,6 +136,9 @@ def main():
     # Set session state variables
     st.session_state.show_quarter_slider = False
     st.session_state.show_yearly_slider = False
+
+    if "selected" not in st.session_state:
+        st.session_state.selected = None
 
     #Data selection tools
     st.sidebar.divider()
@@ -163,6 +178,27 @@ def main():
     country_options = ["US", "UK", "Germany", "France", "Italy", "Spain"]
     country_selection = st.sidebar.multiselect(label = "Select countries to display (where applicable)", options = country_options, default=country_options)
 
+    # qoq, yoy options
+    # qoq_option = st.sidebar.radio(label="Year on year or quarter on quarter comparisons?", 
+    #                        options= ["Quarter on quarter comparison", "Year on year comparison"],
+    #                        index= None,
+    #                        horizontal= True)
+
+    # Checkboxes (Only one selectable at a time)
+    st.sidebar.checkbox("Quarter on quarter comparison", value=(st.session_state.selected == "Quarter on quarter"), 
+                        on_change=update_selection, args=("Quarter on quarter",))
+
+    st.sidebar.checkbox("Year on year comparison", value=(st.session_state.selected == "Year on year"), 
+                        on_change=update_selection, args=("Year on year",))
+    print(st.session_state.selected)
+    
+    qoq = False
+    yoy = False
+    if st.session_state.selected == "Quarter on quarter":
+        qoq = True
+    elif st.session_state.selected == "Year on year":
+        yoy = True
+
     #Figure formatting tools
     st.sidebar.divider()
     st.sidebar.subheader('Configure layout')
@@ -176,8 +212,8 @@ def main():
     figure = st.empty() 
     print(QorY)
     if QorY == "Quarterly":
-        quarterly_data = data_format(quarterly_data, QorY, quarter, quarterly_option, country_selection)
-        fig = create_quarterly_fig(quarterly_data)
+        quarterly_data = data_format(quarterly_data, QorY, quarter, quarterly_option, country_selection, qoq, yoy)
+        fig = create_quarterly_fig(quarterly_data, qoq, yoy)
     else:
         yearly_data = data_format(yearly_data, QorY, year, yearly_option, country_selection)
         fig = create_yearly_fig(yearly_data)
