@@ -138,7 +138,7 @@ def main():
     st.session_state.show_yearly_slider = False
 
     if "selected" not in st.session_state:
-        st.session_state.selected = None
+        st.session_state.selected = "Line graph"
 
     #Data selection tools
     st.sidebar.divider()
@@ -183,15 +183,30 @@ def main():
     #                        options= ["Quarter on quarter comparison", "Year on year comparison"],
     #                        index= None,
     #                        horizontal= True)
+    st.sidebar.write("Select data view options")
+    st.sidebar.write("Line graph")
 
-    # Checkboxes (Only one selectable at a time)
-    st.sidebar.checkbox("Quarter on quarter comparison", value=(st.session_state.selected == "Quarter on quarter"), 
-                        on_change=update_selection, args=("Quarter on quarter",))
+    options = ["Line graph", "Quarter on quarter", "Year on year"]
 
-    st.sidebar.checkbox("Year on year comparison", value=(st.session_state.selected == "Year on year"), 
-                        on_change=update_selection, args=("Year on year",))
-    print(st.session_state.selected)
+    # for option in options:
+    #     st.sidebar.checkbox(option, 
+    #                 value=(st.session_state.selected == option), 
+    #                 on_change=lambda opt=option: update_selection(opt)) 
     
+    st.sidebar.checkbox("Line graph", 
+            value=(st.session_state.selected == "Line graph"), 
+            on_change=lambda opt="Line graph": update_selection(opt))
+
+    st.sidebar.write("Bar graph")
+
+    st.sidebar.checkbox("Quarter on quarter", 
+            value=(st.session_state.selected == "Quarter on quarter"), 
+            on_change=lambda opt="Quarter on quarter": update_selection(opt))
+    
+    st.sidebar.checkbox("Year on year", 
+            value=(st.session_state.selected == "Year on year"), 
+            on_change=lambda opt="Year on year": update_selection(opt))
+
     qoq = False
     yoy = False
     if st.session_state.selected == "Quarter on quarter":
@@ -202,7 +217,6 @@ def main():
     #Figure formatting tools
     st.sidebar.divider()
     st.sidebar.subheader('Configure layout')
-    size = st.sidebar.slider('Figure size', min_value=0.65, max_value = 2.0, value = 0.75)
     legend = st.sidebar.toggle(label='Show legend', value=True)
     showtrend = st.sidebar.toggle(label='Show trendline', value=False)
     showlabel = st.sidebar.toggle(label='Show labels', value=False)
