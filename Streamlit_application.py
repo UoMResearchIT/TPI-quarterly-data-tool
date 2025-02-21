@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import numpy as np
 import time 
 import re
 
@@ -15,9 +16,7 @@ def numeric_to_quarter(n):
     return f"{year} Q{qtr}"
 
 
-def data_format(data, QorY, time_period, data_option, country_options, qoq= False, yoy= False):
-    print("search", data.columns)
-    print("search", data_option)
+def data_format(data, QorY, time_period, data_option, country_options, qoq= False, yoy= False, quarterly_selection =False):
     if QorY == "Quarterly":
         # Convert the quaters to numeric
         data["quarter_numeric"] = data["Quarter"].apply(quarter_to_numeric)
@@ -27,49 +26,59 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq= Fals
         time_period[1] = quarter_to_numeric(time_period[1])
         # Filter out period requested
         data = data[(data["quarter_numeric"] >= time_period[0]) & (data["quarter_numeric"] <= time_period[1])]
-        regex_escaped_options = escaped_option = re.escape(data_option)
-        data = data[['Quarter', *data.loc[:, data.columns[data.columns.str.contains(regex_escaped_options, case=False)]]]]
+        # Have to use re library so the punctiation in the option isn"t used in the regex
+        regex_escaped_options = re.escape(data_option)
+        data = data[["Quarter", *data.loc[:, data.columns[data.columns.str.contains(regex_escaped_options, case=False)]]]]
     elif QorY == "Yearly":
         data = data[(data["Year"] >= time_period[0]) & (data["Year"] <= time_period[1])]
     countries_data = pd.DataFrame()
-    # data = data.reset_index()
     for country in country_options:
         country_data = data.loc[:, data.columns.str.contains(country, case=False)]
         countries_data = countries_data + country_data if not countries_data.empty else country_data
     data = data[[data.columns[0], *countries_data]].dropna()
 
+    # Data processing for bar graphs
     if qoq or yoy:
         qoq_data = data.copy()
+        # Split the country name from the data title
         qoq_data = qoq_data.rename(columns=lambda x: x.split()[0])
+        # Reformat and sort data
         qoq_data = qoq_data.melt(id_vars = "Quarter", var_name = "Country")
-        qoq_data = qoq_data.sort_values(['Country', 'Quarter']).reset_index(drop=True)
+        qoq_data = qoq_data.sort_values(["Country", "Quarter"]).reset_index(drop=True)
+        print("here", qoq_data)
         if qoq:
-            # Calculate QoQ Growth (GDP change from the previous quarter)
-            qoq_data['QoQ Growth (%)'] = qoq_data.groupby('Country')['value'].pct_change().mul(100).round(2)
+            # Calculate QoQ Growth (Change from the previous quarter)
+            qoq_data["QoQ Growth (%)"] = qoq_data.groupby("Country")["value"].pct_change().mul(100).round(2)
+
         if yoy:
-            # Calculate YoY Growth (GDP change from the same quarter last year)
-            qoq_data['YoY Growth (%)'] = qoq_data.groupby('Country')['value'].pct_change(4).mul(100).round(2)
-        # print("Here", qoq_data)
-        # qoq_data.to_csv("out/qoq_data.csv", index = False)
-        # qoq_data = qoq_data.melt(id_vars=['Quarter', 'Country'], 
-        #              value_vars=['QoQ Growth (%)', 'YoY Growth (%)'], 
-        #              var_name='Metric', 
-        #              value_name='Growth Rate')
+            # Calculate YoY Growth (Change from the same quarter last year)
+            qoq_data["Quarter"] = qoq_data["Quarter"].apply(quarter_to_numeric)
+            quarter_map = {1: 0, 2: 0.25, 3: 0.5, 4: 0.75}
+            # extract the decimal part of the year and quarter column
+            qoq_data['decimal_part'] = qoq_data['Quarter'] % 1
+            # filter the dataframe based on the desired decimal part
+            qoq_data = qoq_data[qoq_data['decimal_part'].isin([quarter_map[quarterly_selection]])]
+            # drop the temporary 'decimal_part' column
+            qoq_data.drop('decimal_part', axis=1, inplace=True)
+            qoq_data["YoY Growth (%)"] = qoq_data.groupby("Country")["value"].pct_change(4).mul(100).round(2)
+            qoq_data["Quarter"] = qoq_data["Quarter"].apply(numeric_to_quarter)
         data = qoq_data
+        # qoq_data["Quarter"] = qoq_data["Quarter"].apply(quarter_to_numeric)
+        print(qoq_data)
     print(data)
     return data
 
 def create_quarterly_fig(data, qoq, yoy, show_legend):
     if qoq:
-        fig = px.bar(data, x='Quarter', y="QoQ Growth (%)", color='Country',
-             barmode='group', title="QoQ vs YoY Growth Across Countries")
+        fig = px.bar(data, x="Quarter", y="QoQ Growth (%)", color="Country",
+             barmode="group", title="QoQ vs YoY Growth Across Countries")
     elif yoy:
-        fig = px.bar(data, x='Quarter', y="YoY Growth (%)", color='Country',
-             barmode='group', title="QoQ vs YoY Growth Across Countries")
+        fig = px.bar(data, x="Quarter", y="YoY Growth (%)", color="Country",
+             barmode="group", title="QoQ vs YoY Growth Across Countries")
     else:
         fig = px.line(data, 
                 x="Quarter", 
-                y=data.columns.drop('Quarter').tolist(), 
+                y=data.columns.drop("Quarter").tolist(), 
                 title="Time Series Comparison")
     fig.update_layout(showlegend=show_legend)
     return fig
@@ -77,7 +86,7 @@ def create_quarterly_fig(data, qoq, yoy, show_legend):
 def create_yearly_fig(data, show_legend):
     fig = px.line(data, 
               x="Year", 
-              y=data.columns.drop('Year').tolist(), 
+              y=data.columns.drop("Year").tolist(), 
               markers=True,
               title="GDP per Hour Worked (2015=100) Over Time")
 
@@ -107,8 +116,8 @@ def create_yearly_fig(data, show_legend):
 @st.cache_data
 def load_data():
     t0 = time.time()
-    yearly_data = pd.read_csv('out/OPH_Processed.csv')
-    quarterly_data = pd.read_csv('out/Dataset.csv')
+    yearly_data = pd.read_csv("out/OPH_Processed.csv")
+    quarterly_data = pd.read_csv("out/Dataset.csv")
 
     print("Runtime loading data: " + str(int((time.time() - t0)*1000)) + " miliseconds")
     return quarterly_data, yearly_data
@@ -135,7 +144,7 @@ def main():
     quarterly_data, yearly_data = load_data()
 
     # Page formatting
-    st.sidebar.html("<a href='https://lab.productivity.ac.uk' alt='The Productivity Lab'></a>")
+    st.sidebar.html('<a href="https://lab.productivity.ac.uk" alt="The Productivity Lab"></a>')
     st.logo("static/logo.png", link="https://lab.productivity.ac.uk/", icon_image=None)
 
     # Set session state variables
@@ -147,7 +156,7 @@ def main():
 
     #Data selection tools
     st.sidebar.divider()
-    st.sidebar.subheader('Select data to plot')
+    st.sidebar.subheader("Select data to plot")
     QorY = st.sidebar.radio(
         "Data as yearly or quarterly?",
         ["Quarterly", "Yearly"],
@@ -182,21 +191,25 @@ def main():
     # Country display selection
     country_options = ["US", "UK", "Germany", "France", "Italy", "Spain"]
     country_selection = st.sidebar.multiselect(label = "Select countries to display (where applicable)", options = country_options, default=country_options)
+    quarterly_selection = None
 
     if QorY == "Quarterly":
         st.sidebar.write("Select data view options")
         st.sidebar.write("Line graph")
         st.sidebar.checkbox("Line graph", 
-                value=(st.session_state.selected == "Line graph"), 
-                on_change=lambda opt="Line graph": update_selection(opt))
+        value=(st.session_state.selected == "Line graph"), 
+        on_change=lambda opt="Line graph": update_selection(opt))
 
         st.sidebar.write("Bar graph")
         st.sidebar.checkbox("Quarter on quarter", 
-                value=(st.session_state.selected == "Quarter on quarter"), 
-                on_change=lambda opt="Quarter on quarter": update_selection(opt))
+        value=(st.session_state.selected == "Quarter on quarter"), 
+        on_change=lambda opt="Quarter on quarter": update_selection(opt))
+
         st.sidebar.checkbox("Year on year", 
-                value=(st.session_state.selected == "Year on year"), 
-                on_change=lambda opt="Year on year": update_selection(opt))
+        value=(st.session_state.selected == "Year on year"), 
+        on_change=lambda opt="Year on year": update_selection(opt))
+        if st.session_state.selected == "Year on year":
+            quarterly_selection = st.sidebar.selectbox(label= "Specific quarter comparison", options=[1, 2, 3, 4])
 
     qoq = False
     yoy = False
@@ -207,16 +220,16 @@ def main():
 
     #Figure formatting tools
     st.sidebar.divider()
-    st.sidebar.subheader('Configure layout')
-    show_legend = st.sidebar.toggle(label='Show legend', value=True)
-    # showtrend = st.sidebar.toggle(label='Show trendline', value=False)
-    # showlabel = st.sidebar.toggle(label='Show labels', value=False)
+    st.sidebar.subheader("Configure layout")
+    show_legend = st.sidebar.toggle(label="Show legend", value=True)
+    # showtrend = st.sidebar.toggle(label="Show trendline", value=False)
+    # showlabel = st.sidebar.toggle(label="Show labels", value=False)
     
     #Define main content
-    st.header('TPI Quarterly data tool for US, UK and European labour productivity')
+    st.header("TPI Quarterly data tool for US, UK and European labour productivity")
     figure = st.empty() 
     if QorY == "Quarterly":
-        quarterly_data = data_format(quarterly_data, QorY, quarter, quarterly_option, country_selection, qoq, yoy)
+        quarterly_data = data_format(quarterly_data, QorY, quarter, quarterly_option, country_selection, qoq, yoy, quarterly_selection)
         fig = create_quarterly_fig(quarterly_data, qoq, yoy, show_legend)
     else:
         yearly_data = data_format(yearly_data, QorY, year, yearly_option, country_selection)
@@ -225,10 +238,10 @@ def main():
     # Display the figure
     if fig:
         # Save session state variables and load figure
-        with st.spinner('Loading visualisation'):
+        with st.spinner("Loading visualisation"):
             st.session_state.fig = fig
             st.session_state.df = quarterly_data
             figure.plotly_chart(st.session_state.fig, use_container_width=True)
     
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
