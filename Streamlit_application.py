@@ -25,7 +25,20 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq= Fals
         time_period[0] = quarter_to_numeric(time_period[0])
         time_period[1] = quarter_to_numeric(time_period[1])
         # Filter out period requested
-        data = data[(data["quarter_numeric"] >= time_period[0]) & (data["quarter_numeric"] <= time_period[1])]
+        # If it is qoq, include the quarter before selection
+        # If it is qoq, include the quarter in the year before selection
+        if qoq:
+            try:
+                data = data[(data["quarter_numeric"] >= time_period[0] - 0.25) & (data["quarter_numeric"] <= time_period[1])]
+            except:
+                data = data[(data["quarter_numeric"] >= time_period[0]) & (data["quarter_numeric"] <= time_period[1])]
+        elif yoy:
+            try:
+                data = data[(data["quarter_numeric"] >= time_period[0] - 1) & (data["quarter_numeric"] <= time_period[1])]
+            except:
+                data = data[(data["quarter_numeric"] >= time_period[0]) & (data["quarter_numeric"] <= time_period[1])]
+        else:
+            data = data[(data["quarter_numeric"] >= time_period[0]) & (data["quarter_numeric"] <= time_period[1])]
         # Have to use re library so the punctiation in the option isn"t used in the regex
         regex_escaped_options = re.escape(data_option)
         data = data[["Quarter", *data.loc[:, data.columns[data.columns.str.contains(regex_escaped_options, case=False)]]]]
@@ -53,28 +66,26 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq= Fals
         if yoy:
             # Calculate YoY Growth (Change from the same quarter last year)
             qoq_data["Quarter"] = qoq_data["Quarter"].apply(quarter_to_numeric)
+            # Filtering to show only selected quarters in yoy selection
             quarter_map = {1: 0, 2: 0.25, 3: 0.5, 4: 0.75}
-            # extract the decimal part of the year and quarter column
             qoq_data['decimal_part'] = qoq_data['Quarter'] % 1
-            # filter the dataframe based on the desired decimal part
             qoq_data = qoq_data[qoq_data['decimal_part'].isin([quarter_map[quarterly_selection]])]
-            # drop the temporary 'decimal_part' column
             qoq_data.drop('decimal_part', axis=1, inplace=True)
-            qoq_data["YoY Growth (%)"] = qoq_data.groupby("Country")["value"].pct_change(4).mul(100).round(2)
+            qoq_data["YoY Growth (%)"] = qoq_data.groupby("Country")["value"].pct_change().mul(100).round(2)
             qoq_data["Quarter"] = qoq_data["Quarter"].apply(numeric_to_quarter)
         data = qoq_data
-        # qoq_data["Quarter"] = qoq_data["Quarter"].apply(quarter_to_numeric)
         print(qoq_data)
     print(data)
     return data
 
 def create_quarterly_fig(data, qoq, yoy, show_legend):
+    data = data.dropna()
     if qoq:
         fig = px.bar(data, x="Quarter", y="QoQ Growth (%)", color="Country",
-             barmode="group", title="QoQ vs YoY Growth Across Countries")
+             barmode="group", title="QoQ Growth Across Countries")
     elif yoy:
         fig = px.bar(data, x="Quarter", y="YoY Growth (%)", color="Country",
-             barmode="group", title="QoQ vs YoY Growth Across Countries")
+             barmode="group", title="YoY Growth Across Countries")
     else:
         fig = px.line(data, 
                 x="Quarter", 
