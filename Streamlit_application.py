@@ -78,7 +78,7 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq= Fals
     print(data)
     return data
 
-def create_quarterly_fig(data, qoq, yoy, show_legend):
+def create_quarterly_fig(data, qoq, yoy, show_legend, data_option):
     data = data.dropna()
     if qoq:
         fig = px.bar(data, x="Quarter", y="QoQ Growth (%)", color="Country",
@@ -87,10 +87,12 @@ def create_quarterly_fig(data, qoq, yoy, show_legend):
         fig = px.bar(data, x="Quarter", y="YoY Growth (%)", color="Country",
              barmode="group", title="YoY Growth Across Countries")
     else:
+        print("search", data.columns.drop("Quarter").tolist())
         fig = px.line(data, 
                 x="Quarter", 
                 y=data.columns.drop("Quarter").tolist(), 
-                title="Time Series Comparison")
+                title="Quarter on quarter Comparison",
+                labels={"value": f"{data_option}", "variable": "Countries"})
     fig.update_layout(showlegend=show_legend)
     return fig
 
@@ -207,7 +209,7 @@ def main():
     if QorY == "Quarterly":
         st.sidebar.write("Select data view options")
         st.sidebar.write("Line graph")
-        st.sidebar.checkbox("Line graph", 
+        st.sidebar.checkbox("Quarter on quarter comparison", 
         value=(st.session_state.selected == "Line graph"), 
         on_change=lambda opt="Line graph": update_selection(opt))
 
@@ -241,7 +243,7 @@ def main():
     figure = st.empty() 
     if QorY == "Quarterly":
         quarterly_data = data_format(quarterly_data, QorY, quarter, quarterly_option, country_selection, qoq, yoy, quarterly_selection)
-        fig = create_quarterly_fig(quarterly_data, qoq, yoy, show_legend)
+        fig = create_quarterly_fig(quarterly_data, qoq, yoy, show_legend, quarterly_option)
     else:
         yearly_data = data_format(yearly_data, QorY, year, yearly_option, country_selection)
         fig = create_yearly_fig(yearly_data, show_legend)

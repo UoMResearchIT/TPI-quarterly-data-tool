@@ -44,6 +44,11 @@ ONS_OPJ = pd.read_excel('../src/ONS Reweighted productivity.xlsx', sheet_name='T
 ONS_Data = ONS_GVA.merge(ONS_OPH, on=["Quarter"])
 ONS_Data = ONS_Data.merge(ONS_OPW, on=["Quarter"])
 ONS_Data = ONS_Data.merge(ONS_OPJ, on=["Quarter"])
+# A_2020 = ONS_Data.loc[ONS_Data['Quarter'] == "2020 Q1"]  # Index value in 2020
+# B_2022 = ONS_Data.loc[ONS_Data['Quarter'] == "2022 Q1"]  # Index value in 2022
+# print(ONS_Data)
+# print(A_2020)
+# print(B_2022)
 Dataset = ONS_Data.merge(US_data, on=["Quarter"])
 
 EU_OPH_OPW = pd.read_csv('../src/EU OPH OPW.csv')
