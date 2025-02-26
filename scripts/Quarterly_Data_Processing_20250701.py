@@ -11,6 +11,8 @@ def EU_format(data, indicator):
         tmp = data.loc[data['geo'] == region]
         if "Euro area" in region:
             tmp = tmp.rename(columns = {"OBS_VALUE": f"Euro Area {indicator}"})
+        if "European Union" in region:
+            tmp = tmp.rename(columns = {"OBS_VALUE": f"European Union {indicator}"})
         else:
             tmp = tmp.rename(columns = {"OBS_VALUE": f"{region} {indicator}"})
         tmp = tmp.drop(["geo"], axis=1)
@@ -51,7 +53,7 @@ ONS_Data = ONS_Data.merge(ONS_OPJ, on=["Quarter"])
 # print(B_2022)
 Dataset = ONS_Data.merge(US_data, on=["Quarter"])
 
-EU_OPH_OPW = pd.read_csv('../src/EU OPH OPW.csv')
+EU_OPH_OPW = pd.read_csv('../src/EU OPH OPW extended.csv')
 EU_OPH_OPW = EU_OPH_OPW.rename(columns={"TIME_PERIOD": "Quarter"})
 EU_OPH_OPW["Quarter"] = EU_OPH_OPW["Quarter"].str.replace("-", " ", regex=False)
 # EU_OPH_OPW = EU_OPH_OPW[["na_item", "Quarter", "geo", "OBS_VALUE"]]
@@ -60,10 +62,12 @@ EU_OPW = EU_OPH_OPW.loc[EU_OPH_OPW['na_item'] == 'Real labour productivity per p
 EU_OPH = EU_OPH[["Quarter", "geo", "OBS_VALUE"]]
 EU_OPW = EU_OPW[["Quarter", "geo", "OBS_VALUE"]]
 
-EU_GVA = pd.read_csv('../src/EU GVA.csv')
+EU_GVA = pd.read_csv('../src/EU GVA extended.csv')
 EU_GVA = EU_GVA.rename(columns={"TIME_PERIOD": "Quarter"})
 EU_GVA["Quarter"] = EU_GVA["Quarter"].str.replace("-", " ", regex=False)
 EU_GVA = EU_GVA[["Quarter", "geo", "OBS_VALUE"]]
+print(EU_GVA)
+print(EU_GVA.columns)
 
 EU_OPH = EU_format(EU_OPH, "OPH")
 EU_OPW = EU_format(EU_OPW, "OPW")

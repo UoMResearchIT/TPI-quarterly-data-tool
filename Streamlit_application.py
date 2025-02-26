@@ -87,11 +87,10 @@ def create_quarterly_fig(data, qoq, yoy, show_legend, data_option):
         fig = px.bar(data, x="Quarter", y="YoY Growth (%)", color="Country",
              barmode="group", title="YoY Growth Across Countries")
     else:
-        print("search", data.columns.drop("Quarter").tolist())
         fig = px.line(data, 
                 x="Quarter", 
                 y=data.columns.drop("Quarter").tolist(), 
-                title="Quarter on quarter Comparison",
+                title="Quarter on quarter Comparison (2020 = 100)",
                 labels={"value": f"{data_option}", "variable": "Countries"})
     fig.update_layout(showlegend=show_legend)
     return fig
@@ -171,7 +170,7 @@ def main():
     st.sidebar.divider()
     st.sidebar.subheader("Select data to plot")
     QorY = st.sidebar.radio(
-        "Data as yearly or quarterly?",
+        "",
         ["Quarterly", "Yearly"],
         captions=[
             "Quarterly labour productivity",
@@ -190,7 +189,7 @@ def main():
         quarter = st.sidebar.select_slider(label = "Quarterly slider", options = quarters, value=(quarters[0], quarters[-1]), label_visibility="collapsed")
         # if quarter[0] == quarter[1]:   # remove - need to update this for quarters
         #     quarter = [quarter[0], quarter[0] + 1] if quarter[0] < max(yearly_data["Year"]) else [quarter[0] - 1, quarter[0]]
-        quarterly_options = ["GDP per hour (TPI calculation)", "OPH", "OPW", "GVA"]
+        quarterly_options = ["OPH", "OPW", "GVA", "GDP per hour (TPI calculation)"]
         quarterly_option = st.sidebar.selectbox("Select data", options=quarterly_options)
 
     # Year time series selection
@@ -202,8 +201,9 @@ def main():
         st.sidebar.selectbox("Select data", options=yearly_options)
 
     # Country display selection
-    country_options = ["US", "UK", "Germany", "France", "Italy", "Spain"]
-    country_selection = st.sidebar.multiselect(label = "Select countries to display (where applicable)", options = country_options, default=country_options)
+    country_options = ["US", "UK", "Germany", "France", "Italy", "Spain", "Euro Area", "European Union", "Norway", "Sweden", "Denmark", "Netherlands", "Romania", "Poland"]
+    default_options = ["UK", "Germany", "France", "Italy", "Spain", "Euro Area"]
+    country_selection = st.sidebar.multiselect(label = "Select countries to display (where applicable)", options = country_options, default=default_options)
     quarterly_selection = None
 
     if QorY == "Quarterly":
