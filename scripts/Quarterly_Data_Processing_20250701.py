@@ -51,6 +51,16 @@ ONS_Data = ONS_Data.merge(ONS_OPJ, on=["Quarter"])
 # print(ONS_Data)
 # print(A_2020)
 # print(B_2022)
+# Convert 'Quarter' to datetime for easier filtering
+# print("here", ONS_Data.to_string())
+ONS_Data["Year"] = ONS_Data["Quarter"].str[:4].astype(int)
+
+# Find the rebasing factor (Average of 2020 values)
+base_2020 = ONS_Data[ONS_Data["Year"] == 2020].iloc[:, 1:-1].mean()
+
+# Rebase all values so that 2020 = 100
+ONS_Data.iloc[:, 1:-1] = (ONS_Data.iloc[:, 1:-1] / base_2020) * 100
+ONS_Data = ONS_Data.drop("Year", axis=1)
 Dataset = ONS_Data.merge(US_data, on=["Quarter"])
 
 EU_OPH_OPW = pd.read_csv('../src/EU OPH OPW extended.csv')

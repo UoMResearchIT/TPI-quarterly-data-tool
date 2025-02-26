@@ -99,8 +99,7 @@ def create_yearly_fig(data, show_legend):
     fig = px.line(data, 
               x="Year", 
               y=data.columns.drop("Year").tolist(), 
-              markers=True,
-              title="GDP per Hour Worked (2015=100) Over Time")
+              title="GDP per Hour Worked Over Time (2015=100)")
 
     # fig.add_shape(
     #     go.layout.Shape(
@@ -200,13 +199,18 @@ def main():
         yearly_option = yearly_options = ["GDP per hour worked"]
         st.sidebar.selectbox("Select data", options=yearly_options)
 
-    # Country display selection
-    country_options = ["US", "UK", "Germany", "France", "Italy", "Spain", "Euro Area", "European Union", "Norway", "Sweden", "Denmark", "Netherlands", "Romania", "Poland"]
-    default_options = ["UK", "Germany", "France", "Italy", "Spain", "Euro Area"]
-    country_selection = st.sidebar.multiselect(label = "Select countries to display (where applicable)", options = country_options, default=default_options)
-    quarterly_selection = None
 
     if QorY == "Quarterly":
+        # Only allow the user to select countries which are available for the data selected
+        regex_escaped_options = re.escape(quarterly_option)
+        matching_columns = quarterly_data.columns[quarterly_data.columns.str.contains(regex_escaped_options, case=False)]
+        # Extract country names by removing the option part
+        countries = [col.replace(quarterly_option, "").strip() for col in matching_columns]
+        # country_options = ["US", "UK", "Germany", "France", "Italy", "Spain", "Euro Area", "European Union", "Norway", "Sweden", "Denmark", "Netherlands", "Romania", "Poland", "Ireland"]
+        default_options = ["UK", "Germany", "France", "Italy", "Spain"]
+        country_selection = st.sidebar.multiselect(label = "Select countries to display", options = countries, default=default_options)
+        quarterly_selection = None
+
         st.sidebar.write("Select data view options")
         st.sidebar.write("Line graph")
         st.sidebar.checkbox("Quarter on quarter comparison", 
@@ -223,6 +227,17 @@ def main():
         on_change=lambda opt="Year on year": update_selection(opt))
         if st.session_state.selected == "Year on year":
             quarterly_selection = st.sidebar.selectbox(label= "Specific quarter comparison", options=[1, 2, 3, 4])
+    elif QorY == "Yearly":
+        # Only allow the user to select countries which are available for the data selected
+        regex_escaped_options = re.escape("GDP per hour worked")
+        matching_columns = yearly_data.columns[yearly_data.columns.str.contains(regex_escaped_options, case=False)]
+        # Extract country names by removing the option part
+        countries = [col.replace("GDP per hour worked", "").strip() for col in matching_columns]
+        print("Here", countries)
+        # country_options = ["US", "UK", "Germany", "France", "Italy", "Spain", "Euro Area", "European Union", "Norway", "Sweden", "Denmark", "Netherlands", "Romania", "Poland", "Ireland"]
+        default_options = ["US", "UK", "Germany", "France", "Italy", "Spain"]
+        country_selection = st.sidebar.multiselect(label = "Select countries to display", options = countries, default=default_options)
+        quarterly_selection = None
 
     qoq = False
     yoy = False
