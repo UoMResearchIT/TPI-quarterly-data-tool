@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import plotly.express as px
+from GDP_Data_Processing_20250602 import GDPPH_Calculation
 
 pd.set_option('future.no_silent_downcasting', True)
 
@@ -86,10 +86,6 @@ Dataset = Dataset.merge(EU_OPH, on=["Quarter"])
 Dataset = Dataset.merge(EU_OPW, on=["Quarter"])
 Dataset = Dataset.merge(EU_GVA, on=["Quarter"])
 
+GDPPH = GDPPH_Calculation()
+dataset = Dataset.merge(GDPPH, on="Quarter", how="left")
 Dataset.to_csv("../out/Dataset.csv", index=False)
-
-# Reformating quarters to datatime so can be used by Plotly - remove?
-# Dataset["Year"] = Dataset["Quarter"].str.extract(r"(\d{4})").astype(int)  # Extracts the 4-digit year
-# Dataset["Quarter_Num"] = Dataset["Quarter"].str.extract(r"Q(\d)").astype(int)  # Extracts the quarter number
-# Dataset["Quarter"] = pd.to_datetime(Dataset["Year"].astype(str) + "-" + (Dataset["Quarter_Num"] * 3 - 2).astype(str) + "-01")
-
