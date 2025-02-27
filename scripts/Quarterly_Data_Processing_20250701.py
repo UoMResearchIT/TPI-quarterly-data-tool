@@ -87,5 +87,5 @@ Dataset = Dataset.merge(EU_OPW, on=["Quarter"])
 Dataset = Dataset.merge(EU_GVA, on=["Quarter"])
 
 GDPPH = GDPPH_Calculation()
-dataset = Dataset.merge(GDPPH, on="Quarter", how="left")
+Dataset = Dataset.merge(GDPPH, on="Quarter", how="left")
 Dataset.to_csv("../out/Dataset.csv", index=False)

@@ -1,6 +1,22 @@
 import pandas as pd
-from Quarterly_Data_Processing_20250701 import EU_format
 import numpy as np
+
+def EU_format(data, indicator):
+    formatted_data = pd.DataFrame()
+    for region in data["geo"].unique():
+        tmp = data.loc[data['geo'] == region]
+        if "Euro area" in region:
+            tmp = tmp.rename(columns = {"OBS_VALUE": f"Euro Area {indicator}"})
+        if "European Union" in region:
+            tmp = tmp.rename(columns = {"OBS_VALUE": f"European Union {indicator}"})
+        else:
+            tmp = tmp.rename(columns = {"OBS_VALUE": f"{region} {indicator}"})
+        tmp = tmp.drop(["geo"], axis=1)
+        if formatted_data.empty:
+            formatted_data = tmp
+        else:
+            formatted_data = formatted_data.merge(tmp, on=["Quarter"], how="outer")
+    return formatted_data
 
 def GDPPH_Calculation():
     # Process UK GDP data
