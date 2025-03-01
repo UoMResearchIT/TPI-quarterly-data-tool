@@ -42,7 +42,6 @@ def GDPPH_Calculation():
     GDP = GDP.merge(EU_GDP[["Quarter", "France GDP"]], on=["Quarter"])
     GDP = GDP.merge(EU_GDP[["Quarter", "Spain GDP"]], on=["Quarter"])
     GDP = GDP.merge(EU_GDP[["Quarter", "Italy GDP"]], on=["Quarter"])
-    print(GDP)
 
     PPP = pd.read_csv("../src/OECD PPP.csv")
     PPP = PPP[["TIME_PERIOD", "Country", "OBS_VALUE"]]
@@ -60,7 +59,6 @@ def GDPPH_Calculation():
     GDP["Spain GDP USD"] = round(GDP["Spain GDP"] * GDP["Spain PPP"], 2)
     GDP["Italy GDP USD"] = round(GDP["Italy GDP"] * GDP["Italy PPP"], 2)
     GDP_USD = GDP[["Quarter", "UK GDP USD", "US GDP USD", "Germany GDP USD", "France GDP USD", "Spain GDP USD", "Italy GDP USD"]]
-    print(GDP_USD.head())
     # Hours worked!
     # UK data is already quarterly, hours per week - so need to times by 13 to get quarterly
     # US data is quarterly, in billions of hours

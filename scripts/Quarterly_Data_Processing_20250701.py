@@ -76,8 +76,6 @@ EU_GVA = pd.read_csv('../src/EU GVA extended.csv')
 EU_GVA = EU_GVA.rename(columns={"TIME_PERIOD": "Quarter"})
 EU_GVA["Quarter"] = EU_GVA["Quarter"].str.replace("-", " ", regex=False)
 EU_GVA = EU_GVA[["Quarter", "geo", "OBS_VALUE"]]
-print(EU_GVA)
-print(EU_GVA.columns)
 
 EU_OPH = EU_format(EU_OPH, "OPH")
 EU_OPW = EU_format(EU_OPW, "OPW")
@@ -85,6 +83,14 @@ EU_GVA = EU_format(EU_GVA, "GVA")
 Dataset = Dataset.merge(EU_OPH, on=["Quarter"])
 Dataset = Dataset.merge(EU_OPW, on=["Quarter"])
 Dataset = Dataset.merge(EU_GVA, on=["Quarter"])
+
+# Flash_Estimate = pd.read_csv('../src/Flash_Estimate_Q4.csv', skiprows=7, usecols=[0,1,3], names=["Quarter", "GVA", "OPH"])
+# Flash_Estimate.columns = [
+#     f"ONS Flash Estimate {col}" if col not in ["Quarter"] else col
+#     for col in Flash_Estimate.columns]
+# Flash_Estimate["Quarter"] = Flash_Estimate["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
+# print(Flash_Estimate)
+# Dataset = Dataset.merge(Flash_Estimate, on="Quarter", how="outer")
 
 GDPPH = GDPPH_Calculation()
 Dataset = Dataset.merge(GDPPH, on="Quarter", how="left")
