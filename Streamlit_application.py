@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
-import numpy as np
 import time 
 import re
 
@@ -15,8 +13,9 @@ def numeric_to_quarter(n):
     qtr = int((n - year) * 4) + 1
     return f"{year} Q{qtr}"
 
-
+@st.cache_data
 def data_format(data, QorY, time_period, data_option, country_options, qoq= False, yoy= False, quarterly_selection =False):
+    # Filter for time selection
     if QorY == "Quarterly":
         # Convert the quaters to numeric
         data["quarter_numeric"] = data["Quarter"].apply(quarter_to_numeric)
@@ -25,6 +24,7 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq= Fals
         time_period[0] = quarter_to_numeric(time_period[0])
         time_period[1] = quarter_to_numeric(time_period[1])
         # Filter out period requested
+        # For bar graph, prior quarter is used to calculate the percentage change for data selected, this value is then removed using dropna later
         # If it is qoq, include the quarter before selection
         # If it is qoq, include the quarter in the year before selection
         if qoq:
@@ -44,6 +44,8 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq= Fals
         data = data[["Quarter", *data.loc[:, data.columns[data.columns.str.contains(regex_escaped_options, case=False)]]]]
     elif QorY == "Yearly":
         data = data[(data["Year"] >= time_period[0]) & (data["Year"] <= time_period[1])]
+    
+    # Filter for selected countries
     countries_data = pd.DataFrame()
     for country in country_options:
         country_data = data.loc[:, data.columns.str.contains(country, case=False)]
@@ -68,14 +70,12 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq= Fals
             qoq_data["Quarter"] = qoq_data["Quarter"].apply(quarter_to_numeric)
             # Filtering to show only selected quarters in yoy selection
             quarter_map = {1: 0, 2: 0.25, 3: 0.5, 4: 0.75}
-            qoq_data['decimal_part'] = qoq_data['Quarter'] % 1
-            qoq_data = qoq_data[qoq_data['decimal_part'].isin([quarter_map[quarterly_selection]])]
-            qoq_data.drop('decimal_part', axis=1, inplace=True)
+            qoq_data["decimal_part"] = qoq_data["Quarter"] % 1
+            qoq_data = qoq_data[qoq_data["decimal_part"].isin([quarter_map[quarterly_selection]])]
+            qoq_data.drop("decimal_part", axis=1, inplace=True)
             qoq_data["YoY Growth (%)"] = qoq_data.groupby("Country")["value"].pct_change().mul(100).round(2)
             qoq_data["Quarter"] = qoq_data["Quarter"].apply(numeric_to_quarter)
         data = qoq_data
-        print(qoq_data)
-    print(data)
     return data
 
 def create_quarterly_fig(data, qoq, yoy, show_legend, data_option):
@@ -100,26 +100,6 @@ def create_yearly_fig(data, show_legend):
               x="Year", 
               y=data.columns.drop("Year").tolist(), 
               title="GDP per Hour Worked Over Time (2015=100)")
-
-    # fig.add_shape(
-    #     go.layout.Shape(
-    #         type="line",
-    #         x0=2015, x1=2015,  # Vertical line at 2015
-    #         y0=data["GDP per Hour Worked"].min(), 
-    #         y1=data["GDP per Hour Worked"].max(),
-    #         line=dict(color="gray", width=2, dash="dash"),
-    #     )
-    # )
-
-    # Add annotation for 2015 Base Year
-    # fig.add_annotation(
-    #     x=2015, 
-    #     y=data["GDP per Hour Worked"].max(),
-    #     text="2015 = 100 (Base Year)",
-    #     showarrow=False,
-    #     font=dict(size=12, color="gray"),
-    #     xshift=10
-    # )
     fig.update_layout(showlegend=show_legend)
     return fig
 
@@ -133,15 +113,15 @@ def load_data():
     print("Runtime loading data: " + str(int((time.time() - t0)*1000)) + " miliseconds")
     return quarterly_data, yearly_data
 
-@st.cache_data
-def quarterly_process_data(data, start, end):
-
-    t0 = time.time()
-    print("Runtime data processing: " + str(int((time.time() - t0)*1000)) + " miliseconds")
-    return
-
 def main():
     t0 = time.time()
+
+    # Set session state variables
+    st.session_state.show_quarter_slider = False
+    st.session_state.show_yearly_slider = False
+
+    if "selected" not in st.session_state:
+        st.session_state.selected = "Line graph"
 
     def update_selection(option):
         if st.session_state.selected == option:  # If clicked again, deselect
@@ -158,14 +138,7 @@ def main():
     st.sidebar.html('<a href="https://lab.productivity.ac.uk" alt="The Productivity Lab"></a>')
     st.logo("static/logo.png", link="https://lab.productivity.ac.uk/", icon_image=None)
 
-    # Set session state variables
-    st.session_state.show_quarter_slider = False
-    st.session_state.show_yearly_slider = False
-
-    if "selected" not in st.session_state:
-        st.session_state.selected = "Line graph"
-
-    #Data selection tools
+    #Data selection tools in the sidebar section
     st.sidebar.divider()
     st.sidebar.subheader("Select data to plot")
     QorY = st.sidebar.radio(
@@ -206,11 +179,12 @@ def main():
         matching_columns = quarterly_data.columns[quarterly_data.columns.str.contains(regex_escaped_options, case=False)]
         # Extract country names by removing the option part
         countries = [col.replace(quarterly_option, "").strip() for col in matching_columns]
-        # country_options = ["US", "UK", "Germany", "France", "Italy", "Spain", "Euro Area", "European Union", "Norway", "Sweden", "Denmark", "Netherlands", "Romania", "Poland", "Ireland"]
+        countries = sorted(countries, key=lambda x: (x not in ["UK", "Euro Area", "European Union"], x))
         default_options = ["UK", "Germany", "France", "Italy", "Spain"]
         country_selection = st.sidebar.multiselect(label = "Select countries to display", options = countries, default=default_options)
         quarterly_selection = None
 
+        # Only show data options below if quarterly format is selected
         st.sidebar.write("Select data view options")
         st.sidebar.write("Line graph")
         st.sidebar.checkbox("Quarter on quarter comparison", 
@@ -227,14 +201,17 @@ def main():
         on_change=lambda opt="Year on year": update_selection(opt))
         if st.session_state.selected == "Year on year":
             quarterly_selection = st.sidebar.selectbox(label= "Specific quarter comparison", options=[1, 2, 3, 4])
+
     elif QorY == "Yearly":
         # Only allow the user to select countries which are available for the data selected
         regex_escaped_options = re.escape("GDP per hour worked")
         matching_columns = yearly_data.columns[yearly_data.columns.str.contains(regex_escaped_options, case=False)]
+
         # Extract country names by removing the option part
         countries = [col.replace("GDP per hour worked", "").strip() for col in matching_columns]
-        print("Here", countries)
-        # country_options = ["US", "UK", "Germany", "France", "Italy", "Spain", "Euro Area", "European Union", "Norway", "Sweden", "Denmark", "Netherlands", "Romania", "Poland", "Ireland"]
+
+        # Sort into alphabetical order, but with the European average options at the top
+        countries = sorted(countries, key=lambda x: (x not in ["UK", "Euro Area", "European Union"], x))
         default_options = ["US", "UK", "Germany", "France", "Italy", "Spain"]
         country_selection = st.sidebar.multiselect(label = "Select countries to display", options = countries, default=default_options)
         quarterly_selection = None
