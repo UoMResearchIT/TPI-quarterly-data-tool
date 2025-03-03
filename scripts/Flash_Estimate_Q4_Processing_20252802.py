@@ -15,52 +15,53 @@ def numeric_to_quarter(n):
     qtr = int((n - year) * 4) + 1
     return f"{year} Q{qtr}"
 
+def line_graph(data):
+        fig = px.line(data, 
+        x="Quarter", 
+        y=data.columns.drop("Quarter").tolist(), 
+        title="Quarter on quarter Comparison (1997 = 100)",
+        labels={"value": "Flash Estimate", "variable": "Productivity Flash Estimates"})
+        return fig
+
+def qoq(data):
+        data = data[['Quarter', 'OPH']]
+        data["quarter_numeric"] = data["Quarter"].apply(quarter_to_numeric)
+        data = data[(data["quarter_numeric"] >= 2022 - 0.25) & (data["quarter_numeric"] <= 2024.75)]
+        data = data.drop('quarter_numeric', axis=1)
+        data = data.melt(id_vars = "Quarter", var_name = "Measure")
+        data["QoQ Growth (%)"] = data.groupby("Measure")["value"].pct_change().mul(100).round(2)
+
+        data = data.dropna()
+        fig = px.bar(data, x="Quarter", y="QoQ Growth (%)", color="Measure",
+                barmode="group", title="Q1 2022 - Q4 2024 QoQ Growth")
+        fig.update_layout(showlegend=False)
+        return fig
+
+def yoy(data):
+        data = data[['Quarter', 'OPH']]
+        data["Quarter"] = data["Quarter"].apply(quarter_to_numeric)
+        data = data[(data["Quarter"] >= 2020.75 - 1) & (data["Quarter"] <= 2024.75)]
+        data = data.melt(id_vars = "Quarter", var_name = "Measure")
+        quarter_map = {1: 0, 2: 0.25, 3: 0.5, 4: 0.75}
+        data['decimal_part'] = data['Quarter'] % 1
+        data = data[data['decimal_part'].isin([quarter_map[4]])]
+        data.drop('decimal_part', axis=1, inplace=True)
+        data["YoY Growth (%)"] = data.groupby("Measure")["value"].pct_change().mul(100).round(2)
+        data["Quarter"] = data["Quarter"].apply(numeric_to_quarter)
+
+        data = data.dropna()
+        fig = px.bar(data, x="Quarter", y="YoY Growth (%)", color="Measure",
+                barmode="group", title="Q4 YOY Growth")
+        fig.update_layout(showlegend=False)
+        return fig
+
 Flash_Estimate = pd.read_csv('../src/Flash_Estimate_Q4.csv', skiprows=7, usecols=[0,1,2,3], names=["Quarter", "GVA", "Hours Worked", "OPH"])
-# Flash_Estimate.columns = [
-#     f"ONS Flash Estimate {col}" if col not in ["Quarter"] else col
-#     for col in Flash_Estimate.columns]
+# Change from Q4 1997 to 1997 Q4
 Flash_Estimate["Quarter"] = Flash_Estimate["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
-print(Flash_Estimate)
+# fig = line_graph(Flash_Estimate)
+# fig = qoq(Flash_Estimate)
+fig = yoy(Flash_Estimate)
 
-Flash_Estimate = Flash_Estimate[['Quarter', 'OPH']]
-Flash_Estimate["quarter_numeric"] = Flash_Estimate["Quarter"].apply(quarter_to_numeric)
-Flash_Estimate = Flash_Estimate[(Flash_Estimate["quarter_numeric"] >= 2022 - 0.25) & (Flash_Estimate["quarter_numeric"] <= 2024.75)]
-Flash_Estimate = Flash_Estimate.drop('quarter_numeric', axis=1)
-Flash_Estimate = Flash_Estimate.melt(id_vars = "Quarter", var_name = "Measure")
-print(Flash_Estimate)
-Flash_Estimate["QoQ Growth (%)"] = Flash_Estimate.groupby("Measure")["value"].pct_change().mul(100).round(2)
-
-
-Flash_Estimate = Flash_Estimate.dropna()
-fig = px.bar(Flash_Estimate, x="Quarter", y="QoQ Growth (%)", color="Measure",
-        barmode="group", title="Q1 2022 - Q4 2024 QoQ Growth")
-fig.update_layout(showlegend=False)
-
-# Flash_Estimate = Flash_Estimate[['Quarter', 'OPH']]
-# Flash_Estimate["Quarter"] = Flash_Estimate["Quarter"].apply(quarter_to_numeric)
-# Flash_Estimate = Flash_Estimate[(Flash_Estimate["Quarter"] >= 2020.75 - 1) & (Flash_Estimate["Quarter"] <= 2024.75)]
-# # Flash_Estimate = Flash_Estimate.drop('quarter_numeric', axis=1)
-# Flash_Estimate = Flash_Estimate.melt(id_vars = "Quarter", var_name = "Measure")
-# # Flash_Estimate["QoQ Growth (%)"] = Flash_Estimate.groupby("Measure")["value"].pct_change().mul(100).round(2)
-# print(Flash_Estimate)
-# quarter_map = {1: 0, 2: 0.25, 3: 0.5, 4: 0.75}
-# Flash_Estimate['decimal_part'] = Flash_Estimate['Quarter'] % 1
-# print(Flash_Estimate)
-# Flash_Estimate = Flash_Estimate[Flash_Estimate['decimal_part'].isin([quarter_map[4]])]
-# Flash_Estimate.drop('decimal_part', axis=1, inplace=True)
-# Flash_Estimate["YoY Growth (%)"] = Flash_Estimate.groupby("Measure")["value"].pct_change().mul(100).round(2)
-# Flash_Estimate["Quarter"] = Flash_Estimate["Quarter"].apply(numeric_to_quarter)
-# print(Flash_Estimate)
-
-# Flash_Estimate = Flash_Estimate.dropna()
-# fig = px.bar(Flash_Estimate, x="Quarter", y="YoY Growth (%)", color="Measure",
-#         barmode="group", title="Q4 YOY Growth")
-# fig.update_layout(showlegend=False)
-# fig = px.line(Flash_Estimate, 
-#         x="Quarter", 
-#         y=Flash_Estimate.columns.drop("Quarter").tolist(), 
-#         title="Quarter on quarter Comparison (1997 = 100)",
-#         labels={"value": "Flash Estimate", "variable": "Productivity Flash Estimates"})
 fig.update_layout(template="plotly_white")
 
 fig.show()
