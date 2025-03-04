@@ -232,6 +232,31 @@ def main():
     
     #Define main content
     st.header("TPI Quarterly data tool for US, UK and European labour productivity")
+    with st.expander(label="**About this tool**", expanded=False):
+        st.markdown(
+            """
+            ### Intro
+            ###### Developed by the [TPI Productivity Lab](https://lab.productivity.ac.uk/), this tool allows for the quick creation of graphs of quarterly and yearly productivity data on a national scale.
+            
+            ### Customisation Options
+            #### Data options
+            - **Quarterly or Yearly selection**: Allows for the option of data to be shown as either quarterly or yearly
+            - **Select time period**: change the time period selected
+            - **Select data**: choose the productivity measure to be visualised
+            - **Choose countries**: choose the countries selected from a large list containing many European countries, as well as the US
+            #### Quarterly data specific options
+            ##### Quarterly line graph
+            - Plots all selected data as a line graph
+            ##### QoQ bar graph
+            - Plots all selected data as a bar graph showing Quarter on Quarter (QoQ) change as a percentage
+            ##### YOY bar graph
+            - Plots all selected data as a bar graph showing Year on Year (YoY) change as a percentage
+            - Allows for selection of the specific quarter to be compared (if the 4th quarter is selected, it will show percentage change of the measure selected between the 4th quarters of the years selected)
+            #### Formatting
+            - **Show legend**: choose whether the legend is to be shown in the visualisation
+            """
+        )
+
     figure = st.empty() 
     if QorY == "Quarterly":
         quarterly_data = data_format(quarterly_data, QorY, quarter, quarterly_option, country_selection, qoq, yoy, quarterly_selection)
