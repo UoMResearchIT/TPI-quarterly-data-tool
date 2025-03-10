@@ -15,11 +15,20 @@ def numeric_to_quarter(n):
     qtr = int((n - year) * 4) + 1
     return f"{year} Q{qtr}"
 
-def line_graph(data):
-        fig = px.line(data, 
+def line_graph(data, year):
+        base = data.loc[data["Quarter"] == f"{year} Q1", ["GVA", "Hours Worked", "OPH"]].iloc[0].to_numpy()
+        cols = ["GVA", "Hours Worked", "OPH"]
+        data[cols] = (data[cols] / base) * 100
+
+        data["quarter_numeric"] = data["Quarter"].apply(quarter_to_numeric)
+        data = data[(data["quarter_numeric"] >= year) & (data["quarter_numeric"] <= 2024.75)]
+        data = data.drop(["quarter_numeric"], axis=1)
+
+        fig = px.line(
+        data, 
         x="Quarter", 
         y=data.columns.drop("Quarter").tolist(), 
-        title="Quarter on quarter Comparison (1997 = 100)",
+        title=f"Quarter on quarter Comparison ({year} = 100)",
         labels={"value": "Flash Estimate", "variable": "Productivity Flash Estimates"})
         return fig
 
@@ -58,9 +67,10 @@ def yoy(data):
 Flash_Estimate = pd.read_csv('../src/Flash_Estimate_Q4.csv', skiprows=7, usecols=[0,1,2,3], names=["Quarter", "GVA", "Hours Worked", "OPH"])
 # Change from Q4 1997 to 1997 Q4
 Flash_Estimate["Quarter"] = Flash_Estimate["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
-# fig = line_graph(Flash_Estimate)
+
+fig = line_graph(Flash_Estimate, 2007)
 # fig = qoq(Flash_Estimate)
-fig = yoy(Flash_Estimate)
+# fig = yoy(Flash_Estimate)
 
 fig.update_layout(template="plotly_white")
 
