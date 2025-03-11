@@ -98,10 +98,32 @@ def process():
 
 UK_GVA_Bespoke = pd.read_excel('../src/ONS GVA and hours worked.xlsx', sheet_name='Table_15', header=4)
 UK_GVA_Bespoke = UK_GVA_Bespoke.drop([0,1])
-SIC_C = UK_GVA_Bespoke.filter(like='Part of C', axis=1)
-print(UK_GVA_Bespoke['SIC 2007 section'])
-print(UK_GVA_Bespoke.columns)
-print(SIC_C)
+UK_GVA_Division = pd.read_excel('../src/ONS GVA and hours worked.xlsx', sheet_name='Table_23', header=4)
+UK_GVA_Division = UK_GVA_Division.drop([0,1])
+
+def SIC_Code_Combiner(dataset, letters):
+    data = SIC_Code_Combine(dataset, letters[0])
+    for letter in letters[1:]:
+        temp = SIC_Code_Combine(dataset, letter)
+        data = data.merge(temp, on='Quarter', how='left')
+    return data
+
+def SIC_Code_Combine(dataset, letter):
+    filtered_data = dataset.filter(like=f'Part of {letter}', axis=1)
+    filtered_data.insert(0, 'Quarter', dataset['SIC 2007 section'])
+    filtered_data.set_index("Quarter", inplace=True)
+    filtered_data["Summed"] = filtered_data.sum(axis=1)
+
+    ref_value = filtered_data.loc[filtered_data.index.str.startswith("2022"), "Summed"].mean()
+    filtered_data[f"{letter}"] = (filtered_data["Summed"] / ref_value) * 100
+    return filtered_data[[f"{letter}"]]
+
+print(SIC_Code_Combine(UK_GVA_Bespoke, 'C'))
+print(SIC_Code_Combine(UK_GVA_Division, 'A'))
+print(SIC_Code_Combine(UK_GVA_Division, 'F'))
+print(SIC_Code_Combiner(UK_GVA_Division, ['G', 'H', 'I']))
+# print(UK_GVA_Division)
+
 # table 23
 
 # EU_OPH = EU_format(EU_OPH, "OPH")
