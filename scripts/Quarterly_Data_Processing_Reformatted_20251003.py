@@ -133,26 +133,13 @@ def SIC_Code_Combine(dataset, letters):
     return filtered_data[[f"{combined}"]]
 
 SIC_Codes = ['C', 'A', 'F', 'H', ['G', 'H', 'I'], 'J', 'K', 'L', ['M', 'N'], ['O', 'P', 'Q'], ['B', 'C', 'D', 'E']]
-SIC_Code_Data = SIC_Code_Combine(UK_GVA_Division, SIC_Codes[0])
-for code in SIC_Codes[1:]:
+# A to T = Total
+SIC_Code_Data = UK_GVA_Division.filter(like='A to T', axis=1)
+SIC_Code_Data.insert(0, 'Quarter', UK_GVA_Division['SIC 2007 section'])
+for code in SIC_Codes:
     temp = SIC_Code_Combine(UK_GVA_Division, code)
     SIC_Code_Data = SIC_Code_Data.merge(temp, on='Quarter', how='left')
-
 print(SIC_Code_Data)
-
-# print(SIC_Code_Combine(UK_GVA_Division, 'C'))
-# print(SIC_Code_Combine(UK_GVA_Division, 'A'))
-# print(SIC_Code_Combine(UK_GVA_Division, 'F'))
-# print(SIC_Code_Combine(UK_GVA_Division, 'H'))
-# print(SIC_Code_Combine(UK_GVA_Division, ['G', 'H', 'I']))
-# print(SIC_Code_Combine(UK_GVA_Division, 'J'))
-# print(SIC_Code_Combine(UK_GVA_Division, 'K'))
-# print(SIC_Code_Combine(UK_GVA_Division, 'L'))
-# print(SIC_Code_Combine(UK_GVA_Division, ['M', 'N']))
-# print(SIC_Code_Combine(UK_GVA_Division, ['O', 'P', 'Q']))
-# print(SIC_Code_Combine(UK_GVA_Division, ['B', 'C', 'D', 'E']))
-
-# table 23
 
 # EU_OPH = EU_format(EU_OPH, "OPH")
 # EU_OPW = EU_format(EU_OPW, "OPW")
