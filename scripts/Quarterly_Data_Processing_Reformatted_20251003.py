@@ -108,21 +108,49 @@ def SIC_Code_Combiner(dataset, letters):
         data = data.merge(temp, on='Quarter', how='left')
     return data
 
-def SIC_Code_Combine(dataset, letter):
+def SIC_Code_Combine(dataset, letters):
+    if len(letters) == 1:
+        x = False
+        combined = letters[0]
+    else:
+        x = True
+        combined = "".join(letters)
+    letter = letters[0]
     filtered_data = dataset.filter(like=f'Part of {letter}', axis=1)
+    if filtered_data.empty:
+        filtered_data = dataset.filter(like=f'{letter}', axis=1)
     filtered_data.insert(0, 'Quarter', dataset['SIC 2007 section'])
+    if x:
+        for letter in letters[1:]:
+            temp = dataset.filter(like=f'Part of {letter}', axis=1)
+            if temp.empty:
+                temp = dataset.filter(like=f'{letter}', axis=1)
+            filtered_data = pd.concat([filtered_data, temp], axis=1, ignore_index=False)
     filtered_data.set_index("Quarter", inplace=True)
     filtered_data["Summed"] = filtered_data.sum(axis=1)
-
     ref_value = filtered_data.loc[filtered_data.index.str.startswith("2022"), "Summed"].mean()
-    filtered_data[f"{letter}"] = (filtered_data["Summed"] / ref_value) * 100
-    return filtered_data[[f"{letter}"]]
+    filtered_data[f"{combined}"] = (filtered_data["Summed"] / ref_value) * 100
+    return filtered_data[[f"{combined}"]]
 
-print(SIC_Code_Combine(UK_GVA_Bespoke, 'C'))
-print(SIC_Code_Combine(UK_GVA_Division, 'A'))
-print(SIC_Code_Combine(UK_GVA_Division, 'F'))
-print(SIC_Code_Combiner(UK_GVA_Division, ['G', 'H', 'I']))
-# print(UK_GVA_Division)
+SIC_Codes = ['C', 'A', 'F', 'H', ['G', 'H', 'I'], 'J', 'K', 'L', ['M', 'N'], ['O', 'P', 'Q'], ['B', 'C', 'D', 'E']]
+SIC_Code_Data = SIC_Code_Combine(UK_GVA_Division, SIC_Codes[0])
+for code in SIC_Codes[1:]:
+    temp = SIC_Code_Combine(UK_GVA_Division, code)
+    SIC_Code_Data = SIC_Code_Data.merge(temp, on='Quarter', how='left')
+
+print(SIC_Code_Data)
+
+# print(SIC_Code_Combine(UK_GVA_Division, 'C'))
+# print(SIC_Code_Combine(UK_GVA_Division, 'A'))
+# print(SIC_Code_Combine(UK_GVA_Division, 'F'))
+# print(SIC_Code_Combine(UK_GVA_Division, 'H'))
+# print(SIC_Code_Combine(UK_GVA_Division, ['G', 'H', 'I']))
+# print(SIC_Code_Combine(UK_GVA_Division, 'J'))
+# print(SIC_Code_Combine(UK_GVA_Division, 'K'))
+# print(SIC_Code_Combine(UK_GVA_Division, 'L'))
+# print(SIC_Code_Combine(UK_GVA_Division, ['M', 'N']))
+# print(SIC_Code_Combine(UK_GVA_Division, ['O', 'P', 'Q']))
+# print(SIC_Code_Combine(UK_GVA_Division, ['B', 'C', 'D', 'E']))
 
 # table 23
 
