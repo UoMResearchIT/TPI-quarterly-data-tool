@@ -5,6 +5,10 @@ import sqlite3
 
 pd.set_option('future.no_silent_downcasting', True)
 
+def quarter_to_numeric(q):
+    year, qtr = q.split(" ")
+    return int(year) + (int(qtr[1]) - 1) / 4  # Converts "1997 Q3" → 1997.5
+
 def EU_GVA_Process():
     EU_GVA = pd.read_csv('../src/EU GVA with industries.csv')
     EU_GVA["Quarter"] = EU_GVA["TIME_PERIOD"].str.replace("-", " ", regex=False)
@@ -77,8 +81,12 @@ SIC_Code_Data = SIC_Code_Data.melt(id_vars=["Quarter"], var_name="Industry", val
 SIC_Code_Data["Country"] = "UK"
 SIC_Code_Data["Variable"] = "GVA"
 Dataset = Dataset._append(SIC_Code_Data)
-Dataset = Dataset.set_index(["Quarter", "Country", "Variable", "Industry"]).sort_index()
-print(Dataset.loc[("2020 Q1", "UK", "GVA", "Total - all NACE activities")]['Value'])
+Dataset["Quarter"] = Dataset["Quarter"].apply(quarter_to_numeric) # Why no work
+print(Dataset)
+# Dataset = Dataset.set_index(["Quarter", "Country", "Variable", "Industry"]).sort_index()
+# print(Dataset.loc[("2020 Q1", "UK", "GVA", "Total - all NACE activities")]['Value'])
+Dataset.to_csv("../out/Long_Dataset.csv", index=False)
+
 
 # Import all Quarterly US productivity data since Q1 1997 (consistent with ONS data)
 # Need to change cause this is only one specific industry
@@ -104,9 +112,7 @@ print(Dataset.loc[("2020 Q1", "UK", "GVA", "Total - all NACE activities")]['Valu
 # conn.close()
 # print(df_from_db)
 
-
-# # ONS_Data = ONS_Data.merge(ONS_OPJ, on=["Quarter"])
-
+# Remove - need to remember to rebase UK data
 # ONS_Data["Year"] = ONS_Data["Quarter"].str[:4].astype(int)
 
 # # Find the rebasing factor (Average of 2020 values)
