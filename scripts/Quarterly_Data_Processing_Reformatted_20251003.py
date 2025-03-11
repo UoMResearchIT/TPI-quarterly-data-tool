@@ -41,22 +41,22 @@ def EU_format(data, indicator):
 # Dataset = ONS_Data.merge(US_data, on=["Quarter"])
 
 # ONS_GVA = pd.read_excel('../src/ONS Reweighted productivity.xlsx', sheet_name='Table_1', usecols='A,B', skiprows=6, header=None, names=["Quarter", "GVA"])
-# # New LFS weighting data:
-# ONS_OPH = pd.read_excel('../src/ONS Reweighted productivity.xlsx', sheet_name='Table_2', usecols='A,C', skiprows=6, header=None, names=["Quarter", "OPH"])
-# ONS_OPW = pd.read_excel('../src/ONS Reweighted productivity.xlsx', sheet_name='Table_3', usecols='A,C', skiprows=6, header=None, names=["Quarter", "OPW"])
-# # ONS_OPJ = pd.read_excel('../src/ONS Reweighted productivity.xlsx', sheet_name='Table_4', usecols='A,C', skiprows=6, header=None, names=["Quarter", "OPJ"])
+# New LFS weighting data:
+ONS_OPH = pd.read_excel('../src/ONS Reweighted productivity.xlsx', sheet_name='Table_2', usecols='A,C', skiprows=6, header=None, names=["Quarter", "OPH"])
+ONS_OPW = pd.read_excel('../src/ONS Reweighted productivity.xlsx', sheet_name='Table_3', usecols='A,C', skiprows=6, header=None, names=["Quarter", "OPW"])
+# ONS_OPJ = pd.read_excel('../src/ONS Reweighted productivity.xlsx', sheet_name='Table_4', usecols='A,C', skiprows=6, header=None, names=["Quarter", "OPJ"])
 # ONS_Data = ONS_GVA.merge(ONS_OPH, on=["Quarter"])
-# ONS_Data = ONS_Data.merge(ONS_OPW, on=["Quarter"])
+ONS_Data = ONS_OPH.merge(ONS_OPW, on=["Quarter"])
 
-# # Melt the DataFrame
-# df_long = ONS_Data.melt(id_vars=["Quarter"], var_name="Variable", value_name="Value")
+# Melt the DataFrame
+df_long = ONS_Data.melt(id_vars=["Quarter"], var_name="Variable", value_name="Value")
 
-# # Add 'UK' column
-# df_long["Country"] = "UK"
+# Add 'UK' column
+df_long["Country"] = "UK"
 
-# # Reorder columns
-# df_long = df_long[["Quarter", "Country", "Variable", "Value"]]
-# print(df_long)
+# Reorder columns
+df_long = df_long[["Quarter", "Country", "Variable", "Value"]]
+print(df_long)
 
 # Testing using SQL
 # conn = sqlite3.connect("../out/Quarterly_dataset.db")
@@ -93,9 +93,9 @@ def process():
     EU_GVA = EU_GVA[["TIME_PERIOD", "geo", "nace_r2", "OBS_VALUE"]]
     EU_GVA = EU_GVA.rename(columns={"TIME_PERIOD": "Quarter", "geo": "Country", "nace_r2": "Industry", "OBS_VALUE": "Value"})
     EU_GVA["Variable"] = "GVA"
-    # EU_GVA = EU_GVA._append(df_long)
     return EU_GVA
-
+EU_GVA = process()
+EU_GVA = EU_GVA._append(df_long)
 UK_GVA_Bespoke = pd.read_excel('../src/ONS GVA and hours worked.xlsx', sheet_name='Table_15', header=4)
 UK_GVA_Bespoke = UK_GVA_Bespoke.drop([0,1])
 UK_GVA_Division = pd.read_excel('../src/ONS GVA and hours worked.xlsx', sheet_name='Table_23', header=4)
@@ -116,7 +116,7 @@ def SIC_Code_Combine(dataset, letters):
         x = True
         combined = "".join(letters)
     letter = letters[0]
-    filtered_data = dataset.filter(like=f'Part of {letter}', axis=1)
+    filtered_data = dataset.filter(like=f'Part of {letter}', axis=1).copy()
     if filtered_data.empty:
         filtered_data = dataset.filter(like=f'{letter}', axis=1)
     filtered_data.insert(0, 'Quarter', dataset['SIC 2007 section'])
@@ -133,13 +133,26 @@ def SIC_Code_Combine(dataset, letters):
     return filtered_data[[f"{combined}"]]
 
 SIC_Codes = ['C', 'A', 'F', 'H', ['G', 'H', 'I'], 'J', 'K', 'L', ['M', 'N'], ['O', 'P', 'Q'], ['B', 'C', 'D', 'E']]
+SIC_Codes_Dict = {'A to T': 'Total - all NACE activities', 'C': 'Manufacturing', 'A': 'Agriculture, forestry and fishing', 'F': 'Construction', 'GHI': 'Trade & Hospitality', 'J': 'Information and communication', 'K': 'Finance and insurance', 'L': 'Real estate', 'MN': 'Professional & Admin Services', 'OPQ': 'Public Services', 'BCDE': 'Industry (except construction)'}
 # A to T = Total
 SIC_Code_Data = UK_GVA_Division.filter(like='A to T', axis=1)
 SIC_Code_Data.insert(0, 'Quarter', UK_GVA_Division['SIC 2007 section'])
 for code in SIC_Codes:
     temp = SIC_Code_Combine(UK_GVA_Division, code)
     SIC_Code_Data = SIC_Code_Data.merge(temp, on='Quarter', how='left')
+SIC_Code_Data = SIC_Code_Data.rename(columns=SIC_Codes_Dict)
 print(SIC_Code_Data)
+
+# Melt the DataFrame
+df_longish = SIC_Code_Data.melt(id_vars=["Quarter"], var_name="Industry", value_name="Value")
+
+# Add 'UK' column
+df_longish["Country"] = "UK"
+df_longish["Variable"] = "GVA"
+
+print(df_longish)
+EU_GVA = EU_GVA._append(df_longish)
+print(EU_GVA)
 
 # EU_OPH = EU_format(EU_OPH, "OPH")
 # EU_OPW = EU_format(EU_OPW, "OPW")
