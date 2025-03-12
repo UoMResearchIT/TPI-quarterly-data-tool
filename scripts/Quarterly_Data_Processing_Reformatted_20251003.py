@@ -6,12 +6,20 @@ import sqlite3
 pd.set_option('future.no_silent_downcasting', True)
 
 def quarter_to_numeric(q):
-    year, qtr = q.split(" ")
+    if not isinstance(q, str) or "Q" not in q:
+        print(f"Unexpected format: {q}")
+
+    try:
+        year, qtr = q.split(" ")
+    except:
+        # Remove trailing spaces
+        q = q.strip()
+        year, qtr = q.split(" ")
     return int(year) + (int(qtr[1]) - 1) / 4  # Converts "1997 Q3" → 1997.5
 
 def EU_GVA_Process():
     EU_GVA = pd.read_csv('../src/EU GVA with industries.csv')
-    EU_GVA["Quarter"] = EU_GVA["TIME_PERIOD"].str.replace("-", " ", regex=False)
+    EU_GVA["TIME_PERIOD"] = EU_GVA["TIME_PERIOD"].str.replace("-", " ", regex=False)
     EU_GVA = EU_GVA[["TIME_PERIOD", "geo", "nace_r2", "OBS_VALUE"]]
     EU_GVA = EU_GVA.rename(columns={"TIME_PERIOD": "Quarter", "geo": "Country", "nace_r2": "Industry", "OBS_VALUE": "Value"})
     EU_GVA["Variable"] = "GVA"
@@ -57,6 +65,8 @@ EU_OPH_OPW["Quarter"] = EU_OPH_OPW["Quarter"].str.replace("-", " ", regex=False)
 EU_OPH_OPW = EU_OPH_OPW[["Quarter", "Variable", "Country", "Value"]]
 EU_OPH_OPW["Variable"] = EU_OPH_OPW["Variable"].replace({"Real labour productivity per hour worked": "OPH", "Real labour productivity per person": "OPW"}) 
 
+# EU_OPH_OPW["Quarter"] = EU_OPH_OPW["Quarter"].apply(quarter_to_numeric)
+print(EU_OPH_OPW)
 Dataset = EU_GVA_Process()
 Dataset = Dataset._append(ONS_Data)
 Dataset = Dataset._append(EU_OPH_OPW)
@@ -80,9 +90,10 @@ SIC_Code_Data = SIC_Code_Data.rename(columns=SIC_Codes_Dict)
 SIC_Code_Data = SIC_Code_Data.melt(id_vars=["Quarter"], var_name="Industry", value_name="Value")
 SIC_Code_Data["Country"] = "UK"
 SIC_Code_Data["Variable"] = "GVA"
+# SIC_Code_Data['Quarter'] = SIC_Code_Data['Quarter'].apply(quarter_to_numeric)
 Dataset = Dataset._append(SIC_Code_Data)
 Dataset["Quarter"] = Dataset["Quarter"].apply(quarter_to_numeric) # Why no work
-print(Dataset)
+print(Dataset.dtypes)
 # Dataset = Dataset.set_index(["Quarter", "Country", "Variable", "Industry"]).sort_index()
 # print(Dataset.loc[("2020 Q1", "UK", "GVA", "Total - all NACE activities")]['Value'])
 Dataset.to_csv("../out/Long_Dataset.csv", index=False)
