@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 import time 
 import re
+import numpy as np
 
 def quarter_to_numeric(q):
     year, qtr = q.split(" ")
@@ -14,7 +15,7 @@ def numeric_to_quarter(n):
     return f"{year} Q{qtr}"
 
 @st.cache_data
-def data_format(data, QorY, time_period, data_option, country_options, qoq= False, yoy= False, quarterly_selection =False):
+def data_format(data, QorY, time_period, data_option, country_options, qoq= False, yoy= False, quarterly_selection =False, industry_selection = None):
     # Filter for time selection
     if QorY == "Quarterly":
         # Convert the quaters to numeric
@@ -23,6 +24,12 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq= Fals
         time_period = list(time_period)
         time_period[0] = quarter_to_numeric(time_period[0])
         time_period[1] = quarter_to_numeric(time_period[1])
+        long_data = pd.read_csv('out/Long_Dataset.csv')
+        if industry_selection is not None:
+            filtered = long_data.query(
+            f"Quarter >= {time_period[0]} and Quarter <= {time_period[1]} and Country in {country_options} and Variable == 'GVA' and Industry in {industry_selection}")
+            print(filtered)
+            print("HELLO")
         # Filter out period requested
         # For bar graph, prior quarter is used to calculate the percentage change for data selected, this value is then removed using dropna later
         # If it is qoq, include the quarter before selection
@@ -60,7 +67,6 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq= Fals
         # Reformat and sort data
         qoq_data = qoq_data.melt(id_vars = "Quarter", var_name = "Country")
         qoq_data = qoq_data.sort_values(["Country", "Quarter"]).reset_index(drop=True)
-        print("here", qoq_data)
         if qoq:
             # Calculate QoQ Growth (Change from the previous quarter)
             qoq_data["QoQ Growth (%)"] = qoq_data.groupby("Country")["value"].pct_change().mul(100).round(2)
@@ -109,9 +115,10 @@ def load_data():
     t0 = time.time()
     yearly_data = pd.read_csv("out/OPH_Processed.csv")
     quarterly_data = pd.read_csv("out/Dataset.csv")
+    Long_data = pd.read_csv("out/Long_Dataset.csv")
 
     print("Runtime loading data: " + str(int((time.time() - t0)*1000)) + " miliseconds")
-    return quarterly_data, yearly_data
+    return quarterly_data, yearly_data, Long_data
 
 def main():
     t0 = time.time()
@@ -132,7 +139,7 @@ def main():
     st.set_page_config(layout="wide")
 
     # Load datasets
-    quarterly_data, yearly_data = load_data()
+    quarterly_data, yearly_data, long_data = load_data()
 
     # Page formatting
     st.sidebar.html('<a href="https://lab.productivity.ac.uk" alt="The Productivity Lab"></a>')
@@ -163,6 +170,11 @@ def main():
         #     quarter = [quarter[0], quarter[0] + 1] if quarter[0] < max(yearly_data["Year"]) else [quarter[0] - 1, quarter[0]]
         quarterly_options = ["OPH", "OPW", "GVA", "GDP per hour (TPI calculation)"]
         quarterly_option = st.sidebar.selectbox("Select data", options=quarterly_options)
+        if quarterly_option == "GVA":
+            industry_options = long_data['Industry'].unique()
+            industry_options = industry_options[~pd.isna(industry_options)] 
+            industry_selection = st.sidebar.multiselect(label="Select industry selection", options=industry_options, default=['Total - all NACE activities'])
+            print(industry_selection)
 
     # Year time series selection
     if st.session_state.show_yearly_slider:
@@ -259,7 +271,7 @@ def main():
 
     figure = st.empty() 
     if QorY == "Quarterly":
-        quarterly_data = data_format(quarterly_data, QorY, quarter, quarterly_option, country_selection, qoq, yoy, quarterly_selection)
+        quarterly_data = data_format(quarterly_data, QorY, quarter, quarterly_option, country_selection, qoq, yoy, quarterly_selection, industry_selection)
         fig = create_quarterly_fig(quarterly_data, qoq, yoy, show_legend, quarterly_option)
     else:
         yearly_data = data_format(yearly_data, QorY, year, yearly_option, country_selection)

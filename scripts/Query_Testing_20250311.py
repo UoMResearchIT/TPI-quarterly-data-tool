@@ -9,5 +9,5 @@ print(Long_Dataset)
 filtered = Long_Dataset.query(
     "Quarter >= 2005.0 and Quarter <= 2007.75 and Country in ['UK', 'Germany'] and Variable == 'GVA' and Industry in ['Manufacturing', 'Services']"
 )
-
+print(Long_Dataset['Industry'].unique())
 print(filtered)

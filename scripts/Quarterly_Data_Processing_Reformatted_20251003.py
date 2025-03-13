@@ -76,7 +76,7 @@ UK_GVA_Bespoke = pd.read_excel('../src/ONS GVA and hours worked.xlsx', sheet_nam
 UK_GVA_Bespoke = UK_GVA_Bespoke.drop([0,1])
 UK_GVA_Division = pd.read_excel('../src/ONS GVA and hours worked.xlsx', sheet_name='Table_23', header=4)
 UK_GVA_Division = UK_GVA_Division.drop([0,1])
-SIC_Codes = ['C', 'A', 'F', 'H', ['G', 'H', 'I'], 'J', 'K', 'L', ['M', 'N'], ['O', 'P', 'Q'], ['B', 'C', 'D', 'E']]
+SIC_Codes = ['C', 'A', 'F', ['G', 'H', 'I'], 'J', 'K', 'L', ['M', 'N'], ['O', 'P', 'Q'], ['B', 'C', 'D', 'E']]
 SIC_Codes_Dict = {'A to T': 'Total - all NACE activities', 'C': 'Manufacturing', 'A': 'Agriculture, forestry and fishing', 'F': 'Construction', 'GHI': 'Trade & Hospitality', 'J': 'Information and communication', 'K': 'Finance and insurance', 'L': 'Real estate', 'MN': 'Professional & Admin Services', 'OPQ': 'Public Services', 'BCDE': 'Industry (except construction)'}
 # A to T = Total
 SIC_Code_Data = UK_GVA_Division.filter(like='A to T', axis=1)
