@@ -15,50 +15,23 @@ def numeric_to_quarter(n):
     return f"{year} Q{qtr}"
 
 @st.cache_data
-def data_format(data, QorY, time_period, data_option, country_options, qoq= False, yoy= False, quarterly_selection =False, industry_selection = None):
+def data_format(data, QorY, time_period, data_option, country_options, qoq= False, yoy= False, quarterly_selection =False, industry_selection = ['Total']):
     # Filter for time selection
     if QorY == "Quarterly":
-        # Convert the quaters to numeric
-        data["quarter_numeric"] = data["Quarter"].apply(quarter_to_numeric)
         # Convert the time periods to numeric
         time_period = list(time_period)
         time_period[0] = quarter_to_numeric(time_period[0])
         time_period[1] = quarter_to_numeric(time_period[1])
         long_data = pd.read_csv('out/Long_Dataset.csv')
-        if industry_selection is not None:
-            filtered = long_data.query(
-            f"Quarter >= {time_period[0]} and Quarter <= {time_period[1]} and Country in {country_options} and Variable == 'GVA' and Industry in {industry_selection}")
-            print(filtered)
-            print("HELLO")
-        # Filter out period requested
-        # For bar graph, prior quarter is used to calculate the percentage change for data selected, this value is then removed using dropna later
-        # If it is qoq, include the quarter before selection
-        # If it is qoq, include the quarter in the year before selection
-        if qoq:
-            try:
-                data = data[(data["quarter_numeric"] >= time_period[0] - 0.25) & (data["quarter_numeric"] <= time_period[1])]
-            except:
-                data = data[(data["quarter_numeric"] >= time_period[0]) & (data["quarter_numeric"] <= time_period[1])]
+        if qoq: # remove - add error handling
+            time_period[0] -= 0.25
         elif yoy:
-            try:
-                data = data[(data["quarter_numeric"] >= time_period[0] - 1) & (data["quarter_numeric"] <= time_period[1])]
-            except:
-                data = data[(data["quarter_numeric"] >= time_period[0]) & (data["quarter_numeric"] <= time_period[1])]
-        else:
-            data = data[(data["quarter_numeric"] >= time_period[0]) & (data["quarter_numeric"] <= time_period[1])]
-        # Have to use re library so the punctiation in the option isn"t used in the regex
-        regex_escaped_options = re.escape(data_option)
-        data = data[["Quarter", *data.loc[:, data.columns[data.columns.str.contains(regex_escaped_options, case=False)]]]]
+            time_period[0] -= 1
+        data = long_data.query(
+        f"Quarter >= {time_period[0]} and Quarter <= {time_period[1]} and Country in {country_options} and Variable == '{data_option}' and Industry in {industry_selection}")
     elif QorY == "Yearly":
         data = data[(data["Year"] >= time_period[0]) & (data["Year"] <= time_period[1])]
     
-    # Filter for selected countries
-    countries_data = pd.DataFrame()
-    for country in country_options:
-        country_data = data.loc[:, data.columns.str.contains(country, case=False)]
-        countries_data = countries_data + country_data if not countries_data.empty else country_data
-    data = data[[data.columns[0], *countries_data]].dropna()
-
     # Data processing for bar graphs
     if qoq or yoy:
         qoq_data = data.copy()
@@ -95,7 +68,8 @@ def create_quarterly_fig(data, qoq, yoy, show_legend, data_option):
     else:
         fig = px.line(data, 
                 x="Quarter", 
-                y=data.columns.drop("Quarter").tolist(), 
+                y="Value", 
+                color="Country",
                 title="Quarter on quarter Comparison (2020 = 100)",
                 labels={"value": f"{data_option}", "variable": "Countries"})
     fig.update_layout(showlegend=show_legend)
@@ -173,7 +147,7 @@ def main():
         if quarterly_option == "GVA":
             industry_options = long_data['Industry'].unique()
             industry_options = industry_options[~pd.isna(industry_options)] 
-            industry_selection = st.sidebar.multiselect(label="Select industry selection", options=industry_options, default=['Total - all NACE activities'])
+            industry_selection = st.sidebar.multiselect(label="Select industry selection", options=industry_options, default=['Total'])
             print(industry_selection)
 
     # Year time series selection
