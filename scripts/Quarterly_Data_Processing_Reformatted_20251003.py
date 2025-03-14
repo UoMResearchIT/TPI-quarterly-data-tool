@@ -67,6 +67,8 @@ EU_OPH_OPW = EU_OPH_OPW.rename(columns={"TIME_PERIOD": "Quarter", "na_item": "Va
 EU_OPH_OPW["Quarter"] = EU_OPH_OPW["Quarter"].str.replace("-", " ", regex=False)
 EU_OPH_OPW = EU_OPH_OPW[["Quarter", "Variable", "Country", "Value"]]
 EU_OPH_OPW["Variable"] = EU_OPH_OPW["Variable"].replace({"Real labour productivity per hour worked": "OPH", "Real labour productivity per person": "OPW"}) 
+EU_OPH_OPW["Country"] = EU_OPH_OPW["Country"].str.replace("Euro area (EA11-1999, EA12-2001, EA13-2007, EA15-2008, EA16-2009, EA17-2011, EA18-2014, EA19-2015, EA20-2023)", "Euro area", regex=False)
+EU_OPH_OPW["Country"] = EU_OPH_OPW["Country"].str.replace("European Union - 27 countries (from 2020)", "European Union", regex=False)
 
 # EU_OPH_OPW["Quarter"] = EU_OPH_OPW["Quarter"].apply(quarter_to_numeric)
 Dataset = EU_GVA_Process()

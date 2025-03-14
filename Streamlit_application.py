@@ -71,7 +71,7 @@ def create_quarterly_fig(data, qoq, yoy, show_legend, data_option):
                 y="Value", 
                 color="Country",
                 title="Quarter on quarter Comparison (2020 = 100)",
-                labels={"value": f"{data_option}", "variable": "Countries"})
+                labels={"value": f"{data_option}", "variable": "Countries", "industry": "Industry"})
     fig.update_layout(showlegend=show_legend)
     return fig
 
@@ -88,11 +88,11 @@ def create_yearly_fig(data, show_legend):
 def load_data():
     t0 = time.time()
     yearly_data = pd.read_csv("out/OPH_Processed.csv")
-    quarterly_data = pd.read_csv("out/Dataset.csv")
-    Long_data = pd.read_csv("out/Long_Dataset.csv")
+    # quarterly_data = pd.read_csv("out/Dataset.csv")
+    quarterly_data = pd.read_csv("out/Long_Dataset.csv")
 
     print("Runtime loading data: " + str(int((time.time() - t0)*1000)) + " miliseconds")
-    return quarterly_data, yearly_data, Long_data
+    return quarterly_data, yearly_data
 
 def main():
     t0 = time.time()
@@ -113,7 +113,7 @@ def main():
     st.set_page_config(layout="wide")
 
     # Load datasets
-    quarterly_data, yearly_data, long_data = load_data()
+    quarterly_data, yearly_data = load_data()
 
     # Page formatting
     st.sidebar.html('<a href="https://lab.productivity.ac.uk" alt="The Productivity Lab"></a>')
@@ -138,14 +138,16 @@ def main():
 
     # Quarter time series selection
     if st.session_state.show_quarter_slider:
-        quarters = quarterly_data["Quarter"].tolist()
+        quarters = quarterly_data["Quarter"].unique()
+        quarters = [numeric_to_quarter(x) for x in quarters]
         quarter = st.sidebar.select_slider(label = "Quarterly slider", options = quarters, value=(quarters[0], quarters[-1]), label_visibility="collapsed")
         # if quarter[0] == quarter[1]:   # remove - need to update this for quarters
         #     quarter = [quarter[0], quarter[0] + 1] if quarter[0] < max(yearly_data["Year"]) else [quarter[0] - 1, quarter[0]]
         quarterly_options = ["OPH", "OPW", "GVA", "GDP per hour (TPI calculation)"]
         quarterly_option = st.sidebar.selectbox("Select data", options=quarterly_options)
+        industry_selection = ['Total']
         if quarterly_option == "GVA":
-            industry_options = long_data['Industry'].unique()
+            industry_options = quarterly_data['Industry'].unique()
             industry_options = industry_options[~pd.isna(industry_options)] 
             industry_selection = st.sidebar.multiselect(label="Select industry selection", options=industry_options, default=['Total'])
             print(industry_selection)
@@ -164,9 +166,11 @@ def main():
         regex_escaped_options = re.escape(quarterly_option)
         matching_columns = quarterly_data.columns[quarterly_data.columns.str.contains(regex_escaped_options, case=False)]
         # Extract country names by removing the option part
-        countries = [col.replace(quarterly_option, "").strip() for col in matching_columns]
-        countries = sorted(countries, key=lambda x: (x not in ["UK", "Euro Area", "European Union"], x))
-        default_options = ["UK", "Germany", "France", "Italy", "Spain"]
+        countries = quarterly_data['Country'].unique()
+        # countries = [col.replace(quarterly_option, "").strip() for col in matching_columns]
+        countries = sorted(countries, key=lambda x: (x not in ["UK", "US", "Euro Area", "European Union"], x))
+        print("heaven", countries)
+        default_options = ["UK", "US", "Germany", "France", "Italy", "Spain"]
         country_selection = st.sidebar.multiselect(label = "Select countries to display", options = countries, default=default_options)
         quarterly_selection = None
 
