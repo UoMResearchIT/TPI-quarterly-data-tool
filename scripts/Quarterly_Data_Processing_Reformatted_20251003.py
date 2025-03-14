@@ -23,6 +23,9 @@ def EU_GVA_Process():
     EU_GVA = EU_GVA[["TIME_PERIOD", "geo", "nace_r2", "OBS_VALUE"]]
     EU_GVA = EU_GVA.rename(columns={"TIME_PERIOD": "Quarter", "geo": "Country", "nace_r2": "Industry", "OBS_VALUE": "Value"})
     EU_GVA["Variable"] = "GVA"
+    EU_GVA["Industry"] = EU_GVA["Industry"].str.replace("Total - all NACE activities", "Total", regex=False)
+    EU_GVA["Country"] = EU_GVA["Country"].str.replace("Euro area (EA11-1999, EA12-2001, EA13-2007, EA15-2008, EA16-2009, EA17-2011, EA18-2014, EA19-2015, EA20-2023)", "Euro area", regex=False)
+    EU_GVA["Country"] = EU_GVA["Country"].str.replace("European Union - 27 countries (from 2020)", "European Union", regex=False)
     return EU_GVA
 
 def SIC_Code_Combine(dataset, letters):
@@ -76,7 +79,7 @@ UK_GVA_Bespoke = UK_GVA_Bespoke.drop([0,1])
 UK_GVA_Division = pd.read_excel('../src/ONS GVA and hours worked.xlsx', sheet_name='Table_23', header=4)
 UK_GVA_Division = UK_GVA_Division.drop([0,1])
 SIC_Codes = ['C', 'A', 'F', ['G', 'H', 'I'], 'J', 'K', 'L', ['M', 'N'], ['O', 'P', 'Q'], ['B', 'C', 'D', 'E']]
-SIC_Codes_Dict = {'A to T': 'Total - all NACE activities', 'C': 'Manufacturing', 'A': 'Agriculture, forestry and fishing', 'F': 'Construction', 'GHI': 'Trade & Hospitality', 'J': 'Information and communication', 'K': 'Finance and insurance', 'L': 'Real estate', 'MN': 'Professional & Admin Services', 'OPQ': 'Public Services', 'BCDE': 'Industry (except construction)'}
+SIC_Codes_Dict = {'A to T': 'Total', 'C': 'Manufacturing', 'A': 'Agriculture, forestry and fishing', 'F': 'Construction', 'GHI': 'Trade & Hospitality', 'J': 'Information and communication', 'K': 'Finance and insurance', 'L': 'Real estate', 'MN': 'Professional & Admin Services', 'OPQ': 'Public Services', 'BCDE': 'Industry (except construction)'}
 # A to T = Total
 SIC_Code_Data = UK_GVA_Division.filter(like='A to T', axis=1)
 SIC_Code_Data.insert(0, 'Quarter', UK_GVA_Division['SIC 2007 section'])
@@ -111,6 +114,7 @@ US_data['Country'] = 'US'
 US_data = US_data[['Quarter', 'Variable', 'Country', 'Value', ]] # doesnt matter what order !
 Dataset = pd.concat([Dataset, US_data])
 Dataset["Quarter"] = Dataset["Quarter"].apply(quarter_to_numeric) 
+Dataset["Industry"] = Dataset["Industry"].fillna("Total")
 Dataset.to_csv("../out/Long_Dataset.csv", index=False)
 
 # Testing using SQL
