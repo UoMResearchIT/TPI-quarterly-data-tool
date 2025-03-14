@@ -66,10 +66,9 @@ EU_OPH_OPW = EU_OPH_OPW[["Quarter", "Variable", "Country", "Value"]]
 EU_OPH_OPW["Variable"] = EU_OPH_OPW["Variable"].replace({"Real labour productivity per hour worked": "OPH", "Real labour productivity per person": "OPW"}) 
 
 # EU_OPH_OPW["Quarter"] = EU_OPH_OPW["Quarter"].apply(quarter_to_numeric)
-print(EU_OPH_OPW)
 Dataset = EU_GVA_Process()
-Dataset = Dataset._append(ONS_Data)
-Dataset = Dataset._append(EU_OPH_OPW)
+Dataset = pd.concat([Dataset, ONS_Data])
+Dataset = pd.concat([Dataset, EU_OPH_OPW])
 
 # Import industry GVA data
 UK_GVA_Bespoke = pd.read_excel('../src/ONS GVA and hours worked.xlsx', sheet_name='Table_15', header=4)
@@ -91,30 +90,28 @@ SIC_Code_Data = SIC_Code_Data.melt(id_vars=["Quarter"], var_name="Industry", val
 SIC_Code_Data["Country"] = "UK"
 SIC_Code_Data["Variable"] = "GVA"
 # SIC_Code_Data['Quarter'] = SIC_Code_Data['Quarter'].apply(quarter_to_numeric)
-Dataset = Dataset._append(SIC_Code_Data)
-Dataset["Quarter"] = Dataset["Quarter"].apply(quarter_to_numeric) # Why no work
-print(Dataset.dtypes)
-# Dataset = Dataset.set_index(["Quarter", "Country", "Variable", "Industry"]).sort_index()
-# print(Dataset.loc[("2020 Q1", "UK", "GVA", "Total - all NACE activities")]['Value'])
-Dataset.to_csv("../out/Long_Dataset.csv", index=False)
-
+Dataset = pd.concat([Dataset, SIC_Code_Data])
 
 # Import all Quarterly US productivity data since Q1 1997 (consistent with ONS data)
 # Need to change cause this is only one specific industry
-# US_data = pd.read_excel('../src/US Labour Productivity.xlsx', sheet_name='Quarterly', usecols='A,C,D, GW:LC', skiprows=2)
-# US_data = US_data.loc[US_data['Sector'] == 'Nonfarm business sector']
-# US_data = US_data.loc[US_data['Units'] == 'Index (2017=100)']
+US_data = pd.read_excel('../src/US Labour Productivity.xlsx', sheet_name='Quarterly', usecols='A,C,D, GW:LC', skiprows=2)
+US_data = US_data.loc[US_data['Sector'] == 'Business sector']
+US_data = US_data.loc[US_data['Units'] == 'Index (2017=100)']
 
-# # Reformat data
-# US_data.replace("N.A.", np.nan, inplace=True)
-# US_data = US_data.melt(id_vars=["Sector", "Measure", "Units"], var_name="Quarter", value_name="Value")
-# US_data = US_data.pivot_table(index=["Quarter"], columns="Measure", values="Value").reset_index()
-# US_data = US_data[["Quarter", "Real value-added output", "Output per worker"]]
-# US_data = US_data.rename(columns={"Real value-added output": "US RVA", "Output per worker": "US OPW"})
-# # For some reason the US data is stored as objects so you have to convert them to be stored as floats to display the data in plotly
-# US_data["US OPW"] = pd.to_numeric(US_data["US OPW"], errors="coerce")
-# US_data["US RVA"] = pd.to_numeric(US_data["US RVA"], errors="coerce")
-# Dataset = ONS_Data.merge(US_data, on=["Quarter"])
+# Reformat data
+US_data.replace("N.A.", np.nan, inplace=True)
+US_data = US_data.melt(id_vars=["Sector", "Measure", "Units"], var_name="Quarter", value_name="Value")
+US_data = US_data.pivot_table(index=["Quarter"], columns="Measure", values="Value").reset_index()
+US_data = US_data[["Quarter", "Real value-added output", "Output per worker", "Labor productivity"]]
+US_data = US_data.rename(columns={"Real value-added output": "GVA", "Output per worker": "OPW", "Labor productivity": "OPH"})
+# For some reason the US data is stored as objects so you have to convert them to be stored as floats to display the data in plotly
+US_data = US_data.melt(id_vars=['Quarter'], var_name='Variable', value_name='Value')
+US_data["Value"] = pd.to_numeric(US_data["Value"], errors="coerce")
+US_data['Country'] = 'US'
+US_data = US_data[['Quarter', 'Variable', 'Country', 'Value', ]] # doesnt matter what order !
+Dataset = pd.concat([Dataset, US_data])
+Dataset["Quarter"] = Dataset["Quarter"].apply(quarter_to_numeric) 
+Dataset.to_csv("../out/Long_Dataset.csv", index=False)
 
 # Testing using SQL
 # conn = sqlite3.connect("../out/Quarterly_dataset.db")
