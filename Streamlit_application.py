@@ -3,7 +3,6 @@ import pandas as pd
 import plotly.express as px
 import time 
 import re
-import numpy as np
 
 def quarter_to_numeric(q):
     year, qtr = q.split(" ")
