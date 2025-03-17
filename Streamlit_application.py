@@ -203,7 +203,6 @@ def main():
         countries = quarterly_data['Country'].unique()
         # countries = [col.replace(quarterly_option, "").strip() for col in matching_columns]
         countries = sorted(countries, key=lambda x: (x not in ["UK", "US", "Euro Area", "European Union"], x))
-        print("heaven", countries)
         default_options = ["UK", "US", "Germany", "France", "Italy", "Spain"]
         country_selection = st.sidebar.multiselect(label = "Select countries to display", options = countries, default=default_options)
         quarterly_selection = None

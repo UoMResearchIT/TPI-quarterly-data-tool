@@ -4,7 +4,6 @@ from GDP_Data_Processing_20250602 import GDPPH_Calculation
 import sqlite3
 
 pd.set_option('future.no_silent_downcasting', True)
-
 def quarter_to_numeric(q):
     if not isinstance(q, str) or "Q" not in q:
         print(f"Unexpected format: {q}")
@@ -76,7 +75,6 @@ EU_OPH_OPW["Variable"] = EU_OPH_OPW["Variable"].replace({"Real labour productivi
 EU_OPH_OPW["Country"] = EU_OPH_OPW["Country"].str.replace("Euro area (EA11-1999, EA12-2001, EA13-2007, EA15-2008, EA16-2009, EA17-2011, EA18-2014, EA19-2015, EA20-2023)", "Euro area", regex=False)
 EU_OPH_OPW["Country"] = EU_OPH_OPW["Country"].str.replace("European Union - 27 countries (from 2020)", "European Union", regex=False)
 
-# EU_OPH_OPW["Quarter"] = EU_OPH_OPW["Quarter"].apply(quarter_to_numeric)
 Dataset = EU_GVA_Process()
 Dataset = pd.concat([Dataset, ONS_Data])
 Dataset = pd.concat([Dataset, EU_OPH_OPW])
@@ -121,6 +119,9 @@ US_data["Value"] = pd.to_numeric(US_data["Value"], errors="coerce")
 US_data['Country'] = 'US'
 US_data = US_data[['Quarter', 'Variable', 'Country', 'Value', ]] # doesnt matter what order !
 Dataset = pd.concat([Dataset, US_data])
+
+GDPPH = GDPPH_Calculation()
+Dataset = pd.concat([Dataset, GDPPH])
 Dataset["Quarter"] = Dataset["Quarter"].apply(quarter_to_numeric) 
 Dataset["Industry"] = Dataset["Industry"].fillna("Total")
 Dataset.to_csv("../out/Long_Dataset.csv", index=False)
@@ -143,6 +144,4 @@ Dataset.to_csv("../out/Long_Dataset.csv", index=False)
 # ONS_Data = ONS_Data.drop("Year", axis=1)
 # Dataset = ONS_Data
 
-# GDPPH = GDPPH_Calculation()
-# Dataset = Dataset.merge(GDPPH, on="Quarter", how="left")
 # Dataset.to_csv("../out/Dataset.csv", index=False)
