@@ -1,8 +1,11 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 import time 
 import re
+import math
 
 def quarter_to_numeric(q):
     year, qtr = q.split(" ")
@@ -56,14 +59,46 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq= Fals
         data = qoq_data
     return data
 
+@st.cache_data
+def multi_data_format(data, industry):
+    plot_data = data.query(f"Industry == '{industry}'")
+    return plot_data
+
 def create_quarterly_fig(data, qoq, yoy, show_legend, data_option):
     data = data.dropna()
+    industries = data["Industry"].unique()
     if qoq:
         fig = px.bar(data, x="Quarter", y="QoQ Growth (%)", color="Country",
              barmode="group", title="QoQ Growth Across Countries")
     elif yoy:
         fig = px.bar(data, x="Quarter", y="YoY Growth (%)", color="Country",
              barmode="group", title="YoY Growth Across Countries")
+    elif len(industries) > 1:  # If multiple industries are selected for GVA
+        cols = 2
+        rows = math.ceil(len(industries) / cols) # Rounds to nearest integer to calculate amount of rows
+        fig = make_subplots(rows=rows, cols=cols, subplot_titles=industries)
+        for i, industry in enumerate(industries):
+            row = (i // cols) + 1  # Determine row position
+            col = (i % cols) + 1  # Determine column position
+            figs = px.line(multi_data_format(data, industry), 
+                x="Quarter", 
+                y="Value", 
+                color="Country",
+                title="Quarter on quarter Comparison (2020 = 100)",
+                labels={"value": f"{data_option}", "variable": "Countries", "industry": f"{industry}"})
+            for trace in figs.data:
+                trace.showlegend = i == 0  # Show legend only for first subplot
+                fig.add_trace(trace, row=row, col=col)
+            fig.update_layout(showlegend=show_legend,
+                        legend=dict(
+                        title="Countries",
+                        orientation="v",
+                        yanchor="middle", y=0.5,
+                        xanchor="left", x=1.02,
+                        bgcolor="rgba(255,255,255,0.7)",
+                        font=dict(size=12),
+                    ),
+                    height=300 * rows)
     else:
         fig = px.line(data, 
                 x="Quarter", 
