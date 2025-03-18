@@ -62,6 +62,16 @@ ONS_OPH = pd.read_excel('../src/ONS Reweighted productivity.xlsx', sheet_name='T
 ONS_OPW = pd.read_excel('../src/ONS Reweighted productivity.xlsx', sheet_name='Table_3', usecols='A,C', skiprows=6, header=None, names=["Quarter", "OPW"])
 ONS_Data = ONS_OPH.merge(ONS_OPW, on=["Quarter"])
 
+# Rebase to 2020
+ONS_Data["Year"] = ONS_Data["Quarter"].str[:4].astype(int)
+
+# Find the rebasing factor (Average of 2020 values)
+base_2020 = ONS_Data[ONS_Data["Year"] == 2020].iloc[:, 1:-1].mean()
+
+# Rebase all values so that 2020 = 100
+ONS_Data.iloc[:, 1:-1] = (ONS_Data.iloc[:, 1:-1] / base_2020) * 100
+ONS_Data = ONS_Data.drop("Year", axis=1)
+
 # Reformat dataframe
 ONS_Data = ONS_Data.melt(id_vars=["Quarter"], var_name="Variable", value_name="Value")
 ONS_Data["Country"] = "UK"
@@ -93,6 +103,14 @@ for code in SIC_Codes:
     temp = SIC_Code_Combine(UK_GVA_Division, code)
     SIC_Code_Data = SIC_Code_Data.merge(temp, on='Quarter', how='left')
 SIC_Code_Data = SIC_Code_Data.rename(columns=SIC_Codes_Dict)
+SIC_Code_Data["Year"] = SIC_Code_Data["Quarter"].str[:4].astype(int)
+
+# Find the rebasing factor (Average of 2020 values)
+base_2020 = SIC_Code_Data[SIC_Code_Data["Year"] == 2020].iloc[:, 1:-1].mean()
+
+# Rebase all values so that 2020 = 100
+SIC_Code_Data.iloc[:, 1:-1] = (SIC_Code_Data.iloc[:, 1:-1] / base_2020) * 100
+SIC_Code_Data = SIC_Code_Data.drop("Year", axis=1)
 
 # Format for long form data
 SIC_Code_Data = SIC_Code_Data.melt(id_vars=["Quarter"], var_name="Industry", value_name="Value")
@@ -112,6 +130,16 @@ US_data.replace("N.A.", np.nan, inplace=True)
 US_data = US_data.melt(id_vars=["Sector", "Measure", "Units"], var_name="Quarter", value_name="Value")
 US_data = US_data.pivot_table(index=["Quarter"], columns="Measure", values="Value").reset_index()
 US_data = US_data[["Quarter", "Real value-added output", "Output per worker", "Labor productivity"]]
+
+US_data["Year"] = US_data["Quarter"].str[:4].astype(int)
+
+# Find the rebasing factor (Average of 2020 values)
+base_2020 = US_data[US_data["Year"] == 2020].iloc[:, 1:-1].mean()
+
+# Rebase all values so that 2020 = 100
+US_data.iloc[:, 1:-1] = (US_data.iloc[:, 1:-1] / base_2020) * 100
+US_data = US_data.drop("Year", axis=1)
+
 US_data = US_data.rename(columns={"Real value-added output": "GVA", "Output per worker": "OPW", "Labor productivity": "OPH"})
 # For some reason the US data is stored as objects so you have to convert them to be stored as floats to display the data in plotly
 US_data = US_data.melt(id_vars=['Quarter'], var_name='Variable', value_name='Value')
