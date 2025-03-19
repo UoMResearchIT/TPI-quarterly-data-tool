@@ -96,7 +96,7 @@ def GDPPH_Calculation():
     GDPPH["France GDP per hour (TPI calculation)"] = GDPPH["France GDP USD"] / EU_Hours["France hours worked"]
     GDPPH["Spain GDP per hour (TPI calculation)"] = GDPPH["Spain GDP USD"] / EU_Hours["Spain hours worked"]
     GDPPH["Italy GDP per hour (TPI calculation)"] = GDPPH["Italy GDP USD"] / EU_Hours["Italy hours worked"]
-    GDPPH = GDPPH.dropna().drop(["US GDP USD", "UK GDP USD", "Germany GDP USD", "France GDP USD", "Italy GDP USD"], axis=1).round(2)
+    GDPPH = GDPPH.dropna().drop(["US GDP USD", "UK GDP USD", "Germany GDP USD", "France GDP USD", "Italy GDP USD", "Spain GDP USD"], axis=1).round(2)
     GDPPH = GDPPH.melt(id_vars=["Quarter"], var_name="Country", value_name="Value")
     GDPPH["Country"] = GDPPH["Country"].str.split().str[0]
     GDPPH["Variable"] = "GDP per hour (TPI calculation)"

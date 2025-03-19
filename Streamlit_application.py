@@ -157,7 +157,7 @@ def main():
     st.sidebar.divider()
     st.sidebar.subheader("Select data to plot")
     QorY = st.sidebar.radio(
-        "",
+        "Select data to plot",
         ["Quarterly", "Yearly"],
         captions=[
             "Quarterly labour productivity",
@@ -178,7 +178,7 @@ def main():
         # if quarter[0] == quarter[1]:   # remove - need to update this for quarters
         #     quarter = [quarter[0], quarter[0] + 1] if quarter[0] < max(yearly_data["Year"]) else [quarter[0] - 1, quarter[0]]
         quarterly_options = ["OPH", "OPW", "GVA", "GDP per hour (TPI calculation)"]
-        quarterly_option = st.sidebar.selectbox("Select data", options=quarterly_options)
+        quarterly_option = st.sidebar.selectbox(label= "Select data", options=quarterly_options)
         industry_selection = ['Total']
         if quarterly_option == "GVA":
             industry_options = quarterly_data['Industry'].unique()
@@ -192,7 +192,7 @@ def main():
         if year[0] == year[1]:
             year = [year[0], year[0] + 1] if year[0] < max(yearly_data["Year"]) else [year[0] - 1, year[0]]
         yearly_option = yearly_options = ["GDP per hour worked"]
-        st.sidebar.selectbox("Select data", options=yearly_options)
+        st.sidebar.selectbox(label= "Select data", options=yearly_options)
 
 
     if QorY == "Quarterly":
@@ -258,9 +258,10 @@ def main():
     with st.expander(label="**About this tool**", expanded=False):
         st.markdown(
             """
-            ### Intro
+            ## TPI Quarterly Data Tool
             ###### Developed by the [TPI Productivity Lab](https://lab.productivity.ac.uk/), this tool allows for the quick creation of graphs of quarterly and yearly productivity data on a national scale.
-            
+            ###### US Quarterly total economy data represents most of the US economy but leaves out certain sectors - read the sources and methods document that accompanies this tool for more information
+
             ### Customisation Options
             #### Data options
             - **Quarterly or Yearly selection**: Allows for the option of data to be shown as either quarterly or yearly
@@ -270,6 +271,10 @@ def main():
             #### Quarterly data specific options
             ##### Quarterly line graph
             - Plots all selected data as a line graph
+            - GVA provides data options for multiple sectors:
+            - if only sector is selected, a single line graph will be displayed
+            - if multiple are selected, multiple plots will be displayed side by side
+            - More information about the sectoral options is shown in the sources and methods and document
             ##### QoQ bar graph
             - Plots all selected data as a bar graph showing Quarter on Quarter (QoQ) change as a percentage
             ##### YOY bar graph
