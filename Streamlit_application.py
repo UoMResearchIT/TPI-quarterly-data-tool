@@ -38,27 +38,19 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq= Fals
     # Data processing for bar graphs
     if qoq or yoy:
         qoq_data = data.copy()
-        # Split the country name from the data title
-        qoq_data = qoq_data.rename(columns=lambda x: x.split()[0])
-        # Reformat and sort data
-        qoq_data = qoq_data.melt(id_vars = "Quarter", var_name = "Country")
-        qoq_data = qoq_data.sort_values(["Country", "Quarter"]).reset_index(drop=True)
-        
         if qoq:
             # Calculate QoQ Growth (Change from the previous quarter)
-            qoq_data["QoQ Growth (%)"] = qoq_data.groupby("Country")["value"].pct_change().mul(100).round(2)
+            qoq_data["QoQ Growth (%)"] = qoq_data.groupby("Country")["Value"].pct_change().mul(100).round(2)
 
         if yoy:
-            # Calculate YoY Growth (Change from the same quarter last year)
-            qoq_data["Quarter"] = qoq_data["Quarter"].apply(quarter_to_numeric)
             # Filtering to show only selected quarters in yoy selection
             quarter_map = {1: 0, 2: 0.25, 3: 0.5, 4: 0.75}
             qoq_data["decimal_part"] = qoq_data["Quarter"] % 1
             qoq_data = qoq_data[qoq_data["decimal_part"].isin([quarter_map[quarterly_selection]])]
             qoq_data.drop("decimal_part", axis=1, inplace=True)
-            qoq_data["YoY Growth (%)"] = qoq_data.groupby("Country")["value"].pct_change().mul(100).round(2)
-            qoq_data["Quarter"] = qoq_data["Quarter"].apply(numeric_to_quarter)
+            qoq_data["YoY Growth (%)"] = qoq_data.groupby("Country")["Value"].pct_change().mul(100).round(2)
         data = qoq_data
+    data['Quarter'] = data['Quarter'].apply(numeric_to_quarter)
     return data
 
 @st.cache_data
@@ -102,7 +94,6 @@ def create_quarterly_fig(data, qoq, yoy, show_legend, data_option, show_dip_line
                     ),
                     height=300 * rows)
     else:
-        data['Quarter'] = data['Quarter'].apply(numeric_to_quarter)
         fig = px.line(data, 
                 x="Quarter", 
                 y="Value", 
@@ -110,34 +101,7 @@ def create_quarterly_fig(data, qoq, yoy, show_legend, data_option, show_dip_line
                 title="Quarter on quarter Comparison (2020 = 100)",
                 labels={"value": f"{data_option}", "variable": "Countries", "industry": "Industry"})
         if show_dip_lines:
-            # annotations = {
-            #     "2007 Q4": "Pre-2008 Crisis",
-            #     "2009 Q2": "Start of Recovery",
-            #     "2019 Q4": "Pre-COVID",
-            #     "2021 Q1": "Recovery Begins"
-            # }
-            
-            # # Adjusted y-positions to prevent overlap
-            # y_positions = [1.2, 1.1, 1.2, 1.1]  # Staggered heights
-
-            # # Add vertical lines and labels
-            # for i, (quarter, label) in enumerate(annotations.items()):
-            #     fig.add_vline(x=quarter, line_dash="dash", line_color="red")
-                
-            #     # Add annotation above the graph
-            #     fig.add_annotation(
-            #         x=quarter, 
-            #         y=max(data["Value"]) * y_positions[i],  # Move above graph
-            #         text=label,
-            #         showarrow=False,
-            #         font=dict(size=12, color="black", family="Arial Black"),  # Bold, readable font
-            #         bgcolor="white", bordercolor="black", borderwidth=1, borderpad=4,
-            #         textangle=0  # Keep text horizontal
-            #     )
-
-            # # Extend y-axis to make space for labels
-            # fig.update_layout(yaxis=dict(range=[min(data["Value"]), max(data["Value"]) * 1.2]))
-            highlighted_quarters = ["2007 Q4", "2009 Q2", "2019 Q4", "2021 Q1"]
+            highlighted_quarters = ["2007 Q4", "2009 Q2", "2019 Q4", "2021 Q1"]  # Quarters highlighted with verticle lines
             for quarter in highlighted_quarters:
                 fig.add_vline(x=quarter, line_dash="dash", line_color="red")
     fig.update_layout(showlegend=show_legend)
@@ -218,7 +182,6 @@ def main():
             industry_options = quarterly_data['Industry'].unique()
             industry_options = industry_options[~pd.isna(industry_options)] 
             industry_selection = st.sidebar.multiselect(label="Select industry selection", options=industry_options, default=['Total'])
-            print(industry_selection)
 
     # Year time series selection
     if st.session_state.show_yearly_slider:
