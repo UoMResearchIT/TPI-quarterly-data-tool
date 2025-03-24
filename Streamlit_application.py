@@ -6,6 +6,7 @@ from plotly.subplots import make_subplots
 import time 
 import re
 import math
+import numpy as np
 
 def quarter_to_numeric(q):
     year, qtr = q.split(" ")
@@ -42,6 +43,7 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq= Fals
         # Reformat and sort data
         qoq_data = qoq_data.melt(id_vars = "Quarter", var_name = "Country")
         qoq_data = qoq_data.sort_values(["Country", "Quarter"]).reset_index(drop=True)
+        
         if qoq:
             # Calculate QoQ Growth (Change from the previous quarter)
             qoq_data["QoQ Growth (%)"] = qoq_data.groupby("Country")["value"].pct_change().mul(100).round(2)
@@ -64,7 +66,7 @@ def multi_data_format(data, industry):
     plot_data = data.query(f"Industry == '{industry}'")
     return plot_data
 
-def create_quarterly_fig(data, qoq, yoy, show_legend, data_option):
+def create_quarterly_fig(data, qoq, yoy, show_legend, data_option, show_dip_lines):
     data = data.dropna()
     industries = data["Industry"].unique()
     if qoq:
@@ -100,12 +102,44 @@ def create_quarterly_fig(data, qoq, yoy, show_legend, data_option):
                     ),
                     height=300 * rows)
     else:
+        data['Quarter'] = data['Quarter'].apply(numeric_to_quarter)
         fig = px.line(data, 
                 x="Quarter", 
                 y="Value", 
                 color="Country",
                 title="Quarter on quarter Comparison (2020 = 100)",
                 labels={"value": f"{data_option}", "variable": "Countries", "industry": "Industry"})
+        if show_dip_lines:
+            # annotations = {
+            #     "2007 Q4": "Pre-2008 Crisis",
+            #     "2009 Q2": "Start of Recovery",
+            #     "2019 Q4": "Pre-COVID",
+            #     "2021 Q1": "Recovery Begins"
+            # }
+            
+            # # Adjusted y-positions to prevent overlap
+            # y_positions = [1.2, 1.1, 1.2, 1.1]  # Staggered heights
+
+            # # Add vertical lines and labels
+            # for i, (quarter, label) in enumerate(annotations.items()):
+            #     fig.add_vline(x=quarter, line_dash="dash", line_color="red")
+                
+            #     # Add annotation above the graph
+            #     fig.add_annotation(
+            #         x=quarter, 
+            #         y=max(data["Value"]) * y_positions[i],  # Move above graph
+            #         text=label,
+            #         showarrow=False,
+            #         font=dict(size=12, color="black", family="Arial Black"),  # Bold, readable font
+            #         bgcolor="white", bordercolor="black", borderwidth=1, borderpad=4,
+            #         textangle=0  # Keep text horizontal
+            #     )
+
+            # # Extend y-axis to make space for labels
+            # fig.update_layout(yaxis=dict(range=[min(data["Value"]), max(data["Value"]) * 1.2]))
+            highlighted_quarters = ["2007 Q4", "2009 Q2", "2019 Q4", "2021 Q1"]
+            for quarter in highlighted_quarters:
+                fig.add_vline(x=quarter, line_dash="dash", line_color="red")
     fig.update_layout(showlegend=show_legend)
     return fig
 
@@ -250,6 +284,7 @@ def main():
     st.sidebar.divider()
     st.sidebar.subheader("Configure layout")
     show_legend = st.sidebar.toggle(label="Show legend", value=True)
+    show_dip_lines = st.sidebar.toggle(label="Show verticle lines for before and after major dips in productivity (2008 recession and covid-19)", value=False)
     # showtrend = st.sidebar.toggle(label="Show trendline", value=False)
     # showlabel = st.sidebar.toggle(label="Show labels", value=False)
     
@@ -285,10 +320,11 @@ def main():
             """
         )
 
-    figure = st.empty() 
+    figure = st.empty()
+    # show_dip_lines = True  # remove
     if QorY == "Quarterly":
         quarterly_data = data_format(quarterly_data, QorY, quarter, quarterly_option, country_selection, qoq, yoy, quarterly_selection, industry_selection)
-        fig = create_quarterly_fig(quarterly_data, qoq, yoy, show_legend, quarterly_option)
+        fig = create_quarterly_fig(quarterly_data, qoq, yoy, show_legend, quarterly_option, show_dip_lines)
     else:
         yearly_data = data_format(yearly_data, QorY, year, yearly_option, country_selection)
         fig = create_yearly_fig(yearly_data, show_legend)
@@ -298,8 +334,13 @@ def main():
         # Save session state variables and load figure
         with st.spinner("Loading visualisation"):
             st.session_state.fig = fig
-            st.session_state.df = quarterly_data
-            figure.plotly_chart(st.session_state.fig, use_container_width=True)
+            figure.plotly_chart(st.session_state.fig, use_container_width=True,                     
+                    config = {
+                        'toImageButtonOptions': {
+                            'filename': 'Downloaded_file',
+                            'scale': 2
+                        }
+                    })
     
 if __name__ == "__main__":
     main()
