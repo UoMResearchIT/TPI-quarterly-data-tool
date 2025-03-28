@@ -1,5 +1,6 @@
 import pandas as pd
 import plotly_express as px
+import plotly.graph_objects as go
 
 def numeric_to_quarter(n):
     year = int(n)
@@ -14,19 +15,40 @@ Long_Dataset = pd.read_csv('../out/Long_Dataset.csv')
 data_option = "GVA"
 print(Long_Dataset)
 filtered = Long_Dataset.query(
-    f"Quarter >= 2005.0 and Quarter <= 2007.75 and Country in ['UK', 'Germany'] and Variable == '{data_option}' and Industry == 'Total'"
+    f"Quarter >= 2005.0 and Quarter <= 2024.25 and Country in ['UK', 'Germany', 'France', 'Italy', 'Spain'] and Variable == '{data_option}' and Industry == 'Total'"
 )
 
 filtered['Quarter'] = filtered['Quarter'].apply(numeric_to_quarter)
+data = filtered.copy()
 print(filtered)
 
-fig = px.line(filtered, 
-              x='Quarter', 
-              y='Value', 
-              color='Country',
-              title='GVA Comparison: UK vs Germany (2005-2007)',
-              labels={'Value': 'GVA', 'Date': 'Quarter'},
-              markers=True)
+data['Country_encoded'] = pd.Categorical(data['Country']).codes
+data['Quarter_encoded'] = pd.Categorical(data['Quarter']).codes
+
+fig = go.Figure(data=[go.Scatter3d(
+    x=data['Country_encoded'],
+    y=data['Quarter_encoded'],
+    z=data['Value'],
+    mode='markers',
+    marker=dict(
+        size=5,
+        color=data['Value'],  # Color by z-axis value
+        colorscale='Viridis',
+        opacity=0.8,
+        colorbar=dict(title='Value')
+    ),
+    text=[f"Country: {country}<br>Quarter: {quarter}<br>{'Value'}: {value}" 
+            for country, quarter, value in zip(data['Country'], data['Quarter'], data['Value'])],
+    hoverinfo='text'
+)])
+
+# fig = px.line(filtered, 
+#               x='Quarter', 
+#               y='Value', 
+#               color='Country',
+#               title='GVA Comparison: UK vs Germany (2005-2007)',
+#               labels={'Value': 'GVA', 'Date': 'Quarter'},
+#               markers=True)
 
 # fig = px.line(
 # filtered, 

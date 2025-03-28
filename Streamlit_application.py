@@ -6,7 +6,6 @@ from plotly.subplots import make_subplots
 import time 
 import re
 import math
-import numpy as np
 
 def quarter_to_numeric(q):
     year, qtr = q.split(" ")
@@ -61,6 +60,7 @@ def multi_data_format(data, industry):
 def create_quarterly_fig(data, qoq, yoy, show_legend, data_option, show_dip_lines):
     data = data.dropna()
     industries = data["Industry"].unique()
+    testing = True
     if qoq:
         fig = px.bar(data, x="Quarter", y="QoQ Growth (%)", color="Country",
              barmode="group", title="QoQ Growth Across Countries")
@@ -93,6 +93,63 @@ def create_quarterly_fig(data, qoq, yoy, show_legend, data_option, show_dip_line
                         font=dict(size=12),
                     ),
                     height=300 * rows)
+    elif testing:
+        # Extract years from quarters
+        data['Year'] = data['Quarter'].apply(lambda x: int(x.split()[0]))
+        
+        # Prepare unique mapping for x and y axes
+        unique_countries = data['Country'].unique()
+        unique_years = data['Year'].unique()
+        
+        # Create mappings for x and y axes
+        country_mapping = {country: i for i, country in enumerate(unique_countries)}
+        year_mapping = {year: i for i, year in enumerate(unique_years)}
+        
+        # Create the scatter plot
+        # fig = go.Figure(data=[go.Scatter3d(
+        #     x=[country_mapping[row['Country']] for row in data.to_dict('records')],
+        #     y=[year_mapping[row['Year']] + (int(row['Quarter'].split()[1][1]) - 1) / 4 for row in data.to_dict('records')],
+        #     z=data['Value'],
+        #     mode='markers',
+        #     marker=dict(
+        #         size=3,  # Smaller dot size
+        #         color=data['Value'],  # Color by value
+        #         colorscale='Viridis',  # Color palette
+        #         opacity=0.7,  # Slight transparency
+        #     ),
+        #     text=[f"Country: {row['Country']}<br>Quarter: {row['Quarter']}<br>Value: {row['Value']:.2f}" 
+        #         for row in data.to_dict('records')],
+        #     hoverinfo='text'
+        # )])
+
+        fig = px.line_3d(data, x="Country", y="Year", z="Value", color='Country')
+
+        # Customize layout with explicit axis labels
+        fig.update_layout(
+            title='3D Scatter Plot',
+            scene=dict(
+                # X-axis (Countries)
+                xaxis=dict(
+                    title='Countries',
+                    tickmode='array',
+                    tickvals=list(range(len(unique_countries))),
+                    ticktext=unique_countries
+                ),
+                # Y-axis (Years with quarter positioning)
+                yaxis=dict(
+                    title='Years',
+                    tickmode='array',
+                    tickvals=list(range(len(unique_years))),
+                    ticktext=unique_years
+                ),
+                # Z-axis (Value)
+                zaxis_title=f'{data_option}',
+            ),
+            width=1000,
+            height=500
+        )
+        
+    
     else:
         fig = px.line(data, 
                 x="Quarter", 
@@ -250,6 +307,20 @@ def main():
     show_dip_lines = st.sidebar.toggle(label="Show verticle lines for before and after major dips in productivity (2008 recession and covid-19)", value=False)
     # showtrend = st.sidebar.toggle(label="Show trendline", value=False)
     # showlabel = st.sidebar.toggle(label="Show labels", value=False)
+
+    # Export functionality
+    if st.sidebar.button("Export Current Data"):
+        @st.cache_data
+        def convert_df(df):
+            return df.to_csv().encode('utf-8')
+        
+        csv = convert_df(data_format(quarterly_data, QorY, quarter, quarterly_option, country_selection, qoq, yoy, quarterly_selection, industry_selection))
+        st.sidebar.download_button(
+            label="Download data as CSV",
+            data=csv,
+            file_name='productivity_data.csv',
+            mime='text/csv',
+        )
     
     #Define main content
     st.header("TPI Quarterly data tool for US, UK and European labour productivity")
