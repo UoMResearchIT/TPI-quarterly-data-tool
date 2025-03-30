@@ -25,7 +25,7 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq= Fals
         time_period[0] = quarter_to_numeric(time_period[0])
         time_period[1] = quarter_to_numeric(time_period[1])
         long_data = pd.read_csv('out/Long_Dataset.csv')
-        if qoq: # remove - add error handling
+        if qoq: # remove - check is correct
             time_period[0] -= 0.25
         elif yoy:
             time_period[0] -= 1
@@ -106,21 +106,21 @@ def create_quarterly_fig(data, qoq, yoy, show_legend, data_option, show_dip_line
         year_mapping = {year: i for i, year in enumerate(unique_years)}
         
         # Create the scatter plot
-        # fig = go.Figure(data=[go.Scatter3d(
-        #     x=[country_mapping[row['Country']] for row in data.to_dict('records')],
-        #     y=[year_mapping[row['Year']] + (int(row['Quarter'].split()[1][1]) - 1) / 4 for row in data.to_dict('records')],
-        #     z=data['Value'],
-        #     mode='markers',
-        #     marker=dict(
-        #         size=3,  # Smaller dot size
-        #         color=data['Value'],  # Color by value
-        #         colorscale='Viridis',  # Color palette
-        #         opacity=0.7,  # Slight transparency
-        #     ),
-        #     text=[f"Country: {row['Country']}<br>Quarter: {row['Quarter']}<br>Value: {row['Value']:.2f}" 
-        #         for row in data.to_dict('records')],
-        #     hoverinfo='text'
-        # )])
+        fig = go.Figure(data=[go.Scatter3d(
+            x=[country_mapping[row['Country']] for row in data.to_dict('records')],
+            y=[year_mapping[row['Year']] + (int(row['Quarter'].split()[1][1]) - 1) / 4 for row in data.to_dict('records')],
+            z=data['Value'],
+            mode='markers',
+            marker=dict(
+                size=3,  # Smaller dot size
+                color=data['Value'],  # Color by value
+                colorscale='Viridis',  # Color palette
+                opacity=0.7,  # Slight transparency
+            ),
+            text=[f"Country: {row['Country']}<br>Quarter: {row['Quarter']}<br>Value: {row['Value']:.2f}" 
+                for row in data.to_dict('records')],
+            hoverinfo='text'
+        )])
 
         fig = px.line_3d(data, x="Country", y="Year", z="Value", color='Country')
 
@@ -145,9 +145,10 @@ def create_quarterly_fig(data, qoq, yoy, show_legend, data_option, show_dip_line
                 # Z-axis (Value)
                 zaxis_title=f'{data_option}',
             ),
-            width=1000,
-            height=500
+            width=1500,
+            height=700
         )
+        fig.update_traces(line=dict(width=5))
         
     
     else:
@@ -191,7 +192,7 @@ def main():
     st.session_state.show_yearly_slider = False
 
     if "selected" not in st.session_state:
-        st.session_state.selected = "Line graph"
+        st.session_state.selected = "2D line graph"
 
     def update_selection(option):
         if st.session_state.selected == option:  # If clicked again, deselect
@@ -264,9 +265,13 @@ def main():
         # Only show data options below if quarterly format is selected
         st.sidebar.write("Select data view options")
         st.sidebar.write("Line graph")
-        st.sidebar.checkbox("Quarter on quarter comparison", 
-        value=(st.session_state.selected == "Line graph"), 
-        on_change=lambda opt="Line graph": update_selection(opt))
+        st.sidebar.checkbox("2D line graph", 
+        value=(st.session_state.selected == "2D line graph"), 
+        on_change=lambda opt="2D line graph": update_selection(opt))
+
+        st.sidebar.checkbox("3D line graph", 
+        value=(st.session_state.selected == "3D line graph"), 
+        on_change=lambda opt="3D line graph": update_selection(opt))
 
         st.sidebar.write("Bar graph")
         st.sidebar.checkbox("Quarter on quarter", 
