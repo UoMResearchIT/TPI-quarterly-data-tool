@@ -17,7 +17,7 @@ def numeric_to_quarter(n):
     return f"{year} Q{qtr}"
 
 @st.cache_data
-def data_format(data, QorY, time_period, data_option, country_options, qoq= False, yoy= False, quarterly_selection =False, industry_selection = ['Total']):
+def data_format(data, QorY, time_period, data_option, country_options, visType = '2D line graph', quarterly_selection =False, industry_selection = ['Total']):
     # Filter for time selection
     if QorY == "Quarterly":
         # Convert the time periods to numeric
@@ -25,9 +25,9 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq= Fals
         time_period[0] = quarter_to_numeric(time_period[0])
         time_period[1] = quarter_to_numeric(time_period[1])
         long_data = pd.read_csv('out/Long_Dataset.csv')
-        if qoq: # remove - check is correct
+        if visType == 'QoQ': # remove - check is correct
             time_period[0] -= 0.25
-        elif yoy:
+        elif visType == 'YoY':
             time_period[0] -= 1
         data = long_data.query(
         f"Quarter >= {time_period[0]} and Quarter <= {time_period[1]} and Country in {country_options} and Variable == '{data_option}' and Industry in {industry_selection}")
@@ -35,13 +35,13 @@ def data_format(data, QorY, time_period, data_option, country_options, qoq= Fals
         data = data[(data["Year"] >= time_period[0]) & (data["Year"] <= time_period[1])]
     
     # Data processing for bar graphs
-    if qoq or yoy:
+    if visType == 'QoQ' or visType == 'YoY':
         qoq_data = data.copy()
-        if qoq:
+        if visType == 'QoQ':
             # Calculate QoQ Growth (Change from the previous quarter)
             qoq_data["QoQ Growth (%)"] = qoq_data.groupby("Country")["Value"].pct_change().mul(100).round(2)
 
-        if yoy:
+        if visType == 'YoY':
             # Filtering to show only selected quarters in yoy selection
             quarter_map = {1: 0, 2: 0.25, 3: 0.5, 4: 0.75}
             qoq_data["decimal_part"] = qoq_data["Quarter"] % 1
@@ -57,14 +57,13 @@ def multi_data_format(data, industry):
     plot_data = data.query(f"Industry == '{industry}'")
     return plot_data
 
-def create_quarterly_fig(data, qoq, yoy, show_legend, data_option, show_dip_lines):
+def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType = '2D line graph'):
     data = data.dropna()
     industries = data["Industry"].unique()
-    testing = True
-    if qoq:
+    if visType == 'QoQ':
         fig = px.bar(data, x="Quarter", y="QoQ Growth (%)", color="Country",
              barmode="group", title="QoQ Growth Across Countries")
-    elif yoy:
+    elif visType == 'YoY':
         fig = px.bar(data, x="Quarter", y="YoY Growth (%)", color="Country",
              barmode="group", title="YoY Growth Across Countries")
     elif len(industries) > 1:  # If multiple industries are selected for GVA
@@ -93,7 +92,7 @@ def create_quarterly_fig(data, qoq, yoy, show_legend, data_option, show_dip_line
                         font=dict(size=12),
                     ),
                     height=300 * rows)
-    elif testing:
+    elif visType == '3D line graph':
         # Extract years from quarters
         data['Year'] = data['Quarter'].apply(lambda x: int(x.split()[0]))
         
@@ -101,6 +100,51 @@ def create_quarterly_fig(data, qoq, yoy, show_legend, data_option, show_dip_line
         unique_countries = data['Country'].unique()
         unique_years = data['Year'].unique()
         
+        # Create the line plot
+        fig = px.line_3d(data, x="Country", y="Year", z="Value", color='Country')
+
+        # Customise layout with explicit axis labels
+        fig.update_layout(
+            title='3D Line Graph',
+            scene=dict(
+                # X-axis (Countries)
+                xaxis=dict(
+                    title='Countries',
+                    tickmode='array',
+                    tickvals=list(range(len(unique_countries))),
+                    ticktext=unique_countries
+                ),
+                # Y-axis (Years with quarter positioning)
+                yaxis=dict(
+                    title='Years',
+                    tickmode='array',
+                    tickvals=list(range(len(unique_years))),
+                    ticktext=unique_years
+                ),
+                # Z-axis (Value)
+                zaxis_title=f'{data_option}',
+            ),
+            width=1500,
+            height=500
+        )
+        fig.update_traces(line=dict(width=5))
+
+    elif visType == '2D scatter':
+        fig = px.scatter(data, 
+        x="Quarter", 
+        y="Value", 
+        color="Country",
+        title="Quarter on quarter Comparison (2020 = 100)",
+        labels={"value": f"{data_option}", "variable": "Countries"})
+
+    elif visType == '3D scatter':
+        # Extract years from quarters
+        data['Year'] = data['Quarter'].apply(lambda x: int(x.split()[0]))
+        
+        # Prepare unique mapping for x and y axes
+        unique_countries = data['Country'].unique()
+        unique_years = data['Year'].unique()
+
         # Create mappings for x and y axes
         country_mapping = {country: i for i, country in enumerate(unique_countries)}
         year_mapping = {year: i for i, year in enumerate(unique_years)}
@@ -120,9 +164,7 @@ def create_quarterly_fig(data, qoq, yoy, show_legend, data_option, show_dip_line
             text=[f"Country: {row['Country']}<br>Quarter: {row['Quarter']}<br>Value: {row['Value']:.2f}" 
                 for row in data.to_dict('records')],
             hoverinfo='text'
-        )])
-
-        fig = px.line_3d(data, x="Country", y="Year", z="Value", color='Country')
+        )])   
 
         # Customize layout with explicit axis labels
         fig.update_layout(
@@ -146,10 +188,8 @@ def create_quarterly_fig(data, qoq, yoy, show_legend, data_option, show_dip_line
                 zaxis_title=f'{data_option}',
             ),
             width=1500,
-            height=700
+            height=500
         )
-        fig.update_traces(line=dict(width=5))
-        
     
     else:
         fig = px.line(data, 
@@ -157,7 +197,7 @@ def create_quarterly_fig(data, qoq, yoy, show_legend, data_option, show_dip_line
                 y="Value", 
                 color="Country",
                 title="Quarter on quarter Comparison (2020 = 100)",
-                labels={"value": f"{data_option}", "variable": "Countries", "industry": "Industry"})
+                labels={"value": f"{data_option}", "variable": "Countries"})
         if show_dip_lines:
             highlighted_quarters = ["2007 Q4", "2009 Q2", "2019 Q4", "2021 Q1"]  # Quarters highlighted with verticle lines
             for quarter in highlighted_quarters:
@@ -273,6 +313,15 @@ def main():
         value=(st.session_state.selected == "3D line graph"), 
         on_change=lambda opt="3D line graph": update_selection(opt))
 
+        st.sidebar.write("Scatter plot")
+        st.sidebar.checkbox("2D scatter plot", 
+        value=(st.session_state.selected == "2D scatter"), 
+        on_change=lambda opt="2D scatter": update_selection(opt))
+
+        st.sidebar.checkbox("3D scatter plot", 
+        value=(st.session_state.selected == "3D scatter"), 
+        on_change=lambda opt="3D scatter": update_selection(opt))
+
         st.sidebar.write("Bar graph")
         st.sidebar.checkbox("Quarter on quarter", 
         value=(st.session_state.selected == "Quarter on quarter"), 
@@ -298,12 +347,19 @@ def main():
         country_selection = st.sidebar.multiselect(label = "Select countries to display", options = countries, default=default_options)
         quarterly_selection = None
 
-    qoq = False
-    yoy = False
+    visType = '2D line graph'
     if st.session_state.selected == "Quarter on quarter":
-        qoq = True
+        visType = 'QoQ'
     elif st.session_state.selected == "Year on year":
-        yoy = True
+        visType = 'YoY'
+    elif st.session_state.selected == '2D line graph':
+        visType = '2D line graph'
+    elif st.session_state.selected == '3D line graph':
+        visType = '3D line graph'
+    elif st.session_state.selected == '2D scatter':
+        visType = '2D scatter'
+    elif st.session_state.selected == '3D scatter':
+        visType = '3D scatter'
 
     #Figure formatting tools
     st.sidebar.divider()
@@ -319,7 +375,7 @@ def main():
         def convert_df(df):
             return df.to_csv().encode('utf-8')
         
-        csv = convert_df(data_format(quarterly_data, QorY, quarter, quarterly_option, country_selection, qoq, yoy, quarterly_selection, industry_selection))
+        csv = convert_df(data_format(quarterly_data, QorY, quarter, quarterly_option, country_selection, visType, quarterly_selection, industry_selection))
         st.sidebar.download_button(
             label="Download data as CSV",
             data=csv,
@@ -362,8 +418,8 @@ def main():
     figure = st.empty()
     # show_dip_lines = True  # remove
     if QorY == "Quarterly":
-        quarterly_data = data_format(quarterly_data, QorY, quarter, quarterly_option, country_selection, qoq, yoy, quarterly_selection, industry_selection)
-        fig = create_quarterly_fig(quarterly_data, qoq, yoy, show_legend, quarterly_option, show_dip_lines)
+        quarterly_data = data_format(quarterly_data, QorY, quarter, quarterly_option, country_selection, visType, quarterly_selection, industry_selection)
+        fig = create_quarterly_fig(quarterly_data, show_legend, quarterly_option, show_dip_lines, visType)
     else:
         yearly_data = data_format(yearly_data, QorY, year, yearly_option, country_selection)
         fig = create_yearly_fig(yearly_data, show_legend)
@@ -373,7 +429,7 @@ def main():
         # Save session state variables and load figure
         with st.spinner("Loading visualisation"):
             st.session_state.fig = fig
-            figure.plotly_chart(st.session_state.fig, use_container_width=True,                     
+            figure.plotly_chart(st.session_state.fig, use_container_width=True,                 
                     config = {
                         'toImageButtonOptions': {
                             'filename': 'Downloaded_file',
