@@ -106,25 +106,26 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
         # Customise layout with explicit axis labels
         fig.update_layout(
             title='3D Line Graph',
-            scene=dict(
-                # X-axis (Countries)
-                xaxis=dict(
-                    title='Countries',
-                    tickmode='array',
-                    tickvals=list(range(len(unique_countries))),
-                    ticktext=unique_countries
-                ),
-                # Y-axis (Years with quarter positioning)
-                yaxis=dict(
-                    title='Years',
-                    tickmode='array',
-                    tickvals=list(range(len(unique_years))),
-                    ticktext=unique_years
-                ),
-                # Z-axis (Value)
-                zaxis_title=f'{data_option}',
-            ),
-            width=1500,
+            # scene=dict(
+            #     # X-axis (Countries)
+            #     xaxis=dict(
+            #         title='Countries',
+            #         tickmode='array',
+            #         tickvals=list(range(len(unique_countries))),
+            #         ticktext=unique_countries
+            #     ),
+            #     # Y-axis (Years with quarter positioning)
+            #     yaxis=dict(
+            #         title='Years',
+            #         tickmode='array',
+            #         tickvals=list(range(len(unique_years))),
+            #         ticktext=unique_years
+            #     ),
+            #     # Z-axis (Value)
+            #     zaxis_title=f'{data_option}',
+            # ),
+            scene=dict(camera=dict(eye=dict(x=1.7, y=1.7, z=1.7))),  # Move camera further away
+            width=1000,
             height=500
         )
         fig.update_traces(line=dict(width=5))
@@ -313,14 +314,14 @@ def main():
         value=(st.session_state.selected == "3D line graph"), 
         on_change=lambda opt="3D line graph": update_selection(opt))
 
-        st.sidebar.write("Scatter plot")
-        st.sidebar.checkbox("2D scatter plot", 
-        value=(st.session_state.selected == "2D scatter"), 
-        on_change=lambda opt="2D scatter": update_selection(opt))
+        # st.sidebar.write("Scatter plot")
+        # st.sidebar.checkbox("2D scatter plot", 
+        # value=(st.session_state.selected == "2D scatter"), 
+        # on_change=lambda opt="2D scatter": update_selection(opt))
 
-        st.sidebar.checkbox("3D scatter plot", 
-        value=(st.session_state.selected == "3D scatter"), 
-        on_change=lambda opt="3D scatter": update_selection(opt))
+        # st.sidebar.checkbox("3D scatter plot", 
+        # value=(st.session_state.selected == "3D scatter"), 
+        # on_change=lambda opt="3D scatter": update_selection(opt))
 
         st.sidebar.write("Bar graph")
         st.sidebar.checkbox("Quarter on quarter", 
@@ -370,7 +371,7 @@ def main():
     # showlabel = st.sidebar.toggle(label="Show labels", value=False)
 
     # Export functionality
-    if st.sidebar.button("Export Current Data"):
+    if st.sidebar.button("Export Selected Data"):
         @st.cache_data
         def convert_df(df):
             return df.to_csv().encode('utf-8')
