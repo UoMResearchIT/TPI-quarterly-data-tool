@@ -231,6 +231,8 @@ def main():
     # Set session state variables
     st.session_state.show_quarter_slider = False
     st.session_state.show_yearly_slider = False
+    st.session_state.show_quarter_slider_two = False
+    st.session_state.show_yearly_slider_two = False
 
     if "selected" not in st.session_state:
         st.session_state.selected = "2D line graph"
@@ -254,12 +256,13 @@ def main():
     st.sidebar.divider()
     st.sidebar.subheader("Select data to plot")
     QorY = st.sidebar.radio(
-        "Select data to plot",
-        ["Quarterly", "Yearly"],
+        label="Select data to plot",
+        options=["Quarterly", "Yearly"],
         captions=[
             "Quarterly labour productivity",
             "Yearly labour productivity",
         ],
+        key='QorY_One'
     )
     
     if QorY == "Quarterly":
@@ -272,8 +275,6 @@ def main():
         quarters = quarterly_data["Quarter"].unique()
         quarters = [numeric_to_quarter(x) for x in quarters]
         quarter = st.sidebar.select_slider(label = "Quarterly slider", options = quarters, value=(quarters[0], quarters[-1]), label_visibility="collapsed")
-        # if quarter[0] == quarter[1]:   # remove - need to update this for quarters
-        #     quarter = [quarter[0], quarter[0] + 1] if quarter[0] < max(yearly_data["Year"]) else [quarter[0] - 1, quarter[0]]
         quarterly_options = ["OPH", "OPW", "GVA", "GDP per hour (TPI calculation)"]
         quarterly_option = st.sidebar.selectbox(label= "Select data", options=quarterly_options)
         industry_selection = ['Total']
@@ -361,6 +362,88 @@ def main():
         visType = '2D scatter'
     elif st.session_state.selected == '3D scatter':
         visType = '3D scatter'
+    def visualisation_selection(quarterly_data, yearly_data, key):
+        st.sidebar.divider()
+        st.sidebar.subheader("Select data to plot")
+        QorY = st.sidebar.radio(
+            label="Select data to plot",
+            options=["Quarterly", "Yearly"],
+            captions=[
+                "Quarterly labour productivity",
+                "Yearly labour productivity",
+            ],
+            key=f'QorY_{key}'
+        )
+        if QorY == "Quarterly":
+            st.session_state.show_quarter_slider_two = True
+        elif QorY == "Yearly":
+            st.session_state.show_yearly_slider_two = True
+        
+        # Quarter time series selection
+        quarterly_option = None
+        if st.session_state.show_quarter_slider_two:
+            quarters = quarterly_data["Quarter"].unique()
+            quarters = [numeric_to_quarter(x) for x in quarters]
+            quarter = st.sidebar.select_slider(label = "Quarterly slider", options = quarters, value=(quarters[0], quarters[-1]), label_visibility="collapsed", key=f'Q_Slider_{key}')
+            quarterly_options = ["OPH", "OPW", "GVA", "GDP per hour (TPI calculation)"]
+            quarterly_option = st.sidebar.selectbox(label= "Select data", options=quarterly_options, key=f'Q_Option_{key}')
+            industry_selection = ['Total']
+            if quarterly_option == "GVA":
+                industry_options = quarterly_data['Industry'].unique()
+                industry_options = industry_options[~pd.isna(industry_options)] 
+                industry_selection = st.sidebar.multiselect(label="Select industry selection", options=industry_options, default=['Total'], key=f'Industry_Selection_{key}')
+
+        # Year time series selection
+        yearly_option = None
+        if st.session_state.show_yearly_slider_two:
+            year = st.sidebar.slider(label="Yearly slider!", min_value=yearly_data["Year"].iat[0], max_value=max(yearly_data["Year"]), value=[yearly_data["Year"].iat[0], max(yearly_data["Year"])], label_visibility="collapsed", key='Y_Slider_Two')
+            if year[0] == year[1]:
+                year = [year[0], year[0] + 1] if year[0] < max(yearly_data["Year"]) else [year[0] - 1, year[0]]
+            yearly_option = yearly_options = ["GDP per hour worked"]
+            st.sidebar.selectbox(label= "Select data", options=yearly_options, key='Y_Option')
+        return QorY, quarter, quarterly_option, industry_selection, yearly_option
+    # Second plot options
+    st.sidebar.divider()
+    second_plot = st.sidebar.toggle(label='Show a second plot side by side')
+    if second_plot:
+        key = 2
+        QorY_two, quarter_two, quarterly_option_two, industry_selection_two, yearly_option_two = visualisation_selection(quarterly_data, yearly_data, key)
+    #     st.sidebar.divider()
+    #     st.sidebar.subheader("Select data to plot")
+    #     QorY_Two = st.sidebar.radio(
+    #         label="Select data to plot",
+    #         options=["Quarterly", "Yearly"],
+    #         captions=[
+    #             "Quarterly labour productivity",
+    #             "Yearly labour productivity",
+    #         ],
+    #         key='QorY_Two'
+    #     )
+    #     if QorY_Two == "Quarterly":
+    #         st.session_state.show_quarter_slider_two = True
+    #     elif QorY_Two == "Yearly":
+    #         st.session_state.show_yearly_slider_two = True
+    #         # Quarter time series selection
+
+    #     if st.session_state.show_quarter_slider_two:
+    #         quarters = quarterly_data["Quarter"].unique()
+    #         quarters = [numeric_to_quarter(x) for x in quarters]
+    #         quarter_two = st.sidebar.select_slider(label = "Quarterly slider", options = quarters, value=(quarters[0], quarters[-1]), label_visibility="collapsed", key='Q_Slider_Two')
+    #         quarterly_options = ["OPH", "OPW", "GVA", "GDP per hour (TPI calculation)"]
+    #         quarterly_option_two = st.sidebar.selectbox(label= "Select data", options=quarterly_options, key='Q_Option')
+    #         industry_selection_two = ['Total']
+    #         if quarterly_option_two == "GVA":
+    #             industry_options = quarterly_data['Industry'].unique()
+    #             industry_options = industry_options[~pd.isna(industry_options)] 
+    #             industry_selection_two = st.sidebar.multiselect(label="Select industry selection", options=industry_options, default=['Total'], key='Industry_Selection')
+
+    #     # Year time series selection
+    #     if st.session_state.show_yearly_slider_two:
+    #         year = st.sidebar.slider(label="Yearly slider!", min_value=yearly_data["Year"].iat[0], max_value=max(yearly_data["Year"]), value=[yearly_data["Year"].iat[0], max(yearly_data["Year"])], label_visibility="collapsed", key='Y_Slider_Two')
+    #         if year[0] == year[1]:
+    #             year = [year[0], year[0] + 1] if year[0] < max(yearly_data["Year"]) else [year[0] - 1, year[0]]
+    #         yearly_option = yearly_options = ["GDP per hour worked"]
+    #         st.sidebar.selectbox(label= "Select data", options=yearly_options, key='Y_Option')
 
     #Figure formatting tools
     st.sidebar.divider()
