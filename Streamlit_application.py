@@ -57,13 +57,19 @@ def multi_data_format(data, industry):
     plot_data = data.query(f"Industry == '{industry}'")
     return plot_data
 
-def make_fig(data, visType, data_option, show_dip_lines, second_plot):
+def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_data, show_legend):
+    countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
+    color_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
+    country_colors = {country: color_palette[i % len(color_palette)] for i, country in enumerate(countries)}
+
     if visType == 'QoQ':
         fig = px.bar(data, x="Quarter", y="QoQ Growth (%)", color="Country",
                 barmode="group", title="QoQ Growth Across Countries")
+        
     elif visType == 'YoY':
         fig = px.bar(data, x="Quarter", y="YoY Growth (%)", color="Country",
              barmode="group", title="YoY Growth Across Countries")
+        
     elif visType == '3D line graph':
         # Extract years from quarters
         data['Year'] = data['Quarter'].apply(lambda x: int(x.split()[0]))
@@ -79,18 +85,22 @@ def make_fig(data, visType, data_option, show_dip_lines, second_plot):
             height=500
         )
         fig.update_traces(line=dict(width=5))
-    
+
     elif visType == '2D line graph':
         fig = px.line(data, 
                 x="Quarter", 
                 y="Value", 
                 color="Country",
+                color_discrete_map=country_colors,
                 title="Quarter on quarter Comparison (2020 = 100)",
                 labels={"value": f"{data_option}", "variable": "Countries"})
         if show_dip_lines:
             highlighted_quarters = ["2007 Q4", "2009 Q2", "2019 Q4", "2021 Q1"]  # Quarters highlighted with verticle lines
             for quarter in highlighted_quarters:
                 fig.add_vline(x=quarter, line_dash="dash", line_color="red")
+    if not show_legend:
+        for trace in fig.data:
+            trace.showlegend = False
     if second_plot:
         return fig.data
     else:
@@ -128,14 +138,41 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
     elif second_plot:
         # x = "scene" - remove - sort this out
         # fig=make_subplots(rows=1, cols=2, specs=[[{"type": f"{x}"}, {"type": f"{x}"}]])
+
+        # Determine missing countries (ones in second plot but not first)
+        missing_countries = list(set(second_data["Country"]) - set(data["Country"]))
+
+        # Create a dummy dataframe with missing countries
+        dummy_df = pd.DataFrame({
+            "Quarter": [None] * len(missing_countries),  # Repeat None for each country
+            "Value": [None] * len(missing_countries),    # Repeat None for each country
+            "Country": missing_countries                 # List of missing countries
+        })
+
+
         fig=make_subplots(rows=1, cols=2)
-        for trace in make_fig(data, visType, data_option, show_dip_lines, second_plot):
+        for trace in make_fig(data, visType, data_option, show_dip_lines, second_plot, second_data, True):
+            # trace.showlegend = False
             fig.add_trace(trace, row=1, col=1)
-        for trace in make_fig(second_data, visType, data_option, show_dip_lines, second_plot):
+        for trace in make_fig(second_data, visType, data_option, show_dip_lines, second_plot, second_data, False):
+            # trace.showlegend = False
             fig.add_trace(trace, row=1, col=2)
+        
+        # Generate hidden traces for missing countries
+        for trace in make_fig(dummy_df, visType, data_option, show_dip_lines, second_plot, second_data, show_legend):
+            trace.visible = "legendonly"  # Hide from graph but keep in legend
+            fig.add_trace(trace, row=1, col=1)
+        # Add hidden traces only for countries missing from the first plot
+        # missing_countries = set(df2["country"]) - set(df1["country"])
+        # dummy_df = pd.DataFrame({"x": [None], "y": [None], "country": list(missing_countries)})
+
+        # for trace in make_fig(dummy_df, show_legend=True):
+        #     trace.visible = "legendonly"  # Hide from graph but keep in legend
+        #     fig.add_trace(trace, row=1, col=1)
     else:
-        fig = make_fig(data, visType, data_option, show_dip_lines, second_plot)
-    fig.update_layout(showlegend=show_legend)
+        fig = make_fig(data, visType, data_option, show_dip_lines, second_plot, second_data, show_legend)
+    if not second_plot:
+        fig.update_layout(showlegend=show_legend)
     return fig
 
 def create_yearly_fig(data, show_legend, second_plot, second_data):
@@ -302,6 +339,9 @@ def main():
         if second_plot:
             key = 2
             QorY_two, quarter_two, quarterly_option_two, industry_selection_two, yearly_option_two, year_two, quarterly_selection_two, country_selection_two, visType_two = visualisation_selection(quarterly_data, yearly_data, key)
+    #     countries = list(set(country_selection) | set(country_selection_two)) # All countries in both lists
+    # else:
+    #     countries = country_selection
 
     #Figure formatting tools
     st.sidebar.divider()
