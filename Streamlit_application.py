@@ -68,7 +68,6 @@ def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_dat
         country_colors = {country: color_palette[i % len(color_palette)] for i, country in enumerate(countries)}
 
     if visType == 'QoQ':
-        print("here", data)
         fig = px.bar(data, x="Quarter", y="QoQ Growth (%)", color="Country",
                 barmode="group", title="QoQ Growth Across Countries")
         
@@ -104,6 +103,9 @@ def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_dat
             highlighted_quarters = ["2007 Q4", "2009 Q2", "2019 Q4", "2021 Q1"]  # Quarters highlighted with verticle lines
             for quarter in highlighted_quarters:
                 fig.add_vline(x=quarter, line_dash="dash", line_color="red")
+    elif visType == "Dummy bar graph":
+        fig = px.bar(data, x="Quarter", y="Value", color="Country", title="")
+
     if not show_legend:
         for trace in fig.data:
             trace.showlegend = False
@@ -168,11 +170,17 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
                 "Value": [None] * len(missing_countries),    # Repeat None for each country
                 "Country": missing_countries                 # List of missing countries
             })
-
-            # Generate hidden traces for missing countries
-            for trace in make_fig(dummy_df, "2D line graph", data_option, show_dip_lines, second_plot, second_data, show_legend):
-                trace.visible = "legendonly"  # Hide from graph but keep in legend
-                fig.add_trace(trace, row=1, col=1)
+            
+            if visType == "QoQ" or visType == "YoY":
+                # Generate hidden traces for missing countries
+                for trace in make_fig(dummy_df, "Dummy bar graph", data_option, show_dip_lines, second_plot, second_data, show_legend):
+                    trace.visible = "legendonly"  # Hide from graph but keep in legend
+                    fig.add_trace(trace, row=1, col=1)
+            else:
+                # Generate hidden traces for missing countries
+                for trace in make_fig(dummy_df, "2D line graph", data_option, show_dip_lines, second_plot, second_data, show_legend):
+                    trace.visible = "legendonly"  # Hide from graph but keep in legend
+                    fig.add_trace(trace, row=1, col=1)
         
         # Add hidden traces only for countries missing from the first plot
         # missing_countries = set(df2["country"]) - set(df1["country"])
