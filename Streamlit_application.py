@@ -8,12 +8,16 @@ import re
 import math
 
 class data_options:
-    def __init__(self, QorY, data_option, base_year):
+    def __init__(self, QorY, data_option, base_year, YoY_year):
         self.QorY= QorY
         self.data_option = data_option
         self.base_year = base_year
+        self.YoY_year = YoY_year
 
-def quarter_to_numeric(q): # Converts "1997 Q3" → 1997.5
+def ordinal(n):
+    return str(n)+("th" if 4<=n%100<=20 else {1:"st",2:"nd",3:"rd"}.get(n%10, "th"))
+
+def quarter_to_numeric(q): # Converts "1997 Q3" → 1997.5    
     year, qtr = q.split(" ")
     return int(year) + (int(qtr[1]) - 1) / 4  
 
@@ -64,7 +68,6 @@ def multi_data_format(data, industry):
     return plot_data
 
 def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_data, show_legend):
-    print("search", data_option)
     if second_plot:  
         countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
         color_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
@@ -77,10 +80,13 @@ def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_dat
     if visType == 'QoQ':
         fig = px.bar(data, x="Quarter", y="QoQ Growth (%)", color="Country",
                 barmode="group", title=f"Quarter on quarter comparison of {data_option.data_option} (chain linked values {data_option.base_year} = 100)")
-        
     elif visType == 'YoY':
+        # two options:
+        # title=f"Year on year comparison of {data_option.data_option} for the {ordinal(data_option.YoY_year)} quarter of each year selected (chain linked values {data_option.base_year} = 100)")
+        # or
+        # title=f"Year on year comparison of {data_option.data_option} for Q{data_option.YoY_year} of each year selected (chain linked values {data_option.base_year} = 100)")
         fig = px.bar(data, x="Quarter", y="YoY Growth (%)", color="Country",
-             barmode="group", title="YoY Growth Across Countries")
+             barmode="group", title=f"Year on year comparison of {data_option.data_option} for Q{data_option.YoY_year} of each year selected (chain linked values {data_option.base_year} = 100)")
         
     elif visType == '3D line graph':
         # Extract years from quarters
@@ -100,7 +106,6 @@ def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_dat
         fig.update_traces(line=dict(width=5))
 
     elif visType == '2D line graph':
-        print(data)
         fig = px.line(data, 
                 x="Quarter", 
                 y="Value", 
@@ -362,7 +367,7 @@ def main():
     key = 1
     QorY, quarter, data_option, industry_selection, year, quarterly_selection, country_selection, visType = visualisation_selection(quarterly_data, yearly_data, key)
     base_year = 2020 # remove - need to change this when u can select the base year
-    plot_one_data_option = data_options(QorY, data_option, base_year)
+    plot_one_data_option = data_options(QorY, data_option, base_year, quarterly_selection)
 
     second_plot = False
     # Second plot options
