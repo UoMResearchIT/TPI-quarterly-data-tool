@@ -58,11 +58,17 @@ def multi_data_format(data, industry):
     return plot_data
 
 def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_data, show_legend):
-    countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
-    color_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
-    country_colors = {country: color_palette[i % len(color_palette)] for i, country in enumerate(countries)}
+    if second_plot:  
+        countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
+        color_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
+        country_colors = {country: color_palette[i % len(color_palette)] for i, country in enumerate(countries)}
+    else: # Need this to account for if second plot isn't selected
+        countries = data["Country"]
+        color_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
+        country_colors = {country: color_palette[i % len(color_palette)] for i, country in enumerate(countries)}
 
     if visType == 'QoQ':
+        print("here", data)
         fig = px.bar(data, x="Quarter", y="QoQ Growth (%)", color="Country",
                 barmode="group", title="QoQ Growth Across Countries")
         
@@ -136,21 +142,15 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
                     ),
                     height=300 * rows)
     elif second_plot:
-        # x = "scene" - remove - sort this out
+        # x = "scene" - remove - this also works
         # fig=make_subplots(rows=1, cols=2, specs=[[{"type": f"{x}"}, {"type": f"{x}"}]])
+        if visType == '3D line graph':  # Has to be "scene" instead of "xy" for 3d plot
+            print("outstanding")
+            fig=make_subplots(rows=1, cols=2, specs=[[{"type": "scene"}, {"type": "scene"}]])
+        else:
+            fig=make_subplots(rows=1, cols=2, specs=[[{"type": "xy"}, {"type": "xy"}]])
 
-        # Determine missing countries (ones in second plot but not first)
-        missing_countries = list(set(second_data["Country"]) - set(data["Country"]))
-
-        # Create a dummy dataframe with missing countries
-        dummy_df = pd.DataFrame({
-            "Quarter": [None] * len(missing_countries),  # Repeat None for each country
-            "Value": [None] * len(missing_countries),    # Repeat None for each country
-            "Country": missing_countries                 # List of missing countries
-        })
-
-
-        fig=make_subplots(rows=1, cols=2)
+        # fig=make_subplots(rows=1, cols=2)
         for trace in make_fig(data, visType, data_option, show_dip_lines, second_plot, second_data, True):
             # trace.showlegend = False
             fig.add_trace(trace, row=1, col=1)
@@ -158,10 +158,22 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
             # trace.showlegend = False
             fig.add_trace(trace, row=1, col=2)
         
-        # Generate hidden traces for missing countries
-        for trace in make_fig(dummy_df, visType, data_option, show_dip_lines, second_plot, second_data, show_legend):
-            trace.visible = "legendonly"  # Hide from graph but keep in legend
-            fig.add_trace(trace, row=1, col=1)
+        if visType != "3D line graph":
+            # Determine missing countries (ones in second plot but not first)
+            missing_countries = list(set(second_data["Country"]) - set(data["Country"]))
+
+            # Create a dummy dataframe with missing countries
+            dummy_df = pd.DataFrame({
+                "Quarter": [None] * len(missing_countries),  # Repeat None for each country
+                "Value": [None] * len(missing_countries),    # Repeat None for each country
+                "Country": missing_countries                 # List of missing countries
+            })
+
+            # Generate hidden traces for missing countries
+            for trace in make_fig(dummy_df, "2D line graph", data_option, show_dip_lines, second_plot, second_data, show_legend):
+                trace.visible = "legendonly"  # Hide from graph but keep in legend
+                fig.add_trace(trace, row=1, col=1)
+        
         # Add hidden traces only for countries missing from the first plot
         # missing_countries = set(df2["country"]) - set(df1["country"])
         # dummy_df = pd.DataFrame({"x": [None], "y": [None], "country": list(missing_countries)})
