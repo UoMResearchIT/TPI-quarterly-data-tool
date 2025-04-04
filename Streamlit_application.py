@@ -97,9 +97,9 @@ def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_dat
 
         # Customise layout with explicit axis labels
         fig.update_layout(
-            title='3D Line Graph',
+            title=f"{data_option.QorY} comparison of {data_option.data_option} ({data_option.base_year} = 100)",
             scene=dict(camera=dict(eye=dict(x=1.7, y=1.7, z=1.7)), 
-                       zaxis_title=f"{data_option}"),  # Move camera further away
+                       zaxis_title=f"{data_option.data_option}"),  # Move camera further away
             width=1000,
             height=500
         )
@@ -113,6 +113,13 @@ def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_dat
                 color_discrete_map=country_colors,
                 title=f"{data_option.QorY} comparison of {data_option.data_option} ({data_option.base_year} = 100)",
                 labels={"value": f"{data_option.data_option}", "variable": "Countries"})
+        fig.update_layout(
+            yaxis=dict(
+                title=dict(
+                    text=f"{data_option.data_option}"
+                )
+            ),
+        )
         if show_dip_lines:
             highlighted_quarters = ["2007 Q4", "2009 Q2", "2019 Q4", "2021 Q1"]  # Quarters highlighted with verticle lines
             for quarter in highlighted_quarters:
