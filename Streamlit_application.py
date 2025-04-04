@@ -171,12 +171,12 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
                 "Country": missing_countries                 # List of missing countries
             })
             
-            if visType == "QoQ" or visType == "YoY":
+            if visType == "QoQ" or visType == "YoY":  # If it is displaying a bar graph
                 # Generate hidden traces for missing countries
                 for trace in make_fig(dummy_df, "Dummy bar graph", data_option, show_dip_lines, second_plot, second_data, show_legend):
                     trace.visible = "legendonly"  # Hide from graph but keep in legend
                     fig.add_trace(trace, row=1, col=1)
-            else:
+            else:  # If it is displaying a 2d line graph
                 # Generate hidden traces for missing countries
                 for trace in make_fig(dummy_df, "2D line graph", data_option, show_dip_lines, second_plot, second_data, show_legend):
                     trace.visible = "legendonly"  # Hide from graph but keep in legend
