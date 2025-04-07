@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import time 
 import re
@@ -26,7 +25,7 @@ def numeric_to_quarter(n): # Converts 1997.5 → "1997 Q3"
     qtr = int((n - year) * 4) + 1
     return f"{year} Q{qtr}"
 
-@st.cache_data
+# @st.cache_data
 def data_format(data, QorY, time_period, _data_option, country_options, visType = '2D line graph', quarterly_selection =False, industry_selection = ['Total']):
     # Filter for time selection
     if QorY == "Quarterly":
@@ -255,10 +254,10 @@ def visualisation_selection(quarterly_data, yearly_data, key):
         quarters = quarterly_data["Quarter"].unique()
         quarters = [numeric_to_quarter(x) for x in quarters]
         quarter = st.sidebar.select_slider(label = "Quarterly slider", options = quarters, value=(quarters[0], quarters[-1]), label_visibility="collapsed", key=f'Q_Slider_{key}')
-        quarterly_options = ["OPH", "OPW", "GVA", "GDP per hour (TPI calculation)"]
+        quarterly_options = ["Output Per Hour", "Output Per Worker", "Gross Value Added", "GDP per hour (TPI calculation)"]
         quarterly_option = st.sidebar.selectbox(label= "Select data", options=quarterly_options, key=f'Q_Option_{key}')
         industry_selection = ['Total']
-        if quarterly_option == "GVA":
+        if quarterly_option == "Gross Value Added":
             industry_options = quarterly_data['Industry'].unique()
             industry_options = industry_options[~pd.isna(industry_options)] 
             industry_selection = st.sidebar.multiselect(label="Select industry selection", options=industry_options, default=['Total'], key=f'Industry_Selection_{key}')
