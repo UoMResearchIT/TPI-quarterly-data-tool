@@ -25,8 +25,31 @@ def numeric_to_quarter(n): # Converts 1997.5 → "1997 Q3"
     qtr = int((n - year) * 4) + 1
     return f"{year} Q{qtr}"
 
+def rebase_chain_linked_quarters(df, new_base_year):
+    df = df.copy()
+    
+    # Extract year from Quarter (e.g., 1997.25 -> 1997)
+    df['Year'] = df["Quarter"].astype(int)
+
+    def rebase_group(group):
+        # Get the mean of the base year for this group
+        base_year_values = group[group['Year'] == new_base_year]['Value']
+        if base_year_values.empty or base_year_values.mean() == 0:
+            return group  # Skip group if base year is missing or zero
+        base_mean = base_year_values.mean()
+        group["Value"] = (group["Value"] / base_mean) * 100
+        return group
+
+    # Apply rebase per group
+    df = df.groupby(['Country', 'Industry', 'Variable'], group_keys=False).apply(rebase_group)
+
+    # Drop temporary year column
+    df = df.drop(columns='Year')
+
+    return df
+
 # @st.cache_data
-def data_format(data, QorY, time_period, _data_option, country_options, visType = '2D line graph', quarterly_selection =False, industry_selection = ['Total']):
+def data_format(data, QorY, time_period, data_option, country_options, visType = '2D line graph', quarterly_selection =False, industry_selection = ['Total']):
     # Filter for time selection
     if QorY == "Quarterly":
         # Convert the time periods to numeric
@@ -39,7 +62,7 @@ def data_format(data, QorY, time_period, _data_option, country_options, visType 
         elif visType == 'YoY':
             time_period[0] -= 1
         data = long_data.query(
-        f"Quarter >= {time_period[0]} and Quarter <= {time_period[1]} and Country in {country_options} and Variable == '{_data_option.data_option}' and Industry in {industry_selection}")
+        f"Quarter >= {time_period[0]} and Quarter <= {time_period[1]} and Country in {country_options} and Variable == '{data_option.data_option}' and Industry in {industry_selection}")
     elif QorY == "Yearly":
         data = data[(data["Year"] >= time_period[0]) & (data["Year"] <= time_period[1])]
     
@@ -58,6 +81,8 @@ def data_format(data, QorY, time_period, _data_option, country_options, visType 
             qoq_data.drop("decimal_part", axis=1, inplace=True)
             qoq_data["YoY Growth (%)"] = qoq_data.groupby("Country")["Value"].pct_change().mul(100).round(2)
         data = qoq_data
+    if data_option.base_year != 2020:
+        data = rebase_chain_linked_quarters(data, data_option.base_year)
     data['Quarter'] = data['Quarter'].apply(numeric_to_quarter)
     return data
 
@@ -163,6 +188,7 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
                         font=dict(size=12),
                     ),
                     height=300 * rows)
+        fig.update_layout(title=f"Gross Value Added by industry (2020 = 100)")  # remove
     elif second_plot:
         # x = "scene" - remove - this also works
         # fig=make_subplots(rows=1, cols=2, specs=[[{"type": f"{x}"}, {"type": f"{x}"}]])
@@ -336,7 +362,11 @@ def visualisation_selection(quarterly_data, yearly_data, key):
         data_option = quarterly_option
     elif QorY == "Yearly":
         data_option = yearly_option
-    return QorY, quarter, data_option, industry_selection, year, quarterly_selection, country_selection, visType
+    
+    # Base year selecter 
+    base_year_options = list(range(1997, 2025))
+    base_year = st.sidebar.selectbox(label="Change the base year? (default set to 2020)", options=base_year_options, index=base_year_options.index(2020), key=f'base_year_{key}')
+    return QorY, quarter, data_option, industry_selection, year, quarterly_selection, country_selection, visType, base_year
 
 @st.cache_data
 def load_data():
@@ -371,8 +401,7 @@ def main():
 
     # First plot
     key = 1
-    QorY, quarter, data_option, industry_selection, year, quarterly_selection, country_selection, visType = visualisation_selection(quarterly_data, yearly_data, key)
-    base_year = 2020 # remove - need to change this when u can select the base year
+    QorY, quarter, data_option, industry_selection, year, quarterly_selection, country_selection, visType, base_year = visualisation_selection(quarterly_data, yearly_data, key)
     plot_one_data_option = data_options(QorY, data_option, base_year, quarterly_selection)
 
     second_plot = False
@@ -382,7 +411,8 @@ def main():
         second_plot = st.sidebar.toggle(label='Show a second plot side by side')
         if second_plot:
             key = 2
-            QorY_two, quarter_two, quarterly_option_two, industry_selection_two, yearly_option_two, year_two, quarterly_selection_two, country_selection_two, visType_two = visualisation_selection(quarterly_data, yearly_data, key)
+            QorY_two, quarter_two, data_option_two, industry_selection_two, year_two, quarterly_selection_two, country_selection_two, visType_two, base_year_two = visualisation_selection(quarterly_data, yearly_data, key)
+            plot_two_data_option = data_options(QorY_two, data_option_two, base_year_two, quarterly_selection_two)
     #     countries = list(set(country_selection) | set(country_selection_two)) # All countries in both lists
     # else:
     #     countries = country_selection
@@ -447,13 +477,15 @@ def main():
         quarterly_data = data_format(quarterly_data, QorY, quarter, plot_one_data_option, country_selection, visType, quarterly_selection, industry_selection)
         quarterly_data_two = None
         if second_plot:
-            quarterly_data_two = data_format(quarterly_data, QorY_two, quarter_two, quarterly_option_two, country_selection_two, visType_two, quarterly_selection_two, industry_selection_two)
+            quarterly_data_two = data_format(quarterly_data, QorY_two, quarter_two, plot_two_data_option, country_selection_two, visType_two, quarterly_selection_two, industry_selection_two)
         fig = create_quarterly_fig(quarterly_data, show_legend, plot_one_data_option, show_dip_lines, visType, second_plot, quarterly_data_two)
+        if second_plot:
+            fig.update_layout(title=f"{plot_one_data_option.data_option} against {plot_two_data_option.data_option}")  # remove
     else:
-        yearly_data = data_format(yearly_data, QorY, year, data_option, country_selection)
+        yearly_data = data_format(yearly_data, QorY, year, plot_one_data_option, country_selection)
         yearly_data_two = None
         if second_plot:
-            yearly_data_two = data_format(yearly_data, QorY_two, year_two, yearly_option_two, country_selection_two)
+            yearly_data_two = data_format(yearly_data, QorY_two, year_two, plot_two_data_option, country_selection_two)
         fig = create_yearly_fig(yearly_data, show_legend, second_plot, yearly_data_two) # remove, need to add data_option
     
     # Display the figure
