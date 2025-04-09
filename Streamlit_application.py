@@ -51,6 +51,7 @@ def rebase_chain_linked_quarters(df, new_base_year):
 # @st.cache_data
 def data_format(data, QorY, time_period, data_option, country_options, visType = '2D line graph', quarterly_selection =False, industry_selection = ['Total']):
     # Filter for time selection
+    print("herehere", data)
     if QorY == "Quarterly":
         # Convert the time periods to numeric
         time_period = list(time_period)
@@ -65,6 +66,7 @@ def data_format(data, QorY, time_period, data_option, country_options, visType =
         f"Quarter >= {time_period[0]} and Quarter <= {time_period[1]} and Country in {country_options} and Variable == '{data_option.data_option}' and Industry in {industry_selection}")
     elif QorY == "Yearly":
         data = data[(data["Year"] >= time_period[0]) & (data["Year"] <= time_period[1])]
+        return data
     
     # Data processing for bar graphs
     if visType == 'QoQ' or visType == 'YoY':
@@ -94,12 +96,12 @@ def multi_data_format(data, industry):
 def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_data, show_legend):
     if second_plot:  
         countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
-        color_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
-        country_colors = {country: color_palette[i % len(color_palette)] for i, country in enumerate(countries)}
+        colour_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
+        country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
     else: # Need this to account for if second plot isn't selected
         countries = data["Country"]
-        color_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
-        country_colors = {country: color_palette[i % len(color_palette)] for i, country in enumerate(countries)}
+        colour_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
+        country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
 
     if visType == 'QoQ':
         fig = px.bar(data, x="Quarter", y="QoQ Growth (%)", color="Country",
@@ -275,7 +277,7 @@ def visualisation_selection(quarterly_data, yearly_data, key):
     # Quarter time series selection
     quarterly_option = None
     quarter = None
-    industry_selection = None
+    industry_selection = ['Total']
     if st.session_state.show_quarter_slider_two:
         quarters = quarterly_data["Quarter"].unique()
         quarters = [numeric_to_quarter(x) for x in quarters]
@@ -292,11 +294,11 @@ def visualisation_selection(quarterly_data, yearly_data, key):
     yearly_option = None
     year = None
     if st.session_state.show_yearly_slider_two:
-        year = st.sidebar.slider(label="Yearly slider!", min_value=yearly_data["Year"].iat[0], max_value=max(yearly_data["Year"]), value=[yearly_data["Year"].iat[0], max(yearly_data["Year"])], label_visibility="collapsed", key='Y_Slider_Two')
+        year = st.sidebar.slider(label="Yearly slider!", min_value=yearly_data["Year"].iat[0], max_value=max(yearly_data["Year"]), value=[yearly_data["Year"].iat[0], max(yearly_data["Year"])], label_visibility="collapsed", key=f'Y_Slider_{key}')
         if year[0] == year[1]:
             year = [year[0], year[0] + 1] if year[0] < max(yearly_data["Year"]) else [year[0] - 1, year[0]]
         yearly_option = yearly_options = ["GDP per hour worked"]
-        st.sidebar.selectbox(label= "Select data", options=yearly_options, key='Y_Option')
+        st.sidebar.selectbox(label= "Select data", options=yearly_options, key=f'Y_Option_{key}')
 
     quarterly_selection = None
     if QorY == "Quarterly":
