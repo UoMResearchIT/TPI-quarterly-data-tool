@@ -3,7 +3,6 @@ import pandas as pd
 import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
-import time 
 import re
 import math
 
@@ -30,11 +29,11 @@ def rebase_chain_linked_quarters(df, new_base_year):
     df = df.copy()
     
     # Extract year from Quarter (e.g., 1997.25 -> 1997)
-    df['Year'] = df["Quarter"].astype(int)
+    df["Year"] = df["Quarter"].astype(int)
 
     def rebase_group(group):
         # Get the mean of the base year for this group
-        base_year_values = group[group['Year'] == new_base_year]['Value']
+        base_year_values = group[group["Year"] == new_base_year]["Value"]
         if base_year_values.empty or base_year_values.mean() == 0:
             return group  # Skip group if base year is missing or zero
         base_mean = base_year_values.mean()
@@ -42,15 +41,15 @@ def rebase_chain_linked_quarters(df, new_base_year):
         return group
 
     # Apply rebase per group
-    df = df.groupby(['Country', 'Industry', 'Variable'], group_keys=False).apply(rebase_group)
+    df = df.groupby(["Country", "Industry", "Variable"], group_keys=False).apply(rebase_group)
 
     # Drop temporary year column
-    df = df.drop(columns='Year')
+    df = df.drop(columns="Year")
 
     return df
 
 # @st.cache_data
-def data_format(data, QorY, time_period, data_option, country_options, visType = '2D line graph', quarterly_selection =False, industry_selection = ['Total']):
+def data_format(data, QorY, time_period, data_option, country_options, visType = "2D line graph", quarterly_selection =False, industry_selection = ["Total"]):
     # Filter for time selection
     print("herehere", data)
     if QorY == "Quarterly":
@@ -58,26 +57,24 @@ def data_format(data, QorY, time_period, data_option, country_options, visType =
         time_period = list(time_period)
         time_period[0] = quarter_to_numeric(time_period[0])
         time_period[1] = quarter_to_numeric(time_period[1])
-        long_data = pd.read_csv('out/Long_Dataset.csv')  # remove - what how did i not see this!
-        if visType == 'QoQ': # remove - check is correct
+        if visType == "QoQ": 
             time_period[0] -= 0.25
-        elif visType == 'YoY':
+        elif visType == "YoY":
             time_period[0] -= 1
-        data = long_data.query(
+        data = data.query(
         f"Quarter >= {time_period[0]} and Quarter <= {time_period[1]} and Country in {country_options} and Variable == '{data_option.data_option}' and Industry in {industry_selection}")
     elif QorY == "Yearly":
-        # data = data[(data["Year"] >= time_period[0]) & (data["Year"] <= time_period[1])]
         data = data.query(f"Year >= {time_period[0]} and Year <= {time_period[1]}")
         return data
     
     # Data processing for bar graphs
-    if visType == 'QoQ' or visType == 'YoY':
+    if visType == "QoQ" or visType == "YoY":
         qoq_data = data.copy()
-        if visType == 'QoQ':
+        if visType == "QoQ":
             # Calculate QoQ Growth (Change from the previous quarter)
             qoq_data["QoQ Growth (%)"] = qoq_data.groupby("Country")["Value"].pct_change().mul(100).round(2)
 
-        if visType == 'YoY':
+        if visType == "YoY":
             # Filtering to show only selected quarters in yoy selection
             quarter_map = {1: 0, 2: 0.25, 3: 0.5, 4: 0.75}
             qoq_data["decimal_part"] = qoq_data["Quarter"] % 1
@@ -87,7 +84,7 @@ def data_format(data, QorY, time_period, data_option, country_options, visType =
         data = qoq_data
     if data_option.base_year != 2020:
         data = rebase_chain_linked_quarters(data, data_option.base_year)
-    data['Quarter'] = data['Quarter'].apply(numeric_to_quarter)
+    data["Quarter"] = data["Quarter"].apply(numeric_to_quarter)
     return data
 
 @st.cache_data
@@ -100,15 +97,15 @@ def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_dat
         countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
         colour_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
         country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
-    else: # Need this to account for if second plot isn't selected
+    else: # Need this to account for if second plot isn"t selected
         countries = data["Country"]
         colour_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
         country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
 
-    if visType == 'QoQ':
+    if visType == "QoQ":
         fig = px.bar(data, x="Quarter", y="QoQ Growth (%)", color="Country",
                 barmode="group", title=f"Quarter on quarter comparison of {data_option.data_option} (chain linked values {data_option.base_year} = 100)")
-    elif visType == 'YoY':
+    elif visType == "YoY":
         # two options:
         # title=f"Year on year comparison of {data_option.data_option} for the {ordinal(data_option.YoY_year)} quarter of each year selected (chain linked values {data_option.base_year} = 100)")
         # or
@@ -116,12 +113,12 @@ def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_dat
         fig = px.bar(data, x="Quarter", y="YoY Growth (%)", color="Country",
              barmode="group", title=f"Year on year comparison of {data_option.data_option} for Q{data_option.YoY_year} of each year selected (chain linked values {data_option.base_year} = 100)")
         
-    elif visType == '3D line graph':
+    elif visType == "3D line graph":
         # Extract years from quarters
-        data['Year'] = data['Quarter'].apply(lambda x: int(x.split()[0]))
+        data["Year"] = data["Quarter"].apply(lambda x: int(x.split()[0]))
         
         # Create the line plot
-        fig = px.line_3d(data, x="Country", y="Year", z="Value", color='Country')
+        fig = px.line_3d(data, x="Country", y="Year", z="Value", color="Country")
 
         # Customise layout with explicit axis labels
         fig.update_layout(
@@ -133,7 +130,7 @@ def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_dat
         )
         fig.update_traces(line=dict(width=5))
 
-    elif visType == '2D line graph':
+    elif visType == "2D line graph":
         fig = px.line(data, 
                 x="Quarter", 
                 y="Value", 
@@ -199,9 +196,7 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
         fig.update_layout(title=f"Gross Value Added by industry (2020 = 100)")  # remove
         # fig.update_xaxes(showticklabels=False)
     elif second_plot:
-        # x = "scene" - remove - this also works
-        # fig=make_subplots(rows=1, cols=2, specs=[[{"type": f"{x}"}, {"type": f"{x}"}]])
-        if visType == '3D line graph':  # Has to be "scene" instead of "xy" for 3d plot
+        if visType == "3D line graph":  # Has to be "scene" instead of "xy" for 3d plot
             fig=make_subplots(rows=1, cols=2, specs=[[{"type": "scene"}, {"type": "scene"}]])
         else:
             fig=make_subplots(rows=1, cols=2, specs=[[{"type": "xy"}, {"type": "xy"}]])
@@ -300,7 +295,7 @@ def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
             captions=[
                 "Yearly labour productivity",
             ],
-            key=f'QorY_{key}'
+            key=f"QorY_{key}"
             )
     else:
         QorY = st.sidebar.radio(
@@ -310,7 +305,7 @@ def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
                 "Quarterly labour productivity",
                 "Yearly labour productivity",
             ],
-            key=f'QorY_{key}'
+            key=f"QorY_{key}"
         )
     if QorY == "Quarterly":
         st.session_state.show_quarter_slider_two = True
@@ -320,28 +315,28 @@ def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
     # Quarter time series selection
     quarterly_option = None
     quarter = None
-    industry_selection = ['Total']
+    industry_selection = ["Total"]
     if st.session_state.show_quarter_slider_two:
         quarters = quarterly_data["Quarter"].unique()
         quarters = [numeric_to_quarter(x) for x in quarters]
-        quarter = st.sidebar.select_slider(label = "Quarterly slider", options = quarters, value=(quarters[0], quarters[-1]), label_visibility="collapsed", key=f'Q_Slider_{key}')
+        quarter = st.sidebar.select_slider(label = "Quarterly slider", options = quarters, value=(quarters[0], quarters[-1]), label_visibility="collapsed", key=f"Q_Slider_{key}")
         quarterly_options = ["Output Per Hour", "Output Per Worker", "Gross Value Added", "GDP per hour (TPI calculation)"]
-        quarterly_option = st.sidebar.selectbox(label= "Select data", options=quarterly_options, key=f'Q_Option_{key}')
-        industry_selection = ['Total']
+        quarterly_option = st.sidebar.selectbox(label= "Select data", options=quarterly_options, key=f"Q_Option_{key}")
+        industry_selection = ["Total"]
         if quarterly_option == "Gross Value Added":
-            industry_options = quarterly_data['Industry'].unique()
+            industry_options = quarterly_data["Industry"].unique()
             industry_options = industry_options[~pd.isna(industry_options)] 
-            industry_selection = st.sidebar.multiselect(label="Select industry selection", options=industry_options, default=['Total'], key=f'Industry_Selection_{key}')
+            industry_selection = st.sidebar.multiselect(label="Select industry selection", options=industry_options, default=["Total"], key=f"Industry_Selection_{key}")
 
     # Year time series selection
     yearly_option = None
     year = None
     if st.session_state.show_yearly_slider_two:
-        year = st.sidebar.slider(label="Yearly slider!", min_value=yearly_data["Year"].iat[0], max_value=max(yearly_data["Year"]), value=[yearly_data["Year"].iat[0], max(yearly_data["Year"])], label_visibility="collapsed", key=f'Y_Slider_{key}')
+        year = st.sidebar.slider(label="Yearly slider!", min_value=yearly_data["Year"].iat[0], max_value=max(yearly_data["Year"]), value=[yearly_data["Year"].iat[0], max(yearly_data["Year"])], label_visibility="collapsed", key=f"Y_Slider_{key}")
         if year[0] == year[1]:
             year = [year[0], year[0] + 1] if year[0] < max(yearly_data["Year"]) else [year[0] - 1, year[0]]
         yearly_option = yearly_options = ["GDP per hour worked"]
-        st.sidebar.selectbox(label= "Select data", options=yearly_options, key=f'Y_Option_{key}')
+        st.sidebar.selectbox(label= "Select data", options=yearly_options, key=f"Y_Option_{key}")
 
     quarterly_selection = None
     if QorY == "Quarterly":
@@ -349,33 +344,33 @@ def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
         regex_escaped_options = re.escape(quarterly_option)
         matching_columns = quarterly_data.columns[quarterly_data.columns.str.contains(regex_escaped_options, case=False)]
         # Extract country names by removing the option part
-        countries = quarterly_data['Country'].unique()
+        countries = quarterly_data["Country"].unique()
         # countries = [col.replace(quarterly_option, "").strip() for col in matching_columns]
         countries = sorted(countries, key=lambda x: (x not in ["UK", "US", "Euro Area", "European Union"], x))
         default_options = ["UK", "US", "Germany", "France", "Italy", "Spain"]
-        country_selection = st.sidebar.multiselect(label = "Select countries to display", options = countries, default=default_options, key=f'country_selection_{key}')
+        country_selection = st.sidebar.multiselect(label = "Select countries to display", options = countries, default=default_options, key=f"country_selection_{key}")
 
         # Only show data options below if quarterly format is selected
         st.sidebar.write("Select data view options")
         st.sidebar.write("Line graph")
         st.sidebar.checkbox("2D line graph", 
         value=(st.session_state.selected == "2D line graph"), 
-        on_change=lambda opt="2D line graph": update_selection(opt), key=f'2d_line_graph{key}')
+        on_change=lambda opt="2D line graph": update_selection(opt), key=f"2d_line_graph{key}")
 
         st.sidebar.checkbox("3D line graph", 
         value=(st.session_state.selected == "3D line graph"), 
-        on_change=lambda opt="3D line graph": update_selection(opt), key=f'3d_line_graph{key}')
+        on_change=lambda opt="3D line graph": update_selection(opt), key=f"3d_line_graph{key}")
 
         st.sidebar.write("Bar graph")
         st.sidebar.checkbox("Quarter on quarter", 
         value=(st.session_state.selected == "Quarter on quarter"), 
-        on_change=lambda opt="Quarter on quarter": update_selection(opt), key=f'qoq_graph{key}')
+        on_change=lambda opt="Quarter on quarter": update_selection(opt), key=f"qoq_graph{key}")
 
         st.sidebar.checkbox("Year on year", 
         value=(st.session_state.selected == "Year on year"), 
-        on_change=lambda opt="Year on year": update_selection(opt), key=f'yoy_graph{key}')
+        on_change=lambda opt="Year on year": update_selection(opt), key=f"yoy_graph{key}")
         if st.session_state.selected == "Year on year":
-            quarterly_selection = st.sidebar.selectbox(label= "Specific quarter comparison", options=[1, 2, 3, 4], key=f'quarterly_selection_{key}')
+            quarterly_selection = st.sidebar.selectbox(label= "Specific quarter comparison", options=[1, 2, 3, 4], key=f"quarterly_selection_{key}")
 
     elif QorY == "Yearly":
         # Only allow the user to select countries which are available for the data selected
@@ -386,21 +381,21 @@ def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
         countries= yearly_data["Country"].unique()
 
         default_options = ["US", "UK", "Germany", "France", "Italy", "Spain"]
-        country_selection = st.sidebar.multiselect(label = "Select countries to display", options = countries, default=default_options, key=f'country_selection_{key}')
+        country_selection = st.sidebar.multiselect(label = "Select countries to display", options = countries, default=default_options, key=f"country_selection_{key}")
 
-    visType = '2D line graph'
+    visType = "2D line graph"
     if st.session_state.selected == "Quarter on quarter":
-        visType = 'QoQ'
+        visType = "QoQ"
     elif st.session_state.selected == "Year on year":
-        visType = 'YoY'
-    elif st.session_state.selected == '2D line graph':
-        visType = '2D line graph'
-    elif st.session_state.selected == '3D line graph':
-        visType = '3D line graph'
-    elif st.session_state.selected == '2D scatter':
-        visType = '2D scatter'
-    elif st.session_state.selected == '3D scatter':
-        visType = '3D scatter'
+        visType = "YoY"
+    elif st.session_state.selected == "2D line graph":
+        visType = "2D line graph"
+    elif st.session_state.selected == "3D line graph":
+        visType = "3D line graph"
+    elif st.session_state.selected == "2D scatter":
+        visType = "2D scatter"
+    elif st.session_state.selected == "3D scatter":
+        visType = "3D scatter"
     if QorY == "Quarterly":
         data_option = quarterly_option
     elif QorY == "Yearly":
@@ -408,22 +403,16 @@ def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
     
     # Base year selecter 
     base_year_options = list(range(1997, 2025))
-    base_year = st.sidebar.selectbox(label="Change the base year? (default set to 2020)", options=base_year_options, index=base_year_options.index(2020), key=f'base_year_{key}')
+    base_year = st.sidebar.selectbox(label="Change the base year? (default set to 2020)", options=base_year_options, index=base_year_options.index(2020), key=f"base_year_{key}")
     return QorY, quarter, data_option, industry_selection, year, quarterly_selection, country_selection, visType, base_year
 
 @st.cache_data
 def load_data():
-    t0 = time.time()
     yearly_data = pd.read_csv("out/OPH_Processed.csv")
-    # quarterly_data = pd.read_csv("out/Dataset.csv")
     quarterly_data = pd.read_csv("out/Long_Dataset.csv")
-
-    print("Runtime loading data: " + str(int((time.time() - t0)*1000)) + " miliseconds")
     return quarterly_data, yearly_data
 
 def main():
-    t0 = time.time()
-
     # Set session state variables
     st.session_state.show_quarter_slider = False
     st.session_state.show_yearly_slider = False
@@ -439,7 +428,7 @@ def main():
     quarterly_data, yearly_data = load_data()
 
     # Page formatting
-    st.sidebar.html('<a href="https://lab.productivity.ac.uk" alt="The Productivity Lab"></a>')
+    st.sidebar.html("<a href='https://lab.productivity.ac.uk' alt='The Productivity Lab'></a>")
     st.logo("static/logo.png", link="https://lab.productivity.ac.uk/", icon_image=None)
 
     # First plot
@@ -451,7 +440,7 @@ def main():
     # Second plot options
     if len(industry_selection) == 1:
         st.sidebar.divider()
-        second_plot = st.sidebar.toggle(label='Show a second plot side by side')
+        second_plot = st.sidebar.toggle(label="Show a second plot side by side")
         if second_plot:
             key = 2
             if QorY == "Yearly":
@@ -477,14 +466,14 @@ def main():
     if st.sidebar.button("Export Selected Data"):
         @st.cache_data
         def convert_df(df):
-            return df.to_csv().encode('utf-8')
+            return df.to_csv().encode("utf-8")
         
         csv = convert_df(data_format(quarterly_data, QorY, quarter, data_option, country_selection, visType, quarterly_selection, industry_selection))
         st.sidebar.download_button(
             label="Download data as CSV",
             data=csv,
-            file_name='productivity_data.csv',
-            mime='text/csv',
+            file_name="productivity_data.csv",
+            mime="text/csv",
         )
     
     #Define main content
@@ -520,7 +509,6 @@ def main():
         )
 
     figure = st.empty()
-    # show_dip_lines = True  # remove
     if QorY == "Quarterly":
         quarterly_data = data_format(quarterly_data, QorY, quarter, plot_one_data_option, country_selection, visType, quarterly_selection, industry_selection)
         quarterly_data_two = None
@@ -543,9 +531,9 @@ def main():
             st.session_state.fig = fig
             figure.plotly_chart(st.session_state.fig, use_container_width=True,                 
                     config = {
-                        'toImageButtonOptions': {
-                            'filename': 'Downloaded_file',
-                            'scale': 2
+                        "toImageButtonOptions": {
+                            "filename": "Downloaded_file",
+                            "scale": 2
                         }
                     })
     
