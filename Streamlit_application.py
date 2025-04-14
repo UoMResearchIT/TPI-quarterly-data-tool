@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from plotly.subplots import make_subplots
+import plotly.graph_objects as go
 import time 
 import re
 import math
@@ -57,7 +58,7 @@ def data_format(data, QorY, time_period, data_option, country_options, visType =
         time_period = list(time_period)
         time_period[0] = quarter_to_numeric(time_period[0])
         time_period[1] = quarter_to_numeric(time_period[1])
-        long_data = pd.read_csv('out/Long_Dataset.csv')
+        long_data = pd.read_csv('out/Long_Dataset.csv')  # remove - what how did i not see this!
         if visType == 'QoQ': # remove - check is correct
             time_period[0] -= 0.25
         elif visType == 'YoY':
@@ -65,7 +66,8 @@ def data_format(data, QorY, time_period, data_option, country_options, visType =
         data = long_data.query(
         f"Quarter >= {time_period[0]} and Quarter <= {time_period[1]} and Country in {country_options} and Variable == '{data_option.data_option}' and Industry in {industry_selection}")
     elif QorY == "Yearly":
-        data = data[(data["Year"] >= time_period[0]) & (data["Year"] <= time_period[1])]
+        # data = data[(data["Year"] >= time_period[0]) & (data["Year"] <= time_period[1])]
+        data = data.query(f"Year >= {time_period[0]} and Year <= {time_period[1]}")
         return data
     
     # Data processing for bar graphs
@@ -161,7 +163,7 @@ def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_dat
     else:
         return fig
 
-def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType, second_plot, second_data):
+def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType, second_plot, second_data, show_years):
     data = data.dropna()
     industries = data["Industry"].unique()
     if len(industries) > 1:  # If multiple industries are selected for GVA
@@ -171,7 +173,11 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
         for i, industry in enumerate(industries):
             row = (i // cols) + 1  # Determine row position
             col = (i % cols) + 1  # Determine column position
-            figs = px.line(multi_data_format(data, industry), 
+            industry_data = multi_data_format(data, industry)
+            if show_years:
+                industry_data["Quarter"] = industry_data["Quarter"].apply(quarter_to_numeric)
+            print(industry_data)
+            figs = px.line(industry_data, 
                 x="Quarter", 
                 y="Value", 
                 color="Country",
@@ -191,6 +197,7 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
                     ),
                     height=300 * rows)
         fig.update_layout(title=f"Gross Value Added by industry (2020 = 100)")  # remove
+        # fig.update_xaxes(showticklabels=False)
     elif second_plot:
         # x = "scene" - remove - this also works
         # fig=make_subplots(rows=1, cols=2, specs=[[{"type": f"{x}"}, {"type": f"{x}"}]])
@@ -213,9 +220,9 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
 
             # Create a dummy dataframe with missing countries
             dummy_df = pd.DataFrame({
-                "Quarter": [None] * len(missing_countries),  # Repeat None for each country
-                "Value": [None] * len(missing_countries),    # Repeat None for each country
-                "Country": missing_countries                 # List of missing countries
+                "Quarter": ["1900 Q1"] * len(missing_countries),  # Some old date unlikely to be in range
+                "Value": [0] * len(missing_countries),
+                "Country": missing_countries
             })
             
             if visType == "QoQ" or visType == "YoY":  # If it is displaying a bar graph
@@ -224,18 +231,20 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
                     trace.visible = "legendonly"  # Hide from graph but keep in legend
                     fig.add_trace(trace, row=1, col=1)
             else:  # If it is displaying a 2d line graph
-                # Generate hidden traces for missing countries
-                for trace in make_fig(dummy_df, "2D line graph", data_option, show_dip_lines, second_plot, second_data, show_legend):
-                    trace.visible = "legendonly"  # Hide from graph but keep in legend
+                countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
+                colour_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
+                country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
+                for country in missing_countries:
+                    trace = go.Scatter(
+                        x=["1900 Q1"],  # Fake data
+                        y=[0],
+                        mode="lines",
+                        name=country,
+                        line=dict(color=country_colors.get(country, "#000000")),
+                        visible="legendonly",
+                        showlegend=True
+                    )
                     fig.add_trace(trace, row=1, col=1)
-        # else:
-        #     fig.update_layout(
-        #         title='3D Line Graph',
-        #         scene=dict(camera=dict(eye=dict(x=1.7, y=1.7, z=1.7)), 
-        #                 zaxis_title=f"{data_option}"),  # Move camera further away
-        #         width=1000,
-        #         height=500
-        #     )
     else:
         fig = make_fig(data, visType, data_option, show_dip_lines, second_plot, second_data, show_legend)
     if not second_plot:
@@ -243,11 +252,35 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
     return fig
 
 def create_yearly_fig(data, show_legend, second_plot, second_data):
-    fig = px.line(data, 
-              x="Year", 
-              y=data.columns.drop("Year").tolist(), 
-              title="GDP per Hour Worked Over Time (2015=100)")
-    fig.update_layout(showlegend=show_legend)
+    def yearly_line_graph(data):
+        return px.line(data, 
+        x="Year", 
+        y="Country", 
+        title="GDP per Hour Worked Over Time (2015=100)").data
+    if second_plot:
+        fig=make_subplots(rows=1, cols=2)
+        for trace in yearly_line_graph(data):
+            fig.add_trace(trace, row=1, col=1)
+        for trace in yearly_line_graph(second_data):
+            fig.add_trace(trace, row=1, col=2)
+        # remove - for below code to work, need to make yearly data long
+        # countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
+        # colour_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
+        # country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
+        # for country in missing_countries:
+        #     trace = go.Scatter(
+        #         x=["1900 Q1"],  # Fake data
+        #         y=[0],
+        #         mode="lines",
+        #         name=country,
+        #         line=dict(color=country_colors.get(country, "#000000")),
+        #         visible="legendonly",
+        #         showlegend=True
+        #     )
+        #     fig.add_trace(trace, row=1, col=1)
+    else:
+        fig = yearly_line_graph(data)
+        # fig.update_layout(showlegend=show_legend)
     return fig
 
 def update_selection(option):
@@ -257,18 +290,28 @@ def update_selection(option):
         st.session_state.selected = option
 
 
-def visualisation_selection(quarterly_data, yearly_data, key):
+def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
     st.sidebar.divider()
     st.sidebar.subheader("Select data to plot")
-    QorY = st.sidebar.radio(
-        label="Select data to plot",
-        options=["Quarterly", "Yearly"],
-        captions=[
-            "Quarterly labour productivity",
-            "Yearly labour productivity",
-        ],
-        key=f'QorY_{key}'
-    )
+    if lock_quarterly:
+        QorY = st.sidebar.radio(
+            label="Select data to plot",
+            options=["Yearly"],
+            captions=[
+                "Yearly labour productivity",
+            ],
+            key=f'QorY_{key}'
+            )
+    else:
+        QorY = st.sidebar.radio(
+            label="Select data to plot",
+            options=["Quarterly", "Yearly"],
+            captions=[
+                "Quarterly labour productivity",
+                "Yearly labour productivity",
+            ],
+            key=f'QorY_{key}'
+        )
     if QorY == "Quarterly":
         st.session_state.show_quarter_slider_two = True
     elif QorY == "Yearly":
@@ -340,10 +383,8 @@ def visualisation_selection(quarterly_data, yearly_data, key):
         matching_columns = yearly_data.columns[yearly_data.columns.str.contains(regex_escaped_options, case=False)]
 
         # Extract country names by removing the option part
-        countries = [col.replace("GDP per hour worked", "").strip() for col in matching_columns]
+        countries= yearly_data["Country"].unique()
 
-        # Sort into alphabetical order, but with the European average options at the top
-        countries = sorted(countries, key=lambda x: (x not in ["UK", "Euro Area", "European Union"], x))
         default_options = ["US", "UK", "Germany", "France", "Italy", "Spain"]
         country_selection = st.sidebar.multiselect(label = "Select countries to display", options = countries, default=default_options, key=f'country_selection_{key}')
 
@@ -403,7 +444,7 @@ def main():
 
     # First plot
     key = 1
-    QorY, quarter, data_option, industry_selection, year, quarterly_selection, country_selection, visType, base_year = visualisation_selection(quarterly_data, yearly_data, key)
+    QorY, quarter, data_option, industry_selection, year, quarterly_selection, country_selection, visType, base_year = visualisation_selection(quarterly_data, yearly_data, key, False)
     plot_one_data_option = data_options(QorY, data_option, base_year, quarterly_selection)
 
     second_plot = False
@@ -413,7 +454,11 @@ def main():
         second_plot = st.sidebar.toggle(label='Show a second plot side by side')
         if second_plot:
             key = 2
-            QorY_two, quarter_two, data_option_two, industry_selection_two, year_two, quarterly_selection_two, country_selection_two, visType_two, base_year_two = visualisation_selection(quarterly_data, yearly_data, key)
+            if QorY == "Yearly":
+                lock_quarterly = True
+            else:
+                lock_quarterly = False
+            QorY_two, quarter_two, data_option_two, industry_selection_two, year_two, quarterly_selection_two, country_selection_two, visType_two, base_year_two = visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly)
             plot_two_data_option = data_options(QorY_two, data_option_two, base_year_two, quarterly_selection_two)
     #     countries = list(set(country_selection) | set(country_selection_two)) # All countries in both lists
     # else:
@@ -424,6 +469,7 @@ def main():
     st.sidebar.subheader("Configure layout")
     show_legend = st.sidebar.toggle(label="Show legend", value=True)
     show_dip_lines = st.sidebar.toggle(label="Show verticle lines for before and after major dips in productivity (2008 recession and covid-19)", value=False)
+    show_years = st.sidebar.toggle(label="Show years", value=False)
     # showtrend = st.sidebar.toggle(label="Show trendline", value=False)
     # showlabel = st.sidebar.toggle(label="Show labels", value=False)
 
@@ -480,7 +526,7 @@ def main():
         quarterly_data_two = None
         if second_plot:
             quarterly_data_two = data_format(quarterly_data, QorY_two, quarter_two, plot_two_data_option, country_selection_two, visType_two, quarterly_selection_two, industry_selection_two)
-        fig = create_quarterly_fig(quarterly_data, show_legend, plot_one_data_option, show_dip_lines, visType, second_plot, quarterly_data_two)
+        fig = create_quarterly_fig(quarterly_data, show_legend, plot_one_data_option, show_dip_lines, visType, second_plot, quarterly_data_two, show_years)
         if second_plot:
             fig.update_layout(title=f"{plot_one_data_option.data_option} against {plot_two_data_option.data_option}")  # remove
     else:

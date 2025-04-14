@@ -1,54 +1,319 @@
-Year,France GDP per hour worked,Germany GDP per hour worked,Italy GDP per hour worked,Spain GDP per hour worked,UK GDP per hour worked,US GDP per hour worked
-1970,36.584559,38.829822,47.54863,37.582809,39.997229,48.819783
-1971,38.4033,40.524461,49.674269,39.123319,42.606111,50.650568
-1972,40.985667,42.543817,52.135119,42.270507,45.124673,51.882497
-1973,43.352097,44.713971,55.527978,44.941087,45.946183,53.113941
-1974,45.56264,46.519149,58.602639,46.989696,45.615769,52.634755
-1975,46.109511,48.269427,57.800083,47.789759,45.23678,54.075762
-1976,47.057382,50.519884,61.365685,49.722879,47.257872,55.385876
-1977,49.264423,52.600347,63.912401,51.562967,48.873712,55.976814
-1978,51.79632,54.224191,66.119869,53.977582,51.217904,56.420162
-1979,53.378026,55.776802,69.533694,56.171308,52.831307,56.672847
-1980,54.2552,56.24638,70.854162,59.57542,53.336263,56.684313
-1981,55.522586,57.18147,71.269172,62.060954,56.52667,57.999248
-1982,59.123398,57.773097,70.983066,64.096169,58.209303,57.81291
-1983,60.561641,59.668651,71.609984,66.607224,61.28244,59.394873
-1984,62.038122,61.244613,74.335548,71.057022,60.726315,60.633096
-1985,64.531501,62.65778,75.841455,73.873846,61.415085,61.748111
-1986,65.956339,63.60719,77.127467,74.887676,63.03277,63.14487
-1987,66.606748,64.477291,78.603139,75.771489,65.364288,63.603752
-1988,68.757769,66.140509,80.873332,77.114136,65.234491,64.339062
-1989,71.208466,68.442245,83.749497,78.546913,65.504315,64.905901
-1990,72.916395,70.860694,84.556158,78.443401,66.239326,66.017332
-1991,73.830001,73.324316,84.595277,79.078701,67.575298,66.882229
-1992,75.607026,75.196027,85.779154,81.311551,70.799665,69.179788
-1993,76.3106,76.660097,87.401638,83.204731,73.367751,69.44318
-1994,77.885244,78.64403,91.072919,85.641666,75.157328,70.03144
-1995,79.8219,79.828601,93.772882,86.357948,76.209292,70.185526
-1996,80.691661,81.172291,93.880025,87.314344,77.45123,71.930383
-1997,82.026815,83.161713,95.612618,87.168296,79.836181,72.97303
-1998,84.055794,84.008588,95.678224,86.757607,81.964484,74.614716
-1999,85.267075,84.962423,96.351086,86.451833,83.801614,76.818796
-2000,87.525502,87.068634,99.118059,86.853672,87.228252,78.928548
-2001,89.163111,89.255258,99.78275,86.992814,88.480893,80.660218
-2002,91.766179,90.082726,99.00028,87.127687,90.430863,82.891625
-2003,92.289942,90.775624,98.298734,87.38699,92.905382,85.398085
-2004,93.309866,91.602335,99.123067,87.667071,94.147513,87.632516
-2005,94.138072,93.047959,99.565938,88.009535,95.021657,89.463196
-2006,96.481781,94.536022,99.346739,88.524184,96.809346,90.31024
-2007,96.0296,95.652946,99.271227,89.502613,98.234708,91.57842
-2008,95.416924,95.677826,98.70518,89.733039,98.225392,92.751305
-2009,94.440997,92.797837,96.73892,91.895675,95.753497,95.715647
-2010,95.663522,94.936987,98.938252,94.231736,98.242208,98.245288
-2011,96.621402,97.40629,99.606174,95.622838,98.337771,98.282918
-2012,96.937089,98.007256,99.073743,97.467504,97.73831,98.653951
-2013,98.249867,98.472527,99.86123,98.90578,98.181436,99.073648
-2014,99.195227,99.49312,99.940667,99.211993,98.419046,99.446088
-2015,100.0,100.0,100.0,100.0,100.0,100.0
-2016,100.279427,101.355337,99.692606,100.457181,99.39092,100.302963
-2017,102.395091,103.162111,100.335718,101.334899,101.395966,101.201253
-2018,102.814627,103.375684,100.323292,101.103306,101.573367,102.3422
-2019,103.215736,104.113236,100.82174,101.664137,102.076228,103.581713
-2020,103.5224,105.31975,103.942159,101.486085,103.987187,107.111176
-2021,101.711063,105.93029,102.146042,100.71623,103.244366,108.386615
-2022,99.761299,106.460679,101.854776,102.538091,104.285141,107.025198
+Year,Country,Value,Variable
+2011,Germany,97.40629,GDP per hour worked
+2019,UK,102.076228,GDP per hour worked
+1975,Italy,57.800083,GDP per hour worked
+1971,US,50.650568,GDP per hour worked
+1970,Spain,37.582809,GDP per hour worked
+1979,US,56.672847,GDP per hour worked
+1977,France,49.264423,GDP per hour worked
+1978,Spain,53.977582,GDP per hour worked
+2010,Germany,94.936987,GDP per hour worked
+2021,Spain,100.71623,GDP per hour worked
+1976,UK,47.257872,GDP per hour worked
+1980,Germany,56.24638,GDP per hour worked
+1984,UK,60.726315,GDP per hour worked
+1986,Spain,74.887676,GDP per hour worked
+1983,Italy,71.609984,GDP per hour worked
+1987,US,63.603752,GDP per hour worked
+1988,Germany,66.140509,GDP per hour worked
+1985,France,64.531501,GDP per hour worked
+1992,UK,70.799665,GDP per hour worked
+1991,Italy,84.595277,GDP per hour worked
+1993,France,76.3106,GDP per hour worked
+1994,Spain,85.641666,GDP per hour worked
+2022,Germany,106.460679,GDP per hour worked
+1995,US,70.185526,GDP per hour worked
+1996,Germany,81.172291,GDP per hour worked
+1999,Italy,96.351086,GDP per hour worked
+2000,UK,87.228252,GDP per hour worked
+1972,Germany,42.543817,GDP per hour worked
+2021,Germany,105.93029,GDP per hour worked
+2010,US,98.245288,GDP per hour worked
+2010,Italy,98.938252,GDP per hour worked
+2003,US,85.398085,GDP per hour worked
+2003,Italy,98.298734,GDP per hour worked
+2002,Spain,87.127687,GDP per hour worked
+2006,Germany,94.536022,GDP per hour worked
+2001,France,89.163111,GDP per hour worked
+2021,US,108.386615,GDP per hour worked
+2009,France,94.440997,GDP per hour worked
+2010,Spain,94.231736,GDP per hour worked
+2008,UK,98.225392,GDP per hour worked
+2011,US,98.282918,GDP per hour worked
+2011,Italy,99.606174,GDP per hour worked
+2018,Spain,101.103306,GDP per hour worked
+2019,Italy,100.82174,GDP per hour worked
+2017,France,102.395091,GDP per hour worked
+2014,Germany,99.49312,GDP per hour worked
+2016,UK,99.39092,GDP per hour worked
+1970,US,48.819783,GDP per hour worked
+1970,Germany,38.829822,GDP per hour worked
+1970,France,36.584559,GDP per hour worked
+1972,US,51.882497,GDP per hour worked
+1971,Germany,40.524461,GDP per hour worked
+1971,Spain,39.123319,GDP per hour worked
+1974,Italy,58.602639,GDP per hour worked
+1974,UK,45.615769,GDP per hour worked
+1975,UK,45.23678,GDP per hour worked
+1975,France,46.109511,GDP per hour worked
+1979,Germany,55.776802,GDP per hour worked
+1979,Spain,56.171308,GDP per hour worked
+1976,France,47.057382,GDP per hour worked
+1976,Spain,49.722879,GDP per hour worked
+1976,Italy,61.365685,GDP per hour worked
+1973,Italy,55.527978,GDP per hour worked
+1973,Germany,44.713971,GDP per hour worked
+1978,US,56.420162,GDP per hour worked
+1978,Germany,54.224191,GDP per hour worked
+2005,UK,95.021657,GDP per hour worked
+2005,France,94.138072,GDP per hour worked
+2008,Germany,95.677826,GDP per hour worked
+2008,US,92.751305,GDP per hour worked
+2008,Italy,98.70518,GDP per hour worked
+2004,France,93.309866,GDP per hour worked
+2004,Spain,87.667071,GDP per hour worked
+2004,UK,94.147513,GDP per hour worked
+2010,UK,98.242208,GDP per hour worked
+1978,France,51.79632,GDP per hour worked
+1981,Italy,71.269172,GDP per hour worked
+1981,Germany,57.18147,GDP per hour worked
+1977,Spain,51.562967,GDP per hour worked
+1977,US,55.976814,GDP per hour worked
+1977,UK,48.873712,GDP per hour worked
+1983,UK,61.28244,GDP per hour worked
+1983,France,60.561641,GDP per hour worked
+1982,Italy,70.983066,GDP per hour worked
+1982,UK,58.209303,GDP per hour worked
+1980,US,56.684313,GDP per hour worked
+1984,France,62.038122,GDP per hour worked
+1984,Spain,71.057022,GDP per hour worked
+1984,Italy,74.335548,GDP per hour worked
+1985,Spain,73.873846,GDP per hour worked
+1985,US,61.748111,GDP per hour worked
+1985,UK,61.415085,GDP per hour worked
+1987,Germany,64.477291,GDP per hour worked
+1987,Spain,75.771489,GDP per hour worked
+1986,US,63.14487,GDP per hour worked
+1986,Germany,63.60719,GDP per hour worked
+1986,France,65.956339,GDP per hour worked
+1988,US,64.339062,GDP per hour worked
+1991,UK,67.575298,GDP per hour worked
+1991,France,73.830001,GDP per hour worked
+1992,France,75.607026,GDP per hour worked
+1992,Spain,81.311551,GDP per hour worked
+1992,Italy,85.779154,GDP per hour worked
+1990,Italy,84.556158,GDP per hour worked
+1990,UK,66.239326,GDP per hour worked
+1989,Italy,83.749497,GDP per hour worked
+1989,Germany,68.442245,GDP per hour worked
+1993,Spain,83.204731,GDP per hour worked
+1993,US,69.44318,GDP per hour worked
+1993,UK,73.367751,GDP per hour worked
+1995,Germany,79.828601,GDP per hour worked
+1995,Spain,86.357948,GDP per hour worked
+1994,US,70.03144,GDP per hour worked
+1994,Germany,78.64403,GDP per hour worked
+1994,France,77.885244,GDP per hour worked
+1996,US,71.930383,GDP per hour worked
+1998,Italy,95.678224,GDP per hour worked
+1998,UK,81.964484,GDP per hour worked
+1999,UK,83.801614,GDP per hour worked
+1999,France,85.267075,GDP per hour worked
+1997,Italy,95.612618,GDP per hour worked
+1997,Germany,83.161713,GDP per hour worked
+2022,UK,104.285141,GDP per hour worked
+2022,US,107.025198,GDP per hour worked
+2000,France,87.525502,GDP per hour worked
+2000,Spain,86.853672,GDP per hour worked
+2000,Italy,99.118059,GDP per hour worked
+2004,Germany,91.602335,GDP per hour worked
+2004,US,87.632516,GDP per hour worked
+2004,Italy,99.123067,GDP per hour worked
+2002,US,82.891625,GDP per hour worked
+2002,Italy,99.00028,GDP per hour worked
+2002,France,91.766179,GDP per hour worked
+2003,Spain,87.38699,GDP per hour worked
+2001,Spain,86.992814,GDP per hour worked
+2001,US,80.660218,GDP per hour worked
+2001,Italy,99.78275,GDP per hour worked
+2001,UK,88.480893,GDP per hour worked
+2005,Germany,93.047959,GDP per hour worked
+2006,UK,96.809346,GDP per hour worked
+2007,UK,98.234708,GDP per hour worked
+2007,France,96.0296,GDP per hour worked
+2007,Germany,95.652946,GDP per hour worked
+2008,France,95.416924,GDP per hour worked
+2008,Spain,89.733039,GDP per hour worked
+2019,France,103.215736,GDP per hour worked
+2019,Germany,104.113236,GDP per hour worked
+2017,Germany,103.162111,GDP per hour worked
+2017,US,101.201253,GDP per hour worked
+2018,UK,101.573367,GDP per hour worked
+2018,US,102.3422,GDP per hour worked
+2018,Germany,103.375684,GDP per hour worked
+2013,Spain,98.90578,GDP per hour worked
+2013,US,99.073648,GDP per hour worked
+2013,Italy,99.86123,GDP per hour worked
+2013,UK,98.181436,GDP per hour worked
+2013,France,98.249867,GDP per hour worked
+2020,France,103.5224,GDP per hour worked
+2020,Spain,101.486085,GDP per hour worked
+2020,UK,103.987187,GDP per hour worked
+2016,Germany,101.355337,GDP per hour worked
+2016,US,100.302963,GDP per hour worked
+2016,Italy,99.692606,GDP per hour worked
+2014,US,99.446088,GDP per hour worked
+2014,Italy,99.940667,GDP per hour worked
+2014,France,99.195227,GDP per hour worked
+2014,Spain,99.211993,GDP per hour worked
+2010,France,95.663522,GDP per hour worked
+2009,Spain,91.895675,GDP per hour worked
+2009,US,95.715647,GDP per hour worked
+2009,Italy,96.73892,GDP per hour worked
+2009,UK,95.753497,GDP per hour worked
+2011,Spain,95.622838,GDP per hour worked
+2012,Germany,98.007256,GDP per hour worked
+2012,US,98.653951,GDP per hour worked
+2012,Italy,99.073743,GDP per hour worked
+2016,France,100.279427,GDP per hour worked
+2016,Spain,100.457181,GDP per hour worked
+2014,UK,98.419046,GDP per hour worked
+2015,UK,100.0,GDP per hour worked
+2015,France,100.0,GDP per hour worked
+2015,Germany,100.0,GDP per hour worked
+2013,Germany,98.472527,GDP per hour worked
+2018,Italy,100.323292,GDP per hour worked
+2018,France,102.814627,GDP per hour worked
+2020,US,107.111176,GDP per hour worked
+2020,Germany,105.31975,GDP per hour worked
+2020,Italy,103.942159,GDP per hour worked
+2017,Spain,101.334899,GDP per hour worked
+2017,Italy,100.335718,GDP per hour worked
+2017,UK,101.395966,GDP per hour worked
+2019,US,103.581713,GDP per hour worked
+2019,Spain,101.664137,GDP per hour worked
+1970,Italy,47.54863,GDP per hour worked
+1970,UK,39.997229,GDP per hour worked
+1971,UK,42.606111,GDP per hour worked
+1971,France,38.4033,GDP per hour worked
+1971,Italy,49.674269,GDP per hour worked
+1974,US,52.634755,GDP per hour worked
+1974,Germany,46.519149,GDP per hour worked
+1974,France,45.56264,GDP per hour worked
+1974,Spain,46.989696,GDP per hour worked
+1973,Spain,44.941087,GDP per hour worked
+1973,US,53.113941,GDP per hour worked
+1973,UK,45.946183,GDP per hour worked
+1973,France,43.352097,GDP per hour worked
+1972,France,40.985667,GDP per hour worked
+1972,Spain,42.270507,GDP per hour worked
+1972,Italy,52.135119,GDP per hour worked
+1972,UK,45.124673,GDP per hour worked
+1977,Italy,63.912401,GDP per hour worked
+1977,Germany,52.600347,GDP per hour worked
+1975,Germany,48.269427,GDP per hour worked
+1975,Spain,47.789759,GDP per hour worked
+1975,US,54.075762,GDP per hour worked
+1979,UK,52.831307,GDP per hour worked
+1979,France,53.378026,GDP per hour worked
+1979,Italy,69.533694,GDP per hour worked
+1976,US,55.385876,GDP per hour worked
+1976,Germany,50.519884,GDP per hour worked
+1978,Italy,66.119869,GDP per hour worked
+1978,UK,51.217904,GDP per hour worked
+1982,US,57.81291,GDP per hour worked
+1982,Germany,57.773097,GDP per hour worked
+1982,France,59.123398,GDP per hour worked
+1982,Spain,64.096169,GDP per hour worked
+1981,Spain,62.060954,GDP per hour worked
+1981,US,57.999248,GDP per hour worked
+1981,UK,56.52667,GDP per hour worked
+1981,France,55.522586,GDP per hour worked
+1984,US,60.633096,GDP per hour worked
+1984,Germany,61.244613,GDP per hour worked
+1988,France,68.757769,GDP per hour worked
+1988,Spain,77.114136,GDP per hour worked
+1988,Italy,80.873332,GDP per hour worked
+1988,UK,65.234491,GDP per hour worked
+1983,Germany,59.668651,GDP per hour worked
+1983,Spain,66.607224,GDP per hour worked
+1983,US,59.394873,GDP per hour worked
+1980,France,54.2552,GDP per hour worked
+1980,Spain,59.57542,GDP per hour worked
+1980,Italy,70.854162,GDP per hour worked
+1980,UK,53.336263,GDP per hour worked
+1985,Italy,75.841455,GDP per hour worked
+1985,Germany,62.65778,GDP per hour worked
+1986,Italy,77.127467,GDP per hour worked
+1986,UK,63.03277,GDP per hour worked
+1987,UK,65.364288,GDP per hour worked
+1987,France,66.606748,GDP per hour worked
+1987,Italy,78.603139,GDP per hour worked
+1989,Spain,78.546913,GDP per hour worked
+1989,US,64.905901,GDP per hour worked
+1989,UK,65.504315,GDP per hour worked
+1989,France,71.208466,GDP per hour worked
+1994,Italy,91.072919,GDP per hour worked
+1994,UK,75.157328,GDP per hour worked
+1991,Germany,73.324316,GDP per hour worked
+1991,Spain,79.078701,GDP per hour worked
+1991,US,66.882229,GDP per hour worked
+1992,US,69.179788,GDP per hour worked
+1992,Germany,75.196027,GDP per hour worked
+1990,US,66.017332,GDP per hour worked
+1990,Germany,70.860694,GDP per hour worked
+1990,France,72.916395,GDP per hour worked
+1990,Spain,78.443401,GDP per hour worked
+1993,Italy,87.401638,GDP per hour worked
+1993,Germany,76.660097,GDP per hour worked
+1995,UK,76.209292,GDP per hour worked
+1995,France,79.8219,GDP per hour worked
+1995,Italy,93.772882,GDP per hour worked
+1996,France,80.691661,GDP per hour worked
+1996,Spain,87.314344,GDP per hour worked
+1996,Italy,93.880025,GDP per hour worked
+1996,UK,77.45123,GDP per hour worked
+1997,Spain,87.168296,GDP per hour worked
+1997,US,72.97303,GDP per hour worked
+1997,UK,79.836181,GDP per hour worked
+1997,France,82.026815,GDP per hour worked
+2003,UK,92.905382,GDP per hour worked
+2003,France,92.289942,GDP per hour worked
+2003,Germany,90.775624,GDP per hour worked
+1998,US,74.614716,GDP per hour worked
+1998,Germany,84.008588,GDP per hour worked
+1998,France,84.055794,GDP per hour worked
+1998,Spain,86.757607,GDP per hour worked
+1999,Germany,84.962423,GDP per hour worked
+1999,Spain,86.451833,GDP per hour worked
+1999,US,76.818796,GDP per hour worked
+2001,Germany,89.255258,GDP per hour worked
+2022,Italy,101.854776,GDP per hour worked
+2022,France,99.761299,GDP per hour worked
+2022,Spain,102.538091,GDP per hour worked
+2002,UK,90.430863,GDP per hour worked
+2002,Germany,90.082726,GDP per hour worked
+2000,Germany,87.068634,GDP per hour worked
+2000,US,78.928548,GDP per hour worked
+2007,Spain,89.502613,GDP per hour worked
+2007,US,91.57842,GDP per hour worked
+2007,Italy,99.271227,GDP per hour worked
+2006,US,90.31024,GDP per hour worked
+2006,Italy,99.346739,GDP per hour worked
+2006,France,96.481781,GDP per hour worked
+2006,Spain,88.524184,GDP per hour worked
+2005,Spain,88.009535,GDP per hour worked
+2005,US,89.463196,GDP per hour worked
+2005,Italy,99.565938,GDP per hour worked
+2021,Italy,102.146042,GDP per hour worked
+2021,UK,103.244366,GDP per hour worked
+2021,France,101.711063,GDP per hour worked
+2009,Germany,92.797837,GDP per hour worked
+2012,France,96.937089,GDP per hour worked
+2012,Spain,97.467504,GDP per hour worked
+2012,UK,97.73831,GDP per hour worked
+2015,Spain,100.0,GDP per hour worked
+2015,US,100.0,GDP per hour worked
+2015,Italy,100.0,GDP per hour worked
+2011,UK,98.337771,GDP per hour worked
+2011,France,96.621402,GDP per hour worked
