@@ -49,7 +49,7 @@ def rebase_chain_linked_quarters(df, new_base_year):
     return df
 
 # @st.cache_data
-def data_format(data, QorY, time_period, data_option, country_options, visType = "2D line graph", quarterly_selection =False, industry_selection = ["Total"]):
+def data_format(data, QorY, time_period, data_option, country_options, show_years, visType = "2D line graph", quarterly_selection =False, industry_selection = ["Total"]):
     # Filter for time selection
     print("last", country_options)
     print(data)
@@ -85,7 +85,8 @@ def data_format(data, QorY, time_period, data_option, country_options, visType =
         data = qoq_data
     if data_option.base_year != 2020:
         data = rebase_chain_linked_quarters(data, data_option.base_year)
-    data["Quarter"] = data["Quarter"].apply(numeric_to_quarter)
+    if not show_years:
+        data["Quarter"] = data["Quarter"].apply(numeric_to_quarter)
     return data
 
 @st.cache_data
@@ -157,7 +158,7 @@ def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_dat
     else:
         return fig
 
-def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType, second_plot, second_data, show_years):
+def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType, second_plot, second_data):
     data = data.dropna()
     industries = data["Industry"].unique()
     if len(industries) > 1:  # If multiple industries are selected for GVA
@@ -168,9 +169,6 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
             row = (i // cols) + 1  # Determine row position
             col = (i % cols) + 1  # Determine column position
             industry_data = multi_data_format(data, industry)
-            if show_years:
-                industry_data["Quarter"] = industry_data["Quarter"].apply(quarter_to_numeric)
-            print(industry_data)
             figs = px.line(industry_data, 
                 x="Quarter", 
                 y="Value", 
@@ -357,7 +355,6 @@ def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
     if QorY == "Quarterly":
         # Only allow the user to select countries which are available for the data selected
         regex_escaped_options = re.escape(quarterly_option)
-        matching_columns = quarterly_data.columns[quarterly_data.columns.str.contains(regex_escaped_options, case=False)]
         # Extract country names by removing the option part
         countries = quarterly_data["Country"].unique()
         # countries = [col.replace(quarterly_option, "").strip() for col in matching_columns]
@@ -525,22 +522,22 @@ def main():
     st.sidebar.subheader("Configure layout")
     show_legend = st.sidebar.toggle(label="Show legend", value=True)
     show_dip_lines = st.sidebar.toggle(label="Show verticle lines for before and after major dips in productivity (2008 recession and covid-19)", value=False)
-    show_years = st.sidebar.toggle(label="Show years", value=False)
+    show_years = st.sidebar.toggle(label="Show years instead of quarters", value=False)
     
     # Load main content (not in sidebars)
     load_main_content()
 
     figure = st.empty()
     if QorY == "Quarterly":
-        formatted_data = data_format(data, QorY, quarter, plot_one_data_option, country_selection, visType, quarterly_selection, industry_selection)
+        formatted_data = data_format(data, QorY, quarter, plot_one_data_option, country_selection, show_years, visType, quarterly_selection, industry_selection)
         formatted_data_two = None
         if second_plot:
-            formatted_data_two = data_format(data, QorY_two, quarter_two, plot_two_data_option, country_selection_two, visType_two, quarterly_selection_two, industry_selection_two)
-        fig = create_quarterly_fig(formatted_data, show_legend, plot_one_data_option, show_dip_lines, visType, second_plot, formatted_data_two, show_years)
+            formatted_data_two = data_format(data, QorY_two, quarter_two, plot_two_data_option, country_selection_two, show_years, visType_two, quarterly_selection_two, industry_selection_two)
+        fig = create_quarterly_fig(formatted_data, show_legend, plot_one_data_option, show_dip_lines, visType, second_plot, formatted_data_two)
         if second_plot:
             fig.update_layout(title=f"{plot_one_data_option.data_option} against {plot_two_data_option.data_option}")  # remove - change this
     else:
-        formatted_data = data_format(data, QorY, year, plot_one_data_option, country_selection)
+        formatted_data = data_format(data, QorY, year, plot_one_data_option, country_selection, show_years)
         formatted_data_two = None
         if second_plot:
             formatted_data_two = data_format(data, QorY_two, year_two, plot_two_data_option, country_selection_two)
