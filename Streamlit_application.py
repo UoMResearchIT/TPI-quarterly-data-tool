@@ -144,6 +144,7 @@ def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_dat
             ),
         )
         if show_dip_lines:
+            print("Trumbone")
             highlighted_quarters = ["2007 Q4", "2009 Q2", "2019 Q4", "2021 Q1"]  # Quarters highlighted with verticle lines
             for quarter in highlighted_quarters:
                 fig.add_vline(x=quarter, line_dash="dash", line_color="red")
@@ -235,6 +236,11 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
                         showlegend=True
                     )
                     fig.add_trace(trace, row=1, col=1)
+                if show_dip_lines:
+                    highlighted_quarters = ["2007 Q4", "2009 Q2", "2019 Q4", "2021 Q1"]
+                    for quarter in highlighted_quarters:
+                        fig.add_vline(x=quarter, line_dash="dash", line_color="red", row=1, col=1)
+                        fig.add_vline(x=quarter, line_dash="dash", line_color="red", row=1, col=2)
     else:
         fig = make_fig(data, visType, data_option, show_dip_lines, second_plot, second_data, show_legend)
     if not second_plot:
@@ -263,14 +269,6 @@ def create_yearly_fig(data, show_legend, second_plot, second_data):
     
         # Determine missing countries (ones in second plot but not first)
         missing_countries = list(set(second_data["Country"]) - set(data["Country"]))
-
-        # # Create a dummy dataframe with missing countries
-        # dummy_df = pd.DataFrame({
-        #     "Quarter": ["1900 Q1"] * len(missing_countries),  # Some old date unlikely to be in range
-        #     "Value": [0] * len(missing_countries),
-        #     "Country": missing_countries
-        # })
-
         for country in missing_countries:
             trace = go.Scatter(
                 x=["1900 Q1"],  # Fake data
@@ -521,8 +519,14 @@ def main():
     st.sidebar.divider()
     st.sidebar.subheader("Configure layout")
     show_legend = st.sidebar.toggle(label="Show legend", value=True)
-    show_dip_lines = st.sidebar.toggle(label="Show verticle lines for before and after major dips in productivity (2008 recession and covid-19)", value=False)
-    show_years = st.sidebar.toggle(label="Show years instead of quarters", value=False)
+    if visType == "2D line graph":
+        show_dip_lines = st.sidebar.toggle(label="Show verticle lines for before and after major dips in productivity (2008 recession and covid-19)", value=False)
+    else:
+        show_dip_lines = False
+    if not show_dip_lines:
+        show_years = st.sidebar.toggle(label="Show years instead of quarters", value=False)
+    else:
+        show_years = False
     
     # Load main content (not in sidebars)
     load_main_content()
