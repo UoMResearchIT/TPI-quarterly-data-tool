@@ -451,11 +451,12 @@ def export_data_button(data):
             file_name="productivity_data.csv",
             mime="text/csv",
         )
+
 def main():
     # Initialise app
     initialise_app()
 
-    tab1, tab2 = st.tabs(["Main", "About this tool"])
+    tab1, tab2 = st.tabs(["Quarterly Data Tool", "About this tool"])
     with tab1:
         main_code()
     with tab2:
