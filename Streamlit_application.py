@@ -313,20 +313,19 @@ def update_selection(option):
 def multiY_plot(data, quarter, country_selection, base_year):
     if base_year != 2020:
         data = rebase_chain_linked_quarters(data, base_year)
-    print(quarter)
     quarter = list(quarter)
     quarter[0] = quarter_to_numeric(quarter[0])
     quarter[1] = quarter_to_numeric(quarter[1])
     OPH = data.query(
-            f"Quarter >= 2000.25 and Quarter <= 2010.25 and Country == '{country_selection}' and Variable == 'Output Per Hour'").copy()
+            f"Quarter >= {quarter[0]} and Quarter <= {quarter[1]} and Country == '{country_selection}' and Variable == 'Output Per Hour'").copy()
     OPH['Quarter'] = OPH['Quarter'].apply(numeric_to_quarter)
 
     OPW = data.query(
-            f"Quarter >= 2000.25 and Quarter <= 2010.25 and Country == '{country_selection}' and Variable == 'Output Per Worker'").copy()
+            f"Quarter >= {quarter[0]} and Quarter <= {quarter[1]} and Country == '{country_selection}' and Variable == 'Output Per Worker'").copy()
     OPW['Quarter'] = OPW['Quarter'].apply(numeric_to_quarter)
 
     GVA = data.query(
-            f"Quarter >= 2000.25 and Quarter <= 2010.25 and Country == '{country_selection}' and Variable == 'Gross Value Added' and Industry == 'Total'").copy()
+            f"Quarter >= {quarter[0]} and Quarter <= {quarter[1]} and Country == '{country_selection}' and Variable == 'Gross Value Added' and Industry == 'Total'").copy()
     GVA['Quarter'] = GVA['Quarter'].apply(numeric_to_quarter)
 
     quarters = OPH['Quarter']
@@ -335,7 +334,7 @@ def multiY_plot(data, quarter, country_selection, base_year):
 
     # Profit trace (left y-axis, green)
     fig.add_trace(go.Scatter(
-        x=quarters, y=GVA['Value'], name="GVA",
+        x=quarters, y=OPH['Value'], name="OPH",
         yaxis="y", mode="lines+markers",
         line=dict(color="green")
     ))
@@ -349,29 +348,29 @@ def multiY_plot(data, quarter, country_selection, base_year):
 
     # Sales trace (right y-axis, blue)
     fig.add_trace(go.Scatter(
-        x=quarters, y=OPH['Value'], name="OPH",
+        x=quarters, y=GVA['Value'], name="GVA",
         yaxis="y3", mode="lines+markers",
         line=dict(color="dodgerblue")
     ))
 
     # Layout with multiple y-axes
     fig.update_layout(
-        title="OPH vs OPW vs GVA",
+        title=f"OPH vs OPW vs GVA for {country_selection}",
         xaxis=dict(title="Quarters", showgrid=False),
         
         yaxis=dict(
-        title="GVA",
+        title="Output Per Hour",
         titlefont=dict(color="green"),
         tickfont=dict(color="green"),
         side="left",
         position=0,
         ),
         yaxis2=dict(
-            title="OPW", titlefont=dict(color="orange"), tickfont=dict(color="orange"),
+            title="Output Per Worker", titlefont=dict(color="orange"), tickfont=dict(color="orange"),
             overlaying="y", side="left", position=0.06, showgrid=False
         ),
         yaxis3=dict(
-            title="OPH", titlefont=dict(color="dodgerblue"), tickfont=dict(color="dodgerblue"),
+            title="Gross Value Added", titlefont=dict(color="dodgerblue"), tickfont=dict(color="dodgerblue"),
             overlaying="y", side="right", showgrid=False
         ),
         
