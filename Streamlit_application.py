@@ -437,10 +437,28 @@ def initialise_app():
     st.sidebar.html("<a href='https://lab.productivity.ac.uk' alt='The Productivity Lab'></a>")
     st.logo("static/logo.png", link="https://lab.productivity.ac.uk/", icon_image=None)
 
-def load_main_content():
-    #Define main content
-    st.header("TPI Quarterly data tool for US, UK and European labour productivity")
-    with st.expander(label="**About this tool**", expanded=False):
+def export_data_button(data):
+    # Export functionality
+    if st.sidebar.button("Export Selected Data"):
+        @st.cache_data
+        def convert_df(df):
+            return df.to_csv(index=False).encode("utf-8")
+        
+        csv = convert_df(data)
+        st.sidebar.download_button(
+            label="Download data as CSV",
+            data=csv,
+            file_name="productivity_data.csv",
+            mime="text/csv",
+        )
+def main():
+    # Initialise app
+    initialise_app()
+
+    tab1, tab2 = st.tabs(["Main", "About this tool"])
+    with tab1:
+        main_code()
+    with tab2:
         st.markdown(
             """
             ## TPI Quarterly Data Tool
@@ -470,24 +488,7 @@ def load_main_content():
             """
         )
 
-def export_data_button(data):
-    # Export functionality
-    if st.sidebar.button("Export Selected Data"):
-        @st.cache_data
-        def convert_df(df):
-            return df.to_csv(index=False).encode("utf-8")
-        
-        csv = convert_df(data)
-        st.sidebar.download_button(
-            label="Download data as CSV",
-            data=csv,
-            file_name="productivity_data.csv",
-            mime="text/csv",
-        )
-
-def main():
-    # Initialise app
-    initialise_app()
+def main_code():
 
     # Load datasets
     quarterly_data, yearly_data = load_data()
@@ -529,7 +530,8 @@ def main():
         show_years = False
     
     # Load main content (not in sidebars)
-    load_main_content()
+    st.header("TPI Quarterly data tool for US, UK and European labour productivity")
+
 
     figure = st.empty()
     if QorY == "Quarterly":
