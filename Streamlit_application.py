@@ -311,6 +311,9 @@ def update_selection(option):
         st.session_state.selected = option
 
 def multiY_plot(data, quarter, country_selection, base_year):
+    st.sidebar.divider()
+    st.sidebar.subheader("Configure layout")
+    show_years = st.sidebar.toggle(label="Show years instead of quarters", value=False)
     if base_year != 2020:
         data = rebase_chain_linked_quarters(data, base_year)
     quarter = list(quarter)
@@ -318,15 +321,16 @@ def multiY_plot(data, quarter, country_selection, base_year):
     quarter[1] = quarter_to_numeric(quarter[1])
     OPH = data.query(
             f"Quarter >= {quarter[0]} and Quarter <= {quarter[1]} and Country == '{country_selection}' and Variable == 'Output Per Hour'").copy()
-    OPH['Quarter'] = OPH['Quarter'].apply(numeric_to_quarter)
 
     OPW = data.query(
             f"Quarter >= {quarter[0]} and Quarter <= {quarter[1]} and Country == '{country_selection}' and Variable == 'Output Per Worker'").copy()
-    OPW['Quarter'] = OPW['Quarter'].apply(numeric_to_quarter)
 
     GVA = data.query(
             f"Quarter >= {quarter[0]} and Quarter <= {quarter[1]} and Country == '{country_selection}' and Variable == 'Gross Value Added' and Industry == 'Total'").copy()
-    GVA['Quarter'] = GVA['Quarter'].apply(numeric_to_quarter)
+    if not show_years:
+        OPH['Quarter'] = OPH['Quarter'].apply(numeric_to_quarter)
+        OPW['Quarter'] = OPW['Quarter'].apply(numeric_to_quarter)
+        GVA['Quarter'] = GVA['Quarter'].apply(numeric_to_quarter)
 
     quarters = OPH['Quarter']
 
