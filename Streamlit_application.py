@@ -48,12 +48,29 @@ def rebase_chain_linked_quarters(df, new_base_year):
 
     return df
 
+def rebase_chain_linked_years(df, new_base_year):
+    df = df.copy()
+    
+    def rebase_group(group):
+        base_year_values = group[group["Year"] == new_base_year]["Value"]
+        if base_year_values.empty or base_year_values.mean() == 0:
+            return group  # Skip group if base year is missing or zero
+        base_mean = base_year_values.mean()
+        group["Value"] = (group["Value"] / base_mean) * 100
+        return group
+
+    # Apply rebase per group
+    df = df.groupby(["Country", "Variable"], group_keys=False).apply(rebase_group)
+
+    return df
+
+
 # @st.cache_data
 def data_format(data, QorY, time_period, data_option, country_options, show_years, visType = "2D line graph", quarterly_selection =False, industry_selection = ["Total"]):
     # Filter for time selection
-    print("last", country_options)
-    print(data)
     if QorY == "Quarterly":
+        if data_option.base_year != 2020:
+            data = rebase_chain_linked_quarters(data, data_option.base_year)
         # Convert the time periods to numeric
         time_period = list(time_period)
         time_period[0] = quarter_to_numeric(time_period[0])
@@ -65,6 +82,8 @@ def data_format(data, QorY, time_period, data_option, country_options, show_year
         data = data.query(
         f"Quarter >= {time_period[0]} and Quarter <= {time_period[1]} and Country in {country_options} and Variable == '{data_option.data_option}' and Industry in {industry_selection}")
     elif QorY == "Yearly":
+        if data_option.base_year != 2015:
+            data = rebase_chain_linked_years(data, data_option.base_year)
         data = data.query(f"Year >= {time_period[0]} and Year <= {time_period[1]} and Country in {country_options}")
         return data
     
@@ -83,8 +102,6 @@ def data_format(data, QorY, time_period, data_option, country_options, show_year
             qoq_data.drop("decimal_part", axis=1, inplace=True)
             qoq_data["YoY Growth (%)"] = qoq_data.groupby("Country")["Value"].pct_change().mul(100).round(2)
         data = qoq_data
-    if data_option.base_year != 2020:
-        data = rebase_chain_linked_quarters(data, data_option.base_year)
     if not show_years:
         data["Quarter"] = data["Quarter"].apply(numeric_to_quarter)
     return data
@@ -144,7 +161,6 @@ def make_fig(data, visType, data_option, show_dip_lines, second_plot, second_dat
             ),
         )
         if show_dip_lines:
-            print("Trumbone")
             highlighted_quarters = ["2007 Q4", "2009 Q2", "2019 Q4", "2021 Q1"]  # Quarters highlighted with verticle lines
             for quarter in highlighted_quarters:
                 fig.add_vline(x=quarter, line_dash="dash", line_color="red")
@@ -247,7 +263,7 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
         fig.update_layout(showlegend=show_legend)
     return fig
 
-def create_yearly_fig(data, show_legend, second_plot, second_data):
+def create_yearly_fig(data, show_legend, second_plot, second_data, data_option):
     def yearly_line_graph(data, country_colours):
         return px.line(data, 
         x="Year", 
@@ -285,7 +301,7 @@ def create_yearly_fig(data, show_legend, second_plot, second_data):
         x="Year", 
         y="Value", 
         color="Country",
-        title="GDP per Hour Worked Over Time (2015=100)")
+        title=f"GDP per Hour Worked Over Time ({data_option.base_year}=100)")
         fig.update_layout(showlegend=show_legend)
     return fig
 
@@ -351,8 +367,6 @@ def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
 
     quarterly_selection = None
     if QorY == "Quarterly":
-        # Only allow the user to select countries which are available for the data selected
-        regex_escaped_options = re.escape(quarterly_option)
         # Extract country names by removing the option part
         countries = quarterly_data["Country"].unique()
         # countries = [col.replace(quarterly_option, "").strip() for col in matching_columns]
@@ -383,10 +397,6 @@ def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
             quarterly_selection = st.sidebar.selectbox(label= "Specific quarter comparison", options=[1, 2, 3, 4], key=f"quarterly_selection_{key}")
 
     elif QorY == "Yearly":
-        # Only allow the user to select countries which are available for the data selected
-        regex_escaped_options = re.escape("GDP per hour worked")
-        matching_columns = yearly_data.columns[yearly_data.columns.str.contains(regex_escaped_options, case=False)]
-
         # Extract country names by removing the option part
         countries= yearly_data["Country"].unique()
 
@@ -402,10 +412,7 @@ def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
         visType = "2D line graph"
     elif st.session_state.selected == "3D line graph":
         visType = "3D line graph"
-    elif st.session_state.selected == "2D scatter":
-        visType = "2D scatter"
-    elif st.session_state.selected == "3D scatter":
-        visType = "3D scatter"
+
     if QorY == "Quarterly":
         data_option = quarterly_option
     elif QorY == "Yearly":
@@ -517,11 +524,11 @@ def main_code():
         if second_plot:
             fig.update_layout(title=f"{plot_one_data_option.data_option} against {plot_two_data_option.data_option}")  # remove - change this
     else:
-        formatted_data = data_format(data, QorY, year, plot_one_data_option, country_selection, show_years)
+        formatted_data = data_format(data, QorY, year, plot_one_data_option, country_selection, False)
         formatted_data_two = None
         if second_plot:
-            formatted_data_two = data_format(data, QorY_two, year_two, plot_two_data_option, country_selection_two)
-        fig = create_yearly_fig(formatted_data, show_legend, second_plot, formatted_data_two) # remove, need to add data_option
+            formatted_data_two = data_format(data, QorY_two, year_two, plot_two_data_option, country_selection_two, False)
+        fig = create_yearly_fig(formatted_data, show_legend, second_plot, formatted_data_two, plot_one_data_option) 
     
     # Provides a button to download data
     export_data_button(data)
@@ -561,12 +568,14 @@ def main():
             - **Select data**: choose the productivity measure to be visualised
             - **Choose countries**: choose the countries selected from a large list containing many European countries, as well as the US
             #### Quarterly data specific options
-            ##### Quarterly line graph
+            ##### Quarterly 2D line graph
             - Plots all selected data as a line graph
             - GVA provides data options for multiple sectors:
             - if only sector is selected, a single line graph will be displayed
             - if multiple are selected, multiple plots will be displayed side by side
             - More information about the sectoral options is shown in the sources and methods and document
+            ##### Quarterly 3D line graph
+            - Allows for 
             ##### QoQ bar graph
             - Plots all selected data as a bar graph showing Quarter on Quarter (QoQ) change as a percentage
             ##### YOY bar graph
