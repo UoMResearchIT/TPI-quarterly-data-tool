@@ -3,7 +3,6 @@ import pandas as pd
 import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
-import re
 import math
 
 class data_options:
@@ -311,10 +310,107 @@ def update_selection(option):
     else:
         st.session_state.selected = option
 
+def multiY_plot(data, quarter, country_selection, base_year):
+    if base_year != 2020:
+        data = rebase_chain_linked_quarters(data, base_year)
+    print(quarter)
+    quarter = list(quarter)
+    quarter[0] = quarter_to_numeric(quarter[0])
+    quarter[1] = quarter_to_numeric(quarter[1])
+    OPH = data.query(
+            f"Quarter >= 2000.25 and Quarter <= 2010.25 and Country == '{country_selection}' and Variable == 'Output Per Hour'").copy()
+    OPH['Quarter'] = OPH['Quarter'].apply(numeric_to_quarter)
+
+    OPW = data.query(
+            f"Quarter >= 2000.25 and Quarter <= 2010.25 and Country == '{country_selection}' and Variable == 'Output Per Worker'").copy()
+    OPW['Quarter'] = OPW['Quarter'].apply(numeric_to_quarter)
+
+    GVA = data.query(
+            f"Quarter >= 2000.25 and Quarter <= 2010.25 and Country == '{country_selection}' and Variable == 'Gross Value Added' and Industry == 'Total'").copy()
+    GVA['Quarter'] = GVA['Quarter'].apply(numeric_to_quarter)
+
+    quarters = OPH['Quarter']
+
+    fig = go.Figure()
+
+    # Profit trace (left y-axis, green)
+    fig.add_trace(go.Scatter(
+        x=quarters, y=GVA['Value'], name="GVA",
+        yaxis="y", mode="lines+markers",
+        line=dict(color="green")
+    ))
+
+    # Orders trace (left overlay, orange)
+    fig.add_trace(go.Scatter(
+        x=quarters, y=OPW['Value'], name="OPW",
+        yaxis="y2", mode="lines+markers",
+        line=dict(color="orange")
+    ))
+
+    # Sales trace (right y-axis, blue)
+    fig.add_trace(go.Scatter(
+        x=quarters, y=OPH['Value'], name="OPH",
+        yaxis="y3", mode="lines+markers",
+        line=dict(color="dodgerblue")
+    ))
+
+    # Layout with multiple y-axes
+    fig.update_layout(
+        title="OPH vs OPW vs GVA",
+        xaxis=dict(title="Quarters", showgrid=False),
+        
+        yaxis=dict(
+        title="GVA",
+        titlefont=dict(color="green"),
+        tickfont=dict(color="green"),
+        side="left",
+        position=0,
+        ),
+        yaxis2=dict(
+            title="OPW", titlefont=dict(color="orange"), tickfont=dict(color="orange"),
+            overlaying="y", side="left", position=0.06, showgrid=False
+        ),
+        yaxis3=dict(
+            title="OPH", titlefont=dict(color="dodgerblue"), tickfont=dict(color="dodgerblue"),
+            overlaying="y", side="right", showgrid=False
+        ),
+        
+        legend=dict(x=0.5, y=1.1, xanchor="center", orientation="h"),
+    )
+
+    return fig
+
+def multi_y_mode(quarterly_data, key):
+    QorY = st.sidebar.radio(
+        label="Select data to plot",
+        options=["Quarterly"],
+        captions=[
+            "Quarterly labour productivity",
+        ],
+        key=f"QorY_MultiY_{key}"
+        )
+    quarters = quarterly_data["Quarter"].unique()
+    quarters = [numeric_to_quarter(x) for x in quarters]
+    quarter = st.sidebar.select_slider(label = "Quarterly slider", options = quarters, value=(quarters[0], quarters[-1]), label_visibility="collapsed", key=f"Q_Slider_multiy_{key}")
+    countries = quarterly_data["Country"].unique()
+    countries = sorted(countries, key=lambda x: (x not in ["UK", "US", "Euro Area", "European Union"], x))
+    country_selection = st.sidebar.selectbox(label= "Select Country", options=countries, key=f"Country_Option_multi_y_{key}")
+    base_year_options = list(range(1997, 2025))
+    base_year = st.sidebar.selectbox(label="Change the base year? (default set to 2020)", options=base_year_options, index=base_year_options.index(2020), key=f"base_year_multiY_{key}")
+    return QorY, quarter, country_selection, base_year
 
 def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
     st.sidebar.divider()
     st.sidebar.subheader("Select data to plot")
+    multiY_option = st.sidebar.radio(
+        label="Select visualisation mode:",
+        options=["Default", "MultiY"],
+        key=f"MultiY_{key}"
+    )
+    if multiY_option == "MultiY":
+        QorY, quarter, country_selection, base_year = multi_y_mode(quarterly_data, key)
+        return QorY, quarter, None, None, None, None, country_selection, "multiY", base_year
+
     if lock_quarterly:
         QorY = st.sidebar.radio(
             label="Select data to plot",
@@ -367,9 +463,7 @@ def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
 
     quarterly_selection = None
     if QorY == "Quarterly":
-        # Extract country names by removing the option part
         countries = quarterly_data["Country"].unique()
-        # countries = [col.replace(quarterly_option, "").strip() for col in matching_columns]
         countries = sorted(countries, key=lambda x: (x not in ["UK", "US", "Euro Area", "European Union"], x))
         default_options = ["UK", "US", "Germany", "France", "Italy", "Spain"]
         country_selection = st.sidebar.multiselect(label = "Select countries to display", options = countries, default=default_options, key=f"country_selection_{key}")
@@ -477,63 +571,69 @@ def main_code():
     # First plot
     key = 1
     QorY, quarter, data_option, industry_selection, year, quarterly_selection, country_selection, visType, base_year = visualisation_selection(quarterly_data, yearly_data, key, False)
-    plot_one_data_option = data_options(QorY, data_option, base_year, quarterly_selection)
-    if QorY == "Quarterly":
-        data = quarterly_data
-    elif QorY == "Yearly":
-        data = yearly_data
+    if visType == "multiY":
+        multiY = True
+    else:
+        multiY = False
+    if not multiY:
+        plot_one_data_option = data_options(QorY, data_option, base_year, quarterly_selection)
+        if QorY == "Quarterly":
+            data = quarterly_data
+        elif QorY == "Yearly":
+            data = yearly_data
 
-    second_plot = False
-    # Second plot options
-    if len(industry_selection) == 1:
+        second_plot = False
+        # Second plot options
+        if len(industry_selection) == 1:
+            st.sidebar.divider()
+            second_plot = st.sidebar.toggle(label="Show a second plot side by side")
+            if second_plot:
+                key = 2  # Need a key for duplicated streamlit components (the sidebar options)
+                if QorY == "Yearly":
+                    lock_quarterly = True
+                else:
+                    lock_quarterly = False
+                QorY_two, quarter_two, data_option_two, industry_selection_two, year_two, quarterly_selection_two, country_selection_two, visType_two, base_year_two = visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly)
+                plot_two_data_option = data_options(QorY_two, data_option_two, base_year_two, quarterly_selection_two)
+
+        #Figure formatting tools
         st.sidebar.divider()
-        second_plot = st.sidebar.toggle(label="Show a second plot side by side")
-        if second_plot:
-            key = 2  # Need a key for duplicated streamlit components (the sidebar options)
-            if QorY == "Yearly":
-                lock_quarterly = True
-            else:
-                lock_quarterly = False
-            QorY_two, quarter_two, data_option_two, industry_selection_two, year_two, quarterly_selection_two, country_selection_two, visType_two, base_year_two = visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly)
-            plot_two_data_option = data_options(QorY_two, data_option_two, base_year_two, quarterly_selection_two)
+        st.sidebar.subheader("Configure layout")
+        show_legend = st.sidebar.toggle(label="Show legend", value=True)
+        if visType == "2D line graph":
+            show_dip_lines = st.sidebar.toggle(label="Show verticle lines for before and after major dips in productivity (2008 recession and covid-19)", value=False)
+        else:
+            show_dip_lines = False
+        if not show_dip_lines:
+            show_years = st.sidebar.toggle(label="Show years instead of quarters", value=False)
+        else:
+            show_years = False
+        
+        # Load main content (not in sidebars)
+        st.header("TPI Quarterly data tool for US, UK and European labour productivity")
 
-    #Figure formatting tools
-    st.sidebar.divider()
-    st.sidebar.subheader("Configure layout")
-    show_legend = st.sidebar.toggle(label="Show legend", value=True)
-    if visType == "2D line graph":
-        show_dip_lines = st.sidebar.toggle(label="Show verticle lines for before and after major dips in productivity (2008 recession and covid-19)", value=False)
+        if QorY == "Quarterly":
+            formatted_data = data_format(data, QorY, quarter, plot_one_data_option, country_selection, show_years, visType, quarterly_selection, industry_selection)
+            formatted_data_two = None
+            if second_plot:
+                formatted_data_two = data_format(data, QorY_two, quarter_two, plot_two_data_option, country_selection_two, show_years, visType_two, quarterly_selection_two, industry_selection_two)
+            fig = create_quarterly_fig(formatted_data, show_legend, plot_one_data_option, show_dip_lines, visType, second_plot, formatted_data_two)
+            if second_plot:
+                fig.update_layout(title=f"{plot_one_data_option.data_option} against {plot_two_data_option.data_option}")  # remove - change this
+        else:
+            formatted_data = data_format(data, QorY, year, plot_one_data_option, country_selection, False)
+            formatted_data_two = None
+            if second_plot:
+                formatted_data_two = data_format(data, QorY_two, year_two, plot_two_data_option, country_selection_two, False)
+            fig = create_yearly_fig(formatted_data, show_legend, second_plot, formatted_data_two, plot_one_data_option) 
+        
+        # Provides a button to download data
+        export_data_button(data)
+        create_refresh_button()
     else:
-        show_dip_lines = False
-    if not show_dip_lines:
-        show_years = st.sidebar.toggle(label="Show years instead of quarters", value=False)
-    else:
-        show_years = False
-    
-    # Load main content (not in sidebars)
-    st.header("TPI Quarterly data tool for US, UK and European labour productivity")
-
+        fig = multiY_plot(quarterly_data, quarter, country_selection, base_year)
 
     figure = st.empty()
-    if QorY == "Quarterly":
-        formatted_data = data_format(data, QorY, quarter, plot_one_data_option, country_selection, show_years, visType, quarterly_selection, industry_selection)
-        formatted_data_two = None
-        if second_plot:
-            formatted_data_two = data_format(data, QorY_two, quarter_two, plot_two_data_option, country_selection_two, show_years, visType_two, quarterly_selection_two, industry_selection_two)
-        fig = create_quarterly_fig(formatted_data, show_legend, plot_one_data_option, show_dip_lines, visType, second_plot, formatted_data_two)
-        if second_plot:
-            fig.update_layout(title=f"{plot_one_data_option.data_option} against {plot_two_data_option.data_option}")  # remove - change this
-    else:
-        formatted_data = data_format(data, QorY, year, plot_one_data_option, country_selection, False)
-        formatted_data_two = None
-        if second_plot:
-            formatted_data_two = data_format(data, QorY_two, year_two, plot_two_data_option, country_selection_two, False)
-        fig = create_yearly_fig(formatted_data, show_legend, second_plot, formatted_data_two, plot_one_data_option) 
-    
-    # Provides a button to download data
-    export_data_button(data)
-    create_refresh_button()
-
     # Display the figure
     if fig:
         # Save session state variables and load figure
