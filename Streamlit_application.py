@@ -452,42 +452,15 @@ def export_data_button(data):
             mime="text/csv",
         )
 
-def main():
-    # Initialise app
-    initialise_app()
-
-    tab1, tab2 = st.tabs(["Quarterly Data Tool", "About this tool"])
-    with tab1:
-        main_code()
-    with tab2:
-        st.markdown(
-            """
-            ## TPI Quarterly Data Tool
-            ###### Developed by the [TPI Productivity Lab](https://lab.productivity.ac.uk/), this tool allows for the quick creation of graphs of quarterly and yearly productivity data on a national scale.
-            ###### US Quarterly total economy data represents most of the US economy but leaves out certain sectors - read the sources and methods document that accompanies this tool for more information
-
-            ### Customisation Options
-            #### Data options
-            - **Quarterly or Yearly selection**: Allows for the option of data to be shown as either quarterly or yearly
-            - **Select time period**: change the time period selected
-            - **Select data**: choose the productivity measure to be visualised
-            - **Choose countries**: choose the countries selected from a large list containing many European countries, as well as the US
-            #### Quarterly data specific options
-            ##### Quarterly line graph
-            - Plots all selected data as a line graph
-            - GVA provides data options for multiple sectors:
-            - if only sector is selected, a single line graph will be displayed
-            - if multiple are selected, multiple plots will be displayed side by side
-            - More information about the sectoral options is shown in the sources and methods and document
-            ##### QoQ bar graph
-            - Plots all selected data as a bar graph showing Quarter on Quarter (QoQ) change as a percentage
-            ##### YOY bar graph
-            - Plots all selected data as a bar graph showing Year on Year (YoY) change as a percentage
-            - Allows for selection of the specific quarter to be compared (if the 4th quarter is selected, it will show percentage change of the measure selected between the 4th quarters of the years selected)
-            #### Formatting
-            - **Show legend**: choose whether the legend is to be shown in the visualisation
-            """
-        )
+def create_refresh_button():
+    if st.sidebar.button("Reset To Default Settings"):
+        # Use JavaScript to refresh the entire page
+        js_code = """
+        <script>
+            window.parent.location.reload();
+        </script>
+        """
+        st.components.v1.html(js_code, height=0, width=0)
 
 def main_code():
 
@@ -552,6 +525,7 @@ def main_code():
     
     # Provides a button to download data
     export_data_button(data)
+    create_refresh_button()
 
     # Display the figure
     if fig:
@@ -565,6 +539,44 @@ def main_code():
                             "scale": 2
                         }
                     })
-    
+
+def main():
+    # Initialise app
+    initialise_app()
+
+    tab1, tab2 = st.tabs(["Quarterly Data Tool", "About this tool"])
+    with tab1:
+        main_code()
+    with tab2:
+        st.markdown(
+            """
+            ## TPI Quarterly Data Tool
+            ###### Developed by the [TPI Productivity Lab](https://lab.productivity.ac.uk/), this tool allows for the quick creation of graphs of quarterly and yearly productivity data on a national scale.
+            ###### US Quarterly total economy data represents most of the US economy but leaves out certain sectors - read the sources and methods document that accompanies this tool for more information
+
+            ### Customisation Options
+            #### Data options
+            - **Quarterly or Yearly selection**: Allows for the option of data to be shown as either quarterly or yearly
+            - **Select time period**: change the time period selected
+            - **Select data**: choose the productivity measure to be visualised
+            - **Choose countries**: choose the countries selected from a large list containing many European countries, as well as the US
+            #### Quarterly data specific options
+            ##### Quarterly line graph
+            - Plots all selected data as a line graph
+            - GVA provides data options for multiple sectors:
+            - if only sector is selected, a single line graph will be displayed
+            - if multiple are selected, multiple plots will be displayed side by side
+            - More information about the sectoral options is shown in the sources and methods and document
+            ##### QoQ bar graph
+            - Plots all selected data as a bar graph showing Quarter on Quarter (QoQ) change as a percentage
+            ##### YOY bar graph
+            - Plots all selected data as a bar graph showing Year on Year (YoY) change as a percentage
+            - Allows for selection of the specific quarter to be compared (if the 4th quarter is selected, it will show percentage change of the measure selected between the 4th quarters of the years selected)
+            #### Formatting
+            - **Show legend**: choose whether the legend is to be shown in the visualisation
+            """
+        )
+
+
 if __name__ == "__main__":
     main()
