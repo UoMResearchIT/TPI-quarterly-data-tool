@@ -446,7 +446,7 @@ def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
         quarters = quarterly_data["Quarter"].unique()
         quarters = [numeric_to_quarter(x) for x in quarters]
         quarter = st.sidebar.select_slider(label = "Quarterly slider", options = quarters, value=(quarters[0], quarters[-1]), label_visibility="collapsed", key=f"Q_Slider_{key}")
-        quarterly_options = ["Output Per Hour", "Output Per Worker", "Gross Value Added", "GDP per hour (TPI calculation)"]
+        quarterly_options = ["Output Per Hour", "Output Per Worker", "Gross Value Added"]
         quarterly_option = st.sidebar.selectbox(label= "Select data", options=quarterly_options, key=f"Q_Option_{key}")
         industry_selection = ["Total"]
         if quarterly_option == "Gross Value Added":
@@ -603,8 +603,8 @@ def main_code():
         st.sidebar.divider()
         st.sidebar.subheader("Configure layout")
         show_legend = st.sidebar.toggle(label="Show legend", value=True)
-        if visType == "2D line graph":
-            show_dip_lines = st.sidebar.toggle(label="Show verticle lines for before and after major dips in productivity (2008 recession and covid-19)", value=False)
+        if visType == "2D line graph" and QorY == "Quarterly":
+            show_dip_lines = st.sidebar.toggle(label="Show verticle lines for major dips in productivity", value=False)
         else:
             show_dip_lines = False
         if not show_dip_lines:
@@ -674,11 +674,11 @@ def main():
             ##### Quarterly 2D line graph
             - Plots all selected data as a line graph
             - GVA provides data options for multiple sectors:
-            - if only sector is selected, a single line graph will be displayed
-            - if multiple are selected, multiple plots will be displayed side by side
-            - More information about the sectoral options is shown in the sources and methods and document
+                - If only sector is selected, a single line graph will be displayed
+                - If multiple are selected, multiple plots will be displayed side by side
+                - More information about the sectoral options is shown in the sources and methods and document
             ##### Quarterly 3D line graph
-            - Allows for 
+            - Plots all selected data as a 3D line graph
             ##### QoQ bar graph
             - Plots all selected data as a bar graph showing Quarter on Quarter (QoQ) change as a percentage
             ##### YOY bar graph
@@ -686,6 +686,12 @@ def main():
             - Allows for selection of the specific quarter to be compared (if the 4th quarter is selected, it will show percentage change of the measure selected between the 4th quarters of the years selected)
             #### Formatting
             - **Show legend**: choose whether the legend is to be shown in the visualisation
+            - **Show verticle lines for major dips in productivity**: choose whether to show verticle lines positioned before and after the 2008 recession and covid-19
+            - **Show years instead of quarters**: Choose to show the x-axis of the visualisation as years instead of quarters - the data represented is still quarterly data but it can make the visualisation clearer
+            #### Multi-Y mode settings
+            - Multi-Y mode allows for the creation of a line graph which shows all three productivity indicators (output per hour, output per worker and gross value added) on a single plot
+            - Each indicator is an individual line with its own y axis
+            - This only allows for one country to be selected at a time
             """
         )
 

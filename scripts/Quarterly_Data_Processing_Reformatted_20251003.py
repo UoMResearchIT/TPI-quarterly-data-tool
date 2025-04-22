@@ -61,7 +61,6 @@ def SIC_Code_Combine(dataset, letters):
 ONS_OPH = pd.read_excel('../src/ONS Reweighted productivity.xlsx', sheet_name='Table_2', usecols='A,C', skiprows=6, header=None, names=["Quarter", "OPH"])
 ONS_OPW = pd.read_excel('../src/ONS Reweighted productivity.xlsx', sheet_name='Table_3', usecols='A,C', skiprows=6, header=None, names=["Quarter", "OPW"])
 ONS_Data = ONS_OPH.merge(ONS_OPW, on=["Quarter"])
-
 # Rebase to 2020
 ONS_Data["Year"] = ONS_Data["Quarter"].str[:4].astype(int)
 
@@ -76,7 +75,6 @@ ONS_Data = ONS_Data.drop("Year", axis=1)
 ONS_Data = ONS_Data.melt(id_vars=["Quarter"], var_name="Variable", value_name="Value")
 ONS_Data["Country"] = "UK"
 ONS_Data = ONS_Data[["Quarter", "Country", "Variable", "Value"]]
-
 EU_OPH_OPW = pd.read_csv('../src/EU OPH OPW extended.csv')
 EU_OPH_OPW = EU_OPH_OPW.rename(columns={"TIME_PERIOD": "Quarter", "na_item": "Variable", "geo": "Country", "OBS_VALUE": "Value"})
 EU_OPH_OPW["Quarter"] = EU_OPH_OPW["Quarter"].str.replace("-", " ", regex=False)
@@ -148,8 +146,10 @@ US_data['Country'] = 'US'
 US_data = US_data[['Quarter', 'Variable', 'Country', 'Value', ]] # doesnt matter what order !
 Dataset = pd.concat([Dataset, US_data])
 
-GDPPH = GDPPH_Calculation()
-Dataset = pd.concat([Dataset, GDPPH])
+# GDPPH Calculations
+# GDPPH = GDPPH_Calculation()
+# Dataset = pd.concat([Dataset, GDPPH])
+
 Dataset["Variable"] = Dataset['Variable'].replace('OPH', 'Output Per Hour')
 Dataset["Variable"] = Dataset['Variable'].replace('OPW', 'Output Per Worker')
 Dataset["Variable"] = Dataset['Variable'].replace('GVA', 'Gross Value Added')
