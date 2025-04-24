@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from GDP_Data_Processing_20250602 import GDPPH_Calculation
+# from GDP_Data_Processing_20250602 import GDPPH_Calculation
 import sqlite3
 
 pd.set_option('future.no_silent_downcasting', True)
@@ -88,12 +88,30 @@ Dataset = pd.concat([Dataset, ONS_Data])
 Dataset = pd.concat([Dataset, EU_OPH_OPW])
 
 # Import industry GVA data
-UK_GVA_Bespoke = pd.read_excel('../src/ONS GVA and hours worked.xlsx', sheet_name='Table_15', header=4)
-UK_GVA_Bespoke = UK_GVA_Bespoke.drop([0,1])
-UK_GVA_Division = pd.read_excel('../src/ONS GVA and hours worked.xlsx', sheet_name='Table_23', header=4)
+# This is all the ones not in the most recent release
+UK_GVA_Division_previous = pd.read_excel('../src/ONS GVA Nov 2024 release.xlsx', sheet_name='Table_23', header=4)
+UK_GVA_Division_previous = UK_GVA_Division_previous.drop([0,1])
+SIC_Codes_prev = ['A', 'L']
+SIC_Codes_Dict_prev = {'A': 'Agriculture, forestry and fishing', 'L': 'Real estate'}
+# Putting A and L in seperate and using previous release data, as Feb 2025 release doesn't contain it !!!
+# in SIC_Codes 'A', , 'L', in Sic_Codes_Dict 'A': 'Agriculture, forestry and fishing', 'L': 'Real estate',
+# A to T = Total
+SIC_Code_Data_prev = UK_GVA_Division_previous.filter(like='A to T', axis=1)
+SIC_Code_Data_prev.insert(0, 'Quarter', UK_GVA_Division_previous['SIC 2007 section'])
+for code in SIC_Codes_prev:
+    temp = SIC_Code_Combine(UK_GVA_Division_previous, code)
+    SIC_Code_Data_prev = SIC_Code_Data_prev.merge(temp, on='Quarter', how='left')
+SIC_Code_Data_prev = SIC_Code_Data_prev.rename(columns=SIC_Codes_Dict_prev)
+SIC_Code_Data_prev["Year"] = SIC_Code_Data_prev["Quarter"].str[:4].astype(int)
+SIC_Code_Data_prev = SIC_Code_Data_prev.dropna().drop(["A to T"], axis=1)
+print(SIC_Code_Data_prev)
+
+UK_GVA_Division = pd.read_excel('../src/ONS GVA Feb 2025 release.xlsx', sheet_name='Table_23', header=4)
 UK_GVA_Division = UK_GVA_Division.drop([0,1])
-SIC_Codes = ['C', 'A', 'F', ['G', 'H', 'I'], 'J', 'K', 'L', ['M', 'N'], ['O', 'P', 'Q'], ['B', 'C', 'D', 'E']]
-SIC_Codes_Dict = {'A to T': 'Total', 'C': 'Manufacturing', 'A': 'Agriculture, forestry and fishing', 'F': 'Construction', 'GHI': 'Trade & Hospitality', 'J': 'Information and communication', 'K': 'Finance and insurance', 'L': 'Real estate', 'MN': 'Professional & Admin Services', 'OPQ': 'Public Services', 'BCDE': 'Industry (except construction)'}
+SIC_Codes = ['C', 'F', ['G', 'H', 'I'], 'J', 'K', ['M', 'N'], ['O', 'P', 'Q'], ['B', 'C', 'D', 'E']]
+SIC_Codes_Dict = {'A to T': 'Total', 'C': 'Manufacturing', 'F': 'Construction', 'GHI': 'Trade & Hospitality', 'J': 'Information and communication', 'K': 'Finance and insurance', 'MN': 'Professional & Admin Services', 'OPQ': 'Public Services', 'BCDE': 'Industry (except construction)'}
+# Putting A and L in seperate and using previous release data, as Feb 2025 release doesn't contain it !!!
+# in SIC_Codes 'A', , 'L', in Sic_Codes_Dict 'A': 'Agriculture, forestry and fishing', 'L': 'Real estate',
 # A to T = Total
 SIC_Code_Data = UK_GVA_Division.filter(like='A to T', axis=1)
 SIC_Code_Data.insert(0, 'Quarter', UK_GVA_Division['SIC 2007 section'])
@@ -102,6 +120,8 @@ for code in SIC_Codes:
     SIC_Code_Data = SIC_Code_Data.merge(temp, on='Quarter', how='left')
 SIC_Code_Data = SIC_Code_Data.rename(columns=SIC_Codes_Dict)
 SIC_Code_Data["Year"] = SIC_Code_Data["Quarter"].str[:4].astype(int)
+print(SIC_Code_Data.columns)
+SIC_Code_Data = pd.concat([SIC_Code_Data, SIC_Code_Data_prev])
 
 # Find the rebasing factor (Average of 2020 values)
 base_2020 = SIC_Code_Data[SIC_Code_Data["Year"] == 2020].iloc[:, 1:-1].mean()
@@ -111,7 +131,7 @@ SIC_Code_Data.iloc[:, 1:-1] = (SIC_Code_Data.iloc[:, 1:-1] / base_2020) * 100
 SIC_Code_Data = SIC_Code_Data.drop("Year", axis=1)
 
 # Format for long form data
-SIC_Code_Data = SIC_Code_Data.melt(id_vars=["Quarter"], var_name="Industry", value_name="Value")
+SIC_Code_Data = SIC_Code_Data.melt(id_vars=["Quarter"], var_name="Industry", value_name="Value").dropna()
 SIC_Code_Data["Country"] = "UK"
 SIC_Code_Data["Variable"] = "GVA"
 # SIC_Code_Data['Quarter'] = SIC_Code_Data['Quarter'].apply(quarter_to_numeric)
