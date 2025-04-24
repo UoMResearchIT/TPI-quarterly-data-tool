@@ -461,7 +461,7 @@ def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
         year = st.sidebar.slider(label="Yearly slider!", min_value=yearly_data["Year"].iat[0], max_value=max(yearly_data["Year"]), value=[yearly_data["Year"].iat[0], max(yearly_data["Year"])], label_visibility="collapsed", key=f"Y_Slider_{key}")
         if year[0] == year[1]:
             year = [year[0], year[0] + 1] if year[0] < max(yearly_data["Year"]) else [year[0] - 1, year[0]]
-        yearly_option = yearly_options = ["GDP per hour worked"]
+        yearly_option = yearly_options = ["Output per hour"]
         st.sidebar.selectbox(label= "Select data", options=yearly_options, key=f"Y_Option_{key}")
 
     quarterly_selection = None
