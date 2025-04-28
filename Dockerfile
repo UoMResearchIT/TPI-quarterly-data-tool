@@ -7,8 +7,7 @@ RUN pip install -r requirements.txt
 COPY . /app
 WORKDIR /app
 
-RUN mkdir -p /app/.streamlit
-RUN mv config.toml /app/.streamlit/config.toml
+RUN mkdir -p ~/.streamlit && mv config.toml ~/.streamlit/config.toml
 
 ARG GOOGLE_ANALYTICS_ID
 RUN if [ -n "$GOOGLE_ANALYTICS_ID" ] ; then \

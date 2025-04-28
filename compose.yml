@@ -8,5 +8,5 @@ services:
     volumes:
       - .:/app
     ports:
-      - "${STREAMLIT_PORT-8888}:80"
+      - "${STREAMLIT_PORT:-8888}:8501"
     container_name: international-quarterly-productivity

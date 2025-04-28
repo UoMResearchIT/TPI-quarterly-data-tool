@@ -407,7 +407,7 @@ def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
     st.sidebar.subheader("Select data to plot")
     multiY_option = st.sidebar.radio(
         label="Select visualisation mode:",
-        options=["Default", "MultiY"],
+        options=["Multiple Countries", "Single Country"],
         key=f"MultiY_{key}"
     )
     if multiY_option == "MultiY":
