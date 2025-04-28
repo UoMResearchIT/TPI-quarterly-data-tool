@@ -162,3 +162,10 @@ cython_debug/
 #.idea/
 
 .DS_Store
+/out/Quarterly_dataset.db
+/scripts/Quarterly_Data_Processing_20250701.py
+/scripts/PlotlyTestingNotebook.ipynb
+/scripts/GDP_Data_Processing_20250602.py
+/scripts/Flash_Estimate_Q4_Processing_20252802.py
+/scripts/SQL_Data_Storage_20250318.py
+/scripts/Query_Testing_20250311.py

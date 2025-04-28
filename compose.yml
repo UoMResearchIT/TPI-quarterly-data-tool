@@ -1,5 +1,5 @@
 services:
-  tpi-ons-app:
+  international-quarterly-productivity:
     build:
       context: .
       dockerfile: Dockerfile
@@ -9,4 +9,4 @@ services:
       - .:/app
     ports:
       - "${STREAMLIT_PORT-8888}:80"
-    container_name: tpi-ons-app
+    container_name: international-quarterly-productivity
