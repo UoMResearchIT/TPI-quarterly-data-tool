@@ -1,4 +1,4 @@
-# TPI_ONS_app
+# TPI-Quarterly-Data-Tool
 Visualization tool for ONS Regional productivity dataset
 
 ## Using Docker

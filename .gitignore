@@ -169,3 +169,6 @@ cython_debug/
 /scripts/Flash_Estimate_Q4_Processing_20252802.py
 /scripts/SQL_Data_Storage_20250318.py
 /scripts/Query_Testing_20250311.py
+/out/qoq_data.csv
+/out/Dataset.csv
+/src/GDP-calculations
