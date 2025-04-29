@@ -663,7 +663,8 @@ def main_code():
     else:
         fig = multiY_plot(quarterly_data, quarter, country_selection, base_year)
 
-    if st.query_params["size"]:  # allows for a size parameter in the URL for the DVO
+    size = st.query_params.get("size")
+    if size:
         fig = apply_size(fig, float(st.query_params["size"]))
     figure = st.empty()
     # Display the figure
