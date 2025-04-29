@@ -359,28 +359,50 @@ def multiY_plot(data, quarter, country_selection, base_year):
 
     # Layout with multiple y-axes
     fig.update_layout(
-        title=f"OPH vs OPW vs GVA for {country_selection}",
-        xaxis=dict(title="Quarters", showgrid=False),
-        
+        title_text=f"OPH vs OPW vs GVA for {country_selection}",
+        xaxis=dict(
+            title="Quarters",
+            showgrid=False
+        ),
         yaxis=dict(
-        title="Output Per Hour",
-        titlefont=dict(color="green"),
-        tickfont=dict(color="green"),
-        side="left",
-        position=0,
+            title=dict(
+                text="Output Per Hour",
+                font=dict(color="green")
+            ),
+            tickfont=dict(color="green"),
+            side="left",
+            position=0,
         ),
         yaxis2=dict(
-            title="Output Per Worker", titlefont=dict(color="orange"), tickfont=dict(color="orange"),
-            overlaying="y", side="left", position=0.06, showgrid=False
+            title=dict(
+                text="Output Per Worker",
+                font=dict(color="orange")
+            ),
+            tickfont=dict(color="orange"),
+            overlaying="y",
+            side="left",
+            position=0.06,
+            showgrid=False
         ),
         yaxis3=dict(
-            title="Gross Value Added", titlefont=dict(color="dodgerblue"), tickfont=dict(color="dodgerblue"),
-            overlaying="y", side="right", showgrid=False
+            title=dict(
+                text="Gross Value Added",
+                font=dict(color="dodgerblue")
+            ),
+            tickfont=dict(color="dodgerblue"),
+            overlaying="y",
+            side="right",
+            position=1,
+            showgrid=False
         ),
-        
-        legend=dict(x=0.5, y=1.1, xanchor="center", orientation="h"),
+        legend=dict(
+            x=0.5,
+            y=1.15,
+            xanchor="center",
+            orientation="h"
+        ),
+        margin=dict(t=100),
     )
-
     return fig
 
 def multi_y_mode(quarterly_data, key):
@@ -402,6 +424,12 @@ def multi_y_mode(quarterly_data, key):
     base_year = st.sidebar.selectbox(label="Change the base year? (default set to 2020)", options=base_year_options, index=base_year_options.index(2020), key=f"base_year_multiY_{key}")
     return QorY, quarter, country_selection, base_year
 
+def apply_size(fig, size_factor=1.0):
+    width = int(600 * size_factor)
+    height = int(400 * size_factor)
+    fig.update_layout(width=width, height=height)
+    return fig
+
 def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
     st.sidebar.divider()
     st.sidebar.subheader("Select data to plot")
@@ -410,7 +438,7 @@ def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
         options=["Multiple Countries", "Single Country"],
         key=f"MultiY_{key}"
     )
-    if multiY_option == "MultiY":
+    if multiY_option == "Single Country":
         QorY, quarter, country_selection, base_year = multi_y_mode(quarterly_data, key)
         return QorY, quarter, None, None, None, None, country_selection, "multiY", base_year
 
@@ -536,7 +564,7 @@ def initialise_app():
         st.session_state.selected = "2D line graph"
 
     # Set page configuration
-    st.set_page_config(layout="wide")
+    st.set_page_config(layout="wide", page_title="TPI Quarterly Data Tool")
     # Page formatting
     st.sidebar.html("<a href='https://lab.productivity.ac.uk' alt='The Productivity Lab'></a>")
     st.logo("static/logo.png", link="https://lab.productivity.ac.uk/", icon_image=None)
@@ -567,7 +595,6 @@ def create_refresh_button():
         st.components.v1.html(js_code, height=0, width=0)
 
 def main_code():
-
     # Load datasets
     quarterly_data, yearly_data = load_data()
 
@@ -636,6 +663,8 @@ def main_code():
     else:
         fig = multiY_plot(quarterly_data, quarter, country_selection, base_year)
 
+    if st.query_params["size"]:  # allows for a size parameter in the URL for the DVO
+        fig = apply_size(fig, float(st.query_params["size"]))
     figure = st.empty()
     # Display the figure
     if fig:
