@@ -75,6 +75,7 @@ ONS_Data = ONS_Data.drop("Year", axis=1)
 ONS_Data = ONS_Data.melt(id_vars=["Quarter"], var_name="Variable", value_name="Value")
 ONS_Data["Country"] = "UK"
 ONS_Data = ONS_Data[["Quarter", "Country", "Variable", "Value"]]
+
 EU_OPH_OPW = pd.read_csv('../src/EU OPH OPW extended.csv')
 EU_OPH_OPW = EU_OPH_OPW.rename(columns={"TIME_PERIOD": "Quarter", "na_item": "Variable", "geo": "Country", "OBS_VALUE": "Value"})
 EU_OPH_OPW["Quarter"] = EU_OPH_OPW["Quarter"].str.replace("-", " ", regex=False)
@@ -104,7 +105,6 @@ for code in SIC_Codes_prev:
 SIC_Code_Data_prev = SIC_Code_Data_prev.rename(columns=SIC_Codes_Dict_prev)
 SIC_Code_Data_prev["Year"] = SIC_Code_Data_prev["Quarter"].str[:4].astype(int)
 SIC_Code_Data_prev = SIC_Code_Data_prev.dropna().drop(["A to T"], axis=1)
-print(SIC_Code_Data_prev)
 
 UK_GVA_Division = pd.read_excel('../src/ONS GVA Feb 2025 release.xlsx', sheet_name='Table_23', header=4)
 UK_GVA_Division = UK_GVA_Division.drop([0,1])
@@ -120,7 +120,6 @@ for code in SIC_Codes:
     SIC_Code_Data = SIC_Code_Data.merge(temp, on='Quarter', how='left')
 SIC_Code_Data = SIC_Code_Data.rename(columns=SIC_Codes_Dict)
 SIC_Code_Data["Year"] = SIC_Code_Data["Quarter"].str[:4].astype(int)
-print(SIC_Code_Data.columns)
 SIC_Code_Data = pd.concat([SIC_Code_Data, SIC_Code_Data_prev])
 
 # Find the rebasing factor (Average of 2020 values)
@@ -139,7 +138,7 @@ Dataset = pd.concat([Dataset, SIC_Code_Data])
 
 # Import all Quarterly US productivity data since Q1 1997 (consistent with ONS data)
 # Need to change cause this is only one specific industry
-US_data = pd.read_excel('../src/US Labour Productivity.xlsx', sheet_name='Quarterly', usecols='A,C,D, GW:LC', skiprows=2)
+US_data = pd.read_excel('../src/US Labour Productivity.xlsx', sheet_name='Quarterly', usecols='A,C,D, GW:LE', skiprows=2) # Need to change LE every data release, this is silly
 US_data = US_data.loc[US_data['Sector'] == 'Business sector']
 US_data = US_data.loc[US_data['Units'] == 'Index (2017=100)']
 
@@ -164,6 +163,7 @@ US_data = US_data.melt(id_vars=['Quarter'], var_name='Variable', value_name='Val
 US_data["Value"] = pd.to_numeric(US_data["Value"], errors="coerce")
 US_data['Country'] = 'US'
 US_data = US_data[['Quarter', 'Variable', 'Country', 'Value', ]] # doesnt matter what order !
+print(US_data)
 Dataset = pd.concat([Dataset, US_data])
 
 # GDPPH Calculations
