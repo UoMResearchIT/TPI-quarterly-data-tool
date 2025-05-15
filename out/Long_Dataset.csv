@@ -20582,904 +20582,17 @@ Quarter,Country,Industry,Value,Variable
 2021.5,UK,Total,110.89748882886914,Gross Value Added
 2021.75,UK,Total,112.37199302783314,Gross Value Added
 2022.0,UK,Total,113.12766141652293,Gross Value Added
-2022.25,UK,Total,113.36326981214886,Gross Value Added
+2022.25,UK,Total,113.36346998920546,Gross Value Added
 2022.5,UK,Total,113.34225122120516,Gross Value Added
-2022.75,UK,Total,113.78444233924905,Gross Value Added
-2023.0,UK,Total,113.94198168279841,Gross Value Added
-2023.25,UK,Total,113.95819602438357,Gross Value Added
-2023.5,UK,Total,113.81226695011739,Gross Value Added
-2023.75,UK,Total,113.49518649245263,Gross Value Added
-2024.0,UK,Total,114.31891508038862,Gross Value Added
-2024.25,UK,Total,114.72167131828104,Gross Value Added
-2024.5,UK,Total,114.75410000145125,Gross Value Added
-1997.0,UK,Manufacturing,75.45948431955671,Gross Value Added
-1997.25,UK,Manufacturing,76.86128516601681,Gross Value Added
-1997.5,UK,Manufacturing,77.93208552689964,Gross Value Added
-1997.75,UK,Manufacturing,79.20292095732904,Gross Value Added
-1998.0,UK,Manufacturing,79.59744364166387,Gross Value Added
-1998.25,UK,Manufacturing,80.46502576805385,Gross Value Added
-1998.5,UK,Manufacturing,79.89658423877015,Gross Value Added
-1998.75,UK,Manufacturing,80.12075598890094,Gross Value Added
-1999.0,UK,Manufacturing,82.14797552683282,Gross Value Added
-1999.25,UK,Manufacturing,83.24209292612903,Gross Value Added
-1999.5,UK,Manufacturing,84.43437436625906,Gross Value Added
-1999.75,UK,Manufacturing,84.54930622402038,Gross Value Added
-2000.0,UK,Manufacturing,86.07027185345206,Gross Value Added
-2000.25,UK,Manufacturing,85.81350584688265,Gross Value Added
-2000.5,UK,Manufacturing,85.92877099753373,Gross Value Added
-2000.75,UK,Manufacturing,87.99298774371971,Gross Value Added
-2001.0,UK,Manufacturing,87.69298705985378,Gross Value Added
-2001.25,UK,Manufacturing,86.93555468063316,Gross Value Added
-2001.5,UK,Manufacturing,88.10810551626172,Gross Value Added
-2001.75,UK,Manufacturing,87.15259557081825,Gross Value Added
-2002.0,UK,Manufacturing,87.41584260899012,Gross Value Added
-2002.25,UK,Manufacturing,85.95002107640347,Gross Value Added
-2002.5,UK,Manufacturing,91.63816170552099,Gross Value Added
-2002.75,UK,Manufacturing,90.4437089676291,Gross Value Added
-2003.0,UK,Manufacturing,89.95619376758621,Gross Value Added
-2003.25,UK,Manufacturing,89.24130970887487,Gross Value Added
-2003.5,UK,Manufacturing,89.5996819211719,Gross Value Added
-2003.75,UK,Manufacturing,91.06058275726602,Gross Value Added
-2004.0,UK,Manufacturing,92.77278847924015,Gross Value Added
-2004.25,UK,Manufacturing,92.72163354792244,Gross Value Added
-2004.5,UK,Manufacturing,91.08245983852667,Gross Value Added
-2004.75,UK,Manufacturing,91.25055811443126,Gross Value Added
-2005.0,UK,Manufacturing,91.55577286329778,Gross Value Added
-2005.25,UK,Manufacturing,92.10311709229227,Gross Value Added
-2005.5,UK,Manufacturing,92.0307272950315,Gross Value Added
-2005.75,UK,Manufacturing,93.26303617550406,Gross Value Added
-2006.0,UK,Manufacturing,94.59854351821456,Gross Value Added
-2006.25,UK,Manufacturing,97.5327434258855,Gross Value Added
-2006.5,UK,Manufacturing,98.34648845222954,Gross Value Added
-2006.75,UK,Manufacturing,99.2812960879291,Gross Value Added
-2007.0,UK,Manufacturing,97.43184313194034,Gross Value Added
-2007.25,UK,Manufacturing,96.19400042357704,Gross Value Added
-2007.5,UK,Manufacturing,96.26980693855434,Gross Value Added
-2007.75,UK,Manufacturing,97.24826126924721,Gross Value Added
-2008.0,UK,Manufacturing,96.5354707932563,Gross Value Added
-2008.25,UK,Manufacturing,95.91427840430265,Gross Value Added
-2008.5,UK,Manufacturing,94.82921480265267,Gross Value Added
-2008.75,UK,Manufacturing,91.81274039757491,Gross Value Added
-2009.0,UK,Manufacturing,85.96852198903255,Gross Value Added
-2009.25,UK,Manufacturing,85.65259868406481,Gross Value Added
-2009.5,UK,Manufacturing,86.3219254340203,Gross Value Added
-2009.75,UK,Manufacturing,87.52473691414207,Gross Value Added
-2010.0,UK,Manufacturing,87.79292251685537,Gross Value Added
-2010.25,UK,Manufacturing,88.99770335042896,Gross Value Added
-2010.5,UK,Manufacturing,88.07941482653985,Gross Value Added
-2010.75,UK,Manufacturing,87.13191618778102,Gross Value Added
-2011.0,UK,Manufacturing,83.86378189970696,Gross Value Added
-2011.25,UK,Manufacturing,83.47174049082356,Gross Value Added
-2011.5,UK,Manufacturing,83.29783155331079,Gross Value Added
-2011.75,UK,Manufacturing,84.60923079316129,Gross Value Added
-2012.0,UK,Manufacturing,85.95254959981919,Gross Value Added
-2012.25,UK,Manufacturing,87.34005123244671,Gross Value Added
-2012.5,UK,Manufacturing,88.33959600920038,Gross Value Added
-2012.75,UK,Manufacturing,88.17854151824588,Gross Value Added
-2013.0,UK,Manufacturing,87.88905016978761,Gross Value Added
-2013.25,UK,Manufacturing,89.38099659739261,Gross Value Added
-2013.5,UK,Manufacturing,91.38694094619282,Gross Value Added
-2013.75,UK,Manufacturing,92.23559678683625,Gross Value Added
-2014.0,UK,Manufacturing,93.41277136617256,Gross Value Added
-2014.25,UK,Manufacturing,93.66783584050079,Gross Value Added
-2014.5,UK,Manufacturing,94.55500357008614,Gross Value Added
-2014.75,UK,Manufacturing,95.32686239622974,Gross Value Added
-2015.0,UK,Manufacturing,97.2297644817858,Gross Value Added
-2015.25,UK,Manufacturing,98.19114779644916,Gross Value Added
-2015.5,UK,Manufacturing,98.0663230694682,Gross Value Added
-2015.75,UK,Manufacturing,98.2969315984976,Gross Value Added
-2016.0,UK,Manufacturing,96.27979083710326,Gross Value Added
-2016.25,UK,Manufacturing,96.3623473848419,Gross Value Added
-2016.5,UK,Manufacturing,94.89119241610997,Gross Value Added
-2016.75,UK,Manufacturing,95.28699236739602,Gross Value Added
-2017.0,UK,Manufacturing,96.1508269806541,Gross Value Added
-2017.25,UK,Manufacturing,96.75669715709257,Gross Value Added
-2017.5,UK,Manufacturing,97.73042282224253,Gross Value Added
-2017.75,UK,Manufacturing,100.12855670612257,Gross Value Added
-2018.0,UK,Manufacturing,100.82555280599637,Gross Value Added
-2018.25,UK,Manufacturing,101.29325252458881,Gross Value Added
-2018.5,UK,Manufacturing,100.77418721686786,Gross Value Added
-2018.75,UK,Manufacturing,97.66769065045325,Gross Value Added
-2019.0,UK,Manufacturing,99.32379803317217,Gross Value Added
-2019.25,UK,Manufacturing,98.66610864433996,Gross Value Added
-2019.5,UK,Manufacturing,99.92706558730488,Gross Value Added
-2019.75,UK,Manufacturing,101.91556572383456,Gross Value Added
-2020.0,UK,Manufacturing,103.369175857687,Gross Value Added
-2020.25,UK,Manufacturing,82.75570911534092,Gross Value Added
-2020.5,UK,Manufacturing,105.25803008690858,Gross Value Added
-2020.75,UK,Manufacturing,108.6170849400635,Gross Value Added
-2021.0,UK,Manufacturing,104.46226240306042,Gross Value Added
-2021.25,UK,Manufacturing,104.48170760512585,Gross Value Added
-2021.5,UK,Manufacturing,101.26733095890282,Gross Value Added
-2021.75,UK,Manufacturing,99.42296778722,Gross Value Added
-2022.0,UK,Manufacturing,96.52083369079176,Gross Value Added
-2022.25,UK,Manufacturing,94.83398954728771,Gross Value Added
-2022.5,UK,Manufacturing,92.75192058554713,Gross Value Added
-2022.75,UK,Manufacturing,92.19704059089462,Gross Value Added
-2023.0,UK,Manufacturing,92.43670211018166,Gross Value Added
-2023.25,UK,Manufacturing,93.5703589281618,Gross Value Added
-2023.5,UK,Manufacturing,92.4916781961279,Gross Value Added
-2023.75,UK,Manufacturing,90.71817729336802,Gross Value Added
-2024.0,UK,Manufacturing,91.30526646373393,Gross Value Added
-2024.25,UK,Manufacturing,90.00293893987472,Gross Value Added
-2024.5,UK,Manufacturing,89.67924533872493,Gross Value Added
-1997.0,UK,Construction,103.32344732590666,Gross Value Added
-1997.25,UK,Construction,107.19821986994272,Gross Value Added
-1997.5,UK,Construction,107.00586067119619,Gross Value Added
-1997.75,UK,Construction,110.70817520261069,Gross Value Added
-1998.0,UK,Construction,113.13917076315498,Gross Value Added
-1998.25,UK,Construction,110.67455608535042,Gross Value Added
-1998.5,UK,Construction,111.31220998372228,Gross Value Added
-1998.75,UK,Construction,113.94505404385036,Gross Value Added
-1999.0,UK,Construction,116.08584797598888,Gross Value Added
-1999.25,UK,Construction,117.26400358652025,Gross Value Added
-1999.5,UK,Construction,119.17059453943742,Gross Value Added
-1999.75,UK,Construction,118.64814705685059,Gross Value Added
-2000.0,UK,Construction,120.56530604872972,Gross Value Added
-2000.25,UK,Construction,117.76111446131996,Gross Value Added
-2000.5,UK,Construction,114.79304017750167,Gross Value Added
-2000.75,UK,Construction,116.68353356956736,Gross Value Added
-2001.0,UK,Construction,116.02422866190425,Gross Value Added
-2001.25,UK,Construction,117.8858424053024,Gross Value Added
-2001.5,UK,Construction,116.37301404580849,Gross Value Added
-2001.75,UK,Construction,116.6096074320786,Gross Value Added
-2002.0,UK,Construction,115.36446591379719,Gross Value Added
-2002.25,UK,Construction,113.98375009139518,Gross Value Added
-2002.5,UK,Construction,114.72028026613141,Gross Value Added
-2002.75,UK,Construction,114.79851736391203,Gross Value Added
-2003.0,UK,Construction,110.38969003223042,Gross Value Added
-2003.25,UK,Construction,111.49036637593129,Gross Value Added
-2003.5,UK,Construction,111.99429808473487,Gross Value Added
-2003.75,UK,Construction,112.56145956363535,Gross Value Added
-2004.0,UK,Construction,114.91019604171504,Gross Value Added
-2004.25,UK,Construction,111.11755731748352,Gross Value Added
-2004.5,UK,Construction,109.78956029276499,Gross Value Added
-2004.75,UK,Construction,108.6494874284468,Gross Value Added
-2005.0,UK,Construction,110.23168685946322,Gross Value Added
-2005.25,UK,Construction,110.48589557897846,Gross Value Added
-2005.5,UK,Construction,108.69162258024024,Gross Value Added
-2005.75,UK,Construction,108.38424534674303,Gross Value Added
-2006.0,UK,Construction,109.79436175836759,Gross Value Added
-2006.25,UK,Construction,110.35830349982217,Gross Value Added
-2006.5,UK,Construction,110.31313677787738,Gross Value Added
-2006.75,UK,Construction,111.11269665170545,Gross Value Added
-2007.0,UK,Construction,110.98249884858294,Gross Value Added
-2007.25,UK,Construction,109.31340925737258,Gross Value Added
-2007.5,UK,Construction,106.59331721964713,Gross Value Added
-2007.75,UK,Construction,106.85681273009648,Gross Value Added
-2008.0,UK,Construction,106.65546592683692,Gross Value Added
-2008.25,UK,Construction,104.37055806236333,Gross Value Added
-2008.5,UK,Construction,101.07473967845249,Gross Value Added
-2008.75,UK,Construction,95.66401754175938,Gross Value Added
-2009.0,UK,Construction,88.13775935039891,Gross Value Added
-2009.25,UK,Construction,87.59065119848798,Gross Value Added
-2009.5,UK,Construction,89.15960100710257,Gross Value Added
-2009.75,UK,Construction,87.53375384375182,Gross Value Added
-2010.0,UK,Construction,91.40333728872211,Gross Value Added
-2010.25,UK,Construction,95.46403334565584,Gross Value Added
-2010.5,UK,Construction,97.28648985007817,Gross Value Added
-2010.75,UK,Construction,95.50270622644994,Gross Value Added
-2011.0,UK,Construction,97.92137806295422,Gross Value Added
-2011.25,UK,Construction,100.22635333131353,Gross Value Added
-2011.5,UK,Construction,99.62605343776858,Gross Value Added
-2011.75,UK,Construction,101.50023524021059,Gross Value Added
-2012.0,UK,Construction,99.7116670942538,Gross Value Added
-2012.25,UK,Construction,99.62343569542706,Gross Value Added
-2012.5,UK,Construction,98.19564788693678,Gross Value Added
-2012.75,UK,Construction,100.34537654040211,Gross Value Added
-2013.0,UK,Construction,101.47975800072184,Gross Value Added
-2013.25,UK,Construction,103.18569997191223,Gross Value Added
-2013.5,UK,Construction,105.17443846483532,Gross Value Added
-2013.75,UK,Construction,105.06294597174772,Gross Value Added
-2014.0,UK,Construction,105.54549260356725,Gross Value Added
-2014.25,UK,Construction,106.43977236945861,Gross Value Added
-2014.5,UK,Construction,107.04977811678754,Gross Value Added
-2014.75,UK,Construction,107.9736371355172,Gross Value Added
-2015.0,UK,Construction,110.93377937726781,Gross Value Added
-2015.25,UK,Construction,112.60113275586204,Gross Value Added
-2015.5,UK,Construction,110.71340447885747,Gross Value Added
-2015.75,UK,Construction,111.84245009426354,Gross Value Added
-2016.0,UK,Construction,110.82358581701848,Gross Value Added
-2016.25,UK,Construction,109.43590944122828,Gross Value Added
-2016.5,UK,Construction,109.21363413710922,Gross Value Added
-2016.75,UK,Construction,110.04328707755045,Gross Value Added
-2017.0,UK,Construction,113.50909317216629,Gross Value Added
-2017.25,UK,Construction,114.04756189534753,Gross Value Added
-2017.5,UK,Construction,113.76286941320902,Gross Value Added
-2017.75,UK,Construction,115.51066164417982,Gross Value Added
-2018.0,UK,Construction,113.69081928297018,Gross Value Added
-2018.25,UK,Construction,114.58190018976708,Gross Value Added
-2018.5,UK,Construction,113.75938476450378,Gross Value Added
-2018.75,UK,Construction,112.39383349786496,Gross Value Added
-2019.0,UK,Construction,114.06173598391298,Gross Value Added
-2019.25,UK,Construction,112.70617973156658,Gross Value Added
-2019.5,UK,Construction,114.3634766648289,Gross Value Added
-2019.75,UK,Construction,112.17458546766082,Gross Value Added
-2020.0,UK,Construction,112.6852765650807,Gross Value Added
-2020.25,UK,Construction,76.62187385445137,Gross Value Added
-2020.5,UK,Construction,103.22892619803422,Gross Value Added
-2020.75,UK,Construction,107.46392338243376,Gross Value Added
-2021.0,UK,Construction,109.46587068938489,Gross Value Added
-2021.25,UK,Construction,112.0100885954563,Gross Value Added
-2021.5,UK,Construction,108.7535163363116,Gross Value Added
-2021.75,UK,Construction,111.03539109936038,Gross Value Added
-2022.0,UK,Construction,114.85790607586691,Gross Value Added
-2022.25,UK,Construction,117.43890209948975,Gross Value Added
-2022.5,UK,Construction,118.52254824328013,Gross Value Added
-2022.75,UK,Construction,120.69422130257259,Gross Value Added
-2023.0,UK,Construction,118.5084640667095,Gross Value Added
-2023.25,UK,Construction,119.52842233300494,Gross Value Added
-2023.5,UK,Construction,120.68766968609151,Gross Value Added
-2023.75,UK,Construction,118.90015045286498,Gross Value Added
-2024.0,UK,Construction,118.22264981360668,Gross Value Added
-2024.25,UK,Construction,117.98465111505317,Gross Value Added
-2024.5,UK,Construction,118.7729862977761,Gross Value Added
-1997.0,UK,Trade & Hospitality,117.19831611343643,Gross Value Added
-1997.25,UK,Trade & Hospitality,118.76831870734617,Gross Value Added
-1997.5,UK,Trade & Hospitality,120.44006321636253,Gross Value Added
-1997.75,UK,Trade & Hospitality,122.86213755481474,Gross Value Added
-1998.0,UK,Trade & Hospitality,119.53502879652333,Gross Value Added
-1998.25,UK,Trade & Hospitality,119.2474957904756,Gross Value Added
-1998.5,UK,Trade & Hospitality,119.82803903475654,Gross Value Added
-1998.75,UK,Trade & Hospitality,120.8441880784852,Gross Value Added
-1999.0,UK,Trade & Hospitality,122.39230591358059,Gross Value Added
-1999.25,UK,Trade & Hospitality,125.16648491316154,Gross Value Added
-1999.5,UK,Trade & Hospitality,125.84552230301756,Gross Value Added
-1999.75,UK,Trade & Hospitality,127.14529175049327,Gross Value Added
-2000.0,UK,Trade & Hospitality,132.36637652882877,Gross Value Added
-2000.25,UK,Trade & Hospitality,131.3524928554967,Gross Value Added
-2000.5,UK,Trade & Hospitality,133.90076750256213,Gross Value Added
-2000.75,UK,Trade & Hospitality,133.24047910610608,Gross Value Added
-2001.0,UK,Trade & Hospitality,130.66059624079455,Gross Value Added
-2001.25,UK,Trade & Hospitality,131.42272908888398,Gross Value Added
-2001.5,UK,Trade & Hospitality,132.46447021740403,Gross Value Added
-2001.75,UK,Trade & Hospitality,129.24168297255287,Gross Value Added
-2002.0,UK,Trade & Hospitality,127.33526291779953,Gross Value Added
-2002.25,UK,Trade & Hospitality,127.3197699630654,Gross Value Added
-2002.5,UK,Trade & Hospitality,128.61364990762928,Gross Value Added
-2002.75,UK,Trade & Hospitality,127.0034569811036,Gross Value Added
-2003.0,UK,Trade & Hospitality,128.91342617462732,Gross Value Added
-2003.25,UK,Trade & Hospitality,131.92190055093192,Gross Value Added
-2003.5,UK,Trade & Hospitality,132.55992681406718,Gross Value Added
-2003.75,UK,Trade & Hospitality,133.02367377691093,Gross Value Added
-2004.0,UK,Trade & Hospitality,137.0456748639286,Gross Value Added
-2004.25,UK,Trade & Hospitality,139.3084883719113,Gross Value Added
-2004.5,UK,Trade & Hospitality,140.28641967733745,Gross Value Added
-2004.75,UK,Trade & Hospitality,144.7065659280036,Gross Value Added
-2005.0,UK,Trade & Hospitality,144.8342828898879,Gross Value Added
-2005.25,UK,Trade & Hospitality,143.91778472749007,Gross Value Added
-2005.5,UK,Trade & Hospitality,143.58498395243765,Gross Value Added
-2005.75,UK,Trade & Hospitality,146.03938288117453,Gross Value Added
-2006.0,UK,Trade & Hospitality,145.52197468793065,Gross Value Added
-2006.25,UK,Trade & Hospitality,144.90564947846732,Gross Value Added
-2006.5,UK,Trade & Hospitality,142.67918326514138,Gross Value Added
-2006.75,UK,Trade & Hospitality,138.5974118634103,Gross Value Added
-2007.0,UK,Trade & Hospitality,137.98866847853438,Gross Value Added
-2007.25,UK,Trade & Hospitality,139.4516355362743,Gross Value Added
-2007.5,UK,Trade & Hospitality,141.3822106650739,Gross Value Added
-2007.75,UK,Trade & Hospitality,142.3014117278305,Gross Value Added
-2008.0,UK,Trade & Hospitality,149.46232580830417,Gross Value Added
-2008.25,UK,Trade & Hospitality,147.83217991077214,Gross Value Added
-2008.5,UK,Trade & Hospitality,142.3687846168858,Gross Value Added
-2008.75,UK,Trade & Hospitality,135.4794403340676,Gross Value Added
-2009.0,UK,Trade & Hospitality,127.90401849420266,Gross Value Added
-2009.25,UK,Trade & Hospitality,119.90587552780289,Gross Value Added
-2009.5,UK,Trade & Hospitality,120.33274495929665,Gross Value Added
-2009.75,UK,Trade & Hospitality,124.46934040718088,Gross Value Added
-2010.0,UK,Trade & Hospitality,128.64366987877165,Gross Value Added
-2010.25,UK,Trade & Hospitality,134.32701216530026,Gross Value Added
-2010.5,UK,Trade & Hospitality,138.06007971818607,Gross Value Added
-2010.75,UK,Trade & Hospitality,138.38575685660592,Gross Value Added
-2011.0,UK,Trade & Hospitality,140.6845179245574,Gross Value Added
-2011.25,UK,Trade & Hospitality,142.14246180404447,Gross Value Added
-2011.5,UK,Trade & Hospitality,141.56181101155195,Gross Value Added
-2011.75,UK,Trade & Hospitality,142.68781389671253,Gross Value Added
-2012.0,UK,Trade & Hospitality,143.8392652792253,Gross Value Added
-2012.25,UK,Trade & Hospitality,145.81565969443864,Gross Value Added
-2012.5,UK,Trade & Hospitality,146.92319519070767,Gross Value Added
-2012.75,UK,Trade & Hospitality,148.28023816810173,Gross Value Added
-2013.0,UK,Trade & Hospitality,152.2143482520019,Gross Value Added
-2013.25,UK,Trade & Hospitality,151.4203953053715,Gross Value Added
-2013.5,UK,Trade & Hospitality,153.82603268192773,Gross Value Added
-2013.75,UK,Trade & Hospitality,153.45649136640833,Gross Value Added
-2014.0,UK,Trade & Hospitality,153.6831154505916,Gross Value Added
-2014.25,UK,Trade & Hospitality,154.88975728188524,Gross Value Added
-2014.5,UK,Trade & Hospitality,153.99188171689482,Gross Value Added
-2014.75,UK,Trade & Hospitality,152.1864059089999,Gross Value Added
-2015.0,UK,Trade & Hospitality,147.64443950841883,Gross Value Added
-2015.25,UK,Trade & Hospitality,145.43929347610728,Gross Value Added
-2015.5,UK,Trade & Hospitality,145.5317272511291,Gross Value Added
-2015.75,UK,Trade & Hospitality,145.16936490925713,Gross Value Added
-2016.0,UK,Trade & Hospitality,146.35949732848036,Gross Value Added
-2016.25,UK,Trade & Hospitality,147.6027350102323,Gross Value Added
-2016.5,UK,Trade & Hospitality,149.35814002897874,Gross Value Added
-2016.75,UK,Trade & Hospitality,150.65883731993355,Gross Value Added
-2017.0,UK,Trade & Hospitality,153.01625242480623,Gross Value Added
-2017.25,UK,Trade & Hospitality,155.6001774147162,Gross Value Added
-2017.5,UK,Trade & Hospitality,157.63829928074594,Gross Value Added
-2017.75,UK,Trade & Hospitality,156.44399155186034,Gross Value Added
-2018.0,UK,Trade & Hospitality,155.2199173268531,Gross Value Added
-2018.25,UK,Trade & Hospitality,159.79576995652894,Gross Value Added
-2018.5,UK,Trade & Hospitality,162.7562855130967,Gross Value Added
-2018.75,UK,Trade & Hospitality,165.5050819761533,Gross Value Added
-2019.0,UK,Trade & Hospitality,166.74798138768062,Gross Value Added
-2019.25,UK,Trade & Hospitality,165.77285594523923,Gross Value Added
-2019.5,UK,Trade & Hospitality,165.32748665494339,Gross Value Added
-2019.75,UK,Trade & Hospitality,163.8223640062332,Gross Value Added
-2020.0,UK,Trade & Hospitality,141.06668813536584,Gross Value Added
-2020.25,UK,Trade & Hospitality,55.28153954993728,Gross Value Added
-2020.5,UK,Trade & Hospitality,106.64463896080092,Gross Value Added
-2020.75,UK,Trade & Hospitality,97.00713335389595,Gross Value Added
-2021.0,UK,Trade & Hospitality,92.3741501863934,Gross Value Added
-2021.25,UK,Trade & Hospitality,113.15591904611838,Gross Value Added
-2021.5,UK,Trade & Hospitality,124.54880184399056,Gross Value Added
-2021.75,UK,Trade & Hospitality,125.88794935654623,Gross Value Added
-2022.0,UK,Trade & Hospitality,133.74346949132118,Gross Value Added
-2022.25,UK,Trade & Hospitality,137.88801288251526,Gross Value Added
-2022.5,UK,Trade & Hospitality,141.8092225305763,Gross Value Added
-2022.75,UK,Trade & Hospitality,143.27655054846363,Gross Value Added
-2023.0,UK,Trade & Hospitality,143.59665132785412,Gross Value Added
-2023.25,UK,Trade & Hospitality,141.64471199093487,Gross Value Added
-2023.5,UK,Trade & Hospitality,139.5802082187701,Gross Value Added
-2023.75,UK,Trade & Hospitality,140.59618939636897,Gross Value Added
-2024.0,UK,Trade & Hospitality,144.0285417359712,Gross Value Added
-2024.25,UK,Trade & Hospitality,146.3461003106651,Gross Value Added
-2024.5,UK,Trade & Hospitality,145.61629187156748,Gross Value Added
-1997.0,UK,Information and communication,45.742039473346,Gross Value Added
-1997.25,UK,Information and communication,47.46172064752098,Gross Value Added
-1997.5,UK,Information and communication,45.700402217972055,Gross Value Added
-1997.75,UK,Information and communication,49.49001115947952,Gross Value Added
-1998.0,UK,Information and communication,48.764432755735676,Gross Value Added
-1998.25,UK,Information and communication,50.83631870229118,Gross Value Added
-1998.5,UK,Information and communication,50.41578651367428,Gross Value Added
-1998.75,UK,Information and communication,52.4459654919479,Gross Value Added
-1999.0,UK,Information and communication,51.67822571790035,Gross Value Added
-1999.25,UK,Information and communication,50.928301369049166,Gross Value Added
-1999.5,UK,Information and communication,55.68800384707047,Gross Value Added
-1999.75,UK,Information and communication,56.68390586898222,Gross Value Added
-2000.0,UK,Information and communication,58.788131378694594,Gross Value Added
-2000.25,UK,Information and communication,61.135049708365884,Gross Value Added
-2000.5,UK,Information and communication,62.51424888596626,Gross Value Added
-2000.75,UK,Information and communication,61.96271649824487,Gross Value Added
-2001.0,UK,Information and communication,63.27950314555769,Gross Value Added
-2001.25,UK,Information and communication,63.24916460053572,Gross Value Added
-2001.5,UK,Information and communication,63.187981014588054,Gross Value Added
-2001.75,UK,Information and communication,64.65825196754692,Gross Value Added
-2002.0,UK,Information and communication,64.99289319439221,Gross Value Added
-2002.25,UK,Information and communication,65.52901320593767,Gross Value Added
-2002.5,UK,Information and communication,64.15265816291064,Gross Value Added
-2002.75,UK,Information and communication,66.03763555957299,Gross Value Added
-2003.0,UK,Information and communication,68.15759911472917,Gross Value Added
-2003.25,UK,Information and communication,69.37539069509626,Gross Value Added
-2003.5,UK,Information and communication,68.93563116986995,Gross Value Added
-2003.75,UK,Information and communication,71.82463321910149,Gross Value Added
-2004.0,UK,Information and communication,71.96058984666799,Gross Value Added
-2004.25,UK,Information and communication,72.42967029830399,Gross Value Added
-2004.5,UK,Information and communication,75.22013859318767,Gross Value Added
-2004.75,UK,Information and communication,74.33860377163549,Gross Value Added
-2005.0,UK,Information and communication,75.27265638793516,Gross Value Added
-2005.25,UK,Information and communication,75.73525481253613,Gross Value Added
-2005.5,UK,Information and communication,78.1218739912377,Gross Value Added
-2005.75,UK,Information and communication,78.85691464308019,Gross Value Added
-2006.0,UK,Information and communication,79.14611415377996,Gross Value Added
-2006.25,UK,Information and communication,75.59729282625473,Gross Value Added
-2006.5,UK,Information and communication,76.93451729299908,Gross Value Added
-2006.75,UK,Information and communication,78.28523850865784,Gross Value Added
-2007.0,UK,Information and communication,80.07091054997997,Gross Value Added
-2007.25,UK,Information and communication,82.49014917444451,Gross Value Added
-2007.5,UK,Information and communication,84.94370449702139,Gross Value Added
-2007.75,UK,Information and communication,83.97164768512714,Gross Value Added
-2008.0,UK,Information and communication,85.55782960284125,Gross Value Added
-2008.25,UK,Information and communication,85.96928763102697,Gross Value Added
-2008.5,UK,Information and communication,84.35418879944088,Gross Value Added
-2008.75,UK,Information and communication,83.80190989142113,Gross Value Added
-2009.0,UK,Information and communication,82.87749924542126,Gross Value Added
-2009.25,UK,Information and communication,83.72043977251063,Gross Value Added
-2009.5,UK,Information and communication,83.93395108385752,Gross Value Added
-2009.75,UK,Information and communication,86.14298677811104,Gross Value Added
-2010.0,UK,Information and communication,84.55855273281328,Gross Value Added
-2010.25,UK,Information and communication,83.58326457228398,Gross Value Added
-2010.5,UK,Information and communication,84.25667607671281,Gross Value Added
-2010.75,UK,Information and communication,84.1772832952519,Gross Value Added
-2011.0,UK,Information and communication,82.87336217240966,Gross Value Added
-2011.25,UK,Information and communication,86.5591053660665,Gross Value Added
-2011.5,UK,Information and communication,87.50927250924613,Gross Value Added
-2011.75,UK,Information and communication,86.31597504525052,Gross Value Added
-2012.0,UK,Information and communication,90.43926188685309,Gross Value Added
-2012.25,UK,Information and communication,86.29286371694242,Gross Value Added
-2012.5,UK,Information and communication,84.39380491323,Gross Value Added
-2012.75,UK,Information and communication,87.30482228323635,Gross Value Added
-2013.0,UK,Information and communication,90.77124798196735,Gross Value Added
-2013.25,UK,Information and communication,90.37342560810127,Gross Value Added
-2013.5,UK,Information and communication,94.54358903235037,Gross Value Added
-2013.75,UK,Information and communication,95.74655820896176,Gross Value Added
-2014.0,UK,Information and communication,91.61547468584124,Gross Value Added
-2014.25,UK,Information and communication,93.9460203128971,Gross Value Added
-2014.5,UK,Information and communication,94.07018852688468,Gross Value Added
-2014.75,UK,Information and communication,93.55328182005823,Gross Value Added
-2015.0,UK,Information and communication,94.9462184456092,Gross Value Added
-2015.25,UK,Information and communication,95.30723659494791,Gross Value Added
-2015.5,UK,Information and communication,95.4410764260686,Gross Value Added
-2015.75,UK,Information and communication,97.24874900040406,Gross Value Added
-2016.0,UK,Information and communication,98.65052910683477,Gross Value Added
-2016.25,UK,Information and communication,99.26526732467386,Gross Value Added
-2016.5,UK,Information and communication,101.54748131729446,Gross Value Added
-2016.75,UK,Information and communication,99.39461967777106,Gross Value Added
-2017.0,UK,Information and communication,97.03977332271485,Gross Value Added
-2017.25,UK,Information and communication,96.1889039222341,Gross Value Added
-2017.5,UK,Information and communication,94.8891067913833,Gross Value Added
-2017.75,UK,Information and communication,96.2481585914788,Gross Value Added
-2018.0,UK,Information and communication,97.06491898522896,Gross Value Added
-2018.25,UK,Information and communication,97.22893641625643,Gross Value Added
-2018.5,UK,Information and communication,97.74336799876447,Gross Value Added
-2018.75,UK,Information and communication,98.13921888479014,Gross Value Added
-2019.0,UK,Information and communication,99.44669887150765,Gross Value Added
-2019.25,UK,Information and communication,100.33269209783846,Gross Value Added
-2019.5,UK,Information and communication,101.70690817136196,Gross Value Added
-2019.75,UK,Information and communication,102.99135651297374,Gross Value Added
-2020.0,UK,Information and communication,103.01175763108519,Gross Value Added
-2020.25,UK,Information and communication,94.04188417819904,Gross Value Added
-2020.5,UK,Information and communication,100.27035699648026,Gross Value Added
-2020.75,UK,Information and communication,102.67600119423548,Gross Value Added
-2021.0,UK,Information and communication,103.15749690622529,Gross Value Added
-2021.25,UK,Information and communication,106.82990556356515,Gross Value Added
-2021.5,UK,Information and communication,107.37857232004384,Gross Value Added
-2021.75,UK,Information and communication,110.91772014103381,Gross Value Added
-2022.0,UK,Information and communication,113.23046753065054,Gross Value Added
-2022.25,UK,Information and communication,113.25426533382984,Gross Value Added
-2022.5,UK,Information and communication,112.65869275855115,Gross Value Added
-2022.75,UK,Information and communication,111.88804654533561,Gross Value Added
-2023.0,UK,Information and communication,110.91131327283294,Gross Value Added
-2023.25,UK,Information and communication,111.9894959057768,Gross Value Added
-2023.5,UK,Information and communication,110.65125953739263,Gross Value Added
-2023.75,UK,Information and communication,109.5766557846235,Gross Value Added
-2024.0,UK,Information and communication,110.4084505605655,Gross Value Added
-2024.25,UK,Information and communication,113.12718432105027,Gross Value Added
-2024.5,UK,Information and communication,113.988393019465,Gross Value Added
-1997.0,UK,Finance and insurance,76.07147379403439,Gross Value Added
-1997.25,UK,Finance and insurance,76.0393245172691,Gross Value Added
-1997.5,UK,Finance and insurance,75.16472769672362,Gross Value Added
-1997.75,UK,Finance and insurance,72.21738723833158,Gross Value Added
-1998.0,UK,Finance and insurance,81.88351805531418,Gross Value Added
-1998.25,UK,Finance and insurance,77.67569659808566,Gross Value Added
-1998.5,UK,Finance and insurance,74.47062883623593,Gross Value Added
-1998.75,UK,Finance and insurance,69.90816855209246,Gross Value Added
-1999.0,UK,Finance and insurance,72.60464304862762,Gross Value Added
-1999.25,UK,Finance and insurance,74.96302943694768,Gross Value Added
-1999.5,UK,Finance and insurance,76.10583637526351,Gross Value Added
-1999.75,UK,Finance and insurance,79.99701754367157,Gross Value Added
-2000.0,UK,Finance and insurance,81.2894824319236,Gross Value Added
-2000.25,UK,Finance and insurance,80.3104491253658,Gross Value Added
-2000.5,UK,Finance and insurance,79.82630806356049,Gross Value Added
-2000.75,UK,Finance and insurance,79.64429709792725,Gross Value Added
-2001.0,UK,Finance and insurance,78.71773712012937,Gross Value Added
-2001.25,UK,Finance and insurance,76.42804380217385,Gross Value Added
-2001.5,UK,Finance and insurance,77.06202045115887,Gross Value Added
-2001.75,UK,Finance and insurance,76.16178192296728,Gross Value Added
-2002.0,UK,Finance and insurance,78.45806205738235,Gross Value Added
-2002.25,UK,Finance and insurance,79.3934260788117,Gross Value Added
-2002.5,UK,Finance and insurance,78.74181511064802,Gross Value Added
-2002.75,UK,Finance and insurance,80.73322050332295,Gross Value Added
-2003.0,UK,Finance and insurance,80.94087845718975,Gross Value Added
-2003.25,UK,Finance and insurance,81.4560868782085,Gross Value Added
-2003.5,UK,Finance and insurance,83.22687243446653,Gross Value Added
-2003.75,UK,Finance and insurance,80.40793269983381,Gross Value Added
-2004.0,UK,Finance and insurance,77.86354501853512,Gross Value Added
-2004.25,UK,Finance and insurance,79.79692906234254,Gross Value Added
-2004.5,UK,Finance and insurance,84.64165398430939,Gross Value Added
-2004.75,UK,Finance and insurance,90.4197199067131,Gross Value Added
-2005.0,UK,Finance and insurance,93.62592869168968,Gross Value Added
-2005.25,UK,Finance and insurance,93.52338565861017,Gross Value Added
-2005.5,UK,Finance and insurance,95.77333191161644,Gross Value Added
-2005.75,UK,Finance and insurance,93.04465152248544,Gross Value Added
-2006.0,UK,Finance and insurance,91.34699308066297,Gross Value Added
-2006.25,UK,Finance and insurance,88.5534412710044,Gross Value Added
-2006.5,UK,Finance and insurance,89.46501219114636,Gross Value Added
-2006.75,UK,Finance and insurance,97.1170943440644,Gross Value Added
-2007.0,UK,Finance and insurance,103.64638885922899,Gross Value Added
-2007.25,UK,Finance and insurance,111.34760734125142,Gross Value Added
-2007.5,UK,Finance and insurance,115.56707308522658,Gross Value Added
-2007.75,UK,Finance and insurance,115.50974141250612,Gross Value Added
-2008.0,UK,Finance and insurance,116.95957843045062,Gross Value Added
-2008.25,UK,Finance and insurance,115.6069853619749,Gross Value Added
-2008.5,UK,Finance and insurance,112.48546322841703,Gross Value Added
-2008.75,UK,Finance and insurance,106.21731512232826,Gross Value Added
-2009.0,UK,Finance and insurance,107.10710482957657,Gross Value Added
-2009.25,UK,Finance and insurance,105.33330306329107,Gross Value Added
-2009.5,UK,Finance and insurance,104.60572557054772,Gross Value Added
-2009.75,UK,Finance and insurance,104.57476710753954,Gross Value Added
-2010.0,UK,Finance and insurance,103.24111297397232,Gross Value Added
-2010.25,UK,Finance and insurance,103.6126881508031,Gross Value Added
-2010.5,UK,Finance and insurance,103.5142278961225,Gross Value Added
-2010.75,UK,Finance and insurance,104.66627227762186,Gross Value Added
-2011.0,UK,Finance and insurance,98.94803866538362,Gross Value Added
-2011.25,UK,Finance and insurance,95.52489744166544,Gross Value Added
-2011.5,UK,Finance and insurance,97.76147828818016,Gross Value Added
-2011.75,UK,Finance and insurance,97.794403030191,Gross Value Added
-2012.0,UK,Finance and insurance,98.87817169491619,Gross Value Added
-2012.25,UK,Finance and insurance,100.61155257278007,Gross Value Added
-2012.5,UK,Finance and insurance,100.51183272545636,Gross Value Added
-2012.75,UK,Finance and insurance,98.0751055125648,Gross Value Added
-2013.0,UK,Finance and insurance,96.42392124948084,Gross Value Added
-2013.25,UK,Finance and insurance,95.80482516619688,Gross Value Added
-2013.5,UK,Finance and insurance,93.00303247865544,Gross Value Added
-2013.75,UK,Finance and insurance,93.15210139873282,Gross Value Added
-2014.0,UK,Finance and insurance,92.03672332171533,Gross Value Added
-2014.25,UK,Finance and insurance,94.10645100638203,Gross Value Added
-2014.5,UK,Finance and insurance,95.0591725935915,Gross Value Added
-2014.75,UK,Finance and insurance,95.43973546546161,Gross Value Added
-2015.0,UK,Finance and insurance,92.88221876557088,Gross Value Added
-2015.25,UK,Finance and insurance,88.44220827290442,Gross Value Added
-2015.5,UK,Finance and insurance,87.4825160778989,Gross Value Added
-2015.75,UK,Finance and insurance,88.69913436613106,Gross Value Added
-2016.0,UK,Finance and insurance,91.73003795474757,Gross Value Added
-2016.25,UK,Finance and insurance,92.65749114967764,Gross Value Added
-2016.5,UK,Finance and insurance,97.46009022277237,Gross Value Added
-2016.75,UK,Finance and insurance,100.78616899590787,Gross Value Added
-2017.0,UK,Finance and insurance,100.71872036829545,Gross Value Added
-2017.25,UK,Finance and insurance,102.75688468573591,Gross Value Added
-2017.5,UK,Finance and insurance,103.60737005063847,Gross Value Added
-2017.75,UK,Finance and insurance,105.68675737164055,Gross Value Added
-2018.0,UK,Finance and insurance,104.61856304219222,Gross Value Added
-2018.25,UK,Finance and insurance,103.06644283382862,Gross Value Added
-2018.5,UK,Finance and insurance,101.00998719173471,Gross Value Added
-2018.75,UK,Finance and insurance,100.00202220379617,Gross Value Added
-2019.0,UK,Finance and insurance,98.29846987682807,Gross Value Added
-2019.25,UK,Finance and insurance,99.01557823015975,Gross Value Added
-2019.5,UK,Finance and insurance,100.02979635738609,Gross Value Added
-2019.75,UK,Finance and insurance,100.15485062268954,Gross Value Added
-2020.0,UK,Finance and insurance,99.17386828821638,Gross Value Added
-2020.25,UK,Finance and insurance,96.57951671087017,Gross Value Added
-2020.5,UK,Finance and insurance,99.64477872689297,Gross Value Added
-2020.75,UK,Finance and insurance,104.60183627402049,Gross Value Added
-2021.0,UK,Finance and insurance,105.98435594122233,Gross Value Added
-2021.25,UK,Finance and insurance,105.9538113928802,Gross Value Added
-2021.5,UK,Finance and insurance,104.45924727287309,Gross Value Added
-2021.75,UK,Finance and insurance,106.51275745615712,Gross Value Added
-2022.0,UK,Finance and insurance,105.14607281174808,Gross Value Added
-2022.25,UK,Finance and insurance,103.99459231402226,Gross Value Added
-2022.5,UK,Finance and insurance,102.94813433607305,Gross Value Added
-2022.75,UK,Finance and insurance,101.68406427923118,Gross Value Added
-2023.0,UK,Finance and insurance,103.16801145384271,Gross Value Added
-2023.25,UK,Finance and insurance,102.42261874951042,Gross Value Added
-2023.5,UK,Finance and insurance,101.49497511413634,Gross Value Added
-2023.75,UK,Finance and insurance,101.59402933962546,Gross Value Added
-2024.0,UK,Finance and insurance,102.22308450859549,Gross Value Added
-2024.25,UK,Finance and insurance,101.9677456934354,Gross Value Added
-2024.5,UK,Finance and insurance,101.64074364760893,Gross Value Added
-1997.0,UK,Professional & Admin Services,74.05500475043466,Gross Value Added
-1997.25,UK,Professional & Admin Services,74.11725649286717,Gross Value Added
-1997.5,UK,Professional & Admin Services,75.42323452959634,Gross Value Added
-1997.75,UK,Professional & Admin Services,73.63440695448458,Gross Value Added
-1998.0,UK,Professional & Admin Services,72.26445631880836,Gross Value Added
-1998.25,UK,Professional & Admin Services,73.86234658638372,Gross Value Added
-1998.5,UK,Professional & Admin Services,74.02954468428307,Gross Value Added
-1998.75,UK,Professional & Admin Services,76.0804665206356,Gross Value Added
-1999.0,UK,Professional & Admin Services,73.65627709577116,Gross Value Added
-1999.25,UK,Professional & Admin Services,73.62526976029747,Gross Value Added
-1999.5,UK,Professional & Admin Services,72.66942186995551,Gross Value Added
-1999.75,UK,Professional & Admin Services,76.842097120957,Gross Value Added
-2000.0,UK,Professional & Admin Services,73.0127583202657,Gross Value Added
-2000.25,UK,Professional & Admin Services,74.33910294323958,Gross Value Added
-2000.5,UK,Professional & Admin Services,74.23112675424623,Gross Value Added
-2000.75,UK,Professional & Admin Services,74.28043918371833,Gross Value Added
-2001.0,UK,Professional & Admin Services,75.86010129639699,Gross Value Added
-2001.25,UK,Professional & Admin Services,75.29104410529102,Gross Value Added
-2001.5,UK,Professional & Admin Services,75.15126948877173,Gross Value Added
-2001.75,UK,Professional & Admin Services,73.19387557432975,Gross Value Added
-2002.0,UK,Professional & Admin Services,73.0203869962071,Gross Value Added
-2002.25,UK,Professional & Admin Services,75.84900618773186,Gross Value Added
-2002.5,UK,Professional & Admin Services,75.49812092110243,Gross Value Added
-2002.75,UK,Professional & Admin Services,74.34598787053514,Gross Value Added
-2003.0,UK,Professional & Admin Services,75.04051457719675,Gross Value Added
-2003.25,UK,Professional & Admin Services,74.76270404622292,Gross Value Added
-2003.5,UK,Professional & Admin Services,77.5488819241934,Gross Value Added
-2003.75,UK,Professional & Admin Services,80.03312362898606,Gross Value Added
-2004.0,UK,Professional & Admin Services,79.06881845150974,Gross Value Added
-2004.25,UK,Professional & Admin Services,80.73576353827224,Gross Value Added
-2004.5,UK,Professional & Admin Services,80.33137921653851,Gross Value Added
-2004.75,UK,Professional & Admin Services,81.13688421961449,Gross Value Added
-2005.0,UK,Professional & Admin Services,81.75051573461509,Gross Value Added
-2005.25,UK,Professional & Admin Services,81.49991752955485,Gross Value Added
-2005.5,UK,Professional & Admin Services,83.14195965399381,Gross Value Added
-2005.75,UK,Professional & Admin Services,86.59178213592863,Gross Value Added
-2006.0,UK,Professional & Admin Services,86.81095440766468,Gross Value Added
-2006.25,UK,Professional & Admin Services,86.95155341685992,Gross Value Added
-2006.5,UK,Professional & Admin Services,87.05692323492792,Gross Value Added
-2006.75,UK,Professional & Admin Services,87.06848387322245,Gross Value Added
-2007.0,UK,Professional & Admin Services,89.71561079352519,Gross Value Added
-2007.25,UK,Professional & Admin Services,90.07956847564128,Gross Value Added
-2007.5,UK,Professional & Admin Services,91.52787969317244,Gross Value Added
-2007.75,UK,Professional & Admin Services,91.36099261133424,Gross Value Added
-2008.0,UK,Professional & Admin Services,92.73570224728527,Gross Value Added
-2008.25,UK,Professional & Admin Services,91.09041014243088,Gross Value Added
-2008.5,UK,Professional & Admin Services,88.91458643647374,Gross Value Added
-2008.75,UK,Professional & Admin Services,88.60964050422511,Gross Value Added
-2009.0,UK,Professional & Admin Services,84.41254590019153,Gross Value Added
-2009.25,UK,Professional & Admin Services,86.2380515345956,Gross Value Added
-2009.5,UK,Professional & Admin Services,84.50581348583607,Gross Value Added
-2009.75,UK,Professional & Admin Services,83.61628936453084,Gross Value Added
-2010.0,UK,Professional & Admin Services,87.13015411704295,Gross Value Added
-2010.25,UK,Professional & Admin Services,87.47619671294345,Gross Value Added
-2010.5,UK,Professional & Admin Services,88.26247161614455,Gross Value Added
-2010.75,UK,Professional & Admin Services,87.23306973042794,Gross Value Added
-2011.0,UK,Professional & Admin Services,89.94101345599677,Gross Value Added
-2011.25,UK,Professional & Admin Services,89.66422074295541,Gross Value Added
-2011.5,UK,Professional & Admin Services,89.19375057751726,Gross Value Added
-2011.75,UK,Professional & Admin Services,88.12958604704184,Gross Value Added
-2012.0,UK,Professional & Admin Services,91.00233535591103,Gross Value Added
-2012.25,UK,Professional & Admin Services,89.29317545978796,Gross Value Added
-2012.5,UK,Professional & Admin Services,91.74484227654294,Gross Value Added
-2012.75,UK,Professional & Admin Services,92.60210206058726,Gross Value Added
-2013.0,UK,Professional & Admin Services,92.48174839050975,Gross Value Added
-2013.25,UK,Professional & Admin Services,94.65226864571231,Gross Value Added
-2013.5,UK,Professional & Admin Services,97.05260649983083,Gross Value Added
-2013.75,UK,Professional & Admin Services,98.35481139616824,Gross Value Added
-2014.0,UK,Professional & Admin Services,99.13621297246435,Gross Value Added
-2014.25,UK,Professional & Admin Services,100.0287690625771,Gross Value Added
-2014.5,UK,Professional & Admin Services,101.7040622977682,Gross Value Added
-2014.75,UK,Professional & Admin Services,102.98636968157355,Gross Value Added
-2015.0,UK,Professional & Admin Services,104.27739208346176,Gross Value Added
-2015.25,UK,Professional & Admin Services,105.38968476740642,Gross Value Added
-2015.5,UK,Professional & Admin Services,106.23673335430013,Gross Value Added
-2015.75,UK,Professional & Admin Services,106.07161339991875,Gross Value Added
-2016.0,UK,Professional & Admin Services,106.22073664909037,Gross Value Added
-2016.25,UK,Professional & Admin Services,107.60081521943874,Gross Value Added
-2016.5,UK,Professional & Admin Services,107.31034864699443,Gross Value Added
-2016.75,UK,Professional & Admin Services,108.72080344152744,Gross Value Added
-2017.0,UK,Professional & Admin Services,110.20826762835114,Gross Value Added
-2017.25,UK,Professional & Admin Services,110.63888343262785,Gross Value Added
-2017.5,UK,Professional & Admin Services,110.66470202885064,Gross Value Added
-2017.75,UK,Professional & Admin Services,111.56886862994264,Gross Value Added
-2018.0,UK,Professional & Admin Services,111.1284039474765,Gross Value Added
-2018.25,UK,Professional & Admin Services,112.77541738446317,Gross Value Added
-2018.5,UK,Professional & Admin Services,112.25145961321496,Gross Value Added
-2018.75,UK,Professional & Admin Services,112.61836379845369,Gross Value Added
-2019.0,UK,Professional & Admin Services,113.90106342908697,Gross Value Added
-2019.25,UK,Professional & Admin Services,113.94981084690355,Gross Value Added
-2019.5,UK,Professional & Admin Services,114.92548723374448,Gross Value Added
-2019.75,UK,Professional & Admin Services,113.89100341397271,Gross Value Added
-2020.0,UK,Professional & Admin Services,112.0200613665115,Gross Value Added
-2020.25,UK,Professional & Admin Services,86.83160679380654,Gross Value Added
-2020.5,UK,Professional & Admin Services,98.28452946613025,Gross Value Added
-2020.75,UK,Professional & Admin Services,102.86380237355166,Gross Value Added
-2021.0,UK,Professional & Admin Services,101.89873533257605,Gross Value Added
-2021.25,UK,Professional & Admin Services,107.48204897275156,Gross Value Added
-2021.5,UK,Professional & Admin Services,110.81197252334181,Gross Value Added
-2021.75,UK,Professional & Admin Services,114.86043362440567,Gross Value Added
-2022.0,UK,Professional & Admin Services,117.31181361298239,Gross Value Added
-2022.25,UK,Professional & Admin Services,121.18487199351091,Gross Value Added
-2022.5,UK,Professional & Admin Services,122.27506115574141,Gross Value Added
-2022.75,UK,Professional & Admin Services,125.24213183348093,Gross Value Added
-2023.0,UK,Professional & Admin Services,125.76275109726478,Gross Value Added
-2023.25,UK,Professional & Admin Services,125.43301646667904,Gross Value Added
-2023.5,UK,Professional & Admin Services,124.72689619024673,Gross Value Added
-2023.75,UK,Professional & Admin Services,124.99766838162314,Gross Value Added
-2024.0,UK,Professional & Admin Services,127.95802724862668,Gross Value Added
-2024.25,UK,Professional & Admin Services,129.75227023279783,Gross Value Added
-2024.5,UK,Professional & Admin Services,129.54346441999056,Gross Value Added
-1997.0,UK,Public Services,92.01216589434492,Gross Value Added
-1997.25,UK,Public Services,92.67939206393424,Gross Value Added
-1997.5,UK,Public Services,92.69425758389822,Gross Value Added
-1997.75,UK,Public Services,93.7091249663455,Gross Value Added
-1998.0,UK,Public Services,93.32403297404066,Gross Value Added
-1998.25,UK,Public Services,93.34454068602834,Gross Value Added
-1998.5,UK,Public Services,93.06602148415037,Gross Value Added
-1998.75,UK,Public Services,93.60616014467253,Gross Value Added
-1999.0,UK,Public Services,93.74848602520967,Gross Value Added
-1999.25,UK,Public Services,94.54441976404696,Gross Value Added
-1999.5,UK,Public Services,95.36572334244401,Gross Value Added
-1999.75,UK,Public Services,96.14798758969616,Gross Value Added
-2000.0,UK,Public Services,97.20953375467822,Gross Value Added
-2000.25,UK,Public Services,96.32218993480363,Gross Value Added
-2000.5,UK,Public Services,96.66986300126236,Gross Value Added
-2000.75,UK,Public Services,96.99740806243796,Gross Value Added
-2001.0,UK,Public Services,97.1953696126639,Gross Value Added
-2001.25,UK,Public Services,97.20287050988738,Gross Value Added
-2001.5,UK,Public Services,97.49581714833823,Gross Value Added
-2001.75,UK,Public Services,96.56115263257803,Gross Value Added
-2002.0,UK,Public Services,96.72596421053835,Gross Value Added
-2002.25,UK,Public Services,96.76509264605751,Gross Value Added
-2002.5,UK,Public Services,98.14894264666407,Gross Value Added
-2002.75,UK,Public Services,97.97192709806173,Gross Value Added
-2003.0,UK,Public Services,98.36788593102035,Gross Value Added
-2003.25,UK,Public Services,98.38845794108015,Gross Value Added
-2003.5,UK,Public Services,99.29164502590851,Gross Value Added
-2003.75,UK,Public Services,100.83908702306574,Gross Value Added
-2004.0,UK,Public Services,101.64280251242161,Gross Value Added
-2004.25,UK,Public Services,102.4801877707787,Gross Value Added
-2004.5,UK,Public Services,101.81625730445838,Gross Value Added
-2004.75,UK,Public Services,102.39957389597221,Gross Value Added
-2005.0,UK,Public Services,102.84524334231352,Gross Value Added
-2005.25,UK,Public Services,103.21485219819363,Gross Value Added
-2005.5,UK,Public Services,103.5700433974623,Gross Value Added
-2005.75,UK,Public Services,104.61944809504074,Gross Value Added
-2006.0,UK,Public Services,105.05216187073232,Gross Value Added
-2006.25,UK,Public Services,105.25556683286949,Gross Value Added
-2006.5,UK,Public Services,105.31930182099391,Gross Value Added
-2006.75,UK,Public Services,105.48481718705047,Gross Value Added
-2007.0,UK,Public Services,105.05372260227371,Gross Value Added
-2007.25,UK,Public Services,104.95513118166153,Gross Value Added
-2007.5,UK,Public Services,105.48333185807601,Gross Value Added
-2007.75,UK,Public Services,106.52411189254023,Gross Value Added
-2008.0,UK,Public Services,107.60415827996992,Gross Value Added
-2008.25,UK,Public Services,106.9935228080281,Gross Value Added
-2008.5,UK,Public Services,105.0229953506963,Gross Value Added
-2008.75,UK,Public Services,102.01101201286586,Gross Value Added
-2009.0,UK,Public Services,98.080695124183,Gross Value Added
-2009.25,UK,Public Services,97.21067249859992,Gross Value Added
-2009.5,UK,Public Services,97.22408592432473,Gross Value Added
-2009.75,UK,Public Services,97.60521270851629,Gross Value Added
-2010.0,UK,Public Services,98.8013356230315,Gross Value Added
-2010.25,UK,Public Services,99.92965459159409,Gross Value Added
-2010.5,UK,Public Services,100.1421998032221,Gross Value Added
-2010.75,UK,Public Services,99.34859726783792,Gross Value Added
-2011.0,UK,Public Services,99.01753293641985,Gross Value Added
-2011.25,UK,Public Services,98.63640844989987,Gross Value Added
-2011.5,UK,Public Services,98.21318651523532,Gross Value Added
-2011.75,UK,Public Services,98.46176444818003,Gross Value Added
-2012.0,UK,Public Services,99.4841558392287,Gross Value Added
-2012.25,UK,Public Services,99.43001134695338,Gross Value Added
-2012.5,UK,Public Services,100.85639155791503,Gross Value Added
-2012.75,UK,Public Services,100.6651885265954,Gross Value Added
-2013.0,UK,Public Services,101.42818680306465,Gross Value Added
-2013.25,UK,Public Services,102.43262055966748,Gross Value Added
-2013.5,UK,Public Services,103.95570225638618,Gross Value Added
-2013.75,UK,Public Services,104.65439152637019,Gross Value Added
-2014.0,UK,Public Services,104.88622497359799,Gross Value Added
-2014.25,UK,Public Services,105.62421497978627,Gross Value Added
-2014.5,UK,Public Services,106.36627508046061,Gross Value Added
-2014.75,UK,Public Services,107.24203208556465,Gross Value Added
-2015.0,UK,Public Services,108.27695536069358,Gross Value Added
-2015.25,UK,Public Services,109.43052141869617,Gross Value Added
-2015.5,UK,Public Services,109.55109983117384,Gross Value Added
-2015.75,UK,Public Services,109.69541523634238,Gross Value Added
-2016.0,UK,Public Services,108.44522469834405,Gross Value Added
-2016.25,UK,Public Services,108.33303777014403,Gross Value Added
-2016.5,UK,Public Services,108.35170057096258,Gross Value Added
-2016.75,UK,Public Services,108.84095128380653,Gross Value Added
-2017.0,UK,Public Services,110.11959074925093,Gross Value Added
-2017.25,UK,Public Services,110.67474857376698,Gross Value Added
-2017.5,UK,Public Services,111.14640851418433,Gross Value Added
-2017.75,UK,Public Services,112.0379982552809,Gross Value Added
-2018.0,UK,Public Services,112.10876281322342,Gross Value Added
-2018.25,UK,Public Services,112.96483362312316,Gross Value Added
-2018.5,UK,Public Services,112.94033227005862,Gross Value Added
-2018.75,UK,Public Services,111.98990458703497,Gross Value Added
-2019.0,UK,Public Services,113.11943646040197,Gross Value Added
-2019.25,UK,Public Services,112.8755017865416,Gross Value Added
-2019.5,UK,Public Services,113.81547276957855,Gross Value Added
-2019.75,UK,Public Services,114.3677383484236,Gross Value Added
-2020.0,UK,Public Services,110.8767571960468,Gross Value Added
-2020.25,UK,Public Services,83.11217968879177,Gross Value Added
-2020.5,UK,Public Services,102.00615596671877,Gross Value Added
-2020.75,UK,Public Services,104.00490714844275,Gross Value Added
-2021.0,UK,Public Services,101.79172072658767,Gross Value Added
-2021.25,UK,Public Services,106.70950590186304,Gross Value Added
-2021.5,UK,Public Services,108.09691760749318,Gross Value Added
-2021.75,UK,Public Services,109.25629162146544,Gross Value Added
-2022.0,UK,Public Services,109.713835204367,Gross Value Added
-2022.25,UK,Public Services,110.1281190431273,Gross Value Added
-2022.5,UK,Public Services,109.80670602987787,Gross Value Added
-2022.75,UK,Public Services,110.26558982609778,Gross Value Added
-2023.0,UK,Public Services,110.69711785548546,Gross Value Added
-2023.25,UK,Public Services,110.84824202179742,Gross Value Added
-2023.5,UK,Public Services,110.11702303521089,Gross Value Added
-2023.75,UK,Public Services,109.42253851607988,Gross Value Added
-2024.0,UK,Public Services,110.47816001509287,Gross Value Added
-2024.25,UK,Public Services,110.68202291116953,Gross Value Added
-2024.5,UK,Public Services,110.34827969483058,Gross Value Added
-1997.0,UK,Industry (except construction),93.9215911093706,Gross Value Added
-1997.25,UK,Industry (except construction),94.22229783377453,Gross Value Added
-1997.5,UK,Industry (except construction),95.39137868316048,Gross Value Added
-1997.75,UK,Industry (except construction),96.01810023462576,Gross Value Added
-1998.0,UK,Industry (except construction),96.28316137098201,Gross Value Added
-1998.25,UK,Industry (except construction),96.72108844235511,Gross Value Added
-1998.5,UK,Industry (except construction),95.42164516901187,Gross Value Added
-1998.75,UK,Industry (except construction),95.80757029094875,Gross Value Added
-1999.0,UK,Industry (except construction),97.66582654613036,Gross Value Added
-1999.25,UK,Industry (except construction),98.56694454370097,Gross Value Added
-1999.5,UK,Industry (except construction),99.8837649770158,Gross Value Added
-1999.75,UK,Industry (except construction),99.64213000494405,Gross Value Added
-2000.0,UK,Industry (except construction),99.955239036811,Gross Value Added
-2000.25,UK,Industry (except construction),98.41536843191575,Gross Value Added
-2000.5,UK,Industry (except construction),97.99050082604468,Gross Value Added
-2000.75,UK,Industry (except construction),99.37115813752344,Gross Value Added
-2001.0,UK,Industry (except construction),99.6240861209881,Gross Value Added
-2001.25,UK,Industry (except construction),99.61097577788071,Gross Value Added
-2001.5,UK,Industry (except construction),100.61019105940383,Gross Value Added
-2001.75,UK,Industry (except construction),99.50365301491122,Gross Value Added
-2002.0,UK,Industry (except construction),99.06257843557395,Gross Value Added
-2002.25,UK,Industry (except construction),98.07579583112114,Gross Value Added
-2002.5,UK,Industry (except construction),100.95915331679544,Gross Value Added
-2002.75,UK,Industry (except construction),100.7759624277789,Gross Value Added
-2003.0,UK,Industry (except construction),101.12979018973635,Gross Value Added
-2003.25,UK,Industry (except construction),99.60736155988063,Gross Value Added
-2003.5,UK,Industry (except construction),99.95580719521419,Gross Value Added
-2003.75,UK,Industry (except construction),100.93806621552856,Gross Value Added
-2004.0,UK,Industry (except construction),101.72405306010536,Gross Value Added
-2004.25,UK,Industry (except construction),101.51335053063228,Gross Value Added
-2004.5,UK,Industry (except construction),99.33281292573146,Gross Value Added
-2004.75,UK,Industry (except construction),98.74336359054979,Gross Value Added
-2005.0,UK,Industry (except construction),98.44450568684073,Gross Value Added
-2005.25,UK,Industry (except construction),98.68576981992544,Gross Value Added
-2005.5,UK,Industry (except construction),97.50379534187576,Gross Value Added
-2005.75,UK,Industry (except construction),98.65403942432354,Gross Value Added
-2006.0,UK,Industry (except construction),100.24464299929375,Gross Value Added
-2006.25,UK,Industry (except construction),101.89278626831883,Gross Value Added
-2006.5,UK,Industry (except construction),102.5191745504878,Gross Value Added
-2006.75,UK,Industry (except construction),102.68854664987236,Gross Value Added
-2007.0,UK,Industry (except construction),101.08634655733182,Gross Value Added
-2007.25,UK,Industry (except construction),99.85718344111179,Gross Value Added
-2007.5,UK,Industry (except construction),99.50809138565404,Gross Value Added
-2007.75,UK,Industry (except construction),100.65659027664384,Gross Value Added
-2008.0,UK,Industry (except construction),99.97791379591682,Gross Value Added
-2008.25,UK,Industry (except construction),99.6509173104737,Gross Value Added
-2008.5,UK,Industry (except construction),98.92406081349753,Gross Value Added
-2008.75,UK,Industry (except construction),95.73005986431328,Gross Value Added
-2009.0,UK,Industry (except construction),90.50792423742965,Gross Value Added
-2009.25,UK,Industry (except construction),90.37479606576596,Gross Value Added
-2009.5,UK,Industry (except construction),90.71250779941231,Gross Value Added
-2009.75,UK,Industry (except construction),91.27773043722847,Gross Value Added
-2010.0,UK,Industry (except construction),91.68025489569253,Gross Value Added
-2010.25,UK,Industry (except construction),91.87560401992368,Gross Value Added
-2010.5,UK,Industry (except construction),90.41657629353776,Gross Value Added
-2010.75,UK,Industry (except construction),88.63619208567872,Gross Value Added
-2011.0,UK,Industry (except construction),84.92045104637552,Gross Value Added
-2011.25,UK,Industry (except construction),83.46958537894893,Gross Value Added
-2011.5,UK,Industry (except construction),82.91249472042456,Gross Value Added
-2011.75,UK,Industry (except construction),84.17153719503638,Gross Value Added
-2012.0,UK,Industry (except construction),85.18930812168678,Gross Value Added
-2012.25,UK,Industry (except construction),86.61433785834795,Gross Value Added
-2012.5,UK,Industry (except construction),87.73257256020761,Gross Value Added
-2012.75,UK,Industry (except construction),87.3603852856476,Gross Value Added
-2013.0,UK,Industry (except construction),87.3341742862766,Gross Value Added
-2013.25,UK,Industry (except construction),87.99462031764497,Gross Value Added
-2013.5,UK,Industry (except construction),89.2645414172886,Gross Value Added
-2013.75,UK,Industry (except construction),89.6685806702512,Gross Value Added
-2014.0,UK,Industry (except construction),90.21936072673526,Gross Value Added
-2014.25,UK,Industry (except construction),90.56654210469242,Gross Value Added
-2014.5,UK,Industry (except construction),92.16549646494411,Gross Value Added
-2014.75,UK,Industry (except construction),94.34562846834558,Gross Value Added
-2015.0,UK,Industry (except construction),98.1098568810211,Gross Value Added
-2015.25,UK,Industry (except construction),100.7671420087878,Gross Value Added
-2015.5,UK,Industry (except construction),100.88980117220588,Gross Value Added
-2015.75,UK,Industry (except construction),100.79008004544778,Gross Value Added
-2016.0,UK,Industry (except construction),97.37664908919896,Gross Value Added
-2016.25,UK,Industry (except construction),96.7048019881266,Gross Value Added
-2016.5,UK,Industry (except construction),95.20933364623464,Gross Value Added
-2016.75,UK,Industry (except construction),94.98823857318598,Gross Value Added
-2017.0,UK,Industry (except construction),95.40281377035281,Gross Value Added
-2017.25,UK,Industry (except construction),95.3395472287972,Gross Value Added
-2017.5,UK,Industry (except construction),96.0530602278074,Gross Value Added
-2017.75,UK,Industry (except construction),97.59215618875399,Gross Value Added
-2018.0,UK,Industry (except construction),98.1496045554984,Gross Value Added
-2018.25,UK,Industry (except construction),98.32034832694988,Gross Value Added
-2018.5,UK,Industry (except construction),98.04884855747191,Gross Value Added
-2018.75,UK,Industry (except construction),95.5076525363869,Gross Value Added
-2019.0,UK,Industry (except construction),97.07826997491486,Gross Value Added
-2019.25,UK,Industry (except construction),97.22290753177333,Gross Value Added
-2019.5,UK,Industry (except construction),98.97981049549742,Gross Value Added
-2019.75,UK,Industry (except construction),101.87667911105083,Gross Value Added
-2020.0,UK,Industry (except construction),103.13256420220863,Gross Value Added
-2020.25,UK,Industry (except construction),86.46029882672562,Gross Value Added
-2020.5,UK,Industry (except construction),104.2126321116543,Gross Value Added
-2020.75,UK,Industry (except construction),106.19450485941147,Gross Value Added
-2021.0,UK,Industry (except construction),102.21669768317278,Gross Value Added
-2021.25,UK,Industry (except construction),101.34013492702032,Gross Value Added
-2021.5,UK,Industry (except construction),98.11108991123871,Gross Value Added
-2021.75,UK,Industry (except construction),96.15842306420797,Gross Value Added
-2022.0,UK,Industry (except construction),93.94800978879177,Gross Value Added
-2022.25,UK,Industry (except construction),92.2937971503617,Gross Value Added
-2022.5,UK,Industry (except construction),90.13388310844941,Gross Value Added
-2022.75,UK,Industry (except construction),89.37619403322846,Gross Value Added
-2023.0,UK,Industry (except construction),89.50266884139478,Gross Value Added
-2023.25,UK,Industry (except construction),90.16946281398758,Gross Value Added
-2023.5,UK,Industry (except construction),89.36534459453743,Gross Value Added
-2023.75,UK,Industry (except construction),87.8289841768362,Gross Value Added
-2024.0,UK,Industry (except construction),87.90220344316049,Gross Value Added
-2024.25,UK,Industry (except construction),86.9702243692812,Gross Value Added
-2024.5,UK,Industry (except construction),86.48885241227435,Gross Value Added
+2022.75,UK,Total,113.78424216219247,Gross Value Added
+2023.0,UK,Total,113.923365216534,Gross Value Added
+2023.25,UK,Total,113.92036256068496,Gross Value Added
+2023.5,UK,Total,113.82848129170256,Gross Value Added
+2023.75,UK,Total,113.59087112551056,Gross Value Added
+2024.0,UK,Total,114.62318420643057,Gross Value Added
+2024.25,UK,Total,115.12863127436212,Gross Value Added
+2024.5,UK,Total,115.1300325137584,Gross Value Added
+2024.75,UK,Total,115.20069501474055,Gross Value Added
 1997.0,UK,"Agriculture, forestry and fishing",54.919955116592476,Gross Value Added
 1997.25,UK,"Agriculture, forestry and fishing",59.27653068989572,Gross Value Added
 1997.5,UK,"Agriculture, forestry and fishing",59.054541156442006,Gross Value Added
@@ -21584,122 +20697,1022 @@ Quarter,Country,Industry,Value,Variable
 2022.25,UK,"Agriculture, forestry and fishing",90.92186216892094,Gross Value Added
 2022.5,UK,"Agriculture, forestry and fishing",93.11342179425284,Gross Value Added
 2022.75,UK,"Agriculture, forestry and fishing",94.1064997535162,Gross Value Added
-2023.0,UK,"Agriculture, forestry and fishing",94.15123064768444,Gross Value Added
-2023.25,UK,"Agriculture, forestry and fishing",94.33841536406767,Gross Value Added
-2023.5,UK,"Agriculture, forestry and fishing",94.53719109493623,Gross Value Added
-2023.75,UK,"Agriculture, forestry and fishing",94.7301713185621,Gross Value Added
-2024.0,UK,"Agriculture, forestry and fishing",93.78845222940359,Gross Value Added
-2024.25,UK,"Agriculture, forestry and fishing",94.08082031846375,Gross Value Added
-1997.0,UK,Real estate,65.68419902481664,Gross Value Added
-1997.25,UK,Real estate,64.48502396984307,Gross Value Added
-1997.5,UK,Real estate,63.17658467295847,Gross Value Added
-1997.75,UK,Real estate,62.55377849406558,Gross Value Added
-1998.0,UK,Real estate,63.07278364314297,Gross Value Added
-1998.25,UK,Real estate,63.66417635248644,Gross Value Added
-1998.5,UK,Real estate,64.02338254776896,Gross Value Added
-1998.75,UK,Real estate,64.77320840788342,Gross Value Added
-1999.0,UK,Real estate,65.14334102735704,Gross Value Added
-1999.25,UK,Real estate,64.59975142384965,Gross Value Added
-1999.5,UK,Real estate,66.01745496264529,Gross Value Added
-1999.75,UK,Real estate,65.88633787235206,Gross Value Added
-2000.0,UK,Real estate,65.4861575863529,Gross Value Added
-2000.25,UK,Real estate,64.93027575563052,Gross Value Added
-2000.5,UK,Real estate,65.32909023860579,Gross Value Added
-2000.75,UK,Real estate,65.46976795006624,Gross Value Added
-2001.0,UK,Real estate,65.52576587404565,Gross Value Added
-2001.25,UK,Real estate,65.8918010844476,Gross Value Added
-2001.5,UK,Real estate,66.23325184041957,Gross Value Added
-2001.75,UK,Real estate,66.5583129601049,Gross Value Added
-2002.0,UK,Real estate,66.66347979294426,Gross Value Added
-2002.25,UK,Real estate,66.28378655230343,Gross Value Added
-2002.5,UK,Real estate,65.81804772115765,Gross Value Added
-2002.75,UK,Real estate,66.92161656445907,Gross Value Added
-2003.0,UK,Real estate,67.72470874250516,Gross Value Added
-2003.25,UK,Real estate,68.99353975169701,Gross Value Added
-2003.5,UK,Real estate,69.46883920401,Gross Value Added
-2003.75,UK,Real estate,69.77751068740866,Gross Value Added
-2004.0,UK,Real estate,69.32952729557343,Gross Value Added
-2004.25,UK,Real estate,69.97828373192019,Gross Value Added
-2004.5,UK,Real estate,69.42376770422169,Gross Value Added
-2004.75,UK,Real estate,68.54145895079012,Gross Value Added
-2005.0,UK,Real estate,68.93617602469372,Gross Value Added
-2005.25,UK,Real estate,69.4114754770067,Gross Value Added
-2005.5,UK,Real estate,70.78547331903793,Gross Value Added
-2005.75,UK,Real estate,71.38232924047693,Gross Value Added
-2006.0,UK,Real estate,71.73060901156835,Gross Value Added
-2006.25,UK,Real estate,72.62520999221492,Gross Value Added
-2006.5,UK,Real estate,72.6293074012866,Gross Value Added
-2006.75,UK,Real estate,71.9382110711993,Gross Value Added
-2007.0,UK,Real estate,71.53256757310461,Gross Value Added
-2007.25,UK,Real estate,71.55988363358236,Gross Value Added
-2007.5,UK,Real estate,71.35637898302308,Gross Value Added
-2007.75,UK,Real estate,72.23459032738299,Gross Value Added
-2008.0,UK,Real estate,72.55282243194885,Gross Value Added
-2008.25,UK,Real estate,72.83554365789365,Gross Value Added
-2008.5,UK,Real estate,73.01309805099908,Gross Value Added
-2008.75,UK,Real estate,73.04041411147685,Gross Value Added
-2009.0,UK,Real estate,74.0606689703211,Gross Value Added
-2009.25,UK,Real estate,74.49636013494134,Gross Value Added
-2009.5,UK,Real estate,74.66298810385567,Gross Value Added
-2009.75,UK,Real estate,74.9743911933021,Gross Value Added
-2010.0,UK,Real estate,75.47837250911672,Gross Value Added
-2010.25,UK,Real estate,76.97119521422621,Gross Value Added
-2010.5,UK,Real estate,78.01876613354823,Gross Value Added
-2010.75,UK,Real estate,78.7317153120177,Gross Value Added
-2011.0,UK,Real estate,78.4380676618818,Gross Value Added
-2011.25,UK,Real estate,78.73854432713713,Gross Value Added
-2011.5,UK,Real estate,79.5662209596132,Gross Value Added
-2011.75,UK,Real estate,80.60013384869634,Gross Value Added
-2012.0,UK,Real estate,82.56415859704714,Gross Value Added
-2012.25,UK,Real estate,84.11844243823155,Gross Value Added
-2012.5,UK,Real estate,85.53614597702719,Gross Value Added
-2012.75,UK,Real estate,86.04695630796127,Gross Value Added
-2013.0,UK,Real estate,85.66179985522488,Gross Value Added
-2013.25,UK,Real estate,86.61376456287474,Gross Value Added
-2013.5,UK,Real estate,87.78289195132278,Gross Value Added
-2013.75,UK,Real estate,88.55320485679556,Gross Value Added
-2014.0,UK,Real estate,89.21152191430951,Gross Value Added
-2014.25,UK,Real estate,89.61716541240422,Gross Value Added
-2014.5,UK,Real estate,89.94632394116121,Gross Value Added
-2014.75,UK,Real estate,89.88213119903847,Gross Value Added
-2015.0,UK,Real estate,90.31099334853927,Gross Value Added
-2015.25,UK,Real estate,91.65767513009274,Gross Value Added
-2015.5,UK,Real estate,92.91831132114126,Gross Value Added
-2015.75,UK,Real estate,93.61896827239575,Gross Value Added
-2016.0,UK,Real estate,94.26226149664694,Gross Value Added
-2016.25,UK,Real estate,94.17075269404647,Gross Value Added
-2016.5,UK,Real estate,93.89076307414945,Gross Value Added
-2016.75,UK,Real estate,93.88256825600611,Gross Value Added
-2017.0,UK,Real estate,93.41682942486035,Gross Value Added
-2017.25,UK,Real estate,93.85525219552837,Gross Value Added
-2017.5,UK,Real estate,94.42206045044183,Gross Value Added
-2017.75,UK,Real estate,95.33031946132728,Gross Value Added
-2018.0,UK,Real estate,95.85751942854802,Gross Value Added
-2018.25,UK,Real estate,95.65811218706038,Gross Value Added
-2018.5,UK,Real estate,96.5581763798025,Gross Value Added
-2018.75,UK,Real estate,96.98977013535108,Gross Value Added
-2019.0,UK,Real estate,97.3476105276097,Gross Value Added
-2019.25,UK,Real estate,98.0359752516492,Gross Value Added
-2019.5,UK,Real estate,98.22445606894573,Gross Value Added
-2019.75,UK,Real estate,98.17528716008577,Gross Value Added
-2020.0,UK,Real estate,98.5222011281533,Gross Value Added
-2020.25,UK,Real estate,96.91465096903724,Gross Value Added
-2020.5,UK,Real estate,97.10449758935766,Gross Value Added
-2020.75,UK,Real estate,97.32985508829917,Gross Value Added
-2021.0,UK,Real estate,99.01252441372905,Gross Value Added
-2021.25,UK,Real estate,99.09857000423399,Gross Value Added
-2021.5,UK,Real estate,99.03437726211126,Gross Value Added
-2021.75,UK,Real estate,99.27339279129164,Gross Value Added
-2022.0,UK,Real estate,99.34578035155769,Gross Value Added
-2022.25,UK,Real estate,100.02048704535828,Gross Value Added
-2022.5,UK,Real estate,100.3114030894464,Gross Value Added
-2022.75,UK,Real estate,100.3223295136376,Gross Value Added
-2023.0,UK,Real estate,100.3359875438764,Gross Value Added
-2023.25,UK,Real estate,100.2335523170848,Gross Value Added
-2023.5,UK,Real estate,100.02595025745391,Gross Value Added
-2023.75,UK,Real estate,100.3018424682792,Gross Value Added
-2024.0,UK,Real estate,100.6569512544901,Gross Value Added
-2024.25,UK,Real estate,100.98201237417538,Gross Value Added
+2023.0,UK,"Agriculture, forestry and fishing",94.28209345541391,Gross Value Added
+2023.25,UK,"Agriculture, forestry and fishing",94.62498794588508,Gross Value Added
+2023.5,UK,"Agriculture, forestry and fishing",94.81796816951096,Gross Value Added
+2023.75,UK,"Agriculture, forestry and fishing",95.21718456863587,Gross Value Added
+2024.0,UK,"Agriculture, forestry and fishing",94.8618665949854,Gross Value Added
+2024.25,UK,"Agriculture, forestry and fishing",95.17245367446759,Gross Value Added
+2024.5,UK,"Agriculture, forestry and fishing",95.10783885248958,Gross Value Added
+2024.75,UK,"Agriculture, forestry and fishing",96.42309490572053,Gross Value Added
+1997.0,UK,Manufacturing,75.45948431955671,Gross Value Added
+1997.25,UK,Manufacturing,76.86128516601681,Gross Value Added
+1997.5,UK,Manufacturing,77.93208552689964,Gross Value Added
+1997.75,UK,Manufacturing,79.20292095732904,Gross Value Added
+1998.0,UK,Manufacturing,79.59744364166387,Gross Value Added
+1998.25,UK,Manufacturing,80.46502576805385,Gross Value Added
+1998.5,UK,Manufacturing,79.89658423877015,Gross Value Added
+1998.75,UK,Manufacturing,80.12075598890094,Gross Value Added
+1999.0,UK,Manufacturing,82.14797552683282,Gross Value Added
+1999.25,UK,Manufacturing,83.24209292612903,Gross Value Added
+1999.5,UK,Manufacturing,84.43437436625906,Gross Value Added
+1999.75,UK,Manufacturing,84.54930622402038,Gross Value Added
+2000.0,UK,Manufacturing,86.07027185345206,Gross Value Added
+2000.25,UK,Manufacturing,85.81350584688265,Gross Value Added
+2000.5,UK,Manufacturing,85.92877099753373,Gross Value Added
+2000.75,UK,Manufacturing,87.99298774371971,Gross Value Added
+2001.0,UK,Manufacturing,87.69298705985378,Gross Value Added
+2001.25,UK,Manufacturing,86.93555468063316,Gross Value Added
+2001.5,UK,Manufacturing,88.10810551626172,Gross Value Added
+2001.75,UK,Manufacturing,87.15259557081825,Gross Value Added
+2002.0,UK,Manufacturing,87.41584260899012,Gross Value Added
+2002.25,UK,Manufacturing,85.95002107640347,Gross Value Added
+2002.5,UK,Manufacturing,91.63816170552099,Gross Value Added
+2002.75,UK,Manufacturing,90.4437089676291,Gross Value Added
+2003.0,UK,Manufacturing,89.95619376758621,Gross Value Added
+2003.25,UK,Manufacturing,89.24130970887487,Gross Value Added
+2003.5,UK,Manufacturing,89.5996819211719,Gross Value Added
+2003.75,UK,Manufacturing,91.06058275726602,Gross Value Added
+2004.0,UK,Manufacturing,92.77278847924015,Gross Value Added
+2004.25,UK,Manufacturing,92.72163354792244,Gross Value Added
+2004.5,UK,Manufacturing,91.08245983852667,Gross Value Added
+2004.75,UK,Manufacturing,91.25055811443126,Gross Value Added
+2005.0,UK,Manufacturing,91.55577286329778,Gross Value Added
+2005.25,UK,Manufacturing,92.10311709229227,Gross Value Added
+2005.5,UK,Manufacturing,92.0307272950315,Gross Value Added
+2005.75,UK,Manufacturing,93.26303617550406,Gross Value Added
+2006.0,UK,Manufacturing,94.59854351821456,Gross Value Added
+2006.25,UK,Manufacturing,97.5327434258855,Gross Value Added
+2006.5,UK,Manufacturing,98.34648845222954,Gross Value Added
+2006.75,UK,Manufacturing,99.2812960879291,Gross Value Added
+2007.0,UK,Manufacturing,97.43184313194034,Gross Value Added
+2007.25,UK,Manufacturing,96.19400042357704,Gross Value Added
+2007.5,UK,Manufacturing,96.26980693855434,Gross Value Added
+2007.75,UK,Manufacturing,97.24826126924721,Gross Value Added
+2008.0,UK,Manufacturing,96.5354707932563,Gross Value Added
+2008.25,UK,Manufacturing,95.91427840430265,Gross Value Added
+2008.5,UK,Manufacturing,94.82921480265267,Gross Value Added
+2008.75,UK,Manufacturing,91.81274039757491,Gross Value Added
+2009.0,UK,Manufacturing,85.96852198903255,Gross Value Added
+2009.25,UK,Manufacturing,85.65259868406481,Gross Value Added
+2009.5,UK,Manufacturing,86.3219254340203,Gross Value Added
+2009.75,UK,Manufacturing,87.52473691414207,Gross Value Added
+2010.0,UK,Manufacturing,87.79292251685537,Gross Value Added
+2010.25,UK,Manufacturing,88.99770335042896,Gross Value Added
+2010.5,UK,Manufacturing,88.07941482653985,Gross Value Added
+2010.75,UK,Manufacturing,87.13191618778102,Gross Value Added
+2011.0,UK,Manufacturing,83.86378189970696,Gross Value Added
+2011.25,UK,Manufacturing,83.47174049082356,Gross Value Added
+2011.5,UK,Manufacturing,83.29783155331079,Gross Value Added
+2011.75,UK,Manufacturing,84.60923079316129,Gross Value Added
+2012.0,UK,Manufacturing,85.95254959981919,Gross Value Added
+2012.25,UK,Manufacturing,87.34005123244671,Gross Value Added
+2012.5,UK,Manufacturing,88.33959600920038,Gross Value Added
+2012.75,UK,Manufacturing,88.17854151824588,Gross Value Added
+2013.0,UK,Manufacturing,87.88905016978761,Gross Value Added
+2013.25,UK,Manufacturing,89.38099659739261,Gross Value Added
+2013.5,UK,Manufacturing,91.38694094619282,Gross Value Added
+2013.75,UK,Manufacturing,92.23559678683625,Gross Value Added
+2014.0,UK,Manufacturing,93.41277136617256,Gross Value Added
+2014.25,UK,Manufacturing,93.66783584050079,Gross Value Added
+2014.5,UK,Manufacturing,94.55500357008614,Gross Value Added
+2014.75,UK,Manufacturing,95.32686239622974,Gross Value Added
+2015.0,UK,Manufacturing,97.2297644817858,Gross Value Added
+2015.25,UK,Manufacturing,98.19114779644916,Gross Value Added
+2015.5,UK,Manufacturing,98.0663230694682,Gross Value Added
+2015.75,UK,Manufacturing,98.2969315984976,Gross Value Added
+2016.0,UK,Manufacturing,96.27979083710326,Gross Value Added
+2016.25,UK,Manufacturing,96.3623473848419,Gross Value Added
+2016.5,UK,Manufacturing,94.89119241610997,Gross Value Added
+2016.75,UK,Manufacturing,95.28699236739602,Gross Value Added
+2017.0,UK,Manufacturing,96.1508269806541,Gross Value Added
+2017.25,UK,Manufacturing,96.75669715709257,Gross Value Added
+2017.5,UK,Manufacturing,97.73042282224253,Gross Value Added
+2017.75,UK,Manufacturing,100.12855670612257,Gross Value Added
+2018.0,UK,Manufacturing,100.82555280599637,Gross Value Added
+2018.25,UK,Manufacturing,101.29325252458881,Gross Value Added
+2018.5,UK,Manufacturing,100.77418721686786,Gross Value Added
+2018.75,UK,Manufacturing,97.66769065045325,Gross Value Added
+2019.0,UK,Manufacturing,99.32379803317217,Gross Value Added
+2019.25,UK,Manufacturing,98.66610864433996,Gross Value Added
+2019.5,UK,Manufacturing,99.92706558730488,Gross Value Added
+2019.75,UK,Manufacturing,101.91556572383456,Gross Value Added
+2020.0,UK,Manufacturing,103.369175857687,Gross Value Added
+2020.25,UK,Manufacturing,82.75570911534092,Gross Value Added
+2020.5,UK,Manufacturing,105.25803008690858,Gross Value Added
+2020.75,UK,Manufacturing,108.6170849400635,Gross Value Added
+2021.0,UK,Manufacturing,104.46226240306042,Gross Value Added
+2021.25,UK,Manufacturing,104.48170760512585,Gross Value Added
+2021.5,UK,Manufacturing,101.26733095890282,Gross Value Added
+2021.75,UK,Manufacturing,99.42296778722,Gross Value Added
+2022.0,UK,Manufacturing,96.52083369079176,Gross Value Added
+2022.25,UK,Manufacturing,94.83398954728771,Gross Value Added
+2022.5,UK,Manufacturing,92.75192058554713,Gross Value Added
+2022.75,UK,Manufacturing,92.19704059089462,Gross Value Added
+2023.0,UK,Manufacturing,92.37333282051915,Gross Value Added
+2023.25,UK,Manufacturing,93.3721939633394,Gross Value Added
+2023.5,UK,Manufacturing,92.27480454828918,Gross Value Added
+2023.75,UK,Manufacturing,90.69761575182763,Gross Value Added
+2024.0,UK,Manufacturing,91.58415944718548,Gross Value Added
+2024.25,UK,Manufacturing,90.38093822230499,Gross Value Added
+2024.5,UK,Manufacturing,90.21428280687823,Gross Value Added
+2024.75,UK,Manufacturing,89.73992437018101,Gross Value Added
+1997.0,UK,Construction,103.32344732590666,Gross Value Added
+1997.25,UK,Construction,107.19821986994272,Gross Value Added
+1997.5,UK,Construction,107.00586067119619,Gross Value Added
+1997.75,UK,Construction,110.70817520261069,Gross Value Added
+1998.0,UK,Construction,113.13917076315498,Gross Value Added
+1998.25,UK,Construction,110.67455608535042,Gross Value Added
+1998.5,UK,Construction,111.31220998372228,Gross Value Added
+1998.75,UK,Construction,113.94505404385036,Gross Value Added
+1999.0,UK,Construction,116.08584797598888,Gross Value Added
+1999.25,UK,Construction,117.26400358652025,Gross Value Added
+1999.5,UK,Construction,119.17059453943742,Gross Value Added
+1999.75,UK,Construction,118.64814705685059,Gross Value Added
+2000.0,UK,Construction,120.56530604872972,Gross Value Added
+2000.25,UK,Construction,117.76111446131996,Gross Value Added
+2000.5,UK,Construction,114.79304017750167,Gross Value Added
+2000.75,UK,Construction,116.68353356956736,Gross Value Added
+2001.0,UK,Construction,116.02422866190425,Gross Value Added
+2001.25,UK,Construction,117.8858424053024,Gross Value Added
+2001.5,UK,Construction,116.37301404580849,Gross Value Added
+2001.75,UK,Construction,116.6096074320786,Gross Value Added
+2002.0,UK,Construction,115.36446591379719,Gross Value Added
+2002.25,UK,Construction,113.98375009139518,Gross Value Added
+2002.5,UK,Construction,114.72028026613141,Gross Value Added
+2002.75,UK,Construction,114.79851736391203,Gross Value Added
+2003.0,UK,Construction,110.38969003223042,Gross Value Added
+2003.25,UK,Construction,111.49036637593129,Gross Value Added
+2003.5,UK,Construction,111.99429808473487,Gross Value Added
+2003.75,UK,Construction,112.56145956363535,Gross Value Added
+2004.0,UK,Construction,114.91019604171504,Gross Value Added
+2004.25,UK,Construction,111.11755731748352,Gross Value Added
+2004.5,UK,Construction,109.78956029276499,Gross Value Added
+2004.75,UK,Construction,108.6494874284468,Gross Value Added
+2005.0,UK,Construction,110.23168685946322,Gross Value Added
+2005.25,UK,Construction,110.48589557897846,Gross Value Added
+2005.5,UK,Construction,108.69162258024024,Gross Value Added
+2005.75,UK,Construction,108.38424534674303,Gross Value Added
+2006.0,UK,Construction,109.79436175836759,Gross Value Added
+2006.25,UK,Construction,110.35830349982217,Gross Value Added
+2006.5,UK,Construction,110.31313677787738,Gross Value Added
+2006.75,UK,Construction,111.11269665170545,Gross Value Added
+2007.0,UK,Construction,110.98249884858294,Gross Value Added
+2007.25,UK,Construction,109.31340925737258,Gross Value Added
+2007.5,UK,Construction,106.59331721964713,Gross Value Added
+2007.75,UK,Construction,106.85681273009648,Gross Value Added
+2008.0,UK,Construction,106.65546592683692,Gross Value Added
+2008.25,UK,Construction,104.37055806236333,Gross Value Added
+2008.5,UK,Construction,101.07473967845249,Gross Value Added
+2008.75,UK,Construction,95.66401754175938,Gross Value Added
+2009.0,UK,Construction,88.13775935039891,Gross Value Added
+2009.25,UK,Construction,87.59065119848798,Gross Value Added
+2009.5,UK,Construction,89.15960100710257,Gross Value Added
+2009.75,UK,Construction,87.53375384375182,Gross Value Added
+2010.0,UK,Construction,91.40333728872211,Gross Value Added
+2010.25,UK,Construction,95.46403334565584,Gross Value Added
+2010.5,UK,Construction,97.28648985007817,Gross Value Added
+2010.75,UK,Construction,95.50270622644994,Gross Value Added
+2011.0,UK,Construction,97.92137806295422,Gross Value Added
+2011.25,UK,Construction,100.22635333131353,Gross Value Added
+2011.5,UK,Construction,99.62605343776858,Gross Value Added
+2011.75,UK,Construction,101.50023524021059,Gross Value Added
+2012.0,UK,Construction,99.7116670942538,Gross Value Added
+2012.25,UK,Construction,99.62343569542706,Gross Value Added
+2012.5,UK,Construction,98.19564788693678,Gross Value Added
+2012.75,UK,Construction,100.34537654040211,Gross Value Added
+2013.0,UK,Construction,101.47975800072184,Gross Value Added
+2013.25,UK,Construction,103.18569997191223,Gross Value Added
+2013.5,UK,Construction,105.17443846483532,Gross Value Added
+2013.75,UK,Construction,105.06294597174772,Gross Value Added
+2014.0,UK,Construction,105.54549260356725,Gross Value Added
+2014.25,UK,Construction,106.43977236945861,Gross Value Added
+2014.5,UK,Construction,107.04977811678754,Gross Value Added
+2014.75,UK,Construction,107.9736371355172,Gross Value Added
+2015.0,UK,Construction,110.93377937726781,Gross Value Added
+2015.25,UK,Construction,112.60113275586204,Gross Value Added
+2015.5,UK,Construction,110.71340447885747,Gross Value Added
+2015.75,UK,Construction,111.84245009426354,Gross Value Added
+2016.0,UK,Construction,110.82358581701848,Gross Value Added
+2016.25,UK,Construction,109.43590944122828,Gross Value Added
+2016.5,UK,Construction,109.21363413710922,Gross Value Added
+2016.75,UK,Construction,110.04328707755045,Gross Value Added
+2017.0,UK,Construction,113.50909317216629,Gross Value Added
+2017.25,UK,Construction,114.04756189534753,Gross Value Added
+2017.5,UK,Construction,113.76286941320902,Gross Value Added
+2017.75,UK,Construction,115.51066164417982,Gross Value Added
+2018.0,UK,Construction,113.69081928297018,Gross Value Added
+2018.25,UK,Construction,114.58190018976708,Gross Value Added
+2018.5,UK,Construction,113.75938476450378,Gross Value Added
+2018.75,UK,Construction,112.39383349786496,Gross Value Added
+2019.0,UK,Construction,114.06173598391298,Gross Value Added
+2019.25,UK,Construction,112.70617973156658,Gross Value Added
+2019.5,UK,Construction,114.3634766648289,Gross Value Added
+2019.75,UK,Construction,112.17458546766082,Gross Value Added
+2020.0,UK,Construction,112.6852765650807,Gross Value Added
+2020.25,UK,Construction,76.62187385445137,Gross Value Added
+2020.5,UK,Construction,103.22892619803422,Gross Value Added
+2020.75,UK,Construction,107.46392338243376,Gross Value Added
+2021.0,UK,Construction,109.46587068938489,Gross Value Added
+2021.25,UK,Construction,112.0100885954563,Gross Value Added
+2021.5,UK,Construction,108.7535163363116,Gross Value Added
+2021.75,UK,Construction,111.03539109936038,Gross Value Added
+2022.0,UK,Construction,114.85790607586691,Gross Value Added
+2022.25,UK,Construction,117.43890209948975,Gross Value Added
+2022.5,UK,Construction,118.52254824328013,Gross Value Added
+2022.75,UK,Construction,120.69422130257259,Gross Value Added
+2023.0,UK,Construction,118.44031184756459,Gross Value Added
+2023.25,UK,Construction,119.37974415888033,Gross Value Added
+2023.5,UK,Construction,120.71251315474217,Gross Value Added
+2023.75,UK,Construction,118.88101071061774,Gross Value Added
+2024.0,UK,Construction,118.70193455447516,Gross Value Added
+2024.25,UK,Construction,118.99909440200882,Gross Value Added
+2024.5,UK,Construction,119.42405075918143,Gross Value Added
+2024.75,UK,Construction,119.79844921793341,Gross Value Added
+1997.0,UK,Trade & Hospitality,117.19831611343643,Gross Value Added
+1997.25,UK,Trade & Hospitality,118.76831870734617,Gross Value Added
+1997.5,UK,Trade & Hospitality,120.44006321636253,Gross Value Added
+1997.75,UK,Trade & Hospitality,122.86213755481474,Gross Value Added
+1998.0,UK,Trade & Hospitality,119.53502879652333,Gross Value Added
+1998.25,UK,Trade & Hospitality,119.2474957904756,Gross Value Added
+1998.5,UK,Trade & Hospitality,119.82803903475654,Gross Value Added
+1998.75,UK,Trade & Hospitality,120.8441880784852,Gross Value Added
+1999.0,UK,Trade & Hospitality,122.39230591358059,Gross Value Added
+1999.25,UK,Trade & Hospitality,125.16648491316154,Gross Value Added
+1999.5,UK,Trade & Hospitality,125.84552230301756,Gross Value Added
+1999.75,UK,Trade & Hospitality,127.14529175049327,Gross Value Added
+2000.0,UK,Trade & Hospitality,132.36637652882877,Gross Value Added
+2000.25,UK,Trade & Hospitality,131.3524928554967,Gross Value Added
+2000.5,UK,Trade & Hospitality,133.90076750256213,Gross Value Added
+2000.75,UK,Trade & Hospitality,133.24047910610608,Gross Value Added
+2001.0,UK,Trade & Hospitality,130.66059624079455,Gross Value Added
+2001.25,UK,Trade & Hospitality,131.42272908888398,Gross Value Added
+2001.5,UK,Trade & Hospitality,132.46447021740403,Gross Value Added
+2001.75,UK,Trade & Hospitality,129.24168297255287,Gross Value Added
+2002.0,UK,Trade & Hospitality,127.33526291779953,Gross Value Added
+2002.25,UK,Trade & Hospitality,127.3197699630654,Gross Value Added
+2002.5,UK,Trade & Hospitality,128.61364990762928,Gross Value Added
+2002.75,UK,Trade & Hospitality,127.0034569811036,Gross Value Added
+2003.0,UK,Trade & Hospitality,128.91342617462732,Gross Value Added
+2003.25,UK,Trade & Hospitality,131.92190055093192,Gross Value Added
+2003.5,UK,Trade & Hospitality,132.55992681406718,Gross Value Added
+2003.75,UK,Trade & Hospitality,133.02367377691093,Gross Value Added
+2004.0,UK,Trade & Hospitality,137.0456748639286,Gross Value Added
+2004.25,UK,Trade & Hospitality,139.3084883719113,Gross Value Added
+2004.5,UK,Trade & Hospitality,140.28641967733745,Gross Value Added
+2004.75,UK,Trade & Hospitality,144.7065659280036,Gross Value Added
+2005.0,UK,Trade & Hospitality,144.8342828898879,Gross Value Added
+2005.25,UK,Trade & Hospitality,143.91778472749007,Gross Value Added
+2005.5,UK,Trade & Hospitality,143.58498395243765,Gross Value Added
+2005.75,UK,Trade & Hospitality,146.03938288117453,Gross Value Added
+2006.0,UK,Trade & Hospitality,145.52197468793065,Gross Value Added
+2006.25,UK,Trade & Hospitality,144.90564947846732,Gross Value Added
+2006.5,UK,Trade & Hospitality,142.67918326514138,Gross Value Added
+2006.75,UK,Trade & Hospitality,138.5974118634103,Gross Value Added
+2007.0,UK,Trade & Hospitality,137.98866847853438,Gross Value Added
+2007.25,UK,Trade & Hospitality,139.4516355362743,Gross Value Added
+2007.5,UK,Trade & Hospitality,141.3822106650739,Gross Value Added
+2007.75,UK,Trade & Hospitality,142.3014117278305,Gross Value Added
+2008.0,UK,Trade & Hospitality,149.46232580830417,Gross Value Added
+2008.25,UK,Trade & Hospitality,147.83217991077214,Gross Value Added
+2008.5,UK,Trade & Hospitality,142.3687846168858,Gross Value Added
+2008.75,UK,Trade & Hospitality,135.4794403340676,Gross Value Added
+2009.0,UK,Trade & Hospitality,127.90401849420266,Gross Value Added
+2009.25,UK,Trade & Hospitality,119.90587552780289,Gross Value Added
+2009.5,UK,Trade & Hospitality,120.33274495929665,Gross Value Added
+2009.75,UK,Trade & Hospitality,124.46934040718088,Gross Value Added
+2010.0,UK,Trade & Hospitality,128.64366987877165,Gross Value Added
+2010.25,UK,Trade & Hospitality,134.32701216530026,Gross Value Added
+2010.5,UK,Trade & Hospitality,138.06007971818607,Gross Value Added
+2010.75,UK,Trade & Hospitality,138.38575685660592,Gross Value Added
+2011.0,UK,Trade & Hospitality,140.6845179245574,Gross Value Added
+2011.25,UK,Trade & Hospitality,142.14246180404447,Gross Value Added
+2011.5,UK,Trade & Hospitality,141.56181101155195,Gross Value Added
+2011.75,UK,Trade & Hospitality,142.68781389671253,Gross Value Added
+2012.0,UK,Trade & Hospitality,143.8392652792253,Gross Value Added
+2012.25,UK,Trade & Hospitality,145.81565969443864,Gross Value Added
+2012.5,UK,Trade & Hospitality,146.92319519070767,Gross Value Added
+2012.75,UK,Trade & Hospitality,148.28023816810173,Gross Value Added
+2013.0,UK,Trade & Hospitality,152.2143482520019,Gross Value Added
+2013.25,UK,Trade & Hospitality,151.4203953053715,Gross Value Added
+2013.5,UK,Trade & Hospitality,153.82603268192773,Gross Value Added
+2013.75,UK,Trade & Hospitality,153.45649136640833,Gross Value Added
+2014.0,UK,Trade & Hospitality,153.6831154505916,Gross Value Added
+2014.25,UK,Trade & Hospitality,154.88975728188524,Gross Value Added
+2014.5,UK,Trade & Hospitality,153.99188171689482,Gross Value Added
+2014.75,UK,Trade & Hospitality,152.1864059089999,Gross Value Added
+2015.0,UK,Trade & Hospitality,147.64443950841883,Gross Value Added
+2015.25,UK,Trade & Hospitality,145.43929347610728,Gross Value Added
+2015.5,UK,Trade & Hospitality,145.5317272511291,Gross Value Added
+2015.75,UK,Trade & Hospitality,145.16936490925713,Gross Value Added
+2016.0,UK,Trade & Hospitality,146.35949732848036,Gross Value Added
+2016.25,UK,Trade & Hospitality,147.6027350102323,Gross Value Added
+2016.5,UK,Trade & Hospitality,149.35814002897874,Gross Value Added
+2016.75,UK,Trade & Hospitality,150.65883731993355,Gross Value Added
+2017.0,UK,Trade & Hospitality,153.01625242480623,Gross Value Added
+2017.25,UK,Trade & Hospitality,155.6001774147162,Gross Value Added
+2017.5,UK,Trade & Hospitality,157.63829928074594,Gross Value Added
+2017.75,UK,Trade & Hospitality,156.44399155186034,Gross Value Added
+2018.0,UK,Trade & Hospitality,155.2199173268531,Gross Value Added
+2018.25,UK,Trade & Hospitality,159.79576995652894,Gross Value Added
+2018.5,UK,Trade & Hospitality,162.7562855130967,Gross Value Added
+2018.75,UK,Trade & Hospitality,165.5050819761533,Gross Value Added
+2019.0,UK,Trade & Hospitality,166.74798138768062,Gross Value Added
+2019.25,UK,Trade & Hospitality,165.77285594523923,Gross Value Added
+2019.5,UK,Trade & Hospitality,165.32748665494339,Gross Value Added
+2019.75,UK,Trade & Hospitality,163.8223640062332,Gross Value Added
+2020.0,UK,Trade & Hospitality,141.06668813536584,Gross Value Added
+2020.25,UK,Trade & Hospitality,55.28153954993728,Gross Value Added
+2020.5,UK,Trade & Hospitality,106.64463896080092,Gross Value Added
+2020.75,UK,Trade & Hospitality,97.00713335389595,Gross Value Added
+2021.0,UK,Trade & Hospitality,92.3741501863934,Gross Value Added
+2021.25,UK,Trade & Hospitality,113.15591904611838,Gross Value Added
+2021.5,UK,Trade & Hospitality,124.54880184399056,Gross Value Added
+2021.75,UK,Trade & Hospitality,125.88794935654623,Gross Value Added
+2022.0,UK,Trade & Hospitality,133.7280394121789,Gross Value Added
+2022.25,UK,Trade & Hospitality,137.88801288251526,Gross Value Added
+2022.5,UK,Trade & Hospitality,141.8092225305763,Gross Value Added
+2022.75,UK,Trade & Hospitality,143.2919806276059,Gross Value Added
+2023.0,UK,Trade & Hospitality,143.50828716014067,Gross Value Added
+2023.25,UK,Trade & Hospitality,141.5445536064649,Gross Value Added
+2023.5,UK,Trade & Hospitality,139.47628009241063,Gross Value Added
+2023.75,UK,Trade & Hospitality,140.60351462900806,Gross Value Added
+2024.0,UK,Trade & Hospitality,144.16566226899226,Gross Value Added
+2024.25,UK,Trade & Hospitality,146.816561604792,Gross Value Added
+2024.5,UK,Trade & Hospitality,145.35050495357865,Gross Value Added
+2024.75,UK,Trade & Hospitality,144.70194564934295,Gross Value Added
+1997.0,UK,Information and communication,45.742039473346,Gross Value Added
+1997.25,UK,Information and communication,47.46172064752098,Gross Value Added
+1997.5,UK,Information and communication,45.700402217972055,Gross Value Added
+1997.75,UK,Information and communication,49.49001115947952,Gross Value Added
+1998.0,UK,Information and communication,48.764432755735676,Gross Value Added
+1998.25,UK,Information and communication,50.83631870229118,Gross Value Added
+1998.5,UK,Information and communication,50.41578651367428,Gross Value Added
+1998.75,UK,Information and communication,52.4459654919479,Gross Value Added
+1999.0,UK,Information and communication,51.67822571790035,Gross Value Added
+1999.25,UK,Information and communication,50.928301369049166,Gross Value Added
+1999.5,UK,Information and communication,55.68800384707047,Gross Value Added
+1999.75,UK,Information and communication,56.68390586898222,Gross Value Added
+2000.0,UK,Information and communication,58.788131378694594,Gross Value Added
+2000.25,UK,Information and communication,61.135049708365884,Gross Value Added
+2000.5,UK,Information and communication,62.51424888596626,Gross Value Added
+2000.75,UK,Information and communication,61.96271649824487,Gross Value Added
+2001.0,UK,Information and communication,63.27950314555769,Gross Value Added
+2001.25,UK,Information and communication,63.24916460053572,Gross Value Added
+2001.5,UK,Information and communication,63.187981014588054,Gross Value Added
+2001.75,UK,Information and communication,64.65825196754692,Gross Value Added
+2002.0,UK,Information and communication,64.99289319439221,Gross Value Added
+2002.25,UK,Information and communication,65.52901320593767,Gross Value Added
+2002.5,UK,Information and communication,64.15265816291064,Gross Value Added
+2002.75,UK,Information and communication,66.03763555957299,Gross Value Added
+2003.0,UK,Information and communication,68.15759911472917,Gross Value Added
+2003.25,UK,Information and communication,69.37539069509626,Gross Value Added
+2003.5,UK,Information and communication,68.93563116986995,Gross Value Added
+2003.75,UK,Information and communication,71.82463321910149,Gross Value Added
+2004.0,UK,Information and communication,71.96058984666799,Gross Value Added
+2004.25,UK,Information and communication,72.42967029830399,Gross Value Added
+2004.5,UK,Information and communication,75.22013859318767,Gross Value Added
+2004.75,UK,Information and communication,74.33860377163549,Gross Value Added
+2005.0,UK,Information and communication,75.27265638793516,Gross Value Added
+2005.25,UK,Information and communication,75.73525481253613,Gross Value Added
+2005.5,UK,Information and communication,78.1218739912377,Gross Value Added
+2005.75,UK,Information and communication,78.85691464308019,Gross Value Added
+2006.0,UK,Information and communication,79.14611415377996,Gross Value Added
+2006.25,UK,Information and communication,75.59729282625473,Gross Value Added
+2006.5,UK,Information and communication,76.93451729299908,Gross Value Added
+2006.75,UK,Information and communication,78.28523850865784,Gross Value Added
+2007.0,UK,Information and communication,80.07091054997997,Gross Value Added
+2007.25,UK,Information and communication,82.49014917444451,Gross Value Added
+2007.5,UK,Information and communication,84.94370449702139,Gross Value Added
+2007.75,UK,Information and communication,83.97164768512714,Gross Value Added
+2008.0,UK,Information and communication,85.55782960284125,Gross Value Added
+2008.25,UK,Information and communication,85.96928763102697,Gross Value Added
+2008.5,UK,Information and communication,84.35418879944088,Gross Value Added
+2008.75,UK,Information and communication,83.80190989142113,Gross Value Added
+2009.0,UK,Information and communication,82.87749924542126,Gross Value Added
+2009.25,UK,Information and communication,83.72043977251063,Gross Value Added
+2009.5,UK,Information and communication,83.93395108385752,Gross Value Added
+2009.75,UK,Information and communication,86.14298677811104,Gross Value Added
+2010.0,UK,Information and communication,84.55855273281328,Gross Value Added
+2010.25,UK,Information and communication,83.58326457228398,Gross Value Added
+2010.5,UK,Information and communication,84.25667607671281,Gross Value Added
+2010.75,UK,Information and communication,84.1772832952519,Gross Value Added
+2011.0,UK,Information and communication,82.87336217240966,Gross Value Added
+2011.25,UK,Information and communication,86.5591053660665,Gross Value Added
+2011.5,UK,Information and communication,87.50927250924613,Gross Value Added
+2011.75,UK,Information and communication,86.31597504525052,Gross Value Added
+2012.0,UK,Information and communication,90.43926188685309,Gross Value Added
+2012.25,UK,Information and communication,86.29286371694242,Gross Value Added
+2012.5,UK,Information and communication,84.39380491323,Gross Value Added
+2012.75,UK,Information and communication,87.30482228323635,Gross Value Added
+2013.0,UK,Information and communication,90.77124798196735,Gross Value Added
+2013.25,UK,Information and communication,90.37342560810127,Gross Value Added
+2013.5,UK,Information and communication,94.54358903235037,Gross Value Added
+2013.75,UK,Information and communication,95.74655820896176,Gross Value Added
+2014.0,UK,Information and communication,91.61547468584124,Gross Value Added
+2014.25,UK,Information and communication,93.9460203128971,Gross Value Added
+2014.5,UK,Information and communication,94.07018852688468,Gross Value Added
+2014.75,UK,Information and communication,93.55328182005823,Gross Value Added
+2015.0,UK,Information and communication,94.9462184456092,Gross Value Added
+2015.25,UK,Information and communication,95.30723659494791,Gross Value Added
+2015.5,UK,Information and communication,95.4410764260686,Gross Value Added
+2015.75,UK,Information and communication,97.24874900040406,Gross Value Added
+2016.0,UK,Information and communication,98.65052910683477,Gross Value Added
+2016.25,UK,Information and communication,99.26526732467386,Gross Value Added
+2016.5,UK,Information and communication,101.54748131729446,Gross Value Added
+2016.75,UK,Information and communication,99.39461967777106,Gross Value Added
+2017.0,UK,Information and communication,97.03977332271485,Gross Value Added
+2017.25,UK,Information and communication,96.1889039222341,Gross Value Added
+2017.5,UK,Information and communication,94.8891067913833,Gross Value Added
+2017.75,UK,Information and communication,96.2481585914788,Gross Value Added
+2018.0,UK,Information and communication,97.06491898522896,Gross Value Added
+2018.25,UK,Information and communication,97.22893641625643,Gross Value Added
+2018.5,UK,Information and communication,97.74336799876447,Gross Value Added
+2018.75,UK,Information and communication,98.13921888479014,Gross Value Added
+2019.0,UK,Information and communication,99.44669887150765,Gross Value Added
+2019.25,UK,Information and communication,100.33269209783846,Gross Value Added
+2019.5,UK,Information and communication,101.70690817136196,Gross Value Added
+2019.75,UK,Information and communication,102.99135651297374,Gross Value Added
+2020.0,UK,Information and communication,103.01175763108519,Gross Value Added
+2020.25,UK,Information and communication,94.04188417819904,Gross Value Added
+2020.5,UK,Information and communication,100.27035699648026,Gross Value Added
+2020.75,UK,Information and communication,102.67600119423548,Gross Value Added
+2021.0,UK,Information and communication,103.15749690622529,Gross Value Added
+2021.25,UK,Information and communication,106.82990556356515,Gross Value Added
+2021.5,UK,Information and communication,107.37857232004384,Gross Value Added
+2021.75,UK,Information and communication,110.91772014103381,Gross Value Added
+2022.0,UK,Information and communication,113.23046753065054,Gross Value Added
+2022.25,UK,Information and communication,113.25426533382984,Gross Value Added
+2022.5,UK,Information and communication,112.65869275855115,Gross Value Added
+2022.75,UK,Information and communication,111.88804654533561,Gross Value Added
+2023.0,UK,Information and communication,110.91334713864289,Gross Value Added
+2023.25,UK,Information and communication,111.86723084395342,Gross Value Added
+2023.5,UK,Information and communication,110.81875889782127,Gross Value Added
+2023.75,UK,Information and communication,109.60051772159811,Gross Value Added
+2024.0,UK,Information and communication,110.29683901292513,Gross Value Added
+2024.25,UK,Information and communication,112.95318806474725,Gross Value Added
+2024.5,UK,Information and communication,112.77162284423746,Gross Value Added
+2024.75,UK,Information and communication,113.53537564361275,Gross Value Added
+1997.0,UK,Finance and insurance,76.07147379403439,Gross Value Added
+1997.25,UK,Finance and insurance,76.0393245172691,Gross Value Added
+1997.5,UK,Finance and insurance,75.16472769672362,Gross Value Added
+1997.75,UK,Finance and insurance,72.21738723833158,Gross Value Added
+1998.0,UK,Finance and insurance,81.88351805531418,Gross Value Added
+1998.25,UK,Finance and insurance,77.67569659808566,Gross Value Added
+1998.5,UK,Finance and insurance,74.47062883623593,Gross Value Added
+1998.75,UK,Finance and insurance,69.90816855209246,Gross Value Added
+1999.0,UK,Finance and insurance,72.60464304862762,Gross Value Added
+1999.25,UK,Finance and insurance,74.96302943694768,Gross Value Added
+1999.5,UK,Finance and insurance,76.10583637526351,Gross Value Added
+1999.75,UK,Finance and insurance,79.99701754367157,Gross Value Added
+2000.0,UK,Finance and insurance,81.2894824319236,Gross Value Added
+2000.25,UK,Finance and insurance,80.3104491253658,Gross Value Added
+2000.5,UK,Finance and insurance,79.82630806356049,Gross Value Added
+2000.75,UK,Finance and insurance,79.64429709792725,Gross Value Added
+2001.0,UK,Finance and insurance,78.71773712012937,Gross Value Added
+2001.25,UK,Finance and insurance,76.42804380217385,Gross Value Added
+2001.5,UK,Finance and insurance,77.06202045115887,Gross Value Added
+2001.75,UK,Finance and insurance,76.16178192296728,Gross Value Added
+2002.0,UK,Finance and insurance,78.45806205738235,Gross Value Added
+2002.25,UK,Finance and insurance,79.3934260788117,Gross Value Added
+2002.5,UK,Finance and insurance,78.74181511064802,Gross Value Added
+2002.75,UK,Finance and insurance,80.73322050332295,Gross Value Added
+2003.0,UK,Finance and insurance,80.94087845718975,Gross Value Added
+2003.25,UK,Finance and insurance,81.4560868782085,Gross Value Added
+2003.5,UK,Finance and insurance,83.22687243446653,Gross Value Added
+2003.75,UK,Finance and insurance,80.40793269983381,Gross Value Added
+2004.0,UK,Finance and insurance,77.86354501853512,Gross Value Added
+2004.25,UK,Finance and insurance,79.79692906234254,Gross Value Added
+2004.5,UK,Finance and insurance,84.64165398430939,Gross Value Added
+2004.75,UK,Finance and insurance,90.4197199067131,Gross Value Added
+2005.0,UK,Finance and insurance,93.62592869168968,Gross Value Added
+2005.25,UK,Finance and insurance,93.52338565861017,Gross Value Added
+2005.5,UK,Finance and insurance,95.77333191161644,Gross Value Added
+2005.75,UK,Finance and insurance,93.04465152248544,Gross Value Added
+2006.0,UK,Finance and insurance,91.34699308066297,Gross Value Added
+2006.25,UK,Finance and insurance,88.5534412710044,Gross Value Added
+2006.5,UK,Finance and insurance,89.46501219114636,Gross Value Added
+2006.75,UK,Finance and insurance,97.1170943440644,Gross Value Added
+2007.0,UK,Finance and insurance,103.64638885922899,Gross Value Added
+2007.25,UK,Finance and insurance,111.34760734125142,Gross Value Added
+2007.5,UK,Finance and insurance,115.56707308522658,Gross Value Added
+2007.75,UK,Finance and insurance,115.50974141250612,Gross Value Added
+2008.0,UK,Finance and insurance,116.95957843045062,Gross Value Added
+2008.25,UK,Finance and insurance,115.6069853619749,Gross Value Added
+2008.5,UK,Finance and insurance,112.48546322841703,Gross Value Added
+2008.75,UK,Finance and insurance,106.21731512232826,Gross Value Added
+2009.0,UK,Finance and insurance,107.10710482957657,Gross Value Added
+2009.25,UK,Finance and insurance,105.33330306329107,Gross Value Added
+2009.5,UK,Finance and insurance,104.60572557054772,Gross Value Added
+2009.75,UK,Finance and insurance,104.57476710753954,Gross Value Added
+2010.0,UK,Finance and insurance,103.24111297397232,Gross Value Added
+2010.25,UK,Finance and insurance,103.6126881508031,Gross Value Added
+2010.5,UK,Finance and insurance,103.5142278961225,Gross Value Added
+2010.75,UK,Finance and insurance,104.66627227762186,Gross Value Added
+2011.0,UK,Finance and insurance,98.94803866538362,Gross Value Added
+2011.25,UK,Finance and insurance,95.52489744166544,Gross Value Added
+2011.5,UK,Finance and insurance,97.76147828818016,Gross Value Added
+2011.75,UK,Finance and insurance,97.794403030191,Gross Value Added
+2012.0,UK,Finance and insurance,98.87817169491619,Gross Value Added
+2012.25,UK,Finance and insurance,100.61155257278007,Gross Value Added
+2012.5,UK,Finance and insurance,100.51183272545636,Gross Value Added
+2012.75,UK,Finance and insurance,98.0751055125648,Gross Value Added
+2013.0,UK,Finance and insurance,96.42392124948084,Gross Value Added
+2013.25,UK,Finance and insurance,95.80482516619688,Gross Value Added
+2013.5,UK,Finance and insurance,93.00303247865544,Gross Value Added
+2013.75,UK,Finance and insurance,93.15210139873282,Gross Value Added
+2014.0,UK,Finance and insurance,92.03672332171533,Gross Value Added
+2014.25,UK,Finance and insurance,94.10645100638203,Gross Value Added
+2014.5,UK,Finance and insurance,95.0591725935915,Gross Value Added
+2014.75,UK,Finance and insurance,95.43973546546161,Gross Value Added
+2015.0,UK,Finance and insurance,92.88221876557088,Gross Value Added
+2015.25,UK,Finance and insurance,88.44220827290442,Gross Value Added
+2015.5,UK,Finance and insurance,87.4825160778989,Gross Value Added
+2015.75,UK,Finance and insurance,88.69913436613106,Gross Value Added
+2016.0,UK,Finance and insurance,91.73003795474757,Gross Value Added
+2016.25,UK,Finance and insurance,92.65749114967764,Gross Value Added
+2016.5,UK,Finance and insurance,97.46009022277237,Gross Value Added
+2016.75,UK,Finance and insurance,100.78616899590787,Gross Value Added
+2017.0,UK,Finance and insurance,100.71872036829545,Gross Value Added
+2017.25,UK,Finance and insurance,102.75688468573591,Gross Value Added
+2017.5,UK,Finance and insurance,103.60737005063847,Gross Value Added
+2017.75,UK,Finance and insurance,105.68675737164055,Gross Value Added
+2018.0,UK,Finance and insurance,104.61856304219222,Gross Value Added
+2018.25,UK,Finance and insurance,103.06644283382862,Gross Value Added
+2018.5,UK,Finance and insurance,101.00998719173471,Gross Value Added
+2018.75,UK,Finance and insurance,100.00202220379617,Gross Value Added
+2019.0,UK,Finance and insurance,98.29846987682807,Gross Value Added
+2019.25,UK,Finance and insurance,99.01557823015975,Gross Value Added
+2019.5,UK,Finance and insurance,100.02979635738609,Gross Value Added
+2019.75,UK,Finance and insurance,100.15485062268954,Gross Value Added
+2020.0,UK,Finance and insurance,99.17386828821638,Gross Value Added
+2020.25,UK,Finance and insurance,96.57951671087017,Gross Value Added
+2020.5,UK,Finance and insurance,99.64477872689297,Gross Value Added
+2020.75,UK,Finance and insurance,104.60183627402049,Gross Value Added
+2021.0,UK,Finance and insurance,105.98435594122233,Gross Value Added
+2021.25,UK,Finance and insurance,105.9538113928802,Gross Value Added
+2021.5,UK,Finance and insurance,104.45924727287309,Gross Value Added
+2021.75,UK,Finance and insurance,106.51275745615712,Gross Value Added
+2022.0,UK,Finance and insurance,105.14607281174808,Gross Value Added
+2022.25,UK,Finance and insurance,103.99459231402226,Gross Value Added
+2022.5,UK,Finance and insurance,102.94813433607305,Gross Value Added
+2022.75,UK,Finance and insurance,101.68406427923118,Gross Value Added
+2023.0,UK,Finance and insurance,103.13707012500161,Gross Value Added
+2023.25,UK,Finance and insurance,102.45618574165547,Gross Value Added
+2023.5,UK,Finance and insurance,101.5534574658087,Gross Value Added
+2023.75,UK,Finance and insurance,101.77128921135197,Gross Value Added
+2024.0,UK,Finance and insurance,102.50958874454778,Gross Value Added
+2024.25,UK,Finance and insurance,102.27659243340912,Gross Value Added
+2024.5,UK,Finance and insurance,101.75119804122473,Gross Value Added
+2024.75,UK,Finance and insurance,101.7714332867826,Gross Value Added
+1997.0,UK,Real estate,67.39066463013046,Gross Value Added
+1997.25,UK,Real estate,66.16033518770232,Gross Value Added
+1997.5,UK,Real estate,64.81790283480235,Gross Value Added
+1997.75,UK,Real estate,64.17891624511302,Gross Value Added
+1998.0,UK,Real estate,64.71140506985411,Gross Value Added
+1998.25,UK,Real estate,65.31816207278281,Gross Value Added
+1998.5,UK,Real estate,65.6867003909589,Gross Value Added
+1998.75,UK,Real estate,66.45600661407173,Gross Value Added
+1999.0,UK,Real estate,66.835755223295,Gross Value Added
+1999.25,UK,Real estate,66.27804324369771,Gross Value Added
+1999.5,UK,Real estate,67.73257850706949,Gross Value Added
+1999.75,UK,Real estate,67.59805501450333,Gross Value Added
+2000.0,UK,Real estate,67.18747810490031,Gross Value Added
+2000.25,UK,Real estate,66.61715454787495,Gross Value Added
+2000.5,UK,Real estate,67.02633017109707,Gross Value Added
+2000.75,UK,Real estate,67.17066266832953,Gross Value Added
+2001.0,UK,Real estate,67.22811540994633,Gross Value Added
+2001.25,UK,Real estate,67.6036601600269,Gross Value Added
+2001.5,UK,Real estate,67.95398175525132,Gross Value Added
+2001.75,UK,Real estate,68.28748791390498,Gross Value Added
+2002.0,UK,Real estate,68.39538696523408,Gross Value Added
+2002.25,UK,Real estate,68.00582935134454,Gross Value Added
+2002.5,UK,Real estate,67.52799069545844,Gross Value Added
+2002.75,UK,Real estate,68.66023009122375,Gross Value Added
+2003.0,UK,Real estate,69.48418648319158,Gross Value Added
+2003.25,UK,Real estate,70.78598153104551,Gross Value Added
+2003.5,UK,Real estate,71.27362919159789,Gross Value Added
+2003.75,UK,Real estate,71.59031991368077,Gross Value Added
+2004.0,UK,Real estate,71.13069798074633,Gross Value Added
+2004.25,UK,Real estate,71.79630901167272,Gross Value Added
+2004.5,UK,Real estate,71.22738674102827,Gross Value Added
+2004.75,UK,Real estate,70.32215573896838,Gross Value Added
+2005.0,UK,Real estate,70.72712750304781,Gross Value Added
+2005.25,UK,Real estate,71.21477516360018,Gross Value Added
+2005.5,UK,Real estate,72.62446926278324,Gross Value Added
+2005.75,UK,Real estate,73.23683141123551,Gross Value Added
+2006.0,UK,Real estate,73.59415943836441,Gross Value Added
+2006.25,UK,Real estate,74.51200201785238,Gross Value Added
+2006.5,UK,Real estate,74.5162058769951,Gross Value Added
+2006.75,UK,Real estate,73.80715496826086,Gross Value Added
+2007.0,UK,Real estate,73.39097291313426,Gross Value Added
+2007.25,UK,Real estate,73.4189986407522,Gross Value Added
+2007.5,UK,Real estate,73.21020696999847,Gross Value Added
+2007.75,UK,Real estate,74.11123411291567,Gross Value Added
+2008.0,UK,Real estate,74.43773383966482,Gross Value Added
+2008.25,UK,Real estate,74.72780012051062,Gross Value Added
+2008.5,UK,Real estate,74.90996735002732,Gross Value Added
+2008.75,UK,Real estate,74.93799307764529,Gross Value Added
+2009.0,UK,Real estate,75.98475400417584,Gross Value Added
+2009.25,UK,Real estate,76.43176435968219,Gross Value Added
+2009.5,UK,Real estate,76.6027212981517,Gross Value Added
+2009.75,UK,Real estate,76.92221459299637,Gross Value Added
+2010.0,UK,Real estate,77.43928926754761,Gross Value Added
+2010.25,UK,Real estate,78.97089528186876,Gross Value Added
+2010.5,UK,Real estate,80.04568193601727,Gross Value Added
+2010.75,UK,Real estate,80.77715342684584,Gross Value Added
+2011.0,UK,Real estate,80.47587685495286,Gross Value Added
+2011.25,UK,Real estate,80.78415985875034,Gross Value Added
+2011.5,UK,Real estate,81.63333940557432,Gross Value Added
+2011.75,UK,Real estate,82.69411319591386,Gross Value Added
+2012.0,UK,Real estate,84.7091630116447,Gross Value Added
+2012.25,UK,Real estate,86.30382691310623,Gross Value Added
+2012.5,UK,Real estate,87.75836217647802,Gross Value Added
+2012.75,UK,Real estate,88.28244328293374,Gross Value Added
+2013.0,UK,Real estate,87.8872805235206,Gross Value Added
+2013.25,UK,Real estate,88.86397713100627,Gross Value Added
+2013.5,UK,Real estate,90.06347827305467,Gross Value Added
+2013.75,UK,Real estate,90.85380379188096,Gross Value Added
+2014.0,UK,Real estate,91.52922382747363,Gross Value Added
+2014.25,UK,Real estate,91.94540588260023,Gross Value Added
+2014.5,UK,Real estate,92.28311590039657,Gross Value Added
+2014.75,UK,Real estate,92.21725544049437,Gross Value Added
+2015.0,UK,Real estate,92.65725936409625,Gross Value Added
+2015.25,UK,Real estate,94.03892773566135,Gross Value Added
+2015.5,UK,Real estate,95.33231506522988,Gross Value Added
+2015.75,UK,Real estate,96.05117497863039,Gross Value Added
+2016.0,UK,Real estate,96.71118086403318,Gross Value Added
+2016.25,UK,Real estate,96.61729467651305,Gross Value Added
+2016.5,UK,Real estate,96.33003096842903,Gross Value Added
+2016.75,UK,Real estate,96.32162325014363,Gross Value Added
+2017.0,UK,Real estate,95.84378459425754,Gross Value Added
+2017.25,UK,Real estate,96.29359752252569,Gross Value Added
+2017.5,UK,Real estate,96.87513137059821,Gross Value Added
+2017.75,UK,Real estate,97.80698681389516,Gross Value Added
+2018.0,UK,Real estate,98.34788335692166,Gross Value Added
+2018.25,UK,Real estate,98.14329554531061,Gross Value Added
+2018.5,UK,Real estate,99.06674327032216,Gross Value Added
+2018.75,UK,Real estate,99.50954976668582,Gross Value Added
+2019.0,UK,Real estate,99.876686798481,Gross Value Added
+2019.25,UK,Real estate,100.58293513445345,Gross Value Added
+2019.5,UK,Real estate,100.77631265501729,Gross Value Added
+2019.75,UK,Real estate,100.72586634530501,Gross Value Added
+2020.0,UK,Real estate,101.08179308605301,Gross Value Added
+2020.25,UK,Real estate,99.43247901573645,Gross Value Added
+2020.5,UK,Real estate,99.62725782268123,Gross Value Added
+2020.75,UK,Real estate,99.85847007552935,Gross Value Added
+2021.0,UK,Real estate,101.58485489679528,Gross Value Added
+2021.25,UK,Real estate,101.67313593879182,Gross Value Added
+2021.5,UK,Real estate,101.60727547888963,Gross Value Added
+2021.75,UK,Real estate,101.85250059554672,Gross Value Added
+2022.0,UK,Real estate,101.9267687737343,Gross Value Added
+2022.25,UK,Real estate,102.6190042458977,Gross Value Added
+2022.5,UK,Real estate,102.9174782450289,Gross Value Added
+2022.75,UK,Real estate,102.92868853607618,Gross Value Added
+2023.0,UK,Real estate,102.9455039726469,Gross Value Added
+2023.25,UK,Real estate,102.85301907150767,Gross Value Added
+2023.5,UK,Real estate,102.61199781399328,Gross Value Added
+2023.75,UK,Real estate,102.91187309950539,Gross Value Added
+2024.0,UK,Real estate,103.15429564340066,Gross Value Added
+2024.25,UK,Real estate,103.26920112663427,Gross Value Added
+2024.5,UK,Real estate,103.33366030015551,Gross Value Added
+2024.75,UK,Real estate,103.61531886271598,Gross Value Added
+1997.0,UK,Professional & Admin Services,74.05500475043466,Gross Value Added
+1997.25,UK,Professional & Admin Services,74.11725649286717,Gross Value Added
+1997.5,UK,Professional & Admin Services,75.42323452959634,Gross Value Added
+1997.75,UK,Professional & Admin Services,73.63440695448458,Gross Value Added
+1998.0,UK,Professional & Admin Services,72.26445631880836,Gross Value Added
+1998.25,UK,Professional & Admin Services,73.86234658638372,Gross Value Added
+1998.5,UK,Professional & Admin Services,74.02954468428307,Gross Value Added
+1998.75,UK,Professional & Admin Services,76.0804665206356,Gross Value Added
+1999.0,UK,Professional & Admin Services,73.65627709577116,Gross Value Added
+1999.25,UK,Professional & Admin Services,73.62526976029747,Gross Value Added
+1999.5,UK,Professional & Admin Services,72.66942186995551,Gross Value Added
+1999.75,UK,Professional & Admin Services,76.842097120957,Gross Value Added
+2000.0,UK,Professional & Admin Services,73.0127583202657,Gross Value Added
+2000.25,UK,Professional & Admin Services,74.33910294323958,Gross Value Added
+2000.5,UK,Professional & Admin Services,74.23112675424623,Gross Value Added
+2000.75,UK,Professional & Admin Services,74.28043918371833,Gross Value Added
+2001.0,UK,Professional & Admin Services,75.86010129639699,Gross Value Added
+2001.25,UK,Professional & Admin Services,75.29104410529102,Gross Value Added
+2001.5,UK,Professional & Admin Services,75.15126948877173,Gross Value Added
+2001.75,UK,Professional & Admin Services,73.19387557432975,Gross Value Added
+2002.0,UK,Professional & Admin Services,73.0203869962071,Gross Value Added
+2002.25,UK,Professional & Admin Services,75.84900618773186,Gross Value Added
+2002.5,UK,Professional & Admin Services,75.49812092110243,Gross Value Added
+2002.75,UK,Professional & Admin Services,74.34598787053514,Gross Value Added
+2003.0,UK,Professional & Admin Services,75.04051457719675,Gross Value Added
+2003.25,UK,Professional & Admin Services,74.76270404622292,Gross Value Added
+2003.5,UK,Professional & Admin Services,77.5488819241934,Gross Value Added
+2003.75,UK,Professional & Admin Services,80.03312362898606,Gross Value Added
+2004.0,UK,Professional & Admin Services,79.06881845150974,Gross Value Added
+2004.25,UK,Professional & Admin Services,80.73576353827224,Gross Value Added
+2004.5,UK,Professional & Admin Services,80.33137921653851,Gross Value Added
+2004.75,UK,Professional & Admin Services,81.13688421961449,Gross Value Added
+2005.0,UK,Professional & Admin Services,81.75051573461509,Gross Value Added
+2005.25,UK,Professional & Admin Services,81.49991752955485,Gross Value Added
+2005.5,UK,Professional & Admin Services,83.14195965399381,Gross Value Added
+2005.75,UK,Professional & Admin Services,86.59178213592863,Gross Value Added
+2006.0,UK,Professional & Admin Services,86.81095440766468,Gross Value Added
+2006.25,UK,Professional & Admin Services,86.95155341685992,Gross Value Added
+2006.5,UK,Professional & Admin Services,87.05692323492792,Gross Value Added
+2006.75,UK,Professional & Admin Services,87.06848387322245,Gross Value Added
+2007.0,UK,Professional & Admin Services,89.71561079352519,Gross Value Added
+2007.25,UK,Professional & Admin Services,90.07956847564128,Gross Value Added
+2007.5,UK,Professional & Admin Services,91.52787969317244,Gross Value Added
+2007.75,UK,Professional & Admin Services,91.36099261133424,Gross Value Added
+2008.0,UK,Professional & Admin Services,92.73570224728527,Gross Value Added
+2008.25,UK,Professional & Admin Services,91.09041014243088,Gross Value Added
+2008.5,UK,Professional & Admin Services,88.91458643647374,Gross Value Added
+2008.75,UK,Professional & Admin Services,88.60964050422511,Gross Value Added
+2009.0,UK,Professional & Admin Services,84.41254590019153,Gross Value Added
+2009.25,UK,Professional & Admin Services,86.2380515345956,Gross Value Added
+2009.5,UK,Professional & Admin Services,84.50581348583607,Gross Value Added
+2009.75,UK,Professional & Admin Services,83.61628936453084,Gross Value Added
+2010.0,UK,Professional & Admin Services,87.13015411704295,Gross Value Added
+2010.25,UK,Professional & Admin Services,87.47619671294345,Gross Value Added
+2010.5,UK,Professional & Admin Services,88.26247161614455,Gross Value Added
+2010.75,UK,Professional & Admin Services,87.23306973042794,Gross Value Added
+2011.0,UK,Professional & Admin Services,89.94101345599677,Gross Value Added
+2011.25,UK,Professional & Admin Services,89.66422074295541,Gross Value Added
+2011.5,UK,Professional & Admin Services,89.19375057751726,Gross Value Added
+2011.75,UK,Professional & Admin Services,88.12958604704184,Gross Value Added
+2012.0,UK,Professional & Admin Services,91.00233535591103,Gross Value Added
+2012.25,UK,Professional & Admin Services,89.29317545978796,Gross Value Added
+2012.5,UK,Professional & Admin Services,91.74484227654294,Gross Value Added
+2012.75,UK,Professional & Admin Services,92.60210206058726,Gross Value Added
+2013.0,UK,Professional & Admin Services,92.48174839050975,Gross Value Added
+2013.25,UK,Professional & Admin Services,94.65226864571231,Gross Value Added
+2013.5,UK,Professional & Admin Services,97.05260649983083,Gross Value Added
+2013.75,UK,Professional & Admin Services,98.35481139616824,Gross Value Added
+2014.0,UK,Professional & Admin Services,99.13621297246435,Gross Value Added
+2014.25,UK,Professional & Admin Services,100.0287690625771,Gross Value Added
+2014.5,UK,Professional & Admin Services,101.7040622977682,Gross Value Added
+2014.75,UK,Professional & Admin Services,102.98636968157355,Gross Value Added
+2015.0,UK,Professional & Admin Services,104.27739208346176,Gross Value Added
+2015.25,UK,Professional & Admin Services,105.38968476740642,Gross Value Added
+2015.5,UK,Professional & Admin Services,106.23673335430013,Gross Value Added
+2015.75,UK,Professional & Admin Services,106.07161339991875,Gross Value Added
+2016.0,UK,Professional & Admin Services,106.22073664909037,Gross Value Added
+2016.25,UK,Professional & Admin Services,107.60081521943874,Gross Value Added
+2016.5,UK,Professional & Admin Services,107.31034864699443,Gross Value Added
+2016.75,UK,Professional & Admin Services,108.72080344152744,Gross Value Added
+2017.0,UK,Professional & Admin Services,110.20826762835114,Gross Value Added
+2017.25,UK,Professional & Admin Services,110.63888343262785,Gross Value Added
+2017.5,UK,Professional & Admin Services,110.66470202885064,Gross Value Added
+2017.75,UK,Professional & Admin Services,111.56886862994264,Gross Value Added
+2018.0,UK,Professional & Admin Services,111.1284039474765,Gross Value Added
+2018.25,UK,Professional & Admin Services,112.77541738446317,Gross Value Added
+2018.5,UK,Professional & Admin Services,112.25145961321496,Gross Value Added
+2018.75,UK,Professional & Admin Services,112.61836379845369,Gross Value Added
+2019.0,UK,Professional & Admin Services,113.90106342908697,Gross Value Added
+2019.25,UK,Professional & Admin Services,113.94981084690355,Gross Value Added
+2019.5,UK,Professional & Admin Services,114.92548723374448,Gross Value Added
+2019.75,UK,Professional & Admin Services,113.89100341397271,Gross Value Added
+2020.0,UK,Professional & Admin Services,112.0200613665115,Gross Value Added
+2020.25,UK,Professional & Admin Services,86.83160679380654,Gross Value Added
+2020.5,UK,Professional & Admin Services,98.28452946613025,Gross Value Added
+2020.75,UK,Professional & Admin Services,102.86380237355166,Gross Value Added
+2021.0,UK,Professional & Admin Services,101.89873533257605,Gross Value Added
+2021.25,UK,Professional & Admin Services,107.48204897275156,Gross Value Added
+2021.5,UK,Professional & Admin Services,110.81197252334181,Gross Value Added
+2021.75,UK,Professional & Admin Services,114.86043362440567,Gross Value Added
+2022.0,UK,Professional & Admin Services,117.31181361298239,Gross Value Added
+2022.25,UK,Professional & Admin Services,121.18487199351091,Gross Value Added
+2022.5,UK,Professional & Admin Services,122.27506115574141,Gross Value Added
+2022.75,UK,Professional & Admin Services,125.24213183348093,Gross Value Added
+2023.0,UK,Professional & Admin Services,125.95691665522386,Gross Value Added
+2023.25,UK,Professional & Admin Services,125.68111237895762,Gross Value Added
+2023.5,UK,Professional & Admin Services,124.9286039659594,Gross Value Added
+2023.75,UK,Professional & Admin Services,125.34782167209761,Gross Value Added
+2024.0,UK,Professional & Admin Services,128.4145047114214,Gross Value Added
+2024.25,UK,Professional & Admin Services,130.28980746575724,Gross Value Added
+2024.5,UK,Professional & Admin Services,130.3439116233606,Gross Value Added
+2024.75,UK,Professional & Admin Services,130.75998850580262,Gross Value Added
+1997.0,UK,Public Services,90.87473779173524,Gross Value Added
+1997.25,UK,Public Services,91.65509740913319,Gross Value Added
+1997.5,UK,Public Services,91.66269979788028,Gross Value Added
+1997.75,UK,Public Services,92.64515033721071,Gross Value Added
+1998.0,UK,Public Services,92.2911687000836,Gross Value Added
+1998.25,UK,Public Services,92.36428145243592,Gross Value Added
+1998.5,UK,Public Services,92.10032185858766,Gross Value Added
+1998.75,UK,Public Services,92.74057645686146,Gross Value Added
+1999.0,UK,Public Services,93.02747150781173,Gross Value Added
+1999.25,UK,Public Services,93.8593691341859,Gross Value Added
+1999.5,UK,Public Services,94.6597792852638,Gross Value Added
+1999.75,UK,Public Services,95.38044016218626,Gross Value Added
+2000.0,UK,Public Services,96.37176775592043,Gross Value Added
+2000.25,UK,Public Services,95.51496079676696,Gross Value Added
+2000.5,UK,Public Services,95.88537073177594,Gross Value Added
+2000.75,UK,Public Services,96.24648031995333,Gross Value Added
+2001.0,UK,Public Services,96.56518545444402,Gross Value Added
+2001.25,UK,Public Services,96.58134616091351,Gross Value Added
+2001.5,UK,Public Services,96.99532261088876,Gross Value Added
+2001.75,UK,Public Services,96.13798179983387,Gross Value Added
+2002.0,UK,Public Services,96.46853727669111,Gross Value Added
+2002.25,UK,Public Services,96.56201106546273,Gross Value Added
+2002.5,UK,Public Services,97.93865291042061,Gross Value Added
+2002.75,UK,Public Services,97.82220522607574,Gross Value Added
+2003.0,UK,Public Services,98.0742564135817,Gross Value Added
+2003.25,UK,Public Services,98.15893798702308,Gross Value Added
+2003.5,UK,Public Services,98.94736480336016,Gross Value Added
+2003.75,UK,Public Services,100.49523150480353,Gross Value Added
+2004.0,UK,Public Services,101.27849274190315,Gross Value Added
+2004.25,UK,Public Services,101.98919203783245,Gross Value Added
+2004.5,UK,Public Services,101.36911503352641,Gross Value Added
+2004.75,UK,Public Services,101.94310420702348,Gross Value Added
+2005.0,UK,Public Services,102.60711663881108,Gross Value Added
+2005.25,UK,Public Services,102.91616949517612,Gross Value Added
+2005.5,UK,Public Services,103.35487338433431,Gross Value Added
+2005.75,UK,Public Services,104.331943767995,Gross Value Added
+2006.0,UK,Public Services,104.75918543906442,Gross Value Added
+2006.25,UK,Public Services,104.91546216397145,Gross Value Added
+2006.5,UK,Public Services,105.07629644309478,Gross Value Added
+2006.75,UK,Public Services,104.82983279552833,Gross Value Added
+2007.0,UK,Public Services,104.33540931822034,Gross Value Added
+2007.25,UK,Public Services,104.25132215861038,Gross Value Added
+2007.5,UK,Public Services,104.69652821047075,Gross Value Added
+2007.75,UK,Public Services,105.94522672360532,Gross Value Added
+2008.0,UK,Public Services,107.21402720359445,Gross Value Added
+2008.25,UK,Public Services,106.86456733602627,Gross Value Added
+2008.5,UK,Public Services,105.0927589313968,Gross Value Added
+2008.75,UK,Public Services,102.08018038506835,Gross Value Added
+2009.0,UK,Public Services,98.60701545891523,Gross Value Added
+2009.25,UK,Public Services,97.65021915656457,Gross Value Added
+2009.5,UK,Public Services,97.47601253318253,Gross Value Added
+2009.75,UK,Public Services,97.79760373805908,Gross Value Added
+2010.0,UK,Public Services,98.68666006890396,Gross Value Added
+2010.25,UK,Public Services,99.56513038329432,Gross Value Added
+2010.5,UK,Public Services,99.68388955451856,Gross Value Added
+2010.75,UK,Public Services,98.8399762884817,Gross Value Added
+2011.0,UK,Public Services,98.77100826218782,Gross Value Added
+2011.25,UK,Public Services,98.43359649023199,Gross Value Added
+2011.5,UK,Public Services,98.00242410510553,Gross Value Added
+2011.75,UK,Public Services,98.22326488550777,Gross Value Added
+2012.0,UK,Public Services,99.211286477873,Gross Value Added
+2012.25,UK,Public Services,99.06246835912229,Gross Value Added
+2012.5,UK,Public Services,100.36777298360443,Gross Value Added
+2012.75,UK,Public Services,100.18444010298913,Gross Value Added
+2013.0,UK,Public Services,100.80073331805312,Gross Value Added
+2013.25,UK,Public Services,101.86899959462745,Gross Value Added
+2013.5,UK,Public Services,103.56245330900862,Gross Value Added
+2013.75,UK,Public Services,104.3069693977789,Gross Value Added
+2014.0,UK,Public Services,104.93041435931785,Gross Value Added
+2014.25,UK,Public Services,105.82259359187371,Gross Value Added
+2014.5,UK,Public Services,106.65204930657839,Gross Value Added
+2014.75,UK,Public Services,107.66642149782406,Gross Value Added
+2015.0,UK,Public Services,108.14242179741147,Gross Value Added
+2015.25,UK,Public Services,109.21319754002296,Gross Value Added
+2015.5,UK,Public Services,109.2134512360267,Gross Value Added
+2015.75,UK,Public Services,109.32695255999627,Gross Value Added
+2016.0,UK,Public Services,107.97094118117334,Gross Value Added
+2016.25,UK,Public Services,107.824681228641,Gross Value Added
+2016.5,UK,Public Services,107.86545189388444,Gross Value Added
+2016.75,UK,Public Services,108.39250265499814,Gross Value Added
+2017.0,UK,Public Services,109.72399956531996,Gross Value Added
+2017.25,UK,Public Services,110.20651173852131,Gross Value Added
+2017.5,UK,Public Services,110.53575231420115,Gross Value Added
+2017.75,UK,Public Services,111.33251880303196,Gross Value Added
+2018.0,UK,Public Services,111.17438546484549,Gross Value Added
+2018.25,UK,Public Services,111.92138248665648,Gross Value Added
+2018.5,UK,Public Services,111.92821174204963,Gross Value Added
+2018.75,UK,Public Services,111.09084312774897,Gross Value Added
+2019.0,UK,Public Services,112.24613369591374,Gross Value Added
+2019.25,UK,Public Services,112.26929872548206,Gross Value Added
+2019.5,UK,Public Services,113.41065325943809,Gross Value Added
+2019.75,UK,Public Services,114.09468848441189,Gross Value Added
+2020.0,UK,Public Services,110.71159830220229,Gross Value Added
+2020.25,UK,Public Services,83.516525998252,Gross Value Added
+2020.5,UK,Public Services,101.91808479221865,Gross Value Added
+2020.75,UK,Public Services,103.85379090732707,Gross Value Added
+2021.0,UK,Public Services,101.50764633570515,Gross Value Added
+2021.25,UK,Public Services,106.10009149560544,Gross Value Added
+2021.5,UK,Public Services,107.32739057487932,Gross Value Added
+2021.75,UK,Public Services,108.428125877577,Gross Value Added
+2022.0,UK,Public Services,109.04042800570973,Gross Value Added
+2022.25,UK,Public Services,109.53916152734165,Gross Value Added
+2022.5,UK,Public Services,109.29480851241206,Gross Value Added
+2022.75,UK,Public Services,109.77162841990913,Gross Value Added
+2023.0,UK,Public Services,110.07029507644151,Gross Value Added
+2023.25,UK,Public Services,110.08053016504408,Gross Value Added
+2023.5,UK,Public Services,109.41516786272423,Gross Value Added
+2023.75,UK,Public Services,108.8618100631197,Gross Value Added
+2024.0,UK,Public Services,110.10761352786264,Gross Value Added
+2024.25,UK,Public Services,110.52214821842018,Gross Value Added
+2024.5,UK,Public Services,110.00014475045019,Gross Value Added
+2024.75,UK,Public Services,110.09156465379772,Gross Value Added
+1997.0,UK,Industry (except construction),93.9215911093706,Gross Value Added
+1997.25,UK,Industry (except construction),94.22229783377453,Gross Value Added
+1997.5,UK,Industry (except construction),95.39137868316048,Gross Value Added
+1997.75,UK,Industry (except construction),96.01810023462576,Gross Value Added
+1998.0,UK,Industry (except construction),96.28316137098201,Gross Value Added
+1998.25,UK,Industry (except construction),96.72108844235511,Gross Value Added
+1998.5,UK,Industry (except construction),95.42164516901187,Gross Value Added
+1998.75,UK,Industry (except construction),95.80757029094875,Gross Value Added
+1999.0,UK,Industry (except construction),97.66582654613036,Gross Value Added
+1999.25,UK,Industry (except construction),98.56694454370097,Gross Value Added
+1999.5,UK,Industry (except construction),99.8837649770158,Gross Value Added
+1999.75,UK,Industry (except construction),99.64213000494405,Gross Value Added
+2000.0,UK,Industry (except construction),99.955239036811,Gross Value Added
+2000.25,UK,Industry (except construction),98.41536843191575,Gross Value Added
+2000.5,UK,Industry (except construction),97.99050082604468,Gross Value Added
+2000.75,UK,Industry (except construction),99.37115813752344,Gross Value Added
+2001.0,UK,Industry (except construction),99.6240861209881,Gross Value Added
+2001.25,UK,Industry (except construction),99.61097577788071,Gross Value Added
+2001.5,UK,Industry (except construction),100.61019105940383,Gross Value Added
+2001.75,UK,Industry (except construction),99.50365301491122,Gross Value Added
+2002.0,UK,Industry (except construction),99.06257843557395,Gross Value Added
+2002.25,UK,Industry (except construction),98.07579583112114,Gross Value Added
+2002.5,UK,Industry (except construction),100.95915331679544,Gross Value Added
+2002.75,UK,Industry (except construction),100.7759624277789,Gross Value Added
+2003.0,UK,Industry (except construction),101.12979018973635,Gross Value Added
+2003.25,UK,Industry (except construction),99.60736155988063,Gross Value Added
+2003.5,UK,Industry (except construction),99.95580719521419,Gross Value Added
+2003.75,UK,Industry (except construction),100.93806621552856,Gross Value Added
+2004.0,UK,Industry (except construction),101.72405306010536,Gross Value Added
+2004.25,UK,Industry (except construction),101.51335053063228,Gross Value Added
+2004.5,UK,Industry (except construction),99.33281292573146,Gross Value Added
+2004.75,UK,Industry (except construction),98.74336359054979,Gross Value Added
+2005.0,UK,Industry (except construction),98.44450568684073,Gross Value Added
+2005.25,UK,Industry (except construction),98.68576981992544,Gross Value Added
+2005.5,UK,Industry (except construction),97.50379534187576,Gross Value Added
+2005.75,UK,Industry (except construction),98.65403942432354,Gross Value Added
+2006.0,UK,Industry (except construction),100.24464299929375,Gross Value Added
+2006.25,UK,Industry (except construction),101.89278626831883,Gross Value Added
+2006.5,UK,Industry (except construction),102.5191745504878,Gross Value Added
+2006.75,UK,Industry (except construction),102.68854664987236,Gross Value Added
+2007.0,UK,Industry (except construction),101.08634655733182,Gross Value Added
+2007.25,UK,Industry (except construction),99.85718344111179,Gross Value Added
+2007.5,UK,Industry (except construction),99.50809138565404,Gross Value Added
+2007.75,UK,Industry (except construction),100.65659027664384,Gross Value Added
+2008.0,UK,Industry (except construction),99.97791379591682,Gross Value Added
+2008.25,UK,Industry (except construction),99.6509173104737,Gross Value Added
+2008.5,UK,Industry (except construction),98.92406081349753,Gross Value Added
+2008.75,UK,Industry (except construction),95.73005986431328,Gross Value Added
+2009.0,UK,Industry (except construction),90.50792423742965,Gross Value Added
+2009.25,UK,Industry (except construction),90.37479606576596,Gross Value Added
+2009.5,UK,Industry (except construction),90.71250779941231,Gross Value Added
+2009.75,UK,Industry (except construction),91.27773043722847,Gross Value Added
+2010.0,UK,Industry (except construction),91.68025489569253,Gross Value Added
+2010.25,UK,Industry (except construction),91.87560401992368,Gross Value Added
+2010.5,UK,Industry (except construction),90.41657629353776,Gross Value Added
+2010.75,UK,Industry (except construction),88.63619208567872,Gross Value Added
+2011.0,UK,Industry (except construction),84.92045104637552,Gross Value Added
+2011.25,UK,Industry (except construction),83.46958537894893,Gross Value Added
+2011.5,UK,Industry (except construction),82.91249472042456,Gross Value Added
+2011.75,UK,Industry (except construction),84.17153719503638,Gross Value Added
+2012.0,UK,Industry (except construction),85.18930812168678,Gross Value Added
+2012.25,UK,Industry (except construction),86.61433785834795,Gross Value Added
+2012.5,UK,Industry (except construction),87.73257256020761,Gross Value Added
+2012.75,UK,Industry (except construction),87.3603852856476,Gross Value Added
+2013.0,UK,Industry (except construction),87.3341742862766,Gross Value Added
+2013.25,UK,Industry (except construction),87.99462031764497,Gross Value Added
+2013.5,UK,Industry (except construction),89.2645414172886,Gross Value Added
+2013.75,UK,Industry (except construction),89.6685806702512,Gross Value Added
+2014.0,UK,Industry (except construction),90.21936072673526,Gross Value Added
+2014.25,UK,Industry (except construction),90.56654210469242,Gross Value Added
+2014.5,UK,Industry (except construction),92.16549646494411,Gross Value Added
+2014.75,UK,Industry (except construction),94.34562846834558,Gross Value Added
+2015.0,UK,Industry (except construction),98.1098568810211,Gross Value Added
+2015.25,UK,Industry (except construction),100.7671420087878,Gross Value Added
+2015.5,UK,Industry (except construction),100.88980117220588,Gross Value Added
+2015.75,UK,Industry (except construction),100.79008004544778,Gross Value Added
+2016.0,UK,Industry (except construction),97.37664908919896,Gross Value Added
+2016.25,UK,Industry (except construction),96.7048019881266,Gross Value Added
+2016.5,UK,Industry (except construction),95.20933364623464,Gross Value Added
+2016.75,UK,Industry (except construction),94.98823857318598,Gross Value Added
+2017.0,UK,Industry (except construction),95.40281377035281,Gross Value Added
+2017.25,UK,Industry (except construction),95.3395472287972,Gross Value Added
+2017.5,UK,Industry (except construction),96.0530602278074,Gross Value Added
+2017.75,UK,Industry (except construction),97.59215618875399,Gross Value Added
+2018.0,UK,Industry (except construction),98.1496045554984,Gross Value Added
+2018.25,UK,Industry (except construction),98.32034832694988,Gross Value Added
+2018.5,UK,Industry (except construction),98.04884855747191,Gross Value Added
+2018.75,UK,Industry (except construction),95.5076525363869,Gross Value Added
+2019.0,UK,Industry (except construction),97.07826997491486,Gross Value Added
+2019.25,UK,Industry (except construction),97.22290753177333,Gross Value Added
+2019.5,UK,Industry (except construction),98.97981049549742,Gross Value Added
+2019.75,UK,Industry (except construction),101.87667911105083,Gross Value Added
+2020.0,UK,Industry (except construction),103.13256420220863,Gross Value Added
+2020.25,UK,Industry (except construction),86.46029882672562,Gross Value Added
+2020.5,UK,Industry (except construction),104.2126321116543,Gross Value Added
+2020.75,UK,Industry (except construction),106.19450485941147,Gross Value Added
+2021.0,UK,Industry (except construction),102.21669768317278,Gross Value Added
+2021.25,UK,Industry (except construction),101.34013492702032,Gross Value Added
+2021.5,UK,Industry (except construction),98.11108991123871,Gross Value Added
+2021.75,UK,Industry (except construction),96.15842306420797,Gross Value Added
+2022.0,UK,Industry (except construction),93.94800978879177,Gross Value Added
+2022.25,UK,Industry (except construction),92.2937971503617,Gross Value Added
+2022.5,UK,Industry (except construction),90.13388310844941,Gross Value Added
+2022.75,UK,Industry (except construction),89.37619403322846,Gross Value Added
+2023.0,UK,Industry (except construction),89.4674879985823,Gross Value Added
+2023.25,UK,Industry (except construction),90.07353814698831,Gross Value Added
+2023.5,UK,Industry (except construction),89.2827166422672,Gross Value Added
+2023.75,UK,Industry (except construction),87.93222720340766,Gross Value Added
+2024.0,UK,Industry (except construction),88.24512343873059,Gross Value Added
+2024.25,UK,Industry (except construction),87.38832514887307,Gross Value Added
+2024.5,UK,Industry (except construction),86.82248507467074,Gross Value Added
+2024.75,UK,Industry (except construction),86.43003967369572,Gross Value Added
 1997.0,US,Total,55.664751318309655,Gross Value Added
 1997.25,US,Total,56.792732290264524,Gross Value Added
 1997.5,US,Total,57.61869611575071,Gross Value Added
