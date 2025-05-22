@@ -17698,14 +17698,14 @@ Quarter,Country,Industry,Value,Variable
 1997.5,Germany,Total,78.543,Output Per Hour
 1997.75,Germany,Total,79.337,Output Per Hour
 1998.0,Germany,Total,80.137,Output Per Hour
-1998.25,Germany,Total,79.425,Output Per Hour
+1998.25,Germany,Total,79.424,Output Per Hour
 1998.5,Germany,Total,79.359,Output Per Hour
 1998.75,Germany,Total,79.337,Output Per Hour
 1999.0,Germany,Total,80.287,Output Per Hour
 1999.25,Germany,Total,80.157,Output Per Hour
 1999.5,Germany,Total,81.078,Output Per Hour
 1999.75,Germany,Total,81.273,Output Per Hour
-2000.0,Germany,Total,82.089,Output Per Hour
+2000.0,Germany,Total,82.088,Output Per Hour
 2000.25,Germany,Total,82.644,Output Per Hour
 2000.5,Germany,Total,82.739,Output Per Hour
 2000.75,Germany,Total,82.448,Output Per Hour
@@ -17720,35 +17720,35 @@ Quarter,Country,Industry,Value,Variable
 2003.0,Germany,Total,85.233,Output Per Hour
 2003.25,Germany,Total,85.682,Output Per Hour
 2003.5,Germany,Total,86.383,Output Per Hour
-2003.75,Germany,Total,86.91,Output Per Hour
-2004.0,Germany,Total,86.413,Output Per Hour
-2004.25,Germany,Total,87.309,Output Per Hour
+2003.75,Germany,Total,86.909,Output Per Hour
+2004.0,Germany,Total,86.412,Output Per Hour
+2004.25,Germany,Total,87.312,Output Per Hour
 2004.5,Germany,Total,87.012,Output Per Hour
-2004.75,Germany,Total,87.238,Output Per Hour
-2005.0,Germany,Total,88.258,Output Per Hour
-2005.25,Germany,Total,88.285,Output Per Hour
-2005.5,Germany,Total,88.576,Output Per Hour
-2005.75,Germany,Total,88.366,Output Per Hour
-2006.0,Germany,Total,88.979,Output Per Hour
-2006.25,Germany,Total,89.657,Output Per Hour
-2006.5,Germany,Total,89.934,Output Per Hour
-2006.75,Germany,Total,90.419,Output Per Hour
-2007.0,Germany,Total,90.317,Output Per Hour
-2007.25,Germany,Total,90.479,Output Per Hour
-2007.5,Germany,Total,90.935,Output Per Hour
-2007.75,Germany,Total,91.042,Output Per Hour
-2008.0,Germany,Total,91.139,Output Per Hour
-2008.25,Germany,Total,91.111,Output Per Hour
-2008.5,Germany,Total,90.829,Output Per Hour
-2008.75,Germany,Total,89.912,Output Per Hour
-2009.0,Germany,Total,86.577,Output Per Hour
-2009.25,Germany,Total,87.908,Output Per Hour
-2009.5,Germany,Total,88.564,Output Per Hour
-2009.75,Germany,Total,89.476,Output Per Hour
-2010.0,Germany,Total,89.143,Output Per Hour
-2010.25,Germany,Total,90.332,Output Per Hour
-2010.5,Germany,Total,90.724,Output Per Hour
-2010.75,Germany,Total,90.645,Output Per Hour
+2004.75,Germany,Total,87.237,Output Per Hour
+2005.0,Germany,Total,88.256,Output Per Hour
+2005.25,Germany,Total,88.291,Output Per Hour
+2005.5,Germany,Total,88.574,Output Per Hour
+2005.75,Germany,Total,88.364,Output Per Hour
+2006.0,Germany,Total,88.976,Output Per Hour
+2006.25,Germany,Total,89.665,Output Per Hour
+2006.5,Germany,Total,89.931,Output Per Hour
+2006.75,Germany,Total,90.416,Output Per Hour
+2007.0,Germany,Total,90.315,Output Per Hour
+2007.25,Germany,Total,90.487,Output Per Hour
+2007.5,Germany,Total,90.932,Output Per Hour
+2007.75,Germany,Total,91.039,Output Per Hour
+2008.0,Germany,Total,91.136,Output Per Hour
+2008.25,Germany,Total,91.119,Output Per Hour
+2008.5,Germany,Total,90.826,Output Per Hour
+2008.75,Germany,Total,89.909,Output Per Hour
+2009.0,Germany,Total,86.575,Output Per Hour
+2009.25,Germany,Total,87.913,Output Per Hour
+2009.5,Germany,Total,88.561,Output Per Hour
+2009.75,Germany,Total,89.474,Output Per Hour
+2010.0,Germany,Total,89.142,Output Per Hour
+2010.25,Germany,Total,90.335,Output Per Hour
+2010.5,Germany,Total,90.723,Output Per Hour
+2010.75,Germany,Total,90.644,Output Per Hour
 2011.0,Germany,Total,91.949,Output Per Hour
 2011.25,Germany,Total,92.25,Output Per Hour
 2011.5,Germany,Total,92.574,Output Per Hour
@@ -17759,52 +17759,53 @@ Quarter,Country,Industry,Value,Variable
 2012.75,Germany,Total,92.787,Output Per Hour
 2013.0,Germany,Total,93.021,Output Per Hour
 2013.25,Germany,Total,93.502,Output Per Hour
-2013.5,Germany,Total,93.35,Output Per Hour
+2013.5,Germany,Total,93.349,Output Per Hour
 2013.75,Germany,Total,93.362,Output Per Hour
 2014.0,Germany,Total,93.762,Output Per Hour
 2014.25,Germany,Total,93.901,Output Per Hour
 2014.5,Germany,Total,94.436,Output Per Hour
-2014.75,Germany,Total,94.876,Output Per Hour
-2015.0,Germany,Total,94.425,Output Per Hour
-2015.25,Germany,Total,94.56,Output Per Hour
+2014.75,Germany,Total,94.877,Output Per Hour
+2015.0,Germany,Total,94.424,Output Per Hour
+2015.25,Germany,Total,94.559,Output Per Hour
 2015.5,Germany,Total,95.221,Output Per Hour
-2015.75,Germany,Total,95.537,Output Per Hour
+2015.75,Germany,Total,95.538,Output Per Hour
 2016.0,Germany,Total,96.079,Output Per Hour
 2016.25,Germany,Total,96.161,Output Per Hour
-2016.5,Germany,Total,96.075,Output Per Hour
-2016.75,Germany,Total,96.492,Output Per Hour
+2016.5,Germany,Total,96.074,Output Per Hour
+2016.75,Germany,Total,96.494,Output Per Hour
 2017.0,Germany,Total,97.431,Output Per Hour
-2017.25,Germany,Total,97.697,Output Per Hour
-2017.5,Germany,Total,97.937,Output Per Hour
-2017.75,Germany,Total,98.598,Output Per Hour
-2018.0,Germany,Total,98.867,Output Per Hour
-2018.25,Germany,Total,98.411,Output Per Hour
-2018.5,Germany,Total,97.794,Output Per Hour
-2018.75,Germany,Total,97.883,Output Per Hour
-2019.0,Germany,Total,98.68,Output Per Hour
-2019.25,Germany,Total,99.264,Output Per Hour
-2019.5,Germany,Total,98.653,Output Per Hour
-2019.75,Germany,Total,99.309,Output Per Hour
-2020.0,Germany,Total,98.991,Output Per Hour
-2020.25,Germany,Total,96.227,Output Per Hour
-2020.5,Germany,Total,102.888,Output Per Hour
-2020.75,Germany,Total,101.894,Output Per Hour
-2021.0,Germany,Total,100.301,Output Per Hour
-2021.25,Germany,Total,100.69,Output Per Hour
-2021.5,Germany,Total,102.692,Output Per Hour
-2021.75,Germany,Total,101.738,Output Per Hour
-2022.0,Germany,Total,101.105,Output Per Hour
-2022.25,Germany,Total,101.22,Output Per Hour
-2022.5,Germany,Total,101.714,Output Per Hour
-2022.75,Germany,Total,101.37,Output Per Hour
-2023.0,Germany,Total,100.879,Output Per Hour
-2023.25,Germany,Total,100.182,Output Per Hour
-2023.5,Germany,Total,100.576,Output Per Hour
-2023.75,Germany,Total,100.714,Output Per Hour
-2024.0,Germany,Total,101.168,Output Per Hour
-2024.25,Germany,Total,100.681,Output Per Hour
-2024.5,Germany,Total,100.5,Output Per Hour
-2024.75,Germany,Total,99.734,Output Per Hour
+2017.25,Germany,Total,97.696,Output Per Hour
+2017.5,Germany,Total,97.935,Output Per Hour
+2017.75,Germany,Total,98.603,Output Per Hour
+2018.0,Germany,Total,98.866,Output Per Hour
+2018.25,Germany,Total,98.409,Output Per Hour
+2018.5,Germany,Total,97.788,Output Per Hour
+2018.75,Germany,Total,97.892,Output Per Hour
+2019.0,Germany,Total,98.677,Output Per Hour
+2019.25,Germany,Total,99.259,Output Per Hour
+2019.5,Germany,Total,98.646,Output Per Hour
+2019.75,Germany,Total,99.323,Output Per Hour
+2020.0,Germany,Total,98.986,Output Per Hour
+2020.25,Germany,Total,96.216,Output Per Hour
+2020.5,Germany,Total,102.878,Output Per Hour
+2020.75,Germany,Total,101.92,Output Per Hour
+2021.0,Germany,Total,100.288,Output Per Hour
+2021.25,Germany,Total,100.666,Output Per Hour
+2021.5,Germany,Total,102.686,Output Per Hour
+2021.75,Germany,Total,101.782,Output Per Hour
+2022.0,Germany,Total,101.078,Output Per Hour
+2022.25,Germany,Total,101.183,Output Per Hour
+2022.5,Germany,Total,101.713,Output Per Hour
+2022.75,Germany,Total,101.436,Output Per Hour
+2023.0,Germany,Total,100.836,Output Per Hour
+2023.25,Germany,Total,100.129,Output Per Hour
+2023.5,Germany,Total,100.585,Output Per Hour
+2023.75,Germany,Total,100.802,Output Per Hour
+2024.0,Germany,Total,101.106,Output Per Hour
+2024.25,Germany,Total,100.615,Output Per Hour
+2024.5,Germany,Total,100.534,Output Per Hour
+2024.75,Germany,Total,99.938,Output Per Hour
+2025.0,Germany,Total,100.521,Output Per Hour
 1997.0,Denmark,Total,75.362,Output Per Hour
 1997.25,Denmark,Total,78.744,Output Per Hour
 1997.5,Denmark,Total,76.837,Output Per Hour
@@ -17901,78 +17902,79 @@ Quarter,Country,Industry,Value,Variable
 2020.25,Denmark,Total,100.31,Output Per Hour
 2020.5,Denmark,Total,100.214,Output Per Hour
 2020.75,Denmark,Total,100.077,Output Per Hour
-2021.0,Denmark,Total,99.616,Output Per Hour
-2021.25,Denmark,Total,100.774,Output Per Hour
-2021.5,Denmark,Total,101.415,Output Per Hour
-2021.75,Denmark,Total,103.33,Output Per Hour
-2022.0,Denmark,Total,100.195,Output Per Hour
-2022.25,Denmark,Total,98.964,Output Per Hour
-2022.5,Denmark,Total,99.458,Output Per Hour
-2022.75,Denmark,Total,98.21,Output Per Hour
-2023.0,Denmark,Total,100.275,Output Per Hour
-2023.25,Denmark,Total,99.54,Output Per Hour
-2023.5,Denmark,Total,100.894,Output Per Hour
-2023.75,Denmark,Total,102.144,Output Per Hour
-2024.0,Denmark,Total,101.056,Output Per Hour
-2024.25,Denmark,Total,103.207,Output Per Hour
-2024.5,Denmark,Total,104.472,Output Per Hour
-2024.75,Denmark,Total,105.668,Output Per Hour
-2001.0,Euro area,Total,84.882,Output Per Hour
-2001.25,Euro area,Total,85.116,Output Per Hour
-2001.5,Euro area,Total,85.206,Output Per Hour
-2001.75,Euro area,Total,85.07,Output Per Hour
-2002.0,Euro area,Total,85.267,Output Per Hour
-2002.25,Euro area,Total,85.589,Output Per Hour
-2002.5,Euro area,Total,85.969,Output Per Hour
-2002.75,Euro area,Total,86.139,Output Per Hour
-2003.0,Euro area,Total,85.777,Output Per Hour
-2003.25,Euro area,Total,85.894,Output Per Hour
-2003.5,Euro area,Total,86.301,Output Per Hour
-2003.75,Euro area,Total,86.632,Output Per Hour
-2004.0,Euro area,Total,87.175,Output Per Hour
-2004.25,Euro area,Total,87.421,Output Per Hour
-2004.5,Euro area,Total,87.576,Output Per Hour
-2004.75,Euro area,Total,87.725,Output Per Hour
-2005.0,Euro area,Total,87.939,Output Per Hour
-2005.25,Euro area,Total,87.793,Output Per Hour
-2005.5,Euro area,Total,88.493,Output Per Hour
-2005.75,Euro area,Total,88.371,Output Per Hour
-2006.0,Euro area,Total,88.747,Output Per Hour
-2006.25,Euro area,Total,89.326,Output Per Hour
-2006.5,Euro area,Total,89.248,Output Per Hour
-2006.75,Euro area,Total,89.764,Output Per Hour
-2015.0,Euro area,Total,95.453,Output Per Hour
-2015.25,Euro area,Total,95.364,Output Per Hour
-2015.5,Euro area,Total,95.443,Output Per Hour
-2015.75,Euro area,Total,95.671,Output Per Hour
-2016.0,Euro area,Total,95.344,Output Per Hour
-2016.25,Euro area,Total,95.396,Output Per Hour
-2016.5,Euro area,Total,95.724,Output Per Hour
-2016.75,Euro area,Total,96.21,Output Per Hour
-2017.0,Euro area,Total,96.461,Output Per Hour
-2017.25,Euro area,Total,96.76,Output Per Hour
-2017.5,Euro area,Total,97.102,Output Per Hour
-2017.75,Euro area,Total,97.427,Output Per Hour
-2018.0,Euro area,Total,97.419,Output Per Hour
-2018.25,Euro area,Total,97.035,Output Per Hour
-2018.5,Euro area,Total,96.758,Output Per Hour
-2018.75,Euro area,Total,97.154,Output Per Hour
-2019.0,Euro area,Total,97.239,Output Per Hour
-2019.25,Euro area,Total,97.912,Output Per Hour
-2019.5,Euro area,Total,97.732,Output Per Hour
-2019.75,Euro area,Total,97.811,Output Per Hour
-2020.0,Euro area,Total,98.746,Output Per Hour
-2020.25,Euro area,Total,101.714,Output Per Hour
-2020.5,Euro area,Total,99.348,Output Per Hour
+2021.0,Denmark,Total,99.789,Output Per Hour
+2021.25,Denmark,Total,100.846,Output Per Hour
+2021.5,Denmark,Total,101.333,Output Per Hour
+2021.75,Denmark,Total,103.172,Output Per Hour
+2022.0,Denmark,Total,100.335,Output Per Hour
+2022.25,Denmark,Total,99.031,Output Per Hour
+2022.5,Denmark,Total,99.424,Output Per Hour
+2022.75,Denmark,Total,98.041,Output Per Hour
+2023.0,Denmark,Total,100.386,Output Per Hour
+2023.25,Denmark,Total,99.58,Output Per Hour
+2023.5,Denmark,Total,100.891,Output Per Hour
+2023.75,Denmark,Total,101.996,Output Per Hour
+2024.0,Denmark,Total,101.36,Output Per Hour
+2024.25,Denmark,Total,103.32,Output Per Hour
+2024.5,Denmark,Total,104.336,Output Per Hour
+2024.75,Denmark,Total,105.535,Output Per Hour
+2025.0,Denmark,Total,104.579,Output Per Hour
+2001.0,Euro area,Total,84.881,Output Per Hour
+2001.25,Euro area,Total,85.114,Output Per Hour
+2001.5,Euro area,Total,85.2,Output Per Hour
+2001.75,Euro area,Total,85.065,Output Per Hour
+2002.0,Euro area,Total,85.262,Output Per Hour
+2002.25,Euro area,Total,85.582,Output Per Hour
+2002.5,Euro area,Total,85.964,Output Per Hour
+2002.75,Euro area,Total,86.137,Output Per Hour
+2003.0,Euro area,Total,85.775,Output Per Hour
+2003.25,Euro area,Total,85.892,Output Per Hour
+2003.5,Euro area,Total,86.298,Output Per Hour
+2003.75,Euro area,Total,86.623,Output Per Hour
+2004.0,Euro area,Total,87.171,Output Per Hour
+2004.25,Euro area,Total,87.418,Output Per Hour
+2004.5,Euro area,Total,87.569,Output Per Hour
+2004.75,Euro area,Total,87.72,Output Per Hour
+2005.0,Euro area,Total,87.932,Output Per Hour
+2005.25,Euro area,Total,87.782,Output Per Hour
+2005.5,Euro area,Total,88.487,Output Per Hour
+2005.75,Euro area,Total,88.367,Output Per Hour
+2006.0,Euro area,Total,88.738,Output Per Hour
+2006.25,Euro area,Total,89.318,Output Per Hour
+2006.5,Euro area,Total,89.241,Output Per Hour
+2006.75,Euro area,Total,89.753,Output Per Hour
+2015.0,Euro area,Total,95.44,Output Per Hour
+2015.25,Euro area,Total,95.352,Output Per Hour
+2015.5,Euro area,Total,95.437,Output Per Hour
+2015.75,Euro area,Total,95.666,Output Per Hour
+2016.0,Euro area,Total,95.336,Output Per Hour
+2016.25,Euro area,Total,95.385,Output Per Hour
+2016.5,Euro area,Total,95.712,Output Per Hour
+2016.75,Euro area,Total,96.204,Output Per Hour
+2017.0,Euro area,Total,96.457,Output Per Hour
+2017.25,Euro area,Total,96.748,Output Per Hour
+2017.5,Euro area,Total,97.084,Output Per Hour
+2017.75,Euro area,Total,97.413,Output Per Hour
+2018.0,Euro area,Total,97.414,Output Per Hour
+2018.25,Euro area,Total,97.024,Output Per Hour
+2018.5,Euro area,Total,96.746,Output Per Hour
+2018.75,Euro area,Total,97.147,Output Per Hour
+2019.0,Euro area,Total,97.227,Output Per Hour
+2019.25,Euro area,Total,97.903,Output Per Hour
+2019.5,Euro area,Total,97.718,Output Per Hour
+2019.75,Euro area,Total,97.799,Output Per Hour
+2020.0,Euro area,Total,98.744,Output Per Hour
+2020.25,Euro area,Total,101.72,Output Per Hour
+2020.5,Euro area,Total,99.344,Output Per Hour
 2020.75,Euro area,Total,100.192,Output Per Hour
-2021.0,Euro area,Total,100.611,Output Per Hour
-2021.25,Euro area,Total,99.685,Output Per Hour
-2021.5,Euro area,Total,100.085,Output Per Hour
-2021.75,Euro area,Total,100.127,Output Per Hour
-2022.0,Euro area,Total,99.59,Output Per Hour
-2022.25,Euro area,Total,99.97,Output Per Hour
-2022.5,Euro area,Total,100.28,Output Per Hour
-2022.75,Euro area,Total,99.803,Output Per Hour
+2021.0,Euro area,Total,100.636,Output Per Hour
+2021.25,Euro area,Total,99.712,Output Per Hour
+2021.5,Euro area,Total,100.001,Output Per Hour
+2021.75,Euro area,Total,100.119,Output Per Hour
+2022.0,Euro area,Total,99.618,Output Per Hour
+2022.25,Euro area,Total,99.981,Output Per Hour
+2022.5,Euro area,Total,100.253,Output Per Hour
+2022.75,Euro area,Total,99.77,Output Per Hour
 1997.0,Spain,Total,85.676,Output Per Hour
 1997.25,Spain,Total,86.69,Output Per Hour
 1997.5,Spain,Total,86.244,Output Per Hour
@@ -18081,343 +18083,347 @@ Quarter,Country,Industry,Value,Variable
 2023.25,Spain,Total,101.731,Output Per Hour
 2023.5,Spain,Total,100.8,Output Per Hour
 2023.75,Spain,Total,101.127,Output Per Hour
-2024.0,Spain,Total,102.633,Output Per Hour
-2024.25,Spain,Total,102.483,Output Per Hour
-2024.5,Spain,Total,102.912,Output Per Hour
-2024.75,Spain,Total,101.814,Output Per Hour
-1997.0,European Union,Total,73.814,Output Per Hour
-1997.25,European Union,Total,74.579,Output Per Hour
-1997.5,European Union,Total,74.88,Output Per Hour
-1997.75,European Union,Total,75.507,Output Per Hour
-1998.0,European Union,Total,75.944,Output Per Hour
-1998.25,European Union,Total,75.889,Output Per Hour
-1998.5,European Union,Total,76.046,Output Per Hour
-1998.75,European Union,Total,76.273,Output Per Hour
-1999.0,European Union,Total,77.042,Output Per Hour
-1999.25,European Union,Total,76.972,Output Per Hour
-1999.5,European Union,Total,78.081,Output Per Hour
-1999.75,European Union,Total,78.654,Output Per Hour
-2000.0,European Union,Total,79.23,Output Per Hour
-2000.25,European Union,Total,80.101,Output Per Hour
-2000.5,European Union,Total,80.452,Output Per Hour
-2000.75,European Union,Total,80.49,Output Per Hour
-2001.0,European Union,Total,81.161,Output Per Hour
-2001.25,European Union,Total,81.802,Output Per Hour
-2001.5,European Union,Total,82.01,Output Per Hour
-2001.75,European Union,Total,82.027,Output Per Hour
-2002.0,European Union,Total,82.932,Output Per Hour
-2002.25,European Union,Total,82.981,Output Per Hour
-2002.5,European Union,Total,83.591,Output Per Hour
-2002.75,European Union,Total,83.88,Output Per Hour
-2003.0,European Union,Total,83.881,Output Per Hour
-2003.25,European Union,Total,83.739,Output Per Hour
-2003.5,European Union,Total,84.256,Output Per Hour
-2003.75,European Union,Total,84.742,Output Per Hour
-2004.0,European Union,Total,85.573,Output Per Hour
-2004.25,European Union,Total,85.575,Output Per Hour
-2004.5,European Union,Total,85.821,Output Per Hour
-2004.75,European Union,Total,85.916,Output Per Hour
-2005.0,European Union,Total,86.327,Output Per Hour
-2005.25,European Union,Total,86.2,Output Per Hour
-2005.5,European Union,Total,87.011,Output Per Hour
-2005.75,European Union,Total,87.006,Output Per Hour
-2006.0,European Union,Total,87.51,Output Per Hour
-2006.25,European Union,Total,88.113,Output Per Hour
-2006.5,European Union,Total,87.935,Output Per Hour
-2006.75,European Union,Total,88.502,Output Per Hour
-2007.0,European Union,Total,88.524,Output Per Hour
-2007.25,European Union,Total,88.859,Output Per Hour
-2007.5,European Union,Total,88.916,Output Per Hour
-2007.75,European Union,Total,89.219,Output Per Hour
-2008.0,European Union,Total,89.218,Output Per Hour
-2008.25,European Union,Total,88.968,Output Per Hour
-2008.5,European Union,Total,88.93,Output Per Hour
-2008.75,European Union,Total,87.754,Output Per Hour
-2009.0,European Union,Total,86.591,Output Per Hour
-2009.25,European Union,Total,87.272,Output Per Hour
-2009.5,European Union,Total,88.084,Output Per Hour
-2009.75,European Union,Total,88.89,Output Per Hour
-2010.0,European Union,Total,89.41,Output Per Hour
-2010.25,European Union,Total,89.997,Output Per Hour
-2010.5,European Union,Total,90.483,Output Per Hour
-2010.75,European Union,Total,91.176,Output Per Hour
-2011.0,European Union,Total,91.52,Output Per Hour
-2011.25,European Union,Total,91.909,Output Per Hour
-2011.5,European Union,Total,92.215,Output Per Hour
-2011.75,European Union,Total,92.131,Output Per Hour
-2012.0,European Union,Total,92.187,Output Per Hour
-2012.25,European Union,Total,92.368,Output Per Hour
-2012.5,European Union,Total,92.504,Output Per Hour
-2012.75,European Union,Total,92.533,Output Per Hour
-2013.0,European Union,Total,92.817,Output Per Hour
-2013.25,European Union,Total,93.091,Output Per Hour
-2013.5,European Union,Total,93.373,Output Per Hour
-2013.75,European Union,Total,93.332,Output Per Hour
-2014.0,European Union,Total,93.466,Output Per Hour
-2014.25,European Union,Total,93.739,Output Per Hour
-2014.5,European Union,Total,93.956,Output Per Hour
-2014.75,European Union,Total,94.039,Output Per Hour
-2015.0,European Union,Total,95.175,Output Per Hour
-2015.25,European Union,Total,95.093,Output Per Hour
-2015.5,European Union,Total,95.09,Output Per Hour
-2015.75,European Union,Total,95.5,Output Per Hour
-2016.0,European Union,Total,95.276,Output Per Hour
-2016.25,European Union,Total,95.154,Output Per Hour
-2016.5,European Union,Total,95.741,Output Per Hour
-2016.75,European Union,Total,96.168,Output Per Hour
-2017.0,European Union,Total,96.451,Output Per Hour
-2017.25,European Union,Total,96.859,Output Per Hour
-2017.5,European Union,Total,97.326,Output Per Hour
-2017.75,European Union,Total,97.878,Output Per Hour
-2018.0,European Union,Total,98.018,Output Per Hour
-2018.25,European Union,Total,97.715,Output Per Hour
-2018.5,European Union,Total,97.659,Output Per Hour
-2018.75,European Union,Total,98.252,Output Per Hour
-2019.0,European Union,Total,98.124,Output Per Hour
-2019.25,European Union,Total,98.771,Output Per Hour
-2019.5,European Union,Total,98.638,Output Per Hour
-2019.75,European Union,Total,98.953,Output Per Hour
-2020.0,European Union,Total,99.476,Output Per Hour
-2020.25,European Union,Total,100.525,Output Per Hour
-2020.5,European Union,Total,99.509,Output Per Hour
-2020.75,European Union,Total,100.491,Output Per Hour
-2021.0,European Union,Total,100.723,Output Per Hour
-2021.25,European Union,Total,100.125,Output Per Hour
-2021.5,European Union,Total,100.699,Output Per Hour
-2021.75,European Union,Total,100.971,Output Per Hour
-2022.0,European Union,Total,100.736,Output Per Hour
-2022.25,European Union,Total,100.961,Output Per Hour
-2022.5,European Union,Total,101.452,Output Per Hour
-2022.75,European Union,Total,100.875,Output Per Hour
-2023.0,European Union,Total,100.157,Output Per Hour
-2023.25,European Union,Total,100.454,Output Per Hour
-2023.5,European Union,Total,100.301,Output Per Hour
-2023.75,European Union,Total,100.219,Output Per Hour
-2024.0,European Union,Total,100.36,Output Per Hour
-2024.25,European Union,Total,100.573,Output Per Hour
-2024.5,European Union,Total,101.092,Output Per Hour
-1997.0,France,Total,78.0,Output Per Hour
+2024.0,Spain,Total,102.283,Output Per Hour
+2024.25,Spain,Total,102.356,Output Per Hour
+2024.5,Spain,Total,102.87,Output Per Hour
+2024.75,Spain,Total,101.942,Output Per Hour
+2025.0,Spain,Total,103.068,Output Per Hour
+1997.0,European Union,Total,73.803,Output Per Hour
+1997.25,European Union,Total,74.571,Output Per Hour
+1997.5,European Union,Total,74.874,Output Per Hour
+1997.75,European Union,Total,75.502,Output Per Hour
+1998.0,European Union,Total,75.939,Output Per Hour
+1998.25,European Union,Total,75.879,Output Per Hour
+1998.5,European Union,Total,76.037,Output Per Hour
+1998.75,European Union,Total,76.262,Output Per Hour
+1999.0,European Union,Total,77.028,Output Per Hour
+1999.25,European Union,Total,76.957,Output Per Hour
+1999.5,European Union,Total,78.068,Output Per Hour
+1999.75,European Union,Total,78.64,Output Per Hour
+2000.0,European Union,Total,79.22,Output Per Hour
+2000.25,European Union,Total,80.09,Output Per Hour
+2000.5,European Union,Total,80.439,Output Per Hour
+2000.75,European Union,Total,80.48,Output Per Hour
+2001.0,European Union,Total,81.15,Output Per Hour
+2001.25,European Union,Total,81.789,Output Per Hour
+2001.5,European Union,Total,81.994,Output Per Hour
+2001.75,European Union,Total,82.013,Output Per Hour
+2002.0,European Union,Total,82.916,Output Per Hour
+2002.25,European Union,Total,82.965,Output Per Hour
+2002.5,European Union,Total,83.576,Output Per Hour
+2002.75,European Union,Total,83.869,Output Per Hour
+2003.0,European Union,Total,83.868,Output Per Hour
+2003.25,European Union,Total,83.726,Output Per Hour
+2003.5,European Union,Total,84.241,Output Per Hour
+2003.75,European Union,Total,84.723,Output Per Hour
+2004.0,European Union,Total,85.559,Output Per Hour
+2004.25,European Union,Total,85.562,Output Per Hour
+2004.5,European Union,Total,85.803,Output Per Hour
+2004.75,European Union,Total,85.901,Output Per Hour
+2005.0,European Union,Total,86.308,Output Per Hour
+2005.25,European Union,Total,86.183,Output Per Hour
+2005.5,European Union,Total,86.994,Output Per Hour
+2005.75,European Union,Total,86.992,Output Per Hour
+2006.0,European Union,Total,87.493,Output Per Hour
+2006.25,European Union,Total,88.096,Output Per Hour
+2006.5,European Union,Total,87.918,Output Per Hour
+2006.75,European Union,Total,88.482,Output Per Hour
+2007.0,European Union,Total,88.506,Output Per Hour
+2007.25,European Union,Total,88.839,Output Per Hour
+2007.5,European Union,Total,88.896,Output Per Hour
+2007.75,European Union,Total,89.195,Output Per Hour
+2008.0,European Union,Total,89.194,Output Per Hour
+2008.25,European Union,Total,88.955,Output Per Hour
+2008.5,European Union,Total,88.913,Output Per Hour
+2008.75,European Union,Total,87.73,Output Per Hour
+2009.0,European Union,Total,86.563,Output Per Hour
+2009.25,European Union,Total,87.26,Output Per Hour
+2009.5,European Union,Total,88.073,Output Per Hour
+2009.75,European Union,Total,88.87,Output Per Hour
+2010.0,European Union,Total,89.383,Output Per Hour
+2010.25,European Union,Total,89.99,Output Per Hour
+2010.5,European Union,Total,90.471,Output Per Hour
+2010.75,European Union,Total,91.158,Output Per Hour
+2011.0,European Union,Total,91.496,Output Per Hour
+2011.25,European Union,Total,91.898,Output Per Hour
+2011.5,European Union,Total,92.201,Output Per Hour
+2011.75,European Union,Total,92.11,Output Per Hour
+2012.0,European Union,Total,92.173,Output Per Hour
+2012.25,European Union,Total,92.356,Output Per Hour
+2012.5,European Union,Total,92.482,Output Per Hour
+2012.75,European Union,Total,92.511,Output Per Hour
+2013.0,European Union,Total,92.794,Output Per Hour
+2013.25,European Union,Total,93.073,Output Per Hour
+2013.5,European Union,Total,93.352,Output Per Hour
+2013.75,European Union,Total,93.309,Output Per Hour
+2014.0,European Union,Total,93.439,Output Per Hour
+2014.25,European Union,Total,93.716,Output Per Hour
+2014.5,European Union,Total,93.939,Output Per Hour
+2014.75,European Union,Total,94.02,Output Per Hour
+2015.0,European Union,Total,95.153,Output Per Hour
+2015.25,European Union,Total,95.072,Output Per Hour
+2015.5,European Union,Total,95.074,Output Per Hour
+2015.75,European Union,Total,95.48,Output Per Hour
+2016.0,European Union,Total,95.254,Output Per Hour
+2016.25,European Union,Total,95.137,Output Per Hour
+2016.5,European Union,Total,95.718,Output Per Hour
+2016.75,European Union,Total,96.148,Output Per Hour
+2017.0,European Union,Total,96.437,Output Per Hour
+2017.25,European Union,Total,96.838,Output Per Hour
+2017.5,European Union,Total,97.296,Output Per Hour
+2017.75,European Union,Total,97.853,Output Per Hour
+2018.0,European Union,Total,98.0,Output Per Hour
+2018.25,European Union,Total,97.698,Output Per Hour
+2018.5,European Union,Total,97.638,Output Per Hour
+2018.75,European Union,Total,98.24,Output Per Hour
+2019.0,European Union,Total,98.099,Output Per Hour
+2019.25,European Union,Total,98.754,Output Per Hour
+2019.5,European Union,Total,98.621,Output Per Hour
+2019.75,European Union,Total,98.943,Output Per Hour
+2020.0,European Union,Total,99.469,Output Per Hour
+2020.25,European Union,Total,100.527,Output Per Hour
+2020.5,European Union,Total,99.504,Output Per Hour
+2020.75,European Union,Total,100.5,Output Per Hour
+2021.0,European Union,Total,100.735,Output Per Hour
+2021.25,European Union,Total,100.144,Output Per Hour
+2021.5,European Union,Total,100.623,Output Per Hour
+2021.75,European Union,Total,100.955,Output Per Hour
+2022.0,European Union,Total,100.755,Output Per Hour
+2022.25,European Union,Total,100.969,Output Per Hour
+2022.5,European Union,Total,101.427,Output Per Hour
+2022.75,European Union,Total,100.834,Output Per Hour
+2023.0,European Union,Total,100.165,Output Per Hour
+2023.25,European Union,Total,100.482,Output Per Hour
+2023.5,European Union,Total,100.321,Output Per Hour
+2023.75,European Union,Total,100.159,Output Per Hour
+2024.0,European Union,Total,100.339,Output Per Hour
+2024.25,European Union,Total,100.603,Output Per Hour
+2024.5,European Union,Total,101.116,Output Per Hour
+2024.75,European Union,Total,100.962,Output Per Hour
+1997.0,France,Total,77.999,Output Per Hour
 1997.25,France,Total,78.672,Output Per Hour
-1997.5,France,Total,79.319,Output Per Hour
-1997.75,France,Total,79.943,Output Per Hour
-1998.0,France,Total,80.497,Output Per Hour
-1998.25,France,Total,80.779,Output Per Hour
+1997.5,France,Total,79.318,Output Per Hour
+1997.75,France,Total,79.942,Output Per Hour
+1998.0,France,Total,80.496,Output Per Hour
+1998.25,France,Total,80.778,Output Per Hour
 1998.5,France,Total,80.736,Output Per Hour
-1998.75,France,Total,81.061,Output Per Hour
+1998.75,France,Total,81.06,Output Per Hour
 1999.0,France,Total,81.237,Output Per Hour
 1999.25,France,Total,81.036,Output Per Hour
 1999.5,France,Total,81.752,Output Per Hour
 1999.75,France,Total,82.539,Output Per Hour
-2000.0,France,Total,83.243,Output Per Hour
-2000.25,France,Total,83.839,Output Per Hour
-2000.5,France,Total,83.95,Output Per Hour
-2000.75,France,Total,84.006,Output Per Hour
+2000.0,France,Total,83.244,Output Per Hour
+2000.25,France,Total,83.838,Output Per Hour
+2000.5,France,Total,83.954,Output Per Hour
+2000.75,France,Total,84.002,Output Per Hour
 2001.0,France,Total,84.815,Output Per Hour
-2001.25,France,Total,85.229,Output Per Hour
-2001.5,France,Total,85.98,Output Per Hour
-2001.75,France,Total,85.763,Output Per Hour
-2002.0,France,Total,86.819,Output Per Hour
-2002.25,France,Total,87.691,Output Per Hour
-2002.5,France,Total,88.069,Output Per Hour
-2002.75,France,Total,88.033,Output Per Hour
-2003.0,France,Total,88.07,Output Per Hour
-2003.25,France,Total,87.65,Output Per Hour
-2003.5,France,Total,88.485,Output Per Hour
+2001.25,France,Total,85.226,Output Per Hour
+2001.5,France,Total,85.985,Output Per Hour
+2001.75,France,Total,85.76,Output Per Hour
+2002.0,France,Total,86.818,Output Per Hour
+2002.25,France,Total,87.688,Output Per Hour
+2002.5,France,Total,88.071,Output Per Hour
+2002.75,France,Total,88.031,Output Per Hour
+2003.0,France,Total,88.068,Output Per Hour
+2003.25,France,Total,87.647,Output Per Hour
+2003.5,France,Total,88.49,Output Per Hour
 2003.75,France,Total,88.751,Output Per Hour
-2004.0,France,Total,89.681,Output Per Hour
-2004.25,France,Total,89.934,Output Per Hour
+2004.0,France,Total,89.678,Output Per Hour
+2004.25,France,Total,89.933,Output Per Hour
 2004.5,France,Total,90.042,Output Per Hour
-2004.75,France,Total,90.575,Output Per Hour
-2005.0,France,Total,90.009,Output Per Hour
+2004.75,France,Total,90.577,Output Per Hour
+2005.0,France,Total,90.006,Output Per Hour
 2005.25,France,Total,89.985,Output Per Hour
-2005.5,France,Total,90.454,Output Per Hour
-2005.75,France,Total,90.977,Output Per Hour
-2006.0,France,Total,91.826,Output Per Hour
-2006.25,France,Total,92.685,Output Per Hour
-2006.5,France,Total,92.35,Output Per Hour
-2006.75,France,Total,92.258,Output Per Hour
-2007.0,France,Total,92.394,Output Per Hour
-2007.25,France,Total,92.382,Output Per Hour
-2007.5,France,Total,92.198,Output Per Hour
-2007.75,France,Total,92.078,Output Per Hour
-2008.0,France,Total,92.924,Output Per Hour
+2005.5,France,Total,90.456,Output Per Hour
+2005.75,France,Total,90.978,Output Per Hour
+2006.0,France,Total,91.823,Output Per Hour
+2006.25,France,Total,92.688,Output Per Hour
+2006.5,France,Total,92.353,Output Per Hour
+2006.75,France,Total,92.257,Output Per Hour
+2007.0,France,Total,92.393,Output Per Hour
+2007.25,France,Total,92.383,Output Per Hour
+2007.5,France,Total,92.199,Output Per Hour
+2007.75,France,Total,92.075,Output Per Hour
+2008.0,France,Total,92.922,Output Per Hour
 2008.25,France,Total,92.383,Output Per Hour
-2008.5,France,Total,92.268,Output Per Hour
-2008.75,France,Total,91.451,Output Per Hour
-2009.0,France,Total,90.221,Output Per Hour
-2009.25,France,Total,90.799,Output Per Hour
-2009.5,France,Total,91.081,Output Per Hour
-2009.75,France,Total,91.823,Output Per Hour
-2010.0,France,Total,92.214,Output Per Hour
-2010.25,France,Total,92.264,Output Per Hour
-2010.5,France,Total,92.782,Output Per Hour
-2010.75,France,Total,92.91,Output Per Hour
-2011.0,France,Total,93.675,Output Per Hour
-2011.25,France,Total,93.404,Output Per Hour
-2011.5,France,Total,93.691,Output Per Hour
-2011.75,France,Total,93.962,Output Per Hour
-2012.0,France,Total,93.909,Output Per Hour
-2012.25,France,Total,93.683,Output Per Hour
-2012.5,France,Total,93.987,Output Per Hour
-2012.75,France,Total,94.098,Output Per Hour
-2013.0,France,Total,94.128,Output Per Hour
+2008.5,France,Total,92.27,Output Per Hour
+2008.75,France,Total,91.449,Output Per Hour
+2009.0,France,Total,90.216,Output Per Hour
+2009.25,France,Total,90.797,Output Per Hour
+2009.5,France,Total,91.085,Output Per Hour
+2009.75,France,Total,91.822,Output Per Hour
+2010.0,France,Total,92.212,Output Per Hour
+2010.25,France,Total,92.265,Output Per Hour
+2010.5,France,Total,92.783,Output Per Hour
+2010.75,France,Total,92.908,Output Per Hour
+2011.0,France,Total,93.67,Output Per Hour
+2011.25,France,Total,93.406,Output Per Hour
+2011.5,France,Total,93.694,Output Per Hour
+2011.75,France,Total,93.961,Output Per Hour
+2012.0,France,Total,93.904,Output Per Hour
+2012.25,France,Total,93.685,Output Per Hour
+2012.5,France,Total,93.99,Output Per Hour
+2012.75,France,Total,94.096,Output Per Hour
+2013.0,France,Total,94.125,Output Per Hour
 2013.25,France,Total,95.006,Output Per Hour
-2013.5,France,Total,94.827,Output Per Hour
-2013.75,France,Total,95.435,Output Per Hour
+2013.5,France,Total,94.831,Output Per Hour
+2013.75,France,Total,95.431,Output Per Hour
 2014.0,France,Total,95.359,Output Per Hour
-2014.25,France,Total,95.563,Output Per Hour
+2014.25,France,Total,95.562,Output Per Hour
 2014.5,France,Total,96.154,Output Per Hour
-2014.75,France,Total,96.109,Output Per Hour
-2015.0,France,Total,96.665,Output Per Hour
-2015.25,France,Total,96.747,Output Per Hour
-2015.5,France,Total,96.836,Output Per Hour
+2014.75,France,Total,96.107,Output Per Hour
+2015.0,France,Total,96.662,Output Per Hour
+2015.25,France,Total,96.744,Output Per Hour
+2015.5,France,Total,96.835,Output Per Hour
 2015.75,France,Total,96.999,Output Per Hour
-2016.0,France,Total,97.398,Output Per Hour
-2016.25,France,Total,96.936,Output Per Hour
-2016.5,France,Total,96.962,Output Per Hour
-2016.75,France,Total,97.359,Output Per Hour
-2017.0,France,Total,97.593,Output Per Hour
+2016.0,France,Total,97.403,Output Per Hour
+2016.25,France,Total,96.937,Output Per Hour
+2016.5,France,Total,96.954,Output Per Hour
+2016.75,France,Total,97.367,Output Per Hour
+2017.0,France,Total,97.599,Output Per Hour
 2017.25,France,Total,98.116,Output Per Hour
-2017.5,France,Total,98.727,Output Per Hour
-2017.75,France,Total,98.972,Output Per Hour
-2018.0,France,Total,98.58,Output Per Hour
-2018.25,France,Total,98.61,Output Per Hour
-2018.5,France,Total,98.768,Output Per Hour
-2018.75,France,Total,99.25,Output Per Hour
-2019.0,France,Total,99.287,Output Per Hour
-2019.25,France,Total,99.387,Output Per Hour
-2019.5,France,Total,99.141,Output Per Hour
-2019.75,France,Total,98.427,Output Per Hour
-2020.0,France,Total,96.943,Output Per Hour
-2020.25,France,Total,103.983,Output Per Hour
-2020.5,France,Total,98.567,Output Per Hour
-2020.75,France,Total,100.506,Output Per Hour
-2021.0,France,Total,99.82,Output Per Hour
-2021.25,France,Total,99.571,Output Per Hour
-2021.5,France,Total,97.601,Output Per Hour
-2021.75,France,Total,97.22,Output Per Hour
+2017.5,France,Total,98.714,Output Per Hour
+2017.75,France,Total,98.985,Output Per Hour
+2018.0,France,Total,98.585,Output Per Hour
+2018.25,France,Total,98.613,Output Per Hour
+2018.5,France,Total,98.748,Output Per Hour
+2018.75,France,Total,99.259,Output Per Hour
+2019.0,France,Total,99.295,Output Per Hour
+2019.25,France,Total,99.382,Output Per Hour
+2019.5,France,Total,99.122,Output Per Hour
+2019.75,France,Total,98.439,Output Per Hour
+2020.0,France,Total,96.951,Output Per Hour
+2020.25,France,Total,104.004,Output Per Hour
+2020.5,France,Total,98.542,Output Per Hour
+2020.75,France,Total,100.503,Output Per Hour
+2021.0,France,Total,99.824,Output Per Hour
+2021.25,France,Total,99.59,Output Per Hour
+2021.5,France,Total,97.581,Output Per Hour
+2021.75,France,Total,97.216,Output Per Hour
 2022.0,France,Total,97.548,Output Per Hour
-2022.25,France,Total,96.808,Output Per Hour
-2022.5,France,Total,97.096,Output Per Hour
-2022.75,France,Total,96.659,Output Per Hour
-2023.0,France,Total,96.023,Output Per Hour
-2023.25,France,Total,96.359,Output Per Hour
-2023.5,France,Total,96.367,Output Per Hour
-2023.75,France,Total,96.654,Output Per Hour
-2024.0,France,Total,96.701,Output Per Hour
-2024.25,France,Total,96.932,Output Per Hour
-2024.5,France,Total,97.318,Output Per Hour
-1997.0,Ireland,Total,36.322,Output Per Hour
-1997.25,Ireland,Total,38.119,Output Per Hour
-1997.5,Ireland,Total,38.585,Output Per Hour
-1997.75,Ireland,Total,39.297,Output Per Hour
-1998.0,Ireland,Total,40.0,Output Per Hour
-1998.25,Ireland,Total,40.426,Output Per Hour
-1998.5,Ireland,Total,41.452,Output Per Hour
-1998.75,Ireland,Total,40.518,Output Per Hour
-1999.0,Ireland,Total,41.609,Output Per Hour
-1999.25,Ireland,Total,41.705,Output Per Hour
-1999.5,Ireland,Total,42.996,Output Per Hour
-1999.75,Ireland,Total,43.639,Output Per Hour
-2000.0,Ireland,Total,43.89,Output Per Hour
-2000.25,Ireland,Total,44.127,Output Per Hour
-2000.5,Ireland,Total,44.896,Output Per Hour
-2000.75,Ireland,Total,44.899,Output Per Hour
-2001.0,Ireland,Total,45.938,Output Per Hour
-2001.25,Ireland,Total,46.258,Output Per Hour
-2001.5,Ireland,Total,45.916,Output Per Hour
-2001.75,Ireland,Total,46.641,Output Per Hour
-2002.0,Ireland,Total,47.234,Output Per Hour
-2002.25,Ireland,Total,48.114,Output Per Hour
-2002.5,Ireland,Total,48.644,Output Per Hour
-2002.75,Ireland,Total,49.735,Output Per Hour
-2003.0,Ireland,Total,49.76,Output Per Hour
-2003.25,Ireland,Total,49.805,Output Per Hour
-2003.5,Ireland,Total,49.978,Output Per Hour
-2003.75,Ireland,Total,51.996,Output Per Hour
-2004.0,Ireland,Total,52.269,Output Per Hour
-2004.25,Ireland,Total,52.96,Output Per Hour
-2004.5,Ireland,Total,51.482,Output Per Hour
-2004.75,Ireland,Total,52.872,Output Per Hour
-2005.0,Ireland,Total,52.562,Output Per Hour
-2005.25,Ireland,Total,53.122,Output Per Hour
-2005.5,Ireland,Total,52.787,Output Per Hour
-2005.75,Ireland,Total,53.965,Output Per Hour
-2006.0,Ireland,Total,54.018,Output Per Hour
-2006.25,Ireland,Total,54.555,Output Per Hour
-2006.5,Ireland,Total,54.214,Output Per Hour
-2006.75,Ireland,Total,53.421,Output Per Hour
-2007.0,Ireland,Total,56.422,Output Per Hour
-2007.25,Ireland,Total,55.646,Output Per Hour
-2007.5,Ireland,Total,54.24,Output Per Hour
-2007.75,Ireland,Total,55.134,Output Per Hour
-2008.0,Ireland,Total,56.125,Output Per Hour
-2008.25,Ireland,Total,54.0,Output Per Hour
-2008.5,Ireland,Total,55.195,Output Per Hour
-2008.75,Ireland,Total,52.866,Output Per Hour
-2009.0,Ireland,Total,56.346,Output Per Hour
-2009.25,Ireland,Total,57.608,Output Per Hour
-2009.5,Ireland,Total,57.737,Output Per Hour
-2009.75,Ireland,Total,58.976,Output Per Hour
-2010.0,Ireland,Total,58.442,Output Per Hour
-2010.25,Ireland,Total,59.925,Output Per Hour
-2010.5,Ireland,Total,61.18,Output Per Hour
-2010.75,Ireland,Total,63.347,Output Per Hour
-2011.0,Ireland,Total,61.735,Output Per Hour
-2011.25,Ireland,Total,63.174,Output Per Hour
-2011.5,Ireland,Total,63.309,Output Per Hour
-2011.75,Ireland,Total,63.496,Output Per Hour
-2012.0,Ireland,Total,62.125,Output Per Hour
-2012.25,Ireland,Total,64.302,Output Per Hour
-2012.5,Ireland,Total,62.911,Output Per Hour
-2012.75,Ireland,Total,62.483,Output Per Hour
-2013.0,Ireland,Total,61.774,Output Per Hour
-2013.25,Ireland,Total,62.405,Output Per Hour
-2013.5,Ireland,Total,63.428,Output Per Hour
-2013.75,Ireland,Total,62.497,Output Per Hour
-2014.0,Ireland,Total,65.308,Output Per Hour
-2014.25,Ireland,Total,66.712,Output Per Hour
-2014.5,Ireland,Total,66.609,Output Per Hour
-2014.75,Ireland,Total,64.976,Output Per Hour
-2015.0,Ireland,Total,79.353,Output Per Hour
-2015.25,Ireland,Total,76.578,Output Per Hour
-2015.5,Ireland,Total,77.721,Output Per Hour
-2015.75,Ireland,Total,79.203,Output Per Hour
-2016.0,Ireland,Total,74.245,Output Per Hour
-2016.25,Ireland,Total,73.604,Output Per Hour
-2016.5,Ireland,Total,74.153,Output Per Hour
-2016.75,Ireland,Total,80.776,Output Per Hour
-2017.0,Ireland,Total,78.27,Output Per Hour
-2017.25,Ireland,Total,79.514,Output Per Hour
-2017.5,Ireland,Total,80.815,Output Per Hour
-2017.75,Ireland,Total,83.369,Output Per Hour
-2018.0,Ireland,Total,83.667,Output Per Hour
-2018.25,Ireland,Total,82.345,Output Per Hour
-2018.5,Ireland,Total,83.564,Output Per Hour
-2018.75,Ireland,Total,83.488,Output Per Hour
-2019.0,Ireland,Total,83.217,Output Per Hour
-2019.25,Ireland,Total,84.782,Output Per Hour
-2019.5,Ireland,Total,85.297,Output Per Hour
-2019.75,Ireland,Total,86.652,Output Per Hour
-2020.0,Ireland,Total,92.055,Output Per Hour
-2020.25,Ireland,Total,109.49,Output Per Hour
-2020.5,Ireland,Total,99.375,Output Per Hour
-2020.75,Ireland,Total,99.08,Output Per Hour
-2021.0,Ireland,Total,113.315,Output Per Hour
-2021.25,Ireland,Total,108.212,Output Per Hour
-2021.5,Ireland,Total,104.718,Output Per Hour
-2021.75,Ireland,Total,103.44,Output Per Hour
-2022.0,Ireland,Total,104.811,Output Per Hour
-2022.25,Ireland,Total,105.887,Output Per Hour
-2022.5,Ireland,Total,109.005,Output Per Hour
-2022.75,Ireland,Total,108.428,Output Per Hour
-2023.0,Ireland,Total,101.367,Output Per Hour
-2023.25,Ireland,Total,100.724,Output Per Hour
-2023.5,Ireland,Total,98.077,Output Per Hour
-2023.75,Ireland,Total,97.274,Output Per Hour
-2024.0,Ireland,Total,96.925,Output Per Hour
-2024.25,Ireland,Total,96.144,Output Per Hour
-2024.5,Ireland,Total,97.814,Output Per Hour
+2022.25,France,Total,96.785,Output Per Hour
+2022.5,France,Total,97.073,Output Per Hour
+2022.75,France,Total,96.71,Output Per Hour
+2023.0,France,Total,96.036,Output Per Hour
+2023.25,France,Total,96.376,Output Per Hour
+2023.5,France,Total,96.391,Output Per Hour
+2023.75,France,Total,96.598,Output Per Hour
+2024.0,France,Total,96.595,Output Per Hour
+2024.25,France,Total,96.862,Output Per Hour
+2024.5,France,Total,97.255,Output Per Hour
+2024.75,France,Total,97.429,Output Per Hour
+1997.0,Ireland,Total,36.681,Output Per Hour
+1997.25,Ireland,Total,38.495,Output Per Hour
+1997.5,Ireland,Total,38.953,Output Per Hour
+1997.75,Ireland,Total,39.679,Output Per Hour
+1998.0,Ireland,Total,40.388,Output Per Hour
+1998.25,Ireland,Total,40.835,Output Per Hour
+1998.5,Ireland,Total,41.842,Output Per Hour
+1998.75,Ireland,Total,40.682,Output Per Hour
+1999.0,Ireland,Total,41.702,Output Per Hour
+1999.25,Ireland,Total,41.748,Output Per Hour
+1999.5,Ireland,Total,43.06,Output Per Hour
+1999.75,Ireland,Total,43.707,Output Per Hour
+2000.0,Ireland,Total,43.957,Output Per Hour
+2000.25,Ireland,Total,44.189,Output Per Hour
+2000.5,Ireland,Total,44.947,Output Per Hour
+2000.75,Ireland,Total,44.949,Output Per Hour
+2001.0,Ireland,Total,46.003,Output Per Hour
+2001.25,Ireland,Total,46.308,Output Per Hour
+2001.5,Ireland,Total,45.968,Output Per Hour
+2001.75,Ireland,Total,46.657,Output Per Hour
+2002.0,Ireland,Total,47.28,Output Per Hour
+2002.25,Ireland,Total,48.149,Output Per Hour
+2002.5,Ireland,Total,48.698,Output Per Hour
+2002.75,Ireland,Total,49.838,Output Per Hour
+2003.0,Ireland,Total,49.863,Output Per Hour
+2003.25,Ireland,Total,49.892,Output Per Hour
+2003.5,Ireland,Total,50.074,Output Per Hour
+2003.75,Ireland,Total,52.073,Output Per Hour
+2004.0,Ireland,Total,52.322,Output Per Hour
+2004.25,Ireland,Total,53.011,Output Per Hour
+2004.5,Ireland,Total,51.5,Output Per Hour
+2004.75,Ireland,Total,52.92,Output Per Hour
+2005.0,Ireland,Total,52.607,Output Per Hour
+2005.25,Ireland,Total,53.132,Output Per Hour
+2005.5,Ireland,Total,52.774,Output Per Hour
+2005.75,Ireland,Total,53.992,Output Per Hour
+2006.0,Ireland,Total,53.993,Output Per Hour
+2006.25,Ireland,Total,54.512,Output Per Hour
+2006.5,Ireland,Total,54.216,Output Per Hour
+2006.75,Ireland,Total,53.425,Output Per Hour
+2007.0,Ireland,Total,56.37,Output Per Hour
+2007.25,Ireland,Total,55.561,Output Per Hour
+2007.5,Ireland,Total,54.156,Output Per Hour
+2007.75,Ireland,Total,55.025,Output Per Hour
+2008.0,Ireland,Total,56.01,Output Per Hour
+2008.25,Ireland,Total,53.892,Output Per Hour
+2008.5,Ireland,Total,55.109,Output Per Hour
+2008.75,Ireland,Total,52.77,Output Per Hour
+2009.0,Ireland,Total,56.251,Output Per Hour
+2009.25,Ireland,Total,57.588,Output Per Hour
+2009.5,Ireland,Total,57.738,Output Per Hour
+2009.75,Ireland,Total,58.981,Output Per Hour
+2010.0,Ireland,Total,58.449,Output Per Hour
+2010.25,Ireland,Total,59.969,Output Per Hour
+2010.5,Ireland,Total,61.212,Output Per Hour
+2010.75,Ireland,Total,63.431,Output Per Hour
+2011.0,Ireland,Total,61.807,Output Per Hour
+2011.25,Ireland,Total,63.223,Output Per Hour
+2011.5,Ireland,Total,63.343,Output Per Hour
+2011.75,Ireland,Total,63.515,Output Per Hour
+2012.0,Ireland,Total,62.152,Output Per Hour
+2012.25,Ireland,Total,64.354,Output Per Hour
+2012.5,Ireland,Total,62.943,Output Per Hour
+2012.75,Ireland,Total,62.487,Output Per Hour
+2013.0,Ireland,Total,61.719,Output Per Hour
+2013.25,Ireland,Total,62.311,Output Per Hour
+2013.5,Ireland,Total,63.289,Output Per Hour
+2013.75,Ireland,Total,62.354,Output Per Hour
+2014.0,Ireland,Total,65.135,Output Per Hour
+2014.25,Ireland,Total,66.605,Output Per Hour
+2014.5,Ireland,Total,66.567,Output Per Hour
+2014.75,Ireland,Total,64.919,Output Per Hour
+2015.0,Ireland,Total,79.317,Output Per Hour
+2015.25,Ireland,Total,76.499,Output Per Hour
+2015.5,Ireland,Total,77.675,Output Per Hour
+2015.75,Ireland,Total,79.182,Output Per Hour
+2016.0,Ireland,Total,74.228,Output Per Hour
+2016.25,Ireland,Total,73.47,Output Per Hour
+2016.5,Ireland,Total,74.108,Output Per Hour
+2016.75,Ireland,Total,80.731,Output Per Hour
+2017.0,Ireland,Total,78.297,Output Per Hour
+2017.25,Ireland,Total,79.518,Output Per Hour
+2017.5,Ireland,Total,80.739,Output Per Hour
+2017.75,Ireland,Total,83.19,Output Per Hour
+2018.0,Ireland,Total,83.615,Output Per Hour
+2018.25,Ireland,Total,82.301,Output Per Hour
+2018.5,Ireland,Total,83.626,Output Per Hour
+2018.75,Ireland,Total,83.507,Output Per Hour
+2019.0,Ireland,Total,83.28,Output Per Hour
+2019.25,Ireland,Total,84.685,Output Per Hour
+2019.5,Ireland,Total,85.234,Output Per Hour
+2019.75,Ireland,Total,86.552,Output Per Hour
+2020.0,Ireland,Total,92.086,Output Per Hour
+2020.25,Ireland,Total,109.58,Output Per Hour
+2020.5,Ireland,Total,99.431,Output Per Hour
+2020.75,Ireland,Total,98.902,Output Per Hour
+2021.0,Ireland,Total,113.198,Output Per Hour
+2021.25,Ireland,Total,108.349,Output Per Hour
+2021.5,Ireland,Total,104.582,Output Per Hour
+2021.75,Ireland,Total,102.936,Output Per Hour
+2022.0,Ireland,Total,104.404,Output Per Hour
+2022.25,Ireland,Total,105.699,Output Per Hour
+2022.5,Ireland,Total,108.976,Output Per Hour
+2022.75,Ireland,Total,107.762,Output Per Hour
+2023.0,Ireland,Total,101.01,Output Per Hour
+2023.25,Ireland,Total,100.742,Output Per Hour
+2023.5,Ireland,Total,97.822,Output Per Hour
+2023.75,Ireland,Total,96.595,Output Per Hour
+2024.0,Ireland,Total,96.867,Output Per Hour
+2024.25,Ireland,Total,96.11,Output Per Hour
+2024.5,Ireland,Total,98.214,Output Per Hour
+2024.75,Ireland,Total,101.608,Output Per Hour
 1997.0,Italy,Total,91.429,Output Per Hour
 1997.25,Italy,Total,91.227,Output Per Hour
 1997.5,Italy,Total,91.839,Output Per Hour
@@ -18514,210 +18520,212 @@ Quarter,Country,Industry,Value,Variable
 2020.25,Italy,Total,103.485,Output Per Hour
 2020.5,Italy,Total,98.21,Output Per Hour
 2020.75,Italy,Total,99.028,Output Per Hour
-2021.0,Italy,Total,99.166,Output Per Hour
-2021.25,Italy,Total,98.767,Output Per Hour
-2021.5,Italy,Total,98.178,Output Per Hour
-2021.75,Italy,Total,98.755,Output Per Hour
-2022.0,Italy,Total,98.426,Output Per Hour
-2022.25,Italy,Total,98.833,Output Per Hour
-2022.5,Italy,Total,99.568,Output Per Hour
-2022.75,Italy,Total,98.287,Output Per Hour
-2023.0,Italy,Total,97.503,Output Per Hour
-2023.25,Italy,Total,97.283,Output Per Hour
-2023.5,Italy,Total,96.9,Output Per Hour
-2023.75,Italy,Total,96.158,Output Per Hour
-2024.0,Italy,Total,95.794,Output Per Hour
-2024.25,Italy,Total,96.137,Output Per Hour
-2024.5,Italy,Total,95.931,Output Per Hour
-1997.0,Netherlands,Total,79.632,Output Per Hour
-1997.25,Netherlands,Total,79.722,Output Per Hour
-1997.5,Netherlands,Total,81.091,Output Per Hour
-1997.75,Netherlands,Total,81.72,Output Per Hour
-1998.0,Netherlands,Total,81.969,Output Per Hour
-1998.25,Netherlands,Total,82.4,Output Per Hour
-1998.5,Netherlands,Total,82.648,Output Per Hour
-1998.75,Netherlands,Total,83.71,Output Per Hour
-1999.0,Netherlands,Total,84.154,Output Per Hour
-1999.25,Netherlands,Total,84.399,Output Per Hour
-1999.5,Netherlands,Total,85.099,Output Per Hour
-1999.75,Netherlands,Total,85.12,Output Per Hour
-2000.0,Netherlands,Total,86.062,Output Per Hour
-2000.25,Netherlands,Total,85.837,Output Per Hour
-2000.5,Netherlands,Total,88.095,Output Per Hour
-2000.75,Netherlands,Total,88.486,Output Per Hour
-2001.0,Netherlands,Total,88.065,Output Per Hour
-2001.25,Netherlands,Total,88.029,Output Per Hour
-2001.5,Netherlands,Total,88.059,Output Per Hour
-2001.75,Netherlands,Total,87.922,Output Per Hour
-2002.0,Netherlands,Total,88.437,Output Per Hour
-2002.25,Netherlands,Total,88.544,Output Per Hour
-2002.5,Netherlands,Total,88.608,Output Per Hour
-2002.75,Netherlands,Total,89.075,Output Per Hour
-2003.0,Netherlands,Total,89.414,Output Per Hour
-2003.25,Netherlands,Total,89.434,Output Per Hour
-2003.5,Netherlands,Total,89.747,Output Per Hour
-2003.75,Netherlands,Total,90.864,Output Per Hour
-2004.0,Netherlands,Total,91.353,Output Per Hour
-2004.25,Netherlands,Total,91.841,Output Per Hour
-2004.5,Netherlands,Total,91.906,Output Per Hour
-2004.75,Netherlands,Total,92.415,Output Per Hour
-2005.0,Netherlands,Total,93.015,Output Per Hour
-2005.25,Netherlands,Total,93.449,Output Per Hour
-2005.5,Netherlands,Total,94.221,Output Per Hour
-2005.75,Netherlands,Total,94.552,Output Per Hour
-2006.0,Netherlands,Total,94.19,Output Per Hour
-2006.25,Netherlands,Total,96.005,Output Per Hour
-2006.5,Netherlands,Total,95.502,Output Per Hour
-2006.75,Netherlands,Total,95.26,Output Per Hour
-2007.0,Netherlands,Total,95.28,Output Per Hour
-2007.25,Netherlands,Total,95.119,Output Per Hour
-2007.5,Netherlands,Total,96.148,Output Per Hour
-2007.75,Netherlands,Total,97.261,Output Per Hour
-2008.0,Netherlands,Total,97.09,Output Per Hour
-2008.25,Netherlands,Total,96.999,Output Per Hour
-2008.5,Netherlands,Total,97.002,Output Per Hour
-2008.75,Netherlands,Total,95.781,Output Per Hour
-2009.0,Netherlands,Total,93.981,Output Per Hour
-2009.25,Netherlands,Total,94.058,Output Per Hour
-2009.5,Netherlands,Total,95.054,Output Per Hour
-2009.75,Netherlands,Total,95.361,Output Per Hour
-2010.0,Netherlands,Total,96.577,Output Per Hour
-2010.25,Netherlands,Total,96.902,Output Per Hour
-2010.5,Netherlands,Total,95.844,Output Per Hour
-2010.75,Netherlands,Total,96.753,Output Per Hour
-2011.0,Netherlands,Total,98.052,Output Per Hour
-2011.25,Netherlands,Total,98.818,Output Per Hour
-2011.5,Netherlands,Total,97.133,Output Per Hour
-2011.75,Netherlands,Total,96.324,Output Per Hour
-2012.0,Netherlands,Total,96.933,Output Per Hour
-2012.25,Netherlands,Total,97.071,Output Per Hour
-2012.5,Netherlands,Total,97.489,Output Per Hour
-2012.75,Netherlands,Total,97.438,Output Per Hour
-2013.0,Netherlands,Total,97.616,Output Per Hour
-2013.25,Netherlands,Total,97.258,Output Per Hour
-2013.5,Netherlands,Total,98.034,Output Per Hour
-2013.75,Netherlands,Total,98.527,Output Per Hour
-2014.0,Netherlands,Total,98.456,Output Per Hour
-2014.25,Netherlands,Total,99.9,Output Per Hour
-2014.5,Netherlands,Total,98.267,Output Per Hour
-2014.75,Netherlands,Total,99.576,Output Per Hour
-2015.0,Netherlands,Total,100.35,Output Per Hour
-2015.25,Netherlands,Total,100.53,Output Per Hour
-2015.5,Netherlands,Total,100.08,Output Per Hour
-2015.75,Netherlands,Total,99.505,Output Per Hour
-2016.0,Netherlands,Total,99.874,Output Per Hour
-2016.25,Netherlands,Total,99.672,Output Per Hour
-2016.5,Netherlands,Total,101.19,Output Per Hour
-2016.75,Netherlands,Total,100.49,Output Per Hour
-2017.0,Netherlands,Total,100.847,Output Per Hour
-2017.25,Netherlands,Total,99.884,Output Per Hour
-2017.5,Netherlands,Total,100.324,Output Per Hour
-2017.75,Netherlands,Total,100.951,Output Per Hour
-2018.0,Netherlands,Total,100.641,Output Per Hour
-2018.25,Netherlands,Total,100.72,Output Per Hour
-2018.5,Netherlands,Total,99.596,Output Per Hour
-2018.75,Netherlands,Total,99.389,Output Per Hour
-2019.0,Netherlands,Total,99.67,Output Per Hour
-2019.25,Netherlands,Total,100.14,Output Per Hour
-2019.5,Netherlands,Total,100.368,Output Per Hour
-2019.75,Netherlands,Total,99.733,Output Per Hour
-2020.0,Netherlands,Total,103.708,Output Per Hour
-2020.25,Netherlands,Total,94.846,Output Per Hour
-2020.5,Netherlands,Total,100.828,Output Per Hour
-2020.75,Netherlands,Total,100.618,Output Per Hour
-2021.0,Netherlands,Total,99.025,Output Per Hour
-2021.25,Netherlands,Total,101.06,Output Per Hour
-2021.5,Netherlands,Total,105.311,Output Per Hour
-2021.75,Netherlands,Total,103.803,Output Per Hour
-2022.0,Netherlands,Total,102.83,Output Per Hour
-2022.25,Netherlands,Total,104.742,Output Per Hour
-2022.5,Netherlands,Total,102.157,Output Per Hour
-2022.75,Netherlands,Total,102.479,Output Per Hour
-2023.0,Netherlands,Total,102.439,Output Per Hour
-2023.25,Netherlands,Total,102.043,Output Per Hour
-2023.5,Netherlands,Total,100.39,Output Per Hour
-2023.75,Netherlands,Total,101.206,Output Per Hour
-2024.0,Netherlands,Total,100.714,Output Per Hour
-2024.25,Netherlands,Total,101.405,Output Per Hour
-2024.5,Netherlands,Total,102.236,Output Per Hour
-2024.75,Netherlands,Total,102.673,Output Per Hour
-1997.0,Norway,Total,83.11,Output Per Hour
-1997.25,Norway,Total,84.251,Output Per Hour
-1997.5,Norway,Total,83.866,Output Per Hour
-1997.75,Norway,Total,84.645,Output Per Hour
-1998.0,Norway,Total,84.476,Output Per Hour
-1998.25,Norway,Total,84.966,Output Per Hour
-1998.5,Norway,Total,83.496,Output Per Hour
-1998.75,Norway,Total,83.65,Output Per Hour
-1999.0,Norway,Total,84.302,Output Per Hour
-1999.25,Norway,Total,84.034,Output Per Hour
-1999.5,Norway,Total,85.568,Output Per Hour
-1999.75,Norway,Total,86.691,Output Per Hour
-2000.0,Norway,Total,89.048,Output Per Hour
-2000.25,Norway,Total,87.663,Output Per Hour
-2000.5,Norway,Total,88.581,Output Per Hour
-2000.75,Norway,Total,88.716,Output Per Hour
-2001.0,Norway,Total,91.115,Output Per Hour
-2001.25,Norway,Total,90.87,Output Per Hour
-2001.5,Norway,Total,92.133,Output Per Hour
-2001.75,Norway,Total,92.799,Output Per Hour
-2002.0,Norway,Total,93.21,Output Per Hour
-2002.25,Norway,Total,94.697,Output Per Hour
-2002.5,Norway,Total,92.847,Output Per Hour
-2002.75,Norway,Total,93.944,Output Per Hour
-2003.0,Norway,Total,96.921,Output Per Hour
-2003.25,Norway,Total,96.297,Output Per Hour
-2003.5,Norway,Total,96.689,Output Per Hour
-2003.75,Norway,Total,96.956,Output Per Hour
-2004.0,Norway,Total,99.506,Output Per Hour
-2004.25,Norway,Total,99.307,Output Per Hour
-2004.5,Norway,Total,97.756,Output Per Hour
-2004.75,Norway,Total,98.43,Output Per Hour
-2005.0,Norway,Total,99.819,Output Per Hour
-2005.25,Norway,Total,99.766,Output Per Hour
-2005.5,Norway,Total,99.967,Output Per Hour
-2005.75,Norway,Total,99.793,Output Per Hour
-2006.0,Norway,Total,98.976,Output Per Hour
-2006.25,Norway,Total,98.729,Output Per Hour
-2006.5,Norway,Total,98.985,Output Per Hour
-2006.75,Norway,Total,100.134,Output Per Hour
-2007.0,Norway,Total,97.285,Output Per Hour
-2007.25,Norway,Total,97.065,Output Per Hour
-2007.5,Norway,Total,97.548,Output Per Hour
-2007.75,Norway,Total,98.099,Output Per Hour
-2008.0,Norway,Total,95.781,Output Per Hour
-2008.25,Norway,Total,94.273,Output Per Hour
-2008.5,Norway,Total,94.131,Output Per Hour
-2008.75,Norway,Total,94.273,Output Per Hour
-2009.0,Norway,Total,95.363,Output Per Hour
-2009.25,Norway,Total,94.56,Output Per Hour
-2009.5,Norway,Total,94.299,Output Per Hour
-2009.75,Norway,Total,93.825,Output Per Hour
-2010.0,Norway,Total,96.067,Output Per Hour
-2010.25,Norway,Total,95.324,Output Per Hour
-2010.5,Norway,Total,93.363,Output Per Hour
-2010.75,Norway,Total,95.108,Output Per Hour
-2011.0,Norway,Total,94.913,Output Per Hour
-2011.25,Norway,Total,93.974,Output Per Hour
-2011.5,Norway,Total,94.308,Output Per Hour
-2011.75,Norway,Total,93.946,Output Per Hour
-2012.0,Norway,Total,95.682,Output Per Hour
-2012.25,Norway,Total,95.767,Output Per Hour
-2012.5,Norway,Total,94.317,Output Per Hour
-2012.75,Norway,Total,94.754,Output Per Hour
-2013.0,Norway,Total,96.206,Output Per Hour
-2013.25,Norway,Total,95.555,Output Per Hour
-2013.5,Norway,Total,95.425,Output Per Hour
-2013.75,Norway,Total,95.485,Output Per Hour
-2014.0,Norway,Total,96.055,Output Per Hour
-2014.25,Norway,Total,96.34,Output Per Hour
-2014.5,Norway,Total,96.374,Output Per Hour
-2014.75,Norway,Total,96.747,Output Per Hour
-2015.0,Norway,Total,96.674,Output Per Hour
-2015.25,Norway,Total,97.198,Output Per Hour
-2015.5,Norway,Total,98.549,Output Per Hour
-2015.75,Norway,Total,98.34,Output Per Hour
-2016.0,Norway,Total,98.487,Output Per Hour
+2021.0,Italy,Total,99.327,Output Per Hour
+2021.25,Italy,Total,98.951,Output Per Hour
+2021.5,Italy,Total,97.729,Output Per Hour
+2021.75,Italy,Total,98.866,Output Per Hour
+2022.0,Italy,Total,98.809,Output Per Hour
+2022.25,Italy,Total,99.111,Output Per Hour
+2022.5,Italy,Total,99.575,Output Per Hour
+2022.75,Italy,Total,98.281,Output Per Hour
+2023.0,Italy,Total,97.6,Output Per Hour
+2023.25,Italy,Total,97.511,Output Per Hour
+2023.5,Italy,Total,96.896,Output Per Hour
+2023.75,Italy,Total,96.052,Output Per Hour
+2024.0,Italy,Total,95.566,Output Per Hour
+2024.25,Italy,Total,96.26,Output Per Hour
+2024.5,Italy,Total,96.102,Output Per Hour
+2024.75,Italy,Total,96.109,Output Per Hour
+1997.0,Netherlands,Total,79.633,Output Per Hour
+1997.25,Netherlands,Total,79.723,Output Per Hour
+1997.5,Netherlands,Total,81.092,Output Per Hour
+1997.75,Netherlands,Total,81.721,Output Per Hour
+1998.0,Netherlands,Total,81.97,Output Per Hour
+1998.25,Netherlands,Total,82.401,Output Per Hour
+1998.5,Netherlands,Total,82.649,Output Per Hour
+1998.75,Netherlands,Total,83.711,Output Per Hour
+1999.0,Netherlands,Total,84.155,Output Per Hour
+1999.25,Netherlands,Total,84.4,Output Per Hour
+1999.5,Netherlands,Total,85.1,Output Per Hour
+1999.75,Netherlands,Total,85.121,Output Per Hour
+2000.0,Netherlands,Total,86.063,Output Per Hour
+2000.25,Netherlands,Total,85.838,Output Per Hour
+2000.5,Netherlands,Total,88.096,Output Per Hour
+2000.75,Netherlands,Total,88.487,Output Per Hour
+2001.0,Netherlands,Total,88.066,Output Per Hour
+2001.25,Netherlands,Total,88.03,Output Per Hour
+2001.5,Netherlands,Total,88.06,Output Per Hour
+2001.75,Netherlands,Total,87.923,Output Per Hour
+2002.0,Netherlands,Total,88.439,Output Per Hour
+2002.25,Netherlands,Total,88.545,Output Per Hour
+2002.5,Netherlands,Total,88.609,Output Per Hour
+2002.75,Netherlands,Total,89.076,Output Per Hour
+2003.0,Netherlands,Total,89.416,Output Per Hour
+2003.25,Netherlands,Total,89.436,Output Per Hour
+2003.5,Netherlands,Total,89.748,Output Per Hour
+2003.75,Netherlands,Total,90.865,Output Per Hour
+2004.0,Netherlands,Total,91.354,Output Per Hour
+2004.25,Netherlands,Total,91.842,Output Per Hour
+2004.5,Netherlands,Total,91.907,Output Per Hour
+2004.75,Netherlands,Total,92.416,Output Per Hour
+2005.0,Netherlands,Total,93.016,Output Per Hour
+2005.25,Netherlands,Total,93.45,Output Per Hour
+2005.5,Netherlands,Total,94.223,Output Per Hour
+2005.75,Netherlands,Total,94.553,Output Per Hour
+2006.0,Netherlands,Total,94.191,Output Per Hour
+2006.25,Netherlands,Total,96.006,Output Per Hour
+2006.5,Netherlands,Total,95.503,Output Per Hour
+2006.75,Netherlands,Total,95.261,Output Per Hour
+2007.0,Netherlands,Total,95.281,Output Per Hour
+2007.25,Netherlands,Total,95.12,Output Per Hour
+2007.5,Netherlands,Total,96.149,Output Per Hour
+2007.75,Netherlands,Total,97.263,Output Per Hour
+2008.0,Netherlands,Total,97.091,Output Per Hour
+2008.25,Netherlands,Total,97.001,Output Per Hour
+2008.5,Netherlands,Total,97.004,Output Per Hour
+2008.75,Netherlands,Total,95.782,Output Per Hour
+2009.0,Netherlands,Total,93.982,Output Per Hour
+2009.25,Netherlands,Total,94.059,Output Per Hour
+2009.5,Netherlands,Total,95.055,Output Per Hour
+2009.75,Netherlands,Total,95.362,Output Per Hour
+2010.0,Netherlands,Total,96.578,Output Per Hour
+2010.25,Netherlands,Total,96.903,Output Per Hour
+2010.5,Netherlands,Total,95.845,Output Per Hour
+2010.75,Netherlands,Total,96.754,Output Per Hour
+2011.0,Netherlands,Total,98.053,Output Per Hour
+2011.25,Netherlands,Total,98.819,Output Per Hour
+2011.5,Netherlands,Total,97.135,Output Per Hour
+2011.75,Netherlands,Total,96.325,Output Per Hour
+2012.0,Netherlands,Total,96.934,Output Per Hour
+2012.25,Netherlands,Total,97.072,Output Per Hour
+2012.5,Netherlands,Total,97.49,Output Per Hour
+2012.75,Netherlands,Total,97.439,Output Per Hour
+2013.0,Netherlands,Total,97.617,Output Per Hour
+2013.25,Netherlands,Total,97.259,Output Per Hour
+2013.5,Netherlands,Total,98.036,Output Per Hour
+2013.75,Netherlands,Total,98.528,Output Per Hour
+2014.0,Netherlands,Total,98.457,Output Per Hour
+2014.25,Netherlands,Total,99.901,Output Per Hour
+2014.5,Netherlands,Total,98.268,Output Per Hour
+2014.75,Netherlands,Total,99.577,Output Per Hour
+2015.0,Netherlands,Total,100.344,Output Per Hour
+2015.25,Netherlands,Total,100.521,Output Per Hour
+2015.5,Netherlands,Total,100.078,Output Per Hour
+2015.75,Netherlands,Total,99.508,Output Per Hour
+2016.0,Netherlands,Total,99.869,Output Per Hour
+2016.25,Netherlands,Total,99.674,Output Per Hour
+2016.5,Netherlands,Total,101.188,Output Per Hour
+2016.75,Netherlands,Total,100.489,Output Per Hour
+2017.0,Netherlands,Total,100.852,Output Per Hour
+2017.25,Netherlands,Total,99.878,Output Per Hour
+2017.5,Netherlands,Total,100.317,Output Per Hour
+2017.75,Netherlands,Total,100.945,Output Per Hour
+2018.0,Netherlands,Total,100.643,Output Per Hour
+2018.25,Netherlands,Total,100.707,Output Per Hour
+2018.5,Netherlands,Total,99.591,Output Per Hour
+2018.75,Netherlands,Total,99.392,Output Per Hour
+2019.0,Netherlands,Total,99.672,Output Per Hour
+2019.25,Netherlands,Total,100.117,Output Per Hour
+2019.5,Netherlands,Total,100.377,Output Per Hour
+2019.75,Netherlands,Total,99.74,Output Per Hour
+2020.0,Netherlands,Total,103.717,Output Per Hour
+2020.25,Netherlands,Total,94.798,Output Per Hour
+2020.5,Netherlands,Total,100.855,Output Per Hour
+2020.75,Netherlands,Total,100.63,Output Per Hour
+2021.0,Netherlands,Total,98.995,Output Per Hour
+2021.25,Netherlands,Total,101.022,Output Per Hour
+2021.5,Netherlands,Total,105.379,Output Per Hour
+2021.75,Netherlands,Total,103.811,Output Per Hour
+2022.0,Netherlands,Total,102.782,Output Per Hour
+2022.25,Netherlands,Total,104.714,Output Per Hour
+2022.5,Netherlands,Total,102.255,Output Per Hour
+2022.75,Netherlands,Total,102.463,Output Per Hour
+2023.0,Netherlands,Total,102.362,Output Per Hour
+2023.25,Netherlands,Total,102.04,Output Per Hour
+2023.5,Netherlands,Total,100.495,Output Per Hour
+2023.75,Netherlands,Total,101.184,Output Per Hour
+2024.0,Netherlands,Total,100.633,Output Per Hour
+2024.25,Netherlands,Total,101.421,Output Per Hour
+2024.5,Netherlands,Total,102.318,Output Per Hour
+2024.75,Netherlands,Total,102.63,Output Per Hour
+2025.0,Netherlands,Total,103.286,Output Per Hour
+1997.0,Norway,Total,83.414,Output Per Hour
+1997.25,Norway,Total,84.187,Output Per Hour
+1997.5,Norway,Total,83.819,Output Per Hour
+1997.75,Norway,Total,84.38,Output Per Hour
+1998.0,Norway,Total,84.468,Output Per Hour
+1998.25,Norway,Total,84.782,Output Per Hour
+1998.5,Norway,Total,83.593,Output Per Hour
+1998.75,Norway,Total,83.669,Output Per Hour
+1999.0,Norway,Total,84.515,Output Per Hour
+1999.25,Norway,Total,84.239,Output Per Hour
+1999.5,Norway,Total,85.456,Output Per Hour
+1999.75,Norway,Total,86.308,Output Per Hour
+2000.0,Norway,Total,88.93,Output Per Hour
+2000.25,Norway,Total,87.782,Output Per Hour
+2000.5,Norway,Total,88.543,Output Per Hour
+2000.75,Norway,Total,88.672,Output Per Hour
+2001.0,Norway,Total,91.211,Output Per Hour
+2001.25,Norway,Total,90.996,Output Per Hour
+2001.5,Norway,Total,92.053,Output Per Hour
+2001.75,Norway,Total,92.572,Output Per Hour
+2002.0,Norway,Total,93.374,Output Per Hour
+2002.25,Norway,Total,94.507,Output Per Hour
+2002.5,Norway,Total,92.914,Output Per Hour
+2002.75,Norway,Total,93.819,Output Per Hour
+2003.0,Norway,Total,96.961,Output Per Hour
+2003.25,Norway,Total,96.421,Output Per Hour
+2003.5,Norway,Total,96.567,Output Per Hour
+2003.75,Norway,Total,96.827,Output Per Hour
+2004.0,Norway,Total,99.45,Output Per Hour
+2004.25,Norway,Total,99.215,Output Per Hour
+2004.5,Norway,Total,97.873,Output Per Hour
+2004.75,Norway,Total,98.371,Output Per Hour
+2005.0,Norway,Total,99.954,Output Per Hour
+2005.25,Norway,Total,99.806,Output Per Hour
+2005.5,Norway,Total,99.856,Output Per Hour
+2005.75,Norway,Total,99.641,Output Per Hour
+2006.0,Norway,Total,99.147,Output Per Hour
+2006.25,Norway,Total,98.876,Output Per Hour
+2006.5,Norway,Total,98.947,Output Per Hour
+2006.75,Norway,Total,99.766,Output Per Hour
+2007.0,Norway,Total,97.426,Output Per Hour
+2007.25,Norway,Total,97.206,Output Per Hour
+2007.5,Norway,Total,97.461,Output Per Hour
+2007.75,Norway,Total,97.819,Output Per Hour
+2008.0,Norway,Total,95.763,Output Per Hour
+2008.25,Norway,Total,94.247,Output Per Hour
+2008.5,Norway,Total,94.137,Output Per Hour
+2008.75,Norway,Total,94.225,Output Per Hour
+2009.0,Norway,Total,95.234,Output Per Hour
+2009.25,Norway,Total,94.585,Output Per Hour
+2009.5,Norway,Total,94.313,Output Per Hour
+2009.75,Norway,Total,93.829,Output Per Hour
+2010.0,Norway,Total,95.808,Output Per Hour
+2010.25,Norway,Total,95.252,Output Per Hour
+2010.5,Norway,Total,93.725,Output Per Hour
+2010.75,Norway,Total,94.992,Output Per Hour
+2011.0,Norway,Total,94.979,Output Per Hour
+2011.25,Norway,Total,94.111,Output Per Hour
+2011.5,Norway,Total,94.17,Output Per Hour
+2011.75,Norway,Total,93.799,Output Per Hour
+2012.0,Norway,Total,95.599,Output Per Hour
+2012.25,Norway,Total,95.643,Output Per Hour
+2012.5,Norway,Total,94.447,Output Per Hour
+2012.75,Norway,Total,94.743,Output Per Hour
+2013.0,Norway,Total,96.358,Output Per Hour
+2013.25,Norway,Total,95.58,Output Per Hour
+2013.5,Norway,Total,95.28,Output Per Hour
+2013.75,Norway,Total,95.37,Output Per Hour
+2014.0,Norway,Total,96.222,Output Per Hour
+2014.25,Norway,Total,96.377,Output Per Hour
+2014.5,Norway,Total,96.337,Output Per Hour
+2014.75,Norway,Total,96.496,Output Per Hour
+2015.0,Norway,Total,96.787,Output Per Hour
+2015.25,Norway,Total,97.218,Output Per Hour
+2015.5,Norway,Total,98.358,Output Per Hour
+2015.75,Norway,Total,98.308,Output Per Hour
+2016.0,Norway,Total,98.486,Output Per Hour
 2016.25,Norway,Total,98.969,Output Per Hour
 2016.5,Norway,Total,97.646,Output Per Hour
 2016.75,Norway,Total,99.056,Output Per Hour
@@ -18737,358 +18745,363 @@ Quarter,Country,Industry,Value,Variable
 2020.25,Norway,Total,98.746,Output Per Hour
 2020.5,Norway,Total,101.155,Output Per Hour
 2020.75,Norway,Total,100.704,Output Per Hour
-2021.0,Norway,Total,101.143,Output Per Hour
-2021.25,Norway,Total,101.348,Output Per Hour
-2021.5,Norway,Total,102.996,Output Per Hour
-2021.75,Norway,Total,101.387,Output Per Hour
-2022.0,Norway,Total,100.795,Output Per Hour
-2022.25,Norway,Total,101.194,Output Per Hour
-2022.5,Norway,Total,102.417,Output Per Hour
-2022.75,Norway,Total,101.025,Output Per Hour
-2023.0,Norway,Total,100.945,Output Per Hour
-2023.25,Norway,Total,100.758,Output Per Hour
-2023.5,Norway,Total,100.059,Output Per Hour
-2023.75,Norway,Total,101.621,Output Per Hour
-2024.0,Norway,Total,101.794,Output Per Hour
-2024.25,Norway,Total,103.604,Output Per Hour
-1997.0,Poland,Total,45.819,Output Per Hour
-1997.25,Poland,Total,46.412,Output Per Hour
-1997.5,Poland,Total,46.395,Output Per Hour
-1997.75,Poland,Total,47.038,Output Per Hour
-1998.0,Poland,Total,47.396,Output Per Hour
-1998.25,Poland,Total,47.484,Output Per Hour
-1998.5,Poland,Total,48.143,Output Per Hour
-1998.75,Poland,Total,48.542,Output Per Hour
-1999.0,Poland,Total,49.094,Output Per Hour
-1999.25,Poland,Total,51.018,Output Per Hour
-1999.5,Poland,Total,52.007,Output Per Hour
-1999.75,Poland,Total,53.263,Output Per Hour
-2000.0,Poland,Total,54.545,Output Per Hour
-2000.25,Poland,Total,55.276,Output Per Hour
-2000.5,Poland,Total,55.598,Output Per Hour
-2000.75,Poland,Total,56.698,Output Per Hour
-2001.0,Poland,Total,56.849,Output Per Hour
-2001.25,Poland,Total,57.348,Output Per Hour
-2001.5,Poland,Total,57.806,Output Per Hour
-2001.75,Poland,Total,58.64,Output Per Hour
-2002.0,Poland,Total,59.459,Output Per Hour
-2002.25,Poland,Total,59.932,Output Per Hour
-2002.5,Poland,Total,61.389,Output Per Hour
-2002.75,Poland,Total,61.986,Output Per Hour
-2003.0,Poland,Total,62.19,Output Per Hour
-2003.25,Poland,Total,62.885,Output Per Hour
-2003.5,Poland,Total,64.373,Output Per Hour
-2003.75,Poland,Total,64.263,Output Per Hour
-2004.0,Poland,Total,65.572,Output Per Hour
-2004.25,Poland,Total,66.093,Output Per Hour
-2004.5,Poland,Total,65.874,Output Per Hour
-2004.75,Poland,Total,65.572,Output Per Hour
-2005.0,Poland,Total,66.51,Output Per Hour
-2005.25,Poland,Total,65.952,Output Per Hour
-2005.5,Poland,Total,66.835,Output Per Hour
-2005.75,Poland,Total,67.375,Output Per Hour
-2006.0,Poland,Total,68.541,Output Per Hour
-2006.25,Poland,Total,69.708,Output Per Hour
-2006.5,Poland,Total,68.967,Output Per Hour
-2006.75,Poland,Total,67.127,Output Per Hour
-2007.0,Poland,Total,69.038,Output Per Hour
-2007.25,Poland,Total,69.79,Output Per Hour
-2007.5,Poland,Total,70.531,Output Per Hour
-2007.75,Poland,Total,71.071,Output Per Hour
-2008.0,Poland,Total,70.779,Output Per Hour
-2008.25,Poland,Total,70.551,Output Per Hour
+2021.0,Norway,Total,102.401,Output Per Hour
+2021.25,Norway,Total,100.616,Output Per Hour
+2021.5,Norway,Total,102.948,Output Per Hour
+2021.75,Norway,Total,101.079,Output Per Hour
+2022.0,Norway,Total,101.094,Output Per Hour
+2022.25,Norway,Total,101.275,Output Per Hour
+2022.5,Norway,Total,103.179,Output Per Hour
+2022.75,Norway,Total,101.153,Output Per Hour
+2023.0,Norway,Total,101.029,Output Per Hour
+2023.25,Norway,Total,100.123,Output Per Hour
+2023.5,Norway,Total,99.333,Output Per Hour
+2023.75,Norway,Total,102.008,Output Per Hour
+2024.0,Norway,Total,102.192,Output Per Hour
+2024.25,Norway,Total,104.415,Output Per Hour
+2024.5,Norway,Total,102.645,Output Per Hour
+2024.75,Norway,Total,101.905,Output Per Hour
+1997.0,Poland,Total,45.821,Output Per Hour
+1997.25,Poland,Total,46.413,Output Per Hour
+1997.5,Poland,Total,46.396,Output Per Hour
+1997.75,Poland,Total,47.04,Output Per Hour
+1998.0,Poland,Total,47.397,Output Per Hour
+1998.25,Poland,Total,47.485,Output Per Hour
+1998.5,Poland,Total,48.144,Output Per Hour
+1998.75,Poland,Total,48.544,Output Per Hour
+1999.0,Poland,Total,49.095,Output Per Hour
+1999.25,Poland,Total,51.019,Output Per Hour
+1999.5,Poland,Total,52.009,Output Per Hour
+1999.75,Poland,Total,53.265,Output Per Hour
+2000.0,Poland,Total,54.546,Output Per Hour
+2000.25,Poland,Total,55.277,Output Per Hour
+2000.5,Poland,Total,55.599,Output Per Hour
+2000.75,Poland,Total,56.699,Output Per Hour
+2001.0,Poland,Total,56.85,Output Per Hour
+2001.25,Poland,Total,57.349,Output Per Hour
+2001.5,Poland,Total,57.807,Output Per Hour
+2001.75,Poland,Total,58.641,Output Per Hour
+2002.0,Poland,Total,59.461,Output Per Hour
+2002.25,Poland,Total,59.934,Output Per Hour
+2002.5,Poland,Total,61.39,Output Per Hour
+2002.75,Poland,Total,61.988,Output Per Hour
+2003.0,Poland,Total,62.191,Output Per Hour
+2003.25,Poland,Total,62.886,Output Per Hour
+2003.5,Poland,Total,64.374,Output Per Hour
+2003.75,Poland,Total,64.265,Output Per Hour
+2004.0,Poland,Total,65.574,Output Per Hour
+2004.25,Poland,Total,66.095,Output Per Hour
+2004.5,Poland,Total,65.876,Output Per Hour
+2004.75,Poland,Total,65.574,Output Per Hour
+2005.0,Poland,Total,66.511,Output Per Hour
+2005.25,Poland,Total,65.953,Output Per Hour
+2005.5,Poland,Total,66.836,Output Per Hour
+2005.75,Poland,Total,67.377,Output Per Hour
+2006.0,Poland,Total,68.542,Output Per Hour
+2006.25,Poland,Total,69.709,Output Per Hour
+2006.5,Poland,Total,68.968,Output Per Hour
+2006.75,Poland,Total,67.128,Output Per Hour
+2007.0,Poland,Total,69.039,Output Per Hour
+2007.25,Poland,Total,69.791,Output Per Hour
+2007.5,Poland,Total,70.532,Output Per Hour
+2007.75,Poland,Total,71.072,Output Per Hour
+2008.0,Poland,Total,70.78,Output Per Hour
+2008.25,Poland,Total,70.552,Output Per Hour
 2008.5,Poland,Total,71.015,Output Per Hour
-2008.75,Poland,Total,70.838,Output Per Hour
-2009.0,Poland,Total,71.628,Output Per Hour
-2009.25,Poland,Total,71.983,Output Per Hour
-2009.5,Poland,Total,72.784,Output Per Hour
-2009.75,Poland,Total,74.782,Output Per Hour
-2010.0,Poland,Total,76.041,Output Per Hour
-2010.25,Poland,Total,76.983,Output Per Hour
-2010.5,Poland,Total,77.669,Output Per Hour
-2010.75,Poland,Total,78.749,Output Per Hour
-2011.0,Poland,Total,79.716,Output Per Hour
-2011.25,Poland,Total,80.553,Output Per Hour
-2011.5,Poland,Total,82.034,Output Per Hour
+2008.75,Poland,Total,70.839,Output Per Hour
+2009.0,Poland,Total,71.629,Output Per Hour
+2009.25,Poland,Total,71.984,Output Per Hour
+2009.5,Poland,Total,72.785,Output Per Hour
+2009.75,Poland,Total,74.783,Output Per Hour
+2010.0,Poland,Total,76.042,Output Per Hour
+2010.25,Poland,Total,76.984,Output Per Hour
+2010.5,Poland,Total,77.67,Output Per Hour
+2010.75,Poland,Total,78.75,Output Per Hour
+2011.0,Poland,Total,79.718,Output Per Hour
+2011.25,Poland,Total,80.554,Output Per Hour
+2011.5,Poland,Total,82.035,Output Per Hour
 2011.75,Poland,Total,82.667,Output Per Hour
-2012.0,Poland,Total,82.628,Output Per Hour
-2012.25,Poland,Total,82.869,Output Per Hour
-2012.5,Poland,Total,82.6,Output Per Hour
-2012.75,Poland,Total,82.74,Output Per Hour
-2013.0,Poland,Total,82.829,Output Per Hour
-2013.25,Poland,Total,83.391,Output Per Hour
-2013.5,Poland,Total,83.627,Output Per Hour
-2013.75,Poland,Total,83.983,Output Per Hour
-2014.0,Poland,Total,84.163,Output Per Hour
-2014.25,Poland,Total,84.839,Output Per Hour
-2014.5,Poland,Total,85.122,Output Per Hour
+2012.0,Poland,Total,82.63,Output Per Hour
+2012.25,Poland,Total,82.87,Output Per Hour
+2012.5,Poland,Total,82.602,Output Per Hour
+2012.75,Poland,Total,82.741,Output Per Hour
+2013.0,Poland,Total,82.831,Output Per Hour
+2013.25,Poland,Total,83.392,Output Per Hour
+2013.5,Poland,Total,83.628,Output Per Hour
+2013.75,Poland,Total,83.984,Output Per Hour
+2014.0,Poland,Total,84.165,Output Per Hour
+2014.25,Poland,Total,84.841,Output Per Hour
+2014.5,Poland,Total,85.123,Output Per Hour
 2014.75,Poland,Total,85.28,Output Per Hour
-2015.0,Poland,Total,86.882,Output Per Hour
-2015.25,Poland,Total,86.205,Output Per Hour
-2015.5,Poland,Total,86.77,Output Per Hour
+2015.0,Poland,Total,86.884,Output Per Hour
+2015.25,Poland,Total,86.206,Output Per Hour
+2015.5,Poland,Total,86.771,Output Per Hour
 2015.75,Poland,Total,87.584,Output Per Hour
-2016.0,Poland,Total,87.959,Output Per Hour
-2016.25,Poland,Total,87.73,Output Per Hour
-2016.5,Poland,Total,89.318,Output Per Hour
+2016.0,Poland,Total,87.961,Output Per Hour
+2016.25,Poland,Total,87.732,Output Per Hour
+2016.5,Poland,Total,89.319,Output Per Hour
 2016.75,Poland,Total,90.214,Output Per Hour
-2017.0,Poland,Total,90.723,Output Per Hour
-2017.25,Poland,Total,92.289,Output Per Hour
-2017.5,Poland,Total,94.08,Output Per Hour
+2017.0,Poland,Total,90.725,Output Per Hour
+2017.25,Poland,Total,92.29,Output Per Hour
+2017.5,Poland,Total,94.081,Output Per Hour
 2017.75,Poland,Total,96.035,Output Per Hour
-2018.0,Poland,Total,98.021,Output Per Hour
-2018.25,Poland,Total,99.007,Output Per Hour
-2018.5,Poland,Total,99.806,Output Per Hour
-2018.75,Poland,Total,102.488,Output Per Hour
-2019.0,Poland,Total,100.512,Output Per Hour
+2018.0,Poland,Total,98.024,Output Per Hour
+2018.25,Poland,Total,99.008,Output Per Hour
+2018.5,Poland,Total,99.805,Output Per Hour
+2018.75,Poland,Total,102.49,Output Per Hour
+2019.0,Poland,Total,100.516,Output Per Hour
 2019.25,Poland,Total,101.451,Output Per Hour
-2019.5,Poland,Total,101.112,Output Per Hour
-2019.75,Poland,Total,102.541,Output Per Hour
-2020.0,Poland,Total,103.857,Output Per Hour
-2020.25,Poland,Total,96.476,Output Per Hour
-2020.5,Poland,Total,99.706,Output Per Hour
+2019.5,Poland,Total,101.11,Output Per Hour
+2019.75,Poland,Total,102.543,Output Per Hour
+2020.0,Poland,Total,103.863,Output Per Hour
+2020.25,Poland,Total,96.475,Output Per Hour
+2020.5,Poland,Total,99.701,Output Per Hour
 2020.75,Poland,Total,99.961,Output Per Hour
-2021.0,Poland,Total,99.656,Output Per Hour
-2021.25,Poland,Total,99.667,Output Per Hour
-2021.5,Poland,Total,101.569,Output Per Hour
-2021.75,Poland,Total,103.257,Output Per Hour
-2022.0,Poland,Total,106.882,Output Per Hour
-2022.25,Poland,Total,105.578,Output Per Hour
-2022.5,Poland,Total,107.397,Output Per Hour
-2022.75,Poland,Total,104.498,Output Per Hour
-2023.0,Poland,Total,105.146,Output Per Hour
-2023.25,Poland,Total,106.022,Output Per Hour
-2023.5,Poland,Total,108.074,Output Per Hour
-2023.75,Poland,Total,107.853,Output Per Hour
-2024.0,Poland,Total,109.273,Output Per Hour
-2024.25,Poland,Total,111.481,Output Per Hour
-2024.5,Poland,Total,111.902,Output Per Hour
+2021.0,Poland,Total,99.674,Output Per Hour
+2021.25,Poland,Total,99.661,Output Per Hour
+2021.5,Poland,Total,101.559,Output Per Hour
+2021.75,Poland,Total,103.239,Output Per Hour
+2022.0,Poland,Total,106.934,Output Per Hour
+2022.25,Poland,Total,105.561,Output Per Hour
+2022.5,Poland,Total,107.389,Output Per Hour
+2022.75,Poland,Total,104.456,Output Per Hour
+2023.0,Poland,Total,105.211,Output Per Hour
+2023.25,Poland,Total,106.104,Output Per Hour
+2023.5,Poland,Total,108.248,Output Per Hour
+2023.75,Poland,Total,107.818,Output Per Hour
+2024.0,Poland,Total,109.356,Output Per Hour
+2024.25,Poland,Total,111.803,Output Per Hour
+2024.5,Poland,Total,112.405,Output Per Hour
+2024.75,Poland,Total,114.553,Output Per Hour
 1997.0,Romania,Total,35.356,Output Per Hour
 1997.25,Romania,Total,33.987,Output Per Hour
-1997.5,Romania,Total,34.388,Output Per Hour
+1997.5,Romania,Total,34.387,Output Per Hour
 1997.75,Romania,Total,33.796,Output Per Hour
-1998.0,Romania,Total,32.983,Output Per Hour
+1998.0,Romania,Total,32.982,Output Per Hour
 1998.25,Romania,Total,33.861,Output Per Hour
 1998.5,Romania,Total,35.905,Output Per Hour
 1998.75,Romania,Total,36.301,Output Per Hour
-1999.0,Romania,Total,35.689,Output Per Hour
-1999.25,Romania,Total,35.522,Output Per Hour
+1999.0,Romania,Total,35.688,Output Per Hour
+1999.25,Romania,Total,35.521,Output Per Hour
 1999.5,Romania,Total,35.152,Output Per Hour
-1999.75,Romania,Total,34.629,Output Per Hour
+1999.75,Romania,Total,34.628,Output Per Hour
 2000.0,Romania,Total,34.706,Output Per Hour
 2000.25,Romania,Total,38.401,Output Per Hour
 2000.5,Romania,Total,36.19,Output Per Hour
 2000.75,Romania,Total,36.05,Output Per Hour
-2001.0,Romania,Total,36.912,Output Per Hour
-2001.25,Romania,Total,38.561,Output Per Hour
+2001.0,Romania,Total,36.91,Output Per Hour
+2001.25,Romania,Total,38.56,Output Per Hour
 2001.5,Romania,Total,39.504,Output Per Hour
 2001.75,Romania,Total,39.545,Output Per Hour
-2002.0,Romania,Total,46.258,Output Per Hour
+2002.0,Romania,Total,46.257,Output Per Hour
 2002.25,Romania,Total,44.488,Output Per Hour
 2002.5,Romania,Total,44.626,Output Per Hour
 2002.75,Romania,Total,45.575,Output Per Hour
-2003.0,Romania,Total,47.631,Output Per Hour
+2003.0,Romania,Total,47.629,Output Per Hour
 2003.25,Romania,Total,46.406,Output Per Hour
 2003.5,Romania,Total,46.499,Output Per Hour
 2003.75,Romania,Total,47.771,Output Per Hour
-2004.0,Romania,Total,52.992,Output Per Hour
+2004.0,Romania,Total,52.99,Output Per Hour
 2004.25,Romania,Total,50.764,Output Per Hour
 2004.5,Romania,Total,53.156,Output Per Hour
 2004.75,Romania,Total,53.698,Output Per Hour
-2005.0,Romania,Total,53.971,Output Per Hour
+2005.0,Romania,Total,53.969,Output Per Hour
 2005.25,Romania,Total,54.125,Output Per Hour
 2005.5,Romania,Total,56.485,Output Per Hour
-2005.75,Romania,Total,57.356,Output Per Hour
-2006.0,Romania,Total,59.316,Output Per Hour
-2006.25,Romania,Total,58.639,Output Per Hour
+2005.75,Romania,Total,57.355,Output Per Hour
+2006.0,Romania,Total,59.314,Output Per Hour
+2006.25,Romania,Total,58.64,Output Per Hour
 2006.5,Romania,Total,60.065,Output Per Hour
-2006.75,Romania,Total,62.108,Output Per Hour
-2007.0,Romania,Total,60.907,Output Per Hour
+2006.75,Romania,Total,62.106,Output Per Hour
+2007.0,Romania,Total,60.906,Output Per Hour
 2007.25,Romania,Total,62.39,Output Per Hour
 2007.5,Romania,Total,63.388,Output Per Hour
-2007.75,Romania,Total,66.435,Output Per Hour
-2008.0,Romania,Total,67.03,Output Per Hour
+2007.75,Romania,Total,66.433,Output Per Hour
+2008.0,Romania,Total,67.031,Output Per Hour
 2008.25,Romania,Total,69.821,Output Per Hour
 2008.5,Romania,Total,72.041,Output Per Hour
-2008.75,Romania,Total,72.26,Output Per Hour
-2009.0,Romania,Total,66.588,Output Per Hour
+2008.75,Romania,Total,72.257,Output Per Hour
+2009.0,Romania,Total,66.589,Output Per Hour
 2009.25,Romania,Total,67.513,Output Per Hour
-2009.5,Romania,Total,71.335,Output Per Hour
-2009.75,Romania,Total,73.77,Output Per Hour
-2010.0,Romania,Total,69.115,Output Per Hour
-2010.25,Romania,Total,68.063,Output Per Hour
-2010.5,Romania,Total,66.403,Output Per Hour
-2010.75,Romania,Total,69.913,Output Per Hour
+2009.5,Romania,Total,71.334,Output Per Hour
+2009.75,Romania,Total,73.766,Output Per Hour
+2010.0,Romania,Total,69.116,Output Per Hour
+2010.25,Romania,Total,68.062,Output Per Hour
+2010.5,Romania,Total,66.402,Output Per Hour
+2010.75,Romania,Total,69.91,Output Per Hour
 2011.0,Romania,Total,70.661,Output Per Hour
 2011.25,Romania,Total,73.283,Output Per Hour
 2011.5,Romania,Total,75.283,Output Per Hour
-2011.75,Romania,Total,71.522,Output Per Hour
-2012.0,Romania,Total,76.069,Output Per Hour
+2011.75,Romania,Total,71.519,Output Per Hour
+2012.0,Romania,Total,76.068,Output Per Hour
 2012.25,Romania,Total,75.149,Output Per Hour
-2012.5,Romania,Total,73.821,Output Per Hour
-2012.75,Romania,Total,73.32,Output Per Hour
-2013.0,Romania,Total,74.285,Output Per Hour
+2012.5,Romania,Total,73.82,Output Per Hour
+2012.75,Romania,Total,73.319,Output Per Hour
+2013.0,Romania,Total,74.284,Output Per Hour
 2013.25,Romania,Total,75.03,Output Per Hour
-2013.5,Romania,Total,76.496,Output Per Hour
-2013.75,Romania,Total,76.666,Output Per Hour
-2014.0,Romania,Total,77.052,Output Per Hour
+2013.5,Romania,Total,76.495,Output Per Hour
+2013.75,Romania,Total,76.664,Output Per Hour
+2014.0,Romania,Total,77.053,Output Per Hour
 2014.25,Romania,Total,78.097,Output Per Hour
-2014.5,Romania,Total,79.493,Output Per Hour
-2014.75,Romania,Total,80.207,Output Per Hour
-2015.0,Romania,Total,83.069,Output Per Hour
-2015.25,Romania,Total,82.648,Output Per Hour
-2015.5,Romania,Total,82.094,Output Per Hour
-2015.75,Romania,Total,82.736,Output Per Hour
-2016.0,Romania,Total,84.561,Output Per Hour
-2016.25,Romania,Total,85.162,Output Per Hour
-2016.5,Romania,Total,84.517,Output Per Hour
-2016.75,Romania,Total,85.142,Output Per Hour
-2017.0,Romania,Total,89.12,Output Per Hour
-2017.25,Romania,Total,89.853,Output Per Hour
-2017.5,Romania,Total,91.577,Output Per Hour
-2017.75,Romania,Total,92.883,Output Per Hour
-2018.0,Romania,Total,94.86,Output Per Hour
-2018.25,Romania,Total,95.037,Output Per Hour
-2018.5,Romania,Total,97.273,Output Per Hour
-2018.75,Romania,Total,97.79,Output Per Hour
-2019.0,Romania,Total,97.537,Output Per Hour
-2019.25,Romania,Total,98.085,Output Per Hour
-2019.5,Romania,Total,98.934,Output Per Hour
-2019.75,Romania,Total,101.334,Output Per Hour
-2020.0,Romania,Total,100.1,Output Per Hour
-2020.25,Romania,Total,104.06,Output Per Hour
-2020.5,Romania,Total,95.876,Output Per Hour
-2020.75,Romania,Total,99.964,Output Per Hour
-2021.0,Romania,Total,100.14,Output Per Hour
-2021.25,Romania,Total,100.542,Output Per Hour
-2021.5,Romania,Total,101.502,Output Per Hour
-2021.75,Romania,Total,101.083,Output Per Hour
-2022.0,Romania,Total,104.801,Output Per Hour
-2022.25,Romania,Total,103.178,Output Per Hour
-2022.5,Romania,Total,105.491,Output Per Hour
-2022.75,Romania,Total,107.681,Output Per Hour
-2023.0,Romania,Total,106.751,Output Per Hour
-2023.25,Romania,Total,108.871,Output Per Hour
-2023.5,Romania,Total,109.198,Output Per Hour
-2023.75,Romania,Total,107.357,Output Per Hour
-2024.0,Romania,Total,104.62,Output Per Hour
-2024.25,Romania,Total,105.514,Output Per Hour
-2024.5,Romania,Total,109.173,Output Per Hour
-1997.0,Sweden,Total,70.341,Output Per Hour
-1997.25,Sweden,Total,72.493,Output Per Hour
+2014.5,Romania,Total,79.49,Output Per Hour
+2014.75,Romania,Total,80.205,Output Per Hour
+2015.0,Romania,Total,83.072,Output Per Hour
+2015.25,Romania,Total,82.647,Output Per Hour
+2015.5,Romania,Total,82.09,Output Per Hour
+2015.75,Romania,Total,82.732,Output Per Hour
+2016.0,Romania,Total,84.568,Output Per Hour
+2016.25,Romania,Total,85.161,Output Per Hour
+2016.5,Romania,Total,84.511,Output Per Hour
+2016.75,Romania,Total,85.136,Output Per Hour
+2017.0,Romania,Total,89.13,Output Per Hour
+2017.25,Romania,Total,89.854,Output Per Hour
+2017.5,Romania,Total,91.567,Output Per Hour
+2017.75,Romania,Total,92.876,Output Per Hour
+2018.0,Romania,Total,94.874,Output Per Hour
+2018.25,Romania,Total,95.039,Output Per Hour
+2018.5,Romania,Total,97.258,Output Per Hour
+2018.75,Romania,Total,97.784,Output Per Hour
+2019.0,Romania,Total,97.554,Output Per Hour
+2019.25,Romania,Total,98.092,Output Per Hour
+2019.5,Romania,Total,98.917,Output Per Hour
+2019.75,Romania,Total,101.323,Output Per Hour
+2020.0,Romania,Total,100.129,Output Per Hour
+2020.25,Romania,Total,104.074,Output Per Hour
+2020.5,Romania,Total,95.853,Output Per Hour
+2020.75,Romania,Total,99.944,Output Per Hour
+2021.0,Romania,Total,100.19,Output Per Hour
+2021.25,Romania,Total,100.568,Output Per Hour
+2021.5,Romania,Total,101.467,Output Per Hour
+2021.75,Romania,Total,101.038,Output Per Hour
+2022.0,Romania,Total,104.888,Output Per Hour
+2022.25,Romania,Total,103.261,Output Per Hour
+2022.5,Romania,Total,105.383,Output Per Hour
+2022.75,Romania,Total,107.613,Output Per Hour
+2023.0,Romania,Total,106.906,Output Per Hour
+2023.25,Romania,Total,109.032,Output Per Hour
+2023.5,Romania,Total,108.983,Output Per Hour
+2023.75,Romania,Total,107.262,Output Per Hour
+2024.0,Romania,Total,104.668,Output Per Hour
+2024.25,Romania,Total,105.771,Output Per Hour
+2024.5,Romania,Total,109.122,Output Per Hour
+2024.75,Romania,Total,107.63,Output Per Hour
+1997.0,Sweden,Total,70.278,Output Per Hour
+1997.25,Sweden,Total,72.518,Output Per Hour
 1997.5,Sweden,Total,72.451,Output Per Hour
-1997.75,Sweden,Total,72.896,Output Per Hour
-1998.0,Sweden,Total,73.41,Output Per Hour
-1998.25,Sweden,Total,74.096,Output Per Hour
-1998.5,Sweden,Total,74.278,Output Per Hour
-1998.75,Sweden,Total,74.442,Output Per Hour
-1999.0,Sweden,Total,74.853,Output Per Hour
-1999.25,Sweden,Total,74.816,Output Per Hour
-1999.5,Sweden,Total,75.179,Output Per Hour
-1999.75,Sweden,Total,76.654,Output Per Hour
-2000.0,Sweden,Total,76.692,Output Per Hour
-2000.25,Sweden,Total,77.785,Output Per Hour
-2000.5,Sweden,Total,78.35,Output Per Hour
-2000.75,Sweden,Total,78.378,Output Per Hour
-2001.0,Sweden,Total,78.279,Output Per Hour
-2001.25,Sweden,Total,77.861,Output Per Hour
-2001.5,Sweden,Total,78.361,Output Per Hour
-2001.75,Sweden,Total,78.524,Output Per Hour
-2002.0,Sweden,Total,80.291,Output Per Hour
-2002.25,Sweden,Total,80.813,Output Per Hour
-2002.5,Sweden,Total,81.466,Output Per Hour
-2002.75,Sweden,Total,81.861,Output Per Hour
-2003.0,Sweden,Total,82.638,Output Per Hour
-2003.25,Sweden,Total,83.206,Output Per Hour
-2003.5,Sweden,Total,84.3,Output Per Hour
-2003.75,Sweden,Total,84.474,Output Per Hour
-2004.0,Sweden,Total,85.693,Output Per Hour
-2004.25,Sweden,Total,86.331,Output Per Hour
-2004.5,Sweden,Total,87.487,Output Per Hour
-2004.75,Sweden,Total,88.19,Output Per Hour
-2005.0,Sweden,Total,88.637,Output Per Hour
-2005.25,Sweden,Total,88.893,Output Per Hour
-2005.5,Sweden,Total,90.231,Output Per Hour
-2005.75,Sweden,Total,90.048,Output Per Hour
-2006.0,Sweden,Total,90.869,Output Per Hour
-2006.25,Sweden,Total,91.939,Output Per Hour
-2006.5,Sweden,Total,91.601,Output Per Hour
-2006.75,Sweden,Total,92.21,Output Per Hour
-2007.0,Sweden,Total,91.674,Output Per Hour
-2007.25,Sweden,Total,91.804,Output Per Hour
-2007.5,Sweden,Total,91.556,Output Per Hour
-2007.75,Sweden,Total,91.478,Output Per Hour
-2008.0,Sweden,Total,91.317,Output Per Hour
-2008.25,Sweden,Total,89.841,Output Per Hour
-2008.5,Sweden,Total,90.747,Output Per Hour
-2008.75,Sweden,Total,87.811,Output Per Hour
-2009.0,Sweden,Total,87.862,Output Per Hour
-2009.25,Sweden,Total,88.685,Output Per Hour
-2009.5,Sweden,Total,88.207,Output Per Hour
-2009.75,Sweden,Total,89.268,Output Per Hour
-2010.0,Sweden,Total,90.224,Output Per Hour
-2010.25,Sweden,Total,91.662,Output Per Hour
-2010.5,Sweden,Total,91.779,Output Per Hour
-2010.75,Sweden,Total,92.977,Output Per Hour
-2011.0,Sweden,Total,92.603,Output Per Hour
-2011.25,Sweden,Total,92.323,Output Per Hour
-2011.5,Sweden,Total,93.245,Output Per Hour
-2011.75,Sweden,Total,91.7,Output Per Hour
-2012.0,Sweden,Total,91.318,Output Per Hour
-2012.25,Sweden,Total,92.055,Output Per Hour
-2012.5,Sweden,Total,92.434,Output Per Hour
-2012.75,Sweden,Total,91.171,Output Per Hour
-2013.0,Sweden,Total,92.724,Output Per Hour
-2013.25,Sweden,Total,91.346,Output Per Hour
-2013.5,Sweden,Total,92.437,Output Per Hour
-2013.75,Sweden,Total,92.797,Output Per Hour
-2014.0,Sweden,Total,92.535,Output Per Hour
-2014.25,Sweden,Total,93.032,Output Per Hour
-2014.5,Sweden,Total,92.205,Output Per Hour
-2014.75,Sweden,Total,93.592,Output Per Hour
-2015.0,Sweden,Total,94.276,Output Per Hour
-2015.25,Sweden,Total,96.364,Output Per Hour
-2015.5,Sweden,Total,95.577,Output Per Hour
-2015.75,Sweden,Total,96.599,Output Per Hour
-2016.0,Sweden,Total,95.825,Output Per Hour
-2016.25,Sweden,Total,94.652,Output Per Hour
-2016.5,Sweden,Total,96.076,Output Per Hour
-2016.75,Sweden,Total,96.32,Output Per Hour
-2017.0,Sweden,Total,95.535,Output Per Hour
-2017.25,Sweden,Total,95.517,Output Per Hour
-2017.5,Sweden,Total,95.48,Output Per Hour
-2017.75,Sweden,Total,95.688,Output Per Hour
-2018.0,Sweden,Total,95.935,Output Per Hour
-2018.25,Sweden,Total,95.072,Output Per Hour
-2018.5,Sweden,Total,96.082,Output Per Hour
-2018.75,Sweden,Total,95.639,Output Per Hour
-2019.0,Sweden,Total,97.215,Output Per Hour
-2019.25,Sweden,Total,98.1,Output Per Hour
-2019.5,Sweden,Total,98.37,Output Per Hour
-2019.75,Sweden,Total,99.654,Output Per Hour
-2020.0,Sweden,Total,100.353,Output Per Hour
-2020.25,Sweden,Total,97.081,Output Per Hour
-2020.5,Sweden,Total,100.65,Output Per Hour
-2020.75,Sweden,Total,101.915,Output Per Hour
-2021.0,Sweden,Total,102.592,Output Per Hour
-2021.25,Sweden,Total,103.797,Output Per Hour
-2021.5,Sweden,Total,102.222,Output Per Hour
-2021.75,Sweden,Total,104.736,Output Per Hour
-2022.0,Sweden,Total,103.764,Output Per Hour
-2022.25,Sweden,Total,102.172,Output Per Hour
-2022.5,Sweden,Total,100.569,Output Per Hour
-2022.75,Sweden,Total,100.543,Output Per Hour
-2023.0,Sweden,Total,100.036,Output Per Hour
-2023.25,Sweden,Total,100.85,Output Per Hour
-2023.5,Sweden,Total,100.904,Output Per Hour
-2023.75,Sweden,Total,99.887,Output Per Hour
-2024.0,Sweden,Total,100.587,Output Per Hour
-2024.25,Sweden,Total,101.158,Output Per Hour
-2024.5,Sweden,Total,101.904,Output Per Hour
+1997.75,Sweden,Total,72.864,Output Per Hour
+1998.0,Sweden,Total,73.402,Output Per Hour
+1998.25,Sweden,Total,74.07,Output Per Hour
+1998.5,Sweden,Total,74.277,Output Per Hour
+1998.75,Sweden,Total,74.434,Output Per Hour
+1999.0,Sweden,Total,74.839,Output Per Hour
+1999.25,Sweden,Total,74.825,Output Per Hour
+1999.5,Sweden,Total,75.182,Output Per Hour
+1999.75,Sweden,Total,76.673,Output Per Hour
+2000.0,Sweden,Total,76.725,Output Per Hour
+2000.25,Sweden,Total,77.768,Output Per Hour
+2000.5,Sweden,Total,78.326,Output Per Hour
+2000.75,Sweden,Total,78.376,Output Per Hour
+2001.0,Sweden,Total,78.302,Output Per Hour
+2001.25,Sweden,Total,77.845,Output Per Hour
+2001.5,Sweden,Total,78.336,Output Per Hour
+2001.75,Sweden,Total,78.503,Output Per Hour
+2002.0,Sweden,Total,80.257,Output Per Hour
+2002.25,Sweden,Total,80.818,Output Per Hour
+2002.5,Sweden,Total,81.464,Output Per Hour
+2002.75,Sweden,Total,81.845,Output Per Hour
+2003.0,Sweden,Total,82.606,Output Per Hour
+2003.25,Sweden,Total,83.18,Output Per Hour
+2003.5,Sweden,Total,84.297,Output Per Hour
+2003.75,Sweden,Total,84.452,Output Per Hour
+2004.0,Sweden,Total,85.695,Output Per Hour
+2004.25,Sweden,Total,86.338,Output Per Hour
+2004.5,Sweden,Total,87.491,Output Per Hour
+2004.75,Sweden,Total,88.216,Output Per Hour
+2005.0,Sweden,Total,88.578,Output Per Hour
+2005.25,Sweden,Total,88.972,Output Per Hour
+2005.5,Sweden,Total,90.249,Output Per Hour
+2005.75,Sweden,Total,90.064,Output Per Hour
+2006.0,Sweden,Total,90.886,Output Per Hour
+2006.25,Sweden,Total,91.937,Output Per Hour
+2006.5,Sweden,Total,91.607,Output Per Hour
+2006.75,Sweden,Total,92.172,Output Per Hour
+2007.0,Sweden,Total,91.662,Output Per Hour
+2007.25,Sweden,Total,91.833,Output Per Hour
+2007.5,Sweden,Total,91.587,Output Per Hour
+2007.75,Sweden,Total,91.373,Output Per Hour
+2008.0,Sweden,Total,91.197,Output Per Hour
+2008.25,Sweden,Total,90.027,Output Per Hour
+2008.5,Sweden,Total,90.85,Output Per Hour
+2008.75,Sweden,Total,87.672,Output Per Hour
+2009.0,Sweden,Total,87.664,Output Per Hour
+2009.25,Sweden,Total,88.909,Output Per Hour
+2009.5,Sweden,Total,88.327,Output Per Hour
+2009.75,Sweden,Total,89.135,Output Per Hour
+2010.0,Sweden,Total,89.883,Output Per Hour
+2010.25,Sweden,Total,92.016,Output Per Hour
+2010.5,Sweden,Total,91.913,Output Per Hour
+2010.75,Sweden,Total,92.923,Output Per Hour
+2011.0,Sweden,Total,92.376,Output Per Hour
+2011.25,Sweden,Total,92.502,Output Per Hour
+2011.5,Sweden,Total,93.31,Output Per Hour
+2011.75,Sweden,Total,91.701,Output Per Hour
+2012.0,Sweden,Total,91.241,Output Per Hour
+2012.25,Sweden,Total,92.114,Output Per Hour
+2012.5,Sweden,Total,92.427,Output Per Hour
+2012.75,Sweden,Total,91.127,Output Per Hour
+2013.0,Sweden,Total,92.64,Output Per Hour
+2013.25,Sweden,Total,91.393,Output Per Hour
+2013.5,Sweden,Total,92.446,Output Per Hour
+2013.75,Sweden,Total,92.76,Output Per Hour
+2014.0,Sweden,Total,92.487,Output Per Hour
+2014.25,Sweden,Total,93.016,Output Per Hour
+2014.5,Sweden,Total,92.21,Output Per Hour
+2014.75,Sweden,Total,93.557,Output Per Hour
+2015.0,Sweden,Total,94.251,Output Per Hour
+2015.25,Sweden,Total,96.363,Output Per Hour
+2015.5,Sweden,Total,95.584,Output Per Hour
+2015.75,Sweden,Total,96.592,Output Per Hour
+2016.0,Sweden,Total,95.772,Output Per Hour
+2016.25,Sweden,Total,94.722,Output Per Hour
+2016.5,Sweden,Total,96.09,Output Per Hour
+2016.75,Sweden,Total,96.346,Output Per Hour
+2017.0,Sweden,Total,95.574,Output Per Hour
+2017.25,Sweden,Total,95.49,Output Per Hour
+2017.5,Sweden,Total,95.464,Output Per Hour
+2017.75,Sweden,Total,95.679,Output Per Hour
+2018.0,Sweden,Total,95.931,Output Per Hour
+2018.25,Sweden,Total,95.085,Output Per Hour
+2018.5,Sweden,Total,96.064,Output Per Hour
+2018.75,Sweden,Total,95.597,Output Per Hour
+2019.0,Sweden,Total,97.209,Output Per Hour
+2019.25,Sweden,Total,98.086,Output Per Hour
+2019.5,Sweden,Total,98.376,Output Per Hour
+2019.75,Sweden,Total,99.599,Output Per Hour
+2020.0,Sweden,Total,100.355,Output Per Hour
+2020.25,Sweden,Total,97.121,Output Per Hour
+2020.5,Sweden,Total,100.651,Output Per Hour
+2020.75,Sweden,Total,101.873,Output Per Hour
+2021.0,Sweden,Total,102.578,Output Per Hour
+2021.25,Sweden,Total,103.881,Output Per Hour
+2021.5,Sweden,Total,102.225,Output Per Hour
+2021.75,Sweden,Total,104.69,Output Per Hour
+2022.0,Sweden,Total,103.818,Output Per Hour
+2022.25,Sweden,Total,102.246,Output Per Hour
+2022.5,Sweden,Total,100.553,Output Per Hour
+2022.75,Sweden,Total,100.443,Output Per Hour
+2023.0,Sweden,Total,100.205,Output Per Hour
+2023.25,Sweden,Total,101.027,Output Per Hour
+2023.5,Sweden,Total,101.076,Output Per Hour
+2023.75,Sweden,Total,99.72,Output Per Hour
+2024.0,Sweden,Total,100.844,Output Per Hour
+2024.25,Sweden,Total,101.417,Output Per Hour
+2024.5,Sweden,Total,102.287,Output Per Hour
+2024.75,Sweden,Total,102.351,Output Per Hour
 1997.0,Germany,Total,89.666,Output Per Worker
 1997.25,Germany,Total,90.506,Output Per Worker
 1997.5,Germany,Total,90.659,Output Per Worker
 1997.75,Germany,Total,91.31,Output Per Worker
-1998.0,Germany,Total,92.037,Output Per Worker
+1998.0,Germany,Total,92.035,Output Per Worker
 1998.25,Germany,Total,91.092,Output Per Worker
 1998.5,Germany,Total,90.946,Output Per Worker
 1998.75,Germany,Total,90.543,Output Per Worker
@@ -19181,21 +19194,22 @@ Quarter,Country,Industry,Value,Variable
 2020.5,Germany,Total,101.922,Output Per Worker
 2020.75,Germany,Total,102.923,Output Per Worker
 2021.0,Germany,Total,101.851,Output Per Worker
-2021.25,Germany,Total,104.191,Output Per Worker
-2021.5,Germany,Total,103.703,Output Per Worker
-2021.75,Germany,Total,103.984,Output Per Worker
-2022.0,Germany,Total,103.718,Output Per Worker
-2022.25,Germany,Total,103.403,Output Per Worker
-2022.5,Germany,Total,103.828,Output Per Worker
-2022.75,Germany,Total,103.053,Output Per Worker
-2023.0,Germany,Total,102.962,Output Per Worker
-2023.25,Germany,Total,102.644,Output Per Worker
+2021.25,Germany,Total,104.189,Output Per Worker
+2021.5,Germany,Total,103.705,Output Per Worker
+2021.75,Germany,Total,103.987,Output Per Worker
+2022.0,Germany,Total,103.716,Output Per Worker
+2022.25,Germany,Total,103.4,Output Per Worker
+2022.5,Germany,Total,103.831,Output Per Worker
+2022.75,Germany,Total,103.055,Output Per Worker
+2023.0,Germany,Total,102.96,Output Per Worker
+2023.25,Germany,Total,102.642,Output Per Worker
 2023.5,Germany,Total,102.791,Output Per Worker
-2023.75,Germany,Total,102.329,Output Per Worker
-2024.0,Germany,Total,102.498,Output Per Worker
-2024.25,Germany,Total,102.177,Output Per Worker
+2023.75,Germany,Total,102.332,Output Per Worker
+2024.0,Germany,Total,102.489,Output Per Worker
+2024.25,Germany,Total,102.168,Output Per Worker
 2024.5,Germany,Total,102.389,Output Per Worker
-2024.75,Germany,Total,102.181,Output Per Worker
+2024.75,Germany,Total,102.21,Output Per Worker
+2025.0,Germany,Total,102.441,Output Per Worker
 1997.0,Denmark,Total,81.907,Output Per Worker
 1997.25,Denmark,Total,82.414,Output Per Worker
 1997.5,Denmark,Total,82.034,Output Per Worker
@@ -19292,78 +19306,79 @@ Quarter,Country,Industry,Value,Variable
 2020.25,Denmark,Total,97.164,Output Per Worker
 2020.5,Denmark,Total,101.561,Output Per Worker
 2020.75,Denmark,Total,100.794,Output Per Worker
-2021.0,Denmark,Total,102.53,Output Per Worker
-2021.25,Denmark,Total,104.929,Output Per Worker
-2021.5,Denmark,Total,105.424,Output Per Worker
-2021.75,Denmark,Total,106.927,Output Per Worker
-2022.0,Denmark,Total,103.245,Output Per Worker
-2022.25,Denmark,Total,102.572,Output Per Worker
-2022.5,Denmark,Total,102.756,Output Per Worker
-2022.75,Denmark,Total,101.488,Output Per Worker
-2023.0,Denmark,Total,102.929,Output Per Worker
-2023.25,Denmark,Total,102.701,Output Per Worker
-2023.5,Denmark,Total,103.977,Output Per Worker
-2023.75,Denmark,Total,105.149,Output Per Worker
-2024.0,Denmark,Total,104.52,Output Per Worker
-2024.25,Denmark,Total,105.865,Output Per Worker
-2024.5,Denmark,Total,107.152,Output Per Worker
-2024.75,Denmark,Total,108.465,Output Per Worker
-2001.0,Euro area,Total,96.26,Output Per Worker
-2001.25,Euro area,Total,96.175,Output Per Worker
-2001.5,Euro area,Total,96.13,Output Per Worker
-2001.75,Euro area,Total,95.885,Output Per Worker
+2021.0,Denmark,Total,102.539,Output Per Worker
+2021.25,Denmark,Total,104.954,Output Per Worker
+2021.5,Denmark,Total,105.474,Output Per Worker
+2021.75,Denmark,Total,106.845,Output Per Worker
+2022.0,Denmark,Total,103.225,Output Per Worker
+2022.25,Denmark,Total,102.635,Output Per Worker
+2022.5,Denmark,Total,102.832,Output Per Worker
+2022.75,Denmark,Total,101.369,Output Per Worker
+2023.0,Denmark,Total,102.891,Output Per Worker
+2023.25,Denmark,Total,102.772,Output Per Worker
+2023.5,Denmark,Total,104.046,Output Per Worker
+2023.75,Denmark,Total,105.048,Output Per Worker
+2024.0,Denmark,Total,104.774,Output Per Worker
+2024.25,Denmark,Total,106.124,Output Per Worker
+2024.5,Denmark,Total,107.156,Output Per Worker
+2024.75,Denmark,Total,108.368,Output Per Worker
+2025.0,Denmark,Total,107.282,Output Per Worker
+2001.0,Euro area,Total,96.261,Output Per Worker
+2001.25,Euro area,Total,96.176,Output Per Worker
+2001.5,Euro area,Total,96.129,Output Per Worker
+2001.75,Euro area,Total,95.886,Output Per Worker
 2002.0,Euro area,Total,95.756,Output Per Worker
-2002.25,Euro area,Total,96.105,Output Per Worker
+2002.25,Euro area,Total,96.101,Output Per Worker
 2002.5,Euro area,Total,96.386,Output Per Worker
-2002.75,Euro area,Total,96.531,Output Per Worker
-2003.0,Euro area,Total,96.173,Output Per Worker
+2002.75,Euro area,Total,96.533,Output Per Worker
+2003.0,Euro area,Total,96.174,Output Per Worker
 2003.25,Euro area,Total,96.049,Output Per Worker
-2003.5,Euro area,Total,96.536,Output Per Worker
-2003.75,Euro area,Total,96.932,Output Per Worker
-2004.0,Euro area,Total,97.287,Output Per Worker
-2004.25,Euro area,Total,97.632,Output Per Worker
-2004.5,Euro area,Total,97.596,Output Per Worker
-2004.75,Euro area,Total,97.75,Output Per Worker
-2005.0,Euro area,Total,97.844,Output Per Worker
-2005.25,Euro area,Total,98.147,Output Per Worker
-2005.5,Euro area,Total,98.605,Output Per Worker
+2003.5,Euro area,Total,96.535,Output Per Worker
+2003.75,Euro area,Total,96.926,Output Per Worker
+2004.0,Euro area,Total,97.286,Output Per Worker
+2004.25,Euro area,Total,97.633,Output Per Worker
+2004.5,Euro area,Total,97.593,Output Per Worker
+2004.75,Euro area,Total,97.747,Output Per Worker
+2005.0,Euro area,Total,97.843,Output Per Worker
+2005.25,Euro area,Total,98.141,Output Per Worker
+2005.5,Euro area,Total,98.603,Output Per Worker
 2005.75,Euro area,Total,98.834,Output Per Worker
-2006.0,Euro area,Total,99.301,Output Per Worker
+2006.0,Euro area,Total,99.298,Output Per Worker
 2006.25,Euro area,Total,99.83,Output Per Worker
-2006.5,Euro area,Total,99.945,Output Per Worker
-2006.75,Euro area,Total,100.621,Output Per Worker
-2015.0,Euro area,Total,102.992,Output Per Worker
-2015.25,Euro area,Total,103.139,Output Per Worker
-2015.5,Euro area,Total,103.135,Output Per Worker
-2015.75,Euro area,Total,103.314,Output Per Worker
-2016.0,Euro area,Total,103.484,Output Per Worker
-2016.25,Euro area,Total,103.27,Output Per Worker
-2016.5,Euro area,Total,103.4,Output Per Worker
-2016.75,Euro area,Total,103.788,Output Per Worker
-2017.0,Euro area,Total,104.159,Output Per Worker
-2017.25,Euro area,Total,104.506,Output Per Worker
-2017.5,Euro area,Total,104.784,Output Per Worker
-2017.75,Euro area,Total,105.271,Output Per Worker
-2018.0,Euro area,Total,104.789,Output Per Worker
-2018.25,Euro area,Total,104.803,Output Per Worker
-2018.5,Euro area,Total,104.564,Output Per Worker
+2006.5,Euro area,Total,99.944,Output Per Worker
+2006.75,Euro area,Total,100.616,Output Per Worker
+2015.0,Euro area,Total,102.988,Output Per Worker
+2015.25,Euro area,Total,103.136,Output Per Worker
+2015.5,Euro area,Total,103.133,Output Per Worker
+2015.75,Euro area,Total,103.31,Output Per Worker
+2016.0,Euro area,Total,103.48,Output Per Worker
+2016.25,Euro area,Total,103.267,Output Per Worker
+2016.5,Euro area,Total,103.396,Output Per Worker
+2016.75,Euro area,Total,103.789,Output Per Worker
+2017.0,Euro area,Total,104.157,Output Per Worker
+2017.25,Euro area,Total,104.503,Output Per Worker
+2017.5,Euro area,Total,104.779,Output Per Worker
+2017.75,Euro area,Total,105.27,Output Per Worker
+2018.0,Euro area,Total,104.787,Output Per Worker
+2018.25,Euro area,Total,104.801,Output Per Worker
+2018.5,Euro area,Total,104.562,Output Per Worker
 2018.75,Euro area,Total,104.913,Output Per Worker
-2019.0,Euro area,Total,105.081,Output Per Worker
-2019.25,Euro area,Total,105.081,Output Per Worker
-2019.5,Euro area,Total,105.111,Output Per Worker
-2019.75,Euro area,Total,104.932,Output Per Worker
-2020.0,Euro area,Total,101.659,Output Per Worker
-2020.25,Euro area,Total,93.039,Output Per Worker
-2020.5,Euro area,Total,102.778,Output Per Worker
-2020.75,Euro area,Total,102.524,Output Per Worker
-2021.0,Euro area,Total,103.183,Output Per Worker
-2021.25,Euro area,Total,104.609,Output Per Worker
-2021.5,Euro area,Total,105.291,Output Per Worker
-2021.75,Euro area,Total,105.486,Output Per Worker
-2022.0,Euro area,Total,105.456,Output Per Worker
-2022.25,Euro area,Total,105.879,Output Per Worker
-2022.5,Euro area,Total,106.217,Output Per Worker
-2022.75,Euro area,Total,105.722,Output Per Worker
+2019.0,Euro area,Total,105.079,Output Per Worker
+2019.25,Euro area,Total,105.078,Output Per Worker
+2019.5,Euro area,Total,105.109,Output Per Worker
+2019.75,Euro area,Total,104.929,Output Per Worker
+2020.0,Euro area,Total,101.66,Output Per Worker
+2020.25,Euro area,Total,93.04,Output Per Worker
+2020.5,Euro area,Total,102.779,Output Per Worker
+2020.75,Euro area,Total,102.521,Output Per Worker
+2021.0,Euro area,Total,103.221,Output Per Worker
+2021.25,Euro area,Total,104.637,Output Per Worker
+2021.5,Euro area,Total,105.227,Output Per Worker
+2021.75,Euro area,Total,105.484,Output Per Worker
+2022.0,Euro area,Total,105.505,Output Per Worker
+2022.25,Euro area,Total,105.907,Output Per Worker
+2022.5,Euro area,Total,106.222,Output Per Worker
+2022.75,Euro area,Total,105.696,Output Per Worker
 1997.0,Spain,Total,96.264,Output Per Worker
 1997.25,Spain,Total,96.451,Output Per Worker
 1997.5,Spain,Total,96.572,Output Per Worker
@@ -19472,346 +19487,349 @@ Quarter,Country,Industry,Value,Variable
 2023.25,Spain,Total,106.374,Output Per Worker
 2023.5,Spain,Total,106.143,Output Per Worker
 2023.75,Spain,Total,106.135,Output Per Worker
-2024.0,Spain,Total,106.852,Output Per Worker
-2024.25,Spain,Total,107.738,Output Per Worker
-2024.5,Spain,Total,107.864,Output Per Worker
-2024.75,Spain,Total,107.66,Output Per Worker
-1997.0,European Union,Total,83.351,Output Per Worker
-1997.25,European Union,Total,84.194,Output Per Worker
-1997.5,European Union,Total,84.627,Output Per Worker
-1997.75,European Union,Total,85.246,Output Per Worker
-1998.0,European Union,Total,85.609,Output Per Worker
-1998.25,European Union,Total,85.637,Output Per Worker
-1998.5,European Union,Total,85.778,Output Per Worker
-1998.75,European Union,Total,85.823,Output Per Worker
-1999.0,European Union,Total,86.491,Output Per Worker
-1999.25,European Union,Total,86.741,Output Per Worker
-1999.5,European Union,Total,87.621,Output Per Worker
-1999.75,European Union,Total,88.35,Output Per Worker
-2000.0,European Union,Total,88.964,Output Per Worker
-2000.25,European Union,Total,89.483,Output Per Worker
-2000.5,European Union,Total,89.72,Output Per Worker
-2000.75,European Union,Total,89.868,Output Per Worker
-2001.0,European Union,Total,90.656,Output Per Worker
-2001.25,European Union,Total,90.757,Output Per Worker
-2001.5,European Union,Total,90.839,Output Per Worker
-2001.75,European Union,Total,90.805,Output Per Worker
-2002.0,European Union,Total,91.42,Output Per Worker
-2002.25,European Union,Total,91.736,Output Per Worker
-2002.5,European Union,Total,92.08,Output Per Worker
-2002.75,European Union,Total,92.265,Output Per Worker
-2003.0,European Union,Total,92.148,Output Per Worker
-2003.25,European Union,Total,91.979,Output Per Worker
-2003.5,European Union,Total,92.521,Output Per Worker
-2003.75,European Union,Total,92.986,Output Per Worker
-2004.0,European Union,Total,93.758,Output Per Worker
-2004.25,European Union,Total,94.094,Output Per Worker
-2004.5,European Union,Total,94.175,Output Per Worker
-2004.75,European Union,Total,94.341,Output Per Worker
-2005.0,European Union,Total,94.484,Output Per Worker
-2005.25,European Union,Total,94.813,Output Per Worker
-2005.5,European Union,Total,95.388,Output Per Worker
-2005.75,European Union,Total,95.572,Output Per Worker
-2006.0,European Union,Total,96.07,Output Per Worker
-2006.25,European Union,Total,96.593,Output Per Worker
-2006.5,European Union,Total,96.706,Output Per Worker
-2006.75,European Union,Total,97.388,Output Per Worker
-2007.0,European Union,Total,97.514,Output Per Worker
-2007.25,European Union,Total,97.653,Output Per Worker
-2007.5,European Union,Total,97.593,Output Per Worker
-2007.75,European Union,Total,97.974,Output Per Worker
-2008.0,European Union,Total,98.078,Output Per Worker
-2008.25,European Union,Total,97.712,Output Per Worker
-2008.5,European Union,Total,97.293,Output Per Worker
-2008.75,European Union,Total,95.921,Output Per Worker
-2009.0,European Union,Total,93.767,Output Per Worker
-2009.25,European Union,Total,94.341,Output Per Worker
-2009.5,European Union,Total,95.264,Output Per Worker
-2009.75,European Union,Total,96.019,Output Per Worker
-2010.0,European Union,Total,96.647,Output Per Worker
-2010.25,European Union,Total,97.543,Output Per Worker
-2010.5,European Union,Total,98.033,Output Per Worker
-2010.75,European Union,Total,98.569,Output Per Worker
-2011.0,European Union,Total,99.467,Output Per Worker
-2011.25,European Union,Total,99.564,Output Per Worker
-2011.5,European Union,Total,99.782,Output Per Worker
-2011.75,European Union,Total,99.566,Output Per Worker
-2012.0,European Union,Total,99.38,Output Per Worker
-2012.25,European Union,Total,99.063,Output Per Worker
-2012.5,European Union,Total,99.106,Output Per Worker
-2012.75,European Union,Total,98.925,Output Per Worker
-2013.0,European Union,Total,98.865,Output Per Worker
-2013.25,European Union,Total,99.442,Output Per Worker
-2013.5,European Union,Total,99.789,Output Per Worker
-2013.75,European Union,Total,99.86,Output Per Worker
-2014.0,European Union,Total,99.994,Output Per Worker
-2014.25,European Union,Total,100.039,Output Per Worker
-2014.5,European Union,Total,100.263,Output Per Worker
-2014.75,European Union,Total,100.544,Output Per Worker
-2015.0,European Union,Total,101.291,Output Per Worker
-2015.25,European Union,Total,101.489,Output Per Worker
-2015.5,European Union,Total,101.511,Output Per Worker
-2015.75,European Union,Total,101.687,Output Per Worker
-2016.0,European Union,Total,101.987,Output Per Worker
-2016.25,European Union,Total,101.9,Output Per Worker
-2016.5,European Union,Total,102.084,Output Per Worker
-2016.75,European Union,Total,102.444,Output Per Worker
-2017.0,European Union,Total,102.889,Output Per Worker
-2017.25,European Union,Total,103.11,Output Per Worker
-2017.5,European Union,Total,103.537,Output Per Worker
-2017.75,European Union,Total,104.147,Output Per Worker
-2018.0,European Union,Total,103.843,Output Per Worker
-2018.25,European Union,Total,103.898,Output Per Worker
-2018.5,European Union,Total,103.857,Output Per Worker
-2018.75,European Union,Total,104.382,Output Per Worker
-2019.0,European Union,Total,104.585,Output Per Worker
-2019.25,European Union,Total,104.583,Output Per Worker
-2019.5,European Union,Total,104.701,Output Per Worker
-2019.75,European Union,Total,104.707,Output Per Worker
-2020.0,European Union,Total,101.824,Output Per Worker
-2020.25,European Union,Total,93.355,Output Per Worker
-2020.5,European Union,Total,102.449,Output Per Worker
-2020.75,European Union,Total,102.373,Output Per Worker
-2021.0,European Union,Total,103.161,Output Per Worker
-2021.25,European Union,Total,104.485,Output Per Worker
-2021.5,European Union,Total,105.232,Output Per Worker
-2021.75,European Union,Total,105.647,Output Per Worker
-2022.0,European Union,Total,105.721,Output Per Worker
-2022.25,European Union,Total,105.969,Output Per Worker
+2024.0,Spain,Total,106.855,Output Per Worker
+2024.25,Spain,Total,107.725,Output Per Worker
+2024.5,Spain,Total,107.705,Output Per Worker
+2024.75,Spain,Total,107.432,Output Per Worker
+2025.0,Spain,Total,107.143,Output Per Worker
+1997.0,European Union,Total,83.332,Output Per Worker
+1997.25,European Union,Total,84.181,Output Per Worker
+1997.5,European Union,Total,84.616,Output Per Worker
+1997.75,European Union,Total,85.234,Output Per Worker
+1998.0,European Union,Total,85.599,Output Per Worker
+1998.25,European Union,Total,85.623,Output Per Worker
+1998.5,European Union,Total,85.764,Output Per Worker
+1998.75,European Union,Total,85.809,Output Per Worker
+1999.0,European Union,Total,86.477,Output Per Worker
+1999.25,European Union,Total,86.728,Output Per Worker
+1999.5,European Union,Total,87.608,Output Per Worker
+1999.75,European Union,Total,88.337,Output Per Worker
+2000.0,European Union,Total,88.956,Output Per Worker
+2000.25,European Union,Total,89.474,Output Per Worker
+2000.5,European Union,Total,89.709,Output Per Worker
+2000.75,European Union,Total,89.86,Output Per Worker
+2001.0,European Union,Total,90.649,Output Per Worker
+2001.25,European Union,Total,90.746,Output Per Worker
+2001.5,European Union,Total,90.826,Output Per Worker
+2001.75,European Union,Total,90.794,Output Per Worker
+2002.0,European Union,Total,91.408,Output Per Worker
+2002.25,European Union,Total,91.722,Output Per Worker
+2002.5,European Union,Total,92.069,Output Per Worker
+2002.75,European Union,Total,92.255,Output Per Worker
+2003.0,European Union,Total,92.136,Output Per Worker
+2003.25,European Union,Total,91.968,Output Per Worker
+2003.5,European Union,Total,92.509,Output Per Worker
+2003.75,European Union,Total,92.968,Output Per Worker
+2004.0,European Union,Total,93.746,Output Per Worker
+2004.25,European Union,Total,94.084,Output Per Worker
+2004.5,European Union,Total,94.161,Output Per Worker
+2004.75,European Union,Total,94.328,Output Per Worker
+2005.0,European Union,Total,94.469,Output Per Worker
+2005.25,European Union,Total,94.799,Output Per Worker
+2005.5,European Union,Total,95.375,Output Per Worker
+2005.75,European Union,Total,95.559,Output Per Worker
+2006.0,European Union,Total,96.056,Output Per Worker
+2006.25,European Union,Total,96.581,Output Per Worker
+2006.5,European Union,Total,96.693,Output Per Worker
+2006.75,European Union,Total,97.371,Output Per Worker
+2007.0,European Union,Total,97.502,Output Per Worker
+2007.25,European Union,Total,97.638,Output Per Worker
+2007.5,European Union,Total,97.581,Output Per Worker
+2007.75,European Union,Total,97.956,Output Per Worker
+2008.0,European Union,Total,98.059,Output Per Worker
+2008.25,European Union,Total,97.703,Output Per Worker
+2008.5,European Union,Total,97.283,Output Per Worker
+2008.75,European Union,Total,95.901,Output Per Worker
+2009.0,European Union,Total,93.745,Output Per Worker
+2009.25,European Union,Total,94.334,Output Per Worker
+2009.5,European Union,Total,95.255,Output Per Worker
+2009.75,European Union,Total,96.002,Output Per Worker
+2010.0,European Union,Total,96.622,Output Per Worker
+2010.25,European Union,Total,97.537,Output Per Worker
+2010.5,European Union,Total,98.022,Output Per Worker
+2010.75,European Union,Total,98.552,Output Per Worker
+2011.0,European Union,Total,99.442,Output Per Worker
+2011.25,European Union,Total,99.555,Output Per Worker
+2011.5,European Union,Total,99.771,Output Per Worker
+2011.75,European Union,Total,99.55,Output Per Worker
+2012.0,European Union,Total,99.364,Output Per Worker
+2012.25,European Union,Total,99.052,Output Per Worker
+2012.5,European Union,Total,99.09,Output Per Worker
+2012.75,European Union,Total,98.907,Output Per Worker
+2013.0,European Union,Total,98.845,Output Per Worker
+2013.25,European Union,Total,99.429,Output Per Worker
+2013.5,European Union,Total,99.774,Output Per Worker
+2013.75,European Union,Total,99.844,Output Per Worker
+2014.0,European Union,Total,99.974,Output Per Worker
+2014.25,European Union,Total,100.024,Output Per Worker
+2014.5,European Union,Total,100.249,Output Per Worker
+2014.75,European Union,Total,100.531,Output Per Worker
+2015.0,European Union,Total,101.274,Output Per Worker
+2015.25,European Union,Total,101.475,Output Per Worker
+2015.5,European Union,Total,101.497,Output Per Worker
+2015.75,European Union,Total,101.669,Output Per Worker
+2016.0,European Union,Total,101.969,Output Per Worker
+2016.25,European Union,Total,101.888,Output Per Worker
+2016.5,European Union,Total,102.069,Output Per Worker
+2016.75,European Union,Total,102.43,Output Per Worker
+2017.0,European Union,Total,102.877,Output Per Worker
+2017.25,European Union,Total,103.094,Output Per Worker
+2017.5,European Union,Total,103.52,Output Per Worker
+2017.75,European Union,Total,104.129,Output Per Worker
+2018.0,European Union,Total,103.833,Output Per Worker
+2018.25,European Union,Total,103.888,Output Per Worker
+2018.5,European Union,Total,103.847,Output Per Worker
+2018.75,European Union,Total,104.371,Output Per Worker
+2019.0,European Union,Total,104.571,Output Per Worker
+2019.25,European Union,Total,104.572,Output Per Worker
+2019.5,European Union,Total,104.697,Output Per Worker
+2019.75,European Union,Total,104.699,Output Per Worker
+2020.0,European Union,Total,101.82,Output Per Worker
+2020.25,European Union,Total,93.354,Output Per Worker
+2020.5,European Union,Total,102.45,Output Per Worker
+2020.75,European Union,Total,102.375,Output Per Worker
+2021.0,European Union,Total,103.186,Output Per Worker
+2021.25,European Union,Total,104.506,Output Per Worker
+2021.5,European Union,Total,105.17,Output Per Worker
+2021.75,European Union,Total,105.63,Output Per Worker
+2022.0,European Union,Total,105.76,Output Per Worker
+2022.25,European Union,Total,105.992,Output Per Worker
 2022.5,European Union,Total,106.406,Output Per Worker
-2022.75,European Union,Total,105.833,Output Per Worker
-2023.0,European Union,Total,105.55,Output Per Worker
-2023.25,European Union,Total,105.368,Output Per Worker
-2023.5,European Union,Total,105.342,Output Per Worker
-2023.75,European Union,Total,105.092,Output Per Worker
-2024.0,European Union,Total,105.137,Output Per Worker
-2024.25,European Union,Total,105.284,Output Per Worker
-2024.5,European Union,Total,105.659,Output Per Worker
-2024.75,European Union,Total,105.731,Output Per Worker
+2022.75,European Union,Total,105.791,Output Per Worker
+2023.0,European Union,Total,105.583,Output Per Worker
+2023.25,European Union,Total,105.422,Output Per Worker
+2023.5,European Union,Total,105.395,Output Per Worker
+2023.75,European Union,Total,105.054,Output Per Worker
+2024.0,European Union,Total,105.155,Output Per Worker
+2024.25,European Union,Total,105.344,Output Per Worker
+2024.5,European Union,Total,105.734,Output Per Worker
+2024.75,European Union,Total,105.909,Output Per Worker
+2025.0,European Union,Total,105.992,Output Per Worker
 1997.0,France,Total,88.829,Output Per Worker
 1997.25,France,Total,89.565,Output Per Worker
 1997.5,France,Total,90.313,Output Per Worker
-1997.75,France,Total,90.822,Output Per Worker
-1998.0,France,Total,91.28,Output Per Worker
+1997.75,France,Total,90.823,Output Per Worker
+1998.0,France,Total,91.281,Output Per Worker
 1998.25,France,Total,91.403,Output Per Worker
-1998.5,France,Total,91.327,Output Per Worker
+1998.5,France,Total,91.328,Output Per Worker
 1998.75,France,Total,91.555,Output Per Worker
 1999.0,France,Total,91.637,Output Per Worker
 1999.25,France,Total,91.574,Output Per Worker
 1999.5,France,Total,92.281,Output Per Worker
-1999.75,France,Total,93.023,Output Per Worker
-2000.0,France,Total,93.469,Output Per Worker
-2000.25,France,Total,93.807,Output Per Worker
-2000.5,France,Total,93.873,Output Per Worker
-2000.75,France,Total,93.99,Output Per Worker
+1999.75,France,Total,93.024,Output Per Worker
+2000.0,France,Total,93.471,Output Per Worker
+2000.25,France,Total,93.806,Output Per Worker
+2000.5,France,Total,93.879,Output Per Worker
+2000.75,France,Total,93.987,Output Per Worker
 2001.0,France,Total,94.267,Output Per Worker
-2001.25,France,Total,94.074,Output Per Worker
-2001.5,France,Total,94.413,Output Per Worker
-2001.75,France,Total,93.902,Output Per Worker
+2001.25,France,Total,94.072,Output Per Worker
+2001.5,France,Total,94.42,Output Per Worker
+2001.75,France,Total,93.901,Output Per Worker
 2002.0,France,Total,94.315,Output Per Worker
-2002.25,France,Total,94.677,Output Per Worker
-2002.5,France,Total,94.974,Output Per Worker
-2002.75,France,Total,95.026,Output Per Worker
-2003.0,France,Total,95.329,Output Per Worker
-2003.25,France,Total,94.979,Output Per Worker
-2003.5,France,Total,96.002,Output Per Worker
-2003.75,France,Total,96.319,Output Per Worker
-2004.0,France,Total,97.323,Output Per Worker
+2002.25,France,Total,94.674,Output Per Worker
+2002.5,France,Total,94.977,Output Per Worker
+2002.75,France,Total,95.025,Output Per Worker
+2003.0,France,Total,95.327,Output Per Worker
+2003.25,France,Total,94.978,Output Per Worker
+2003.5,France,Total,96.007,Output Per Worker
+2003.75,France,Total,96.32,Output Per Worker
+2004.0,France,Total,97.321,Output Per Worker
 2004.25,France,Total,97.707,Output Per Worker
-2004.5,France,Total,97.991,Output Per Worker
-2004.75,France,Total,98.718,Output Per Worker
-2005.0,France,Total,98.764,Output Per Worker
-2005.25,France,Total,98.824,Output Per Worker
-2005.5,France,Total,99.377,Output Per Worker
-2005.75,France,Total,99.823,Output Per Worker
-2006.0,France,Total,100.429,Output Per Worker
-2006.25,France,Total,101.324,Output Per Worker
-2006.5,France,Total,101.009,Output Per Worker
+2004.5,France,Total,97.992,Output Per Worker
+2004.75,France,Total,98.721,Output Per Worker
+2005.0,France,Total,98.761,Output Per Worker
+2005.25,France,Total,98.826,Output Per Worker
+2005.5,France,Total,99.379,Output Per Worker
+2005.75,France,Total,99.825,Output Per Worker
+2006.0,France,Total,100.427,Output Per Worker
+2006.25,France,Total,101.326,Output Per Worker
+2006.5,France,Total,101.013,Output Per Worker
 2006.75,France,Total,101.228,Output Per Worker
-2007.0,France,Total,101.871,Output Per Worker
-2007.25,France,Total,102.119,Output Per Worker
-2007.5,France,Total,102.162,Output Per Worker
-2007.75,France,Total,101.967,Output Per Worker
-2008.0,France,Total,102.62,Output Per Worker
-2008.25,France,Total,101.876,Output Per Worker
-2008.5,France,Total,101.799,Output Per Worker
-2008.75,France,Total,100.826,Output Per Worker
-2009.0,France,Total,99.331,Output Per Worker
+2007.0,France,Total,101.87,Output Per Worker
+2007.25,France,Total,102.123,Output Per Worker
+2007.5,France,Total,102.164,Output Per Worker
+2007.75,France,Total,101.966,Output Per Worker
+2008.0,France,Total,102.619,Output Per Worker
+2008.25,France,Total,101.879,Output Per Worker
+2008.5,France,Total,101.801,Output Per Worker
+2008.75,France,Total,100.825,Output Per Worker
+2009.0,France,Total,99.326,Output Per Worker
 2009.25,France,Total,99.895,Output Per Worker
-2009.5,France,Total,100.233,Output Per Worker
+2009.5,France,Total,100.239,Output Per Worker
 2009.75,France,Total,101.034,Output Per Worker
-2010.0,France,Total,101.198,Output Per Worker
-2010.25,France,Total,101.61,Output Per Worker
-2010.5,France,Total,102.118,Output Per Worker
-2010.75,France,Total,102.549,Output Per Worker
-2011.0,France,Total,103.663,Output Per Worker
-2011.25,France,Total,103.368,Output Per Worker
-2011.5,France,Total,103.588,Output Per Worker
+2010.0,France,Total,101.197,Output Per Worker
+2010.25,France,Total,101.613,Output Per Worker
+2010.5,France,Total,102.12,Output Per Worker
+2010.75,France,Total,102.547,Output Per Worker
+2011.0,France,Total,103.658,Output Per Worker
+2011.25,France,Total,103.371,Output Per Worker
+2011.5,France,Total,103.591,Output Per Worker
 2011.75,France,Total,103.795,Output Per Worker
-2012.0,France,Total,103.716,Output Per Worker
-2012.25,France,Total,103.226,Output Per Worker
-2012.5,France,Total,103.443,Output Per Worker
-2012.75,France,Total,103.459,Output Per Worker
-2013.0,France,Total,103.505,Output Per Worker
-2013.25,France,Total,104.387,Output Per Worker
-2013.5,France,Total,104.248,Output Per Worker
-2013.75,France,Total,104.693,Output Per Worker
-2014.0,France,Total,104.385,Output Per Worker
-2014.25,France,Total,104.467,Output Per Worker
+2012.0,France,Total,103.712,Output Per Worker
+2012.25,France,Total,103.231,Output Per Worker
+2012.5,France,Total,103.447,Output Per Worker
+2012.75,France,Total,103.458,Output Per Worker
+2013.0,France,Total,103.504,Output Per Worker
+2013.25,France,Total,104.389,Output Per Worker
+2013.5,France,Total,104.253,Output Per Worker
+2013.75,France,Total,104.688,Output Per Worker
+2014.0,France,Total,104.387,Output Per Worker
+2014.25,France,Total,104.468,Output Per Worker
 2014.5,France,Total,105.101,Output Per Worker
-2014.75,France,Total,104.88,Output Per Worker
-2015.0,France,Total,105.445,Output Per Worker
-2015.25,France,Total,105.386,Output Per Worker
-2015.5,France,Total,105.477,Output Per Worker
-2015.75,France,Total,105.594,Output Per Worker
-2016.0,France,Total,105.857,Output Per Worker
-2016.25,France,Total,105.37,Output Per Worker
-2016.5,France,Total,105.189,Output Per Worker
-2016.75,France,Total,105.514,Output Per Worker
-2017.0,France,Total,105.949,Output Per Worker
-2017.25,France,Total,106.406,Output Per Worker
-2017.5,France,Total,106.889,Output Per Worker
-2017.75,France,Total,107.288,Output Per Worker
-2018.0,France,Total,106.829,Output Per Worker
-2018.25,France,Total,106.858,Output Per Worker
-2018.5,France,Total,107.321,Output Per Worker
-2018.75,France,Total,107.999,Output Per Worker
-2019.0,France,Total,108.453,Output Per Worker
-2019.25,France,Total,108.631,Output Per Worker
-2019.5,France,Total,108.371,Output Per Worker
-2019.75,France,Total,107.359,Output Per Worker
-2020.0,France,Total,101.843,Output Per Worker
-2020.25,France,Total,91.359,Output Per Worker
-2020.5,France,Total,103.877,Output Per Worker
-2020.75,France,Total,102.921,Output Per Worker
-2021.0,France,Total,102.866,Output Per Worker
-2021.25,France,Total,103.461,Output Per Worker
-2021.5,France,Total,105.216,Output Per Worker
-2021.75,France,Total,105.015,Output Per Worker
-2022.0,France,Total,104.251,Output Per Worker
-2022.25,France,Total,104.317,Output Per Worker
-2022.5,France,Total,104.577,Output Per Worker
-2022.75,France,Total,104.332,Output Per Worker
-2023.0,France,Total,103.95,Output Per Worker
-2023.25,France,Total,104.488,Output Per Worker
-2023.5,France,Total,104.439,Output Per Worker
-2023.75,France,Total,104.803,Output Per Worker
-2024.0,France,Total,104.676,Output Per Worker
-2024.25,France,Total,104.832,Output Per Worker
-2024.5,France,Total,105.217,Output Per Worker
-2024.75,France,Total,105.13,Output Per Worker
-1997.0,Ireland,Total,44.122,Output Per Worker
-1997.25,Ireland,Total,45.561,Output Per Worker
-1997.5,Ireland,Total,46.687,Output Per Worker
-1997.75,Ireland,Total,46.804,Output Per Worker
-1998.0,Ireland,Total,47.607,Output Per Worker
-1998.25,Ireland,Total,48.232,Output Per Worker
-1998.5,Ireland,Total,49.007,Output Per Worker
-1998.75,Ireland,Total,47.836,Output Per Worker
-1999.0,Ireland,Total,49.275,Output Per Worker
-1999.25,Ireland,Total,48.935,Output Per Worker
-1999.5,Ireland,Total,49.961,Output Per Worker
-1999.75,Ireland,Total,50.834,Output Per Worker
-2000.0,Ireland,Total,50.815,Output Per Worker
-2000.25,Ireland,Total,51.676,Output Per Worker
-2000.5,Ireland,Total,52.107,Output Per Worker
-2000.75,Ireland,Total,52.163,Output Per Worker
-2001.0,Ireland,Total,52.796,Output Per Worker
-2001.25,Ireland,Total,53.376,Output Per Worker
-2001.5,Ireland,Total,52.673,Output Per Worker
-2001.75,Ireland,Total,53.439,Output Per Worker
-2002.0,Ireland,Total,54.115,Output Per Worker
-2002.25,Ireland,Total,54.673,Output Per Worker
-2002.5,Ireland,Total,55.658,Output Per Worker
-2002.75,Ireland,Total,56.345,Output Per Worker
-2003.0,Ireland,Total,55.59,Output Per Worker
-2003.25,Ireland,Total,55.805,Output Per Worker
-2003.5,Ireland,Total,56.122,Output Per Worker
-2003.75,Ireland,Total,58.478,Output Per Worker
-2004.0,Ireland,Total,57.712,Output Per Worker
-2004.25,Ireland,Total,58.921,Output Per Worker
-2004.5,Ireland,Total,57.736,Output Per Worker
-2004.75,Ireland,Total,58.646,Output Per Worker
-2005.0,Ireland,Total,58.816,Output Per Worker
-2005.25,Ireland,Total,59.528,Output Per Worker
-2005.5,Ireland,Total,58.35,Output Per Worker
-2005.75,Ireland,Total,59.597,Output Per Worker
-2006.0,Ireland,Total,59.624,Output Per Worker
-2006.25,Ireland,Total,59.583,Output Per Worker
-2006.5,Ireland,Total,59.544,Output Per Worker
-2006.75,Ireland,Total,59.001,Output Per Worker
-2007.0,Ireland,Total,61.152,Output Per Worker
-2007.25,Ireland,Total,60.073,Output Per Worker
-2007.5,Ireland,Total,58.305,Output Per Worker
-2007.75,Ireland,Total,60.4,Output Per Worker
-2008.0,Ireland,Total,58.803,Output Per Worker
-2008.25,Ireland,Total,57.87,Output Per Worker
-2008.5,Ireland,Total,58.393,Output Per Worker
-2008.75,Ireland,Total,56.716,Output Per Worker
-2009.0,Ireland,Total,58.455,Output Per Worker
-2009.25,Ireland,Total,59.584,Output Per Worker
-2009.5,Ireland,Total,60.304,Output Per Worker
-2009.75,Ireland,Total,59.611,Output Per Worker
-2010.0,Ireland,Total,61.703,Output Per Worker
-2010.25,Ireland,Total,62.193,Output Per Worker
-2010.5,Ireland,Total,63.237,Output Per Worker
-2010.75,Ireland,Total,63.895,Output Per Worker
-2011.0,Ireland,Total,64.545,Output Per Worker
-2011.25,Ireland,Total,65.386,Output Per Worker
-2011.5,Ireland,Total,65.258,Output Per Worker
-2011.75,Ireland,Total,65.223,Output Per Worker
-2012.0,Ireland,Total,64.168,Output Per Worker
-2012.25,Ireland,Total,65.832,Output Per Worker
-2012.5,Ireland,Total,64.83,Output Per Worker
-2012.75,Ireland,Total,64.74,Output Per Worker
-2013.0,Ireland,Total,63.723,Output Per Worker
-2013.25,Ireland,Total,64.734,Output Per Worker
-2013.5,Ireland,Total,66.169,Output Per Worker
-2013.75,Ireland,Total,65.395,Output Per Worker
-2014.0,Ireland,Total,67.79,Output Per Worker
-2014.25,Ireland,Total,69.645,Output Per Worker
-2014.5,Ireland,Total,69.646,Output Per Worker
-2014.75,Ireland,Total,68.952,Output Per Worker
-2015.0,Ireland,Total,82.576,Output Per Worker
-2015.25,Ireland,Total,80.167,Output Per Worker
-2015.5,Ireland,Total,81.363,Output Per Worker
-2015.75,Ireland,Total,82.155,Output Per Worker
-2016.0,Ireland,Total,78.666,Output Per Worker
-2016.25,Ireland,Total,78.236,Output Per Worker
-2016.5,Ireland,Total,78.049,Output Per Worker
-2016.75,Ireland,Total,85.116,Output Per Worker
-2017.0,Ireland,Total,83.635,Output Per Worker
-2017.25,Ireland,Total,83.708,Output Per Worker
-2017.5,Ireland,Total,87.658,Output Per Worker
-2017.75,Ireland,Total,89.829,Output Per Worker
-2018.0,Ireland,Total,89.393,Output Per Worker
-2018.25,Ireland,Total,89.575,Output Per Worker
-2018.5,Ireland,Total,89.873,Output Per Worker
-2018.75,Ireland,Total,90.696,Output Per Worker
-2019.0,Ireland,Total,89.948,Output Per Worker
-2019.25,Ireland,Total,92.056,Output Per Worker
-2019.5,Ireland,Total,92.19,Output Per Worker
-2019.75,Ireland,Total,92.934,Output Per Worker
-2020.0,Ireland,Total,95.601,Output Per Worker
-2020.25,Ireland,Total,98.65,Output Per Worker
-2020.5,Ireland,Total,104.87,Output Per Worker
-2020.75,Ireland,Total,100.879,Output Per Worker
-2021.0,Ireland,Total,112.003,Output Per Worker
-2021.25,Ireland,Total,110.569,Output Per Worker
-2021.5,Ireland,Total,107.039,Output Per Worker
-2021.75,Ireland,Total,105.093,Output Per Worker
-2022.0,Ireland,Total,107.727,Output Per Worker
-2022.25,Ireland,Total,109.536,Output Per Worker
-2022.5,Ireland,Total,112.153,Output Per Worker
-2022.75,Ireland,Total,111.903,Output Per Worker
-2023.0,Ireland,Total,103.616,Output Per Worker
-2023.25,Ireland,Total,102.111,Output Per Worker
-2023.5,Ireland,Total,99.346,Output Per Worker
-2023.75,Ireland,Total,97.479,Output Per Worker
-2024.0,Ireland,Total,97.351,Output Per Worker
-2024.25,Ireland,Total,96.256,Output Per Worker
-2024.5,Ireland,Total,98.344,Output Per Worker
-2024.75,Ireland,Total,97.468,Output Per Worker
+2014.75,France,Total,104.877,Output Per Worker
+2015.0,France,Total,105.443,Output Per Worker
+2015.25,France,Total,105.384,Output Per Worker
+2015.5,France,Total,105.481,Output Per Worker
+2015.75,France,Total,105.59,Output Per Worker
+2016.0,France,Total,105.861,Output Per Worker
+2016.25,France,Total,105.376,Output Per Worker
+2016.5,France,Total,105.187,Output Per Worker
+2016.75,France,Total,105.516,Output Per Worker
+2017.0,France,Total,105.953,Output Per Worker
+2017.25,France,Total,106.409,Output Per Worker
+2017.5,France,Total,106.883,Output Per Worker
+2017.75,France,Total,107.295,Output Per Worker
+2018.0,France,Total,106.83,Output Per Worker
+2018.25,France,Total,106.866,Output Per Worker
+2018.5,France,Total,107.307,Output Per Worker
+2018.75,France,Total,108.008,Output Per Worker
+2019.0,France,Total,108.456,Output Per Worker
+2019.25,France,Total,108.63,Output Per Worker
+2019.5,France,Total,108.359,Output Per Worker
+2019.75,France,Total,107.37,Output Per Worker
+2020.0,France,Total,101.844,Output Per Worker
+2020.25,France,Total,91.382,Output Per Worker
+2020.5,France,Total,103.861,Output Per Worker
+2020.75,France,Total,102.914,Output Per Worker
+2021.0,France,Total,102.864,Output Per Worker
+2021.25,France,Total,103.487,Output Per Worker
+2021.5,France,Total,105.206,Output Per Worker
+2021.75,France,Total,105.005,Output Per Worker
+2022.0,France,Total,104.252,Output Per Worker
+2022.25,France,Total,104.306,Output Per Worker
+2022.5,France,Total,104.561,Output Per Worker
+2022.75,France,Total,104.367,Output Per Worker
+2023.0,France,Total,103.953,Output Per Worker
+2023.25,France,Total,104.509,Output Per Worker
+2023.5,France,Total,104.47,Output Per Worker
+2023.75,France,Total,104.75,Output Per Worker
+2024.0,France,Total,104.637,Output Per Worker
+2024.25,France,Total,104.864,Output Per Worker
+2024.5,France,Total,105.282,Output Per Worker
+2024.75,France,Total,105.316,Output Per Worker
+2025.0,France,Total,105.551,Output Per Worker
+1997.0,Ireland,Total,44.226,Output Per Worker
+1997.25,Ireland,Total,45.686,Output Per Worker
+1997.5,Ireland,Total,46.462,Output Per Worker
+1997.75,Ireland,Total,46.805,Output Per Worker
+1998.0,Ireland,Total,47.747,Output Per Worker
+1998.25,Ireland,Total,48.366,Output Per Worker
+1998.5,Ireland,Total,48.808,Output Per Worker
+1998.75,Ireland,Total,47.796,Output Per Worker
+1999.0,Ireland,Total,49.419,Output Per Worker
+1999.25,Ireland,Total,49.05,Output Per Worker
+1999.5,Ireland,Total,49.801,Output Per Worker
+1999.75,Ireland,Total,50.795,Output Per Worker
+2000.0,Ireland,Total,50.942,Output Per Worker
+2000.25,Ireland,Total,51.761,Output Per Worker
+2000.5,Ireland,Total,51.984,Output Per Worker
+2000.75,Ireland,Total,52.129,Output Per Worker
+2001.0,Ireland,Total,52.908,Output Per Worker
+2001.25,Ireland,Total,53.425,Output Per Worker
+2001.5,Ireland,Total,52.573,Output Per Worker
+2001.75,Ireland,Total,53.451,Output Per Worker
+2002.0,Ireland,Total,54.187,Output Per Worker
+2002.25,Ireland,Total,54.705,Output Per Worker
+2002.5,Ireland,Total,55.575,Output Per Worker
+2002.75,Ireland,Total,56.407,Output Per Worker
+2003.0,Ireland,Total,55.632,Output Per Worker
+2003.25,Ireland,Total,55.826,Output Per Worker
+2003.5,Ireland,Total,56.06,Output Per Worker
+2003.75,Ireland,Total,58.543,Output Per Worker
+2004.0,Ireland,Total,57.739,Output Per Worker
+2004.25,Ireland,Total,58.957,Output Per Worker
+2004.5,Ireland,Total,57.667,Output Per Worker
+2004.75,Ireland,Total,58.729,Output Per Worker
+2005.0,Ireland,Total,58.805,Output Per Worker
+2005.25,Ireland,Total,59.569,Output Per Worker
+2005.5,Ireland,Total,58.275,Output Per Worker
+2005.75,Ireland,Total,59.714,Output Per Worker
+2006.0,Ireland,Total,59.587,Output Per Worker
+2006.25,Ireland,Total,59.603,Output Per Worker
+2006.5,Ireland,Total,59.467,Output Per Worker
+2006.75,Ireland,Total,59.151,Output Per Worker
+2007.0,Ireland,Total,61.094,Output Per Worker
+2007.25,Ireland,Total,60.076,Output Per Worker
+2007.5,Ireland,Total,58.229,Output Per Worker
+2007.75,Ireland,Total,60.57,Output Per Worker
+2008.0,Ireland,Total,58.757,Output Per Worker
+2008.25,Ireland,Total,57.867,Output Per Worker
+2008.5,Ireland,Total,58.309,Output Per Worker
+2008.75,Ireland,Total,56.877,Output Per Worker
+2009.0,Ireland,Total,58.469,Output Per Worker
+2009.25,Ireland,Total,59.572,Output Per Worker
+2009.5,Ireland,Total,60.174,Output Per Worker
+2009.75,Ireland,Total,59.737,Output Per Worker
+2010.0,Ireland,Total,61.794,Output Per Worker
+2010.25,Ireland,Total,62.151,Output Per Worker
+2010.5,Ireland,Total,63.134,Output Per Worker
+2010.75,Ireland,Total,63.986,Output Per Worker
+2011.0,Ireland,Total,64.632,Output Per Worker
+2011.25,Ireland,Total,65.345,Output Per Worker
+2011.5,Ireland,Total,65.224,Output Per Worker
+2011.75,Ireland,Total,65.239,Output Per Worker
+2012.0,Ireland,Total,64.26,Output Per Worker
+2012.25,Ireland,Total,65.796,Output Per Worker
+2012.5,Ireland,Total,64.843,Output Per Worker
+2012.75,Ireland,Total,64.711,Output Per Worker
+2013.0,Ireland,Total,63.784,Output Per Worker
+2013.25,Ireland,Total,64.73,Output Per Worker
+2013.5,Ireland,Total,66.214,Output Per Worker
+2013.75,Ireland,Total,65.362,Output Per Worker
+2014.0,Ireland,Total,67.855,Output Per Worker
+2014.25,Ireland,Total,69.632,Output Per Worker
+2014.5,Ireland,Total,69.678,Output Per Worker
+2014.75,Ireland,Total,68.942,Output Per Worker
+2015.0,Ireland,Total,82.643,Output Per Worker
+2015.25,Ireland,Total,80.158,Output Per Worker
+2015.5,Ireland,Total,81.381,Output Per Worker
+2015.75,Ireland,Total,82.141,Output Per Worker
+2016.0,Ireland,Total,78.736,Output Per Worker
+2016.25,Ireland,Total,78.232,Output Per Worker
+2016.5,Ireland,Total,78.077,Output Per Worker
+2016.75,Ireland,Total,85.043,Output Per Worker
+2017.0,Ireland,Total,83.75,Output Per Worker
+2017.25,Ireland,Total,83.73,Output Per Worker
+2017.5,Ireland,Total,87.648,Output Per Worker
+2017.75,Ireland,Total,89.689,Output Per Worker
+2018.0,Ireland,Total,89.58,Output Per Worker
+2018.25,Ireland,Total,89.618,Output Per Worker
+2018.5,Ireland,Total,89.923,Output Per Worker
+2018.75,Ireland,Total,90.445,Output Per Worker
+2019.0,Ireland,Total,90.177,Output Per Worker
+2019.25,Ireland,Total,92.057,Output Per Worker
+2019.5,Ireland,Total,92.356,Output Per Worker
+2019.75,Ireland,Total,92.595,Output Per Worker
+2020.0,Ireland,Total,95.845,Output Per Worker
+2020.25,Ireland,Total,98.56,Output Per Worker
+2020.5,Ireland,Total,105.29,Output Per Worker
+2020.75,Ireland,Total,100.304,Output Per Worker
+2021.0,Ireland,Total,112.314,Output Per Worker
+2021.25,Ireland,Total,110.539,Output Per Worker
+2021.5,Ireland,Total,107.616,Output Per Worker
+2021.75,Ireland,Total,104.354,Output Per Worker
+2022.0,Ireland,Total,107.97,Output Per Worker
+2022.25,Ireland,Total,109.525,Output Per Worker
+2022.5,Ireland,Total,112.91,Output Per Worker
+2022.75,Ireland,Total,110.944,Output Per Worker
+2023.0,Ireland,Total,103.876,Output Per Worker
+2023.25,Ireland,Total,102.135,Output Per Worker
+2023.5,Ireland,Total,100.015,Output Per Worker
+2023.75,Ireland,Total,96.596,Output Per Worker
+2024.0,Ireland,Total,98.067,Output Per Worker
+2024.25,Ireland,Total,96.369,Output Per Worker
+2024.5,Ireland,Total,99.488,Output Per Worker
+2024.75,Ireland,Total,102.823,Output Per Worker
 1997.0,Italy,Total,110.192,Output Per Worker
 1997.25,Italy,Total,111.797,Output Per Worker
 1997.5,Italy,Total,112.143,Output Per Worker
@@ -19908,210 +19926,212 @@ Quarter,Country,Industry,Value,Variable
 2020.25,Italy,Total,91.652,Output Per Worker
 2020.5,Italy,Total,103.906,Output Per Worker
 2020.75,Italy,Total,103.218,Output Per Worker
-2021.0,Italy,Total,105.107,Output Per Worker
-2021.25,Italy,Total,106.849,Output Per Worker
-2021.5,Italy,Total,109.273,Output Per Worker
-2021.75,Italy,Total,109.866,Output Per Worker
-2022.0,Italy,Total,110.269,Output Per Worker
-2022.25,Italy,Total,110.758,Output Per Worker
-2022.5,Italy,Total,111.766,Output Per Worker
-2022.75,Italy,Total,110.519,Output Per Worker
-2023.0,Italy,Total,109.917,Output Per Worker
-2023.25,Italy,Total,109.775,Output Per Worker
-2023.5,Italy,Total,110.035,Output Per Worker
-2023.75,Italy,Total,108.948,Output Per Worker
-2024.0,Italy,Total,108.989,Output Per Worker
-2024.25,Italy,Total,108.742,Output Per Worker
-2024.5,Italy,Total,108.216,Output Per Worker
-2024.75,Italy,Total,108.138,Output Per Worker
-1997.0,Netherlands,Total,85.032,Output Per Worker
-1997.25,Netherlands,Total,85.424,Output Per Worker
-1997.5,Netherlands,Total,85.965,Output Per Worker
-1997.75,Netherlands,Total,86.441,Output Per Worker
-1998.0,Netherlands,Total,87.268,Output Per Worker
-1998.25,Netherlands,Total,87.368,Output Per Worker
-1998.5,Netherlands,Total,87.626,Output Per Worker
-1998.75,Netherlands,Total,87.842,Output Per Worker
-1999.0,Netherlands,Total,88.488,Output Per Worker
-1999.25,Netherlands,Total,88.865,Output Per Worker
-1999.5,Netherlands,Total,89.657,Output Per Worker
-1999.75,Netherlands,Total,90.298,Output Per Worker
-2000.0,Netherlands,Total,90.944,Output Per Worker
-2000.25,Netherlands,Total,91.315,Output Per Worker
-2000.5,Netherlands,Total,91.544,Output Per Worker
-2000.75,Netherlands,Total,92.034,Output Per Worker
-2001.0,Netherlands,Total,91.972,Output Per Worker
-2001.25,Netherlands,Total,91.903,Output Per Worker
-2001.5,Netherlands,Total,91.707,Output Per Worker
-2001.75,Netherlands,Total,91.549,Output Per Worker
-2002.0,Netherlands,Total,91.267,Output Per Worker
-2002.25,Netherlands,Total,91.311,Output Per Worker
-2002.5,Netherlands,Total,91.341,Output Per Worker
-2002.75,Netherlands,Total,91.415,Output Per Worker
-2003.0,Netherlands,Total,91.897,Output Per Worker
-2003.25,Netherlands,Total,91.72,Output Per Worker
-2003.5,Netherlands,Total,92.019,Output Per Worker
-2003.75,Netherlands,Total,92.671,Output Per Worker
-2004.0,Netherlands,Total,94.334,Output Per Worker
-2004.25,Netherlands,Total,94.708,Output Per Worker
-2004.5,Netherlands,Total,94.744,Output Per Worker
-2004.75,Netherlands,Total,95.092,Output Per Worker
-2005.0,Netherlands,Total,95.01,Output Per Worker
-2005.25,Netherlands,Total,95.64,Output Per Worker
-2005.5,Netherlands,Total,96.593,Output Per Worker
-2005.75,Netherlands,Total,97.13,Output Per Worker
-2006.0,Netherlands,Total,96.788,Output Per Worker
-2006.25,Netherlands,Total,98.015,Output Per Worker
-2006.5,Netherlands,Total,97.847,Output Per Worker
-2006.75,Netherlands,Total,97.509,Output Per Worker
-2007.0,Netherlands,Total,98.155,Output Per Worker
-2007.25,Netherlands,Total,97.879,Output Per Worker
-2007.5,Netherlands,Total,98.352,Output Per Worker
-2007.75,Netherlands,Total,99.409,Output Per Worker
-2008.0,Netherlands,Total,99.543,Output Per Worker
-2008.25,Netherlands,Total,99.347,Output Per Worker
-2008.5,Netherlands,Total,98.98,Output Per Worker
-2008.75,Netherlands,Total,98.012,Output Per Worker
-2009.0,Netherlands,Total,95.967,Output Per Worker
-2009.25,Netherlands,Total,95.667,Output Per Worker
-2009.5,Netherlands,Total,96.159,Output Per Worker
-2009.75,Netherlands,Total,96.867,Output Per Worker
-2010.0,Netherlands,Total,97.479,Output Per Worker
-2010.25,Netherlands,Total,98.016,Output Per Worker
-2010.5,Netherlands,Total,97.98,Output Per Worker
-2010.75,Netherlands,Total,98.68,Output Per Worker
-2011.0,Netherlands,Total,99.564,Output Per Worker
-2011.25,Netherlands,Total,99.179,Output Per Worker
-2011.5,Netherlands,Total,98.935,Output Per Worker
-2011.75,Netherlands,Total,98.447,Output Per Worker
-2012.0,Netherlands,Total,98.348,Output Per Worker
-2012.25,Netherlands,Total,98.444,Output Per Worker
-2012.5,Netherlands,Total,98.285,Output Per Worker
-2012.75,Netherlands,Total,98.097,Output Per Worker
-2013.0,Netherlands,Total,98.493,Output Per Worker
-2013.25,Netherlands,Total,99.142,Output Per Worker
-2013.5,Netherlands,Total,99.755,Output Per Worker
-2013.75,Netherlands,Total,100.461,Output Per Worker
-2014.0,Netherlands,Total,100.867,Output Per Worker
-2014.25,Netherlands,Total,101.063,Output Per Worker
-2014.5,Netherlands,Total,100.928,Output Per Worker
-2014.75,Netherlands,Total,102.151,Output Per Worker
-2015.0,Netherlands,Total,102.364,Output Per Worker
-2015.25,Netherlands,Total,102.529,Output Per Worker
-2015.5,Netherlands,Total,102.653,Output Per Worker
-2015.75,Netherlands,Total,102.522,Output Per Worker
-2016.0,Netherlands,Total,103.022,Output Per Worker
-2016.25,Netherlands,Total,103.257,Output Per Worker
-2016.5,Netherlands,Total,103.678,Output Per Worker
-2016.75,Netherlands,Total,103.944,Output Per Worker
-2017.0,Netherlands,Total,103.976,Output Per Worker
-2017.25,Netherlands,Total,103.861,Output Per Worker
-2017.5,Netherlands,Total,103.942,Output Per Worker
-2017.75,Netherlands,Total,103.905,Output Per Worker
-2018.0,Netherlands,Total,103.855,Output Per Worker
-2018.25,Netherlands,Total,103.657,Output Per Worker
-2018.5,Netherlands,Total,103.275,Output Per Worker
-2018.75,Netherlands,Total,102.954,Output Per Worker
-2019.0,Netherlands,Total,103.595,Output Per Worker
-2019.25,Netherlands,Total,103.589,Output Per Worker
-2019.5,Netherlands,Total,103.734,Output Per Worker
-2019.75,Netherlands,Total,103.502,Output Per Worker
+2021.0,Italy,Total,105.352,Output Per Worker
+2021.25,Italy,Total,107.081,Output Per Worker
+2021.5,Italy,Total,108.77,Output Per Worker
+2021.75,Italy,Total,109.95,Output Per Worker
+2022.0,Italy,Total,110.811,Output Per Worker
+2022.25,Italy,Total,111.108,Output Per Worker
+2022.5,Italy,Total,111.76,Output Per Worker
+2022.75,Italy,Total,110.467,Output Per Worker
+2023.0,Italy,Total,110.315,Output Per Worker
+2023.25,Italy,Total,110.186,Output Per Worker
+2023.5,Italy,Total,110.032,Output Per Worker
+2023.75,Italy,Total,108.833,Output Per Worker
+2024.0,Italy,Total,109.063,Output Per Worker
+2024.25,Italy,Total,108.95,Output Per Worker
+2024.5,Italy,Total,108.146,Output Per Worker
+2024.75,Italy,Total,108.333,Output Per Worker
+2025.0,Italy,Total,107.178,Output Per Worker
+1997.0,Netherlands,Total,85.037,Output Per Worker
+1997.25,Netherlands,Total,85.429,Output Per Worker
+1997.5,Netherlands,Total,85.97,Output Per Worker
+1997.75,Netherlands,Total,86.446,Output Per Worker
+1998.0,Netherlands,Total,87.273,Output Per Worker
+1998.25,Netherlands,Total,87.373,Output Per Worker
+1998.5,Netherlands,Total,87.631,Output Per Worker
+1998.75,Netherlands,Total,87.847,Output Per Worker
+1999.0,Netherlands,Total,88.493,Output Per Worker
+1999.25,Netherlands,Total,88.87,Output Per Worker
+1999.5,Netherlands,Total,89.663,Output Per Worker
+1999.75,Netherlands,Total,90.304,Output Per Worker
+2000.0,Netherlands,Total,90.949,Output Per Worker
+2000.25,Netherlands,Total,91.32,Output Per Worker
+2000.5,Netherlands,Total,91.549,Output Per Worker
+2000.75,Netherlands,Total,92.039,Output Per Worker
+2001.0,Netherlands,Total,91.977,Output Per Worker
+2001.25,Netherlands,Total,91.908,Output Per Worker
+2001.5,Netherlands,Total,91.712,Output Per Worker
+2001.75,Netherlands,Total,91.555,Output Per Worker
+2002.0,Netherlands,Total,91.273,Output Per Worker
+2002.25,Netherlands,Total,91.316,Output Per Worker
+2002.5,Netherlands,Total,91.346,Output Per Worker
+2002.75,Netherlands,Total,91.421,Output Per Worker
+2003.0,Netherlands,Total,91.902,Output Per Worker
+2003.25,Netherlands,Total,91.726,Output Per Worker
+2003.5,Netherlands,Total,92.024,Output Per Worker
+2003.75,Netherlands,Total,92.677,Output Per Worker
+2004.0,Netherlands,Total,94.339,Output Per Worker
+2004.25,Netherlands,Total,94.713,Output Per Worker
+2004.5,Netherlands,Total,94.75,Output Per Worker
+2004.75,Netherlands,Total,95.098,Output Per Worker
+2005.0,Netherlands,Total,95.016,Output Per Worker
+2005.25,Netherlands,Total,95.646,Output Per Worker
+2005.5,Netherlands,Total,96.599,Output Per Worker
+2005.75,Netherlands,Total,97.136,Output Per Worker
+2006.0,Netherlands,Total,96.794,Output Per Worker
+2006.25,Netherlands,Total,98.02,Output Per Worker
+2006.5,Netherlands,Total,97.853,Output Per Worker
+2006.75,Netherlands,Total,97.514,Output Per Worker
+2007.0,Netherlands,Total,98.161,Output Per Worker
+2007.25,Netherlands,Total,97.885,Output Per Worker
+2007.5,Netherlands,Total,98.357,Output Per Worker
+2007.75,Netherlands,Total,99.415,Output Per Worker
+2008.0,Netherlands,Total,99.549,Output Per Worker
+2008.25,Netherlands,Total,99.352,Output Per Worker
+2008.5,Netherlands,Total,98.986,Output Per Worker
+2008.75,Netherlands,Total,98.017,Output Per Worker
+2009.0,Netherlands,Total,95.972,Output Per Worker
+2009.25,Netherlands,Total,95.673,Output Per Worker
+2009.5,Netherlands,Total,96.165,Output Per Worker
+2009.75,Netherlands,Total,96.872,Output Per Worker
+2010.0,Netherlands,Total,97.485,Output Per Worker
+2010.25,Netherlands,Total,98.022,Output Per Worker
+2010.5,Netherlands,Total,97.985,Output Per Worker
+2010.75,Netherlands,Total,98.686,Output Per Worker
+2011.0,Netherlands,Total,99.569,Output Per Worker
+2011.25,Netherlands,Total,99.185,Output Per Worker
+2011.5,Netherlands,Total,98.941,Output Per Worker
+2011.75,Netherlands,Total,98.453,Output Per Worker
+2012.0,Netherlands,Total,98.354,Output Per Worker
+2012.25,Netherlands,Total,98.449,Output Per Worker
+2012.5,Netherlands,Total,98.29,Output Per Worker
+2012.75,Netherlands,Total,98.102,Output Per Worker
+2013.0,Netherlands,Total,98.499,Output Per Worker
+2013.25,Netherlands,Total,99.147,Output Per Worker
+2013.5,Netherlands,Total,99.76,Output Per Worker
+2013.75,Netherlands,Total,100.467,Output Per Worker
+2014.0,Netherlands,Total,100.873,Output Per Worker
+2014.25,Netherlands,Total,101.069,Output Per Worker
+2014.5,Netherlands,Total,100.933,Output Per Worker
+2014.75,Netherlands,Total,102.157,Output Per Worker
+2015.0,Netherlands,Total,102.37,Output Per Worker
+2015.25,Netherlands,Total,102.535,Output Per Worker
+2015.5,Netherlands,Total,102.659,Output Per Worker
+2015.75,Netherlands,Total,102.527,Output Per Worker
+2016.0,Netherlands,Total,103.029,Output Per Worker
+2016.25,Netherlands,Total,103.263,Output Per Worker
+2016.5,Netherlands,Total,103.684,Output Per Worker
+2016.75,Netherlands,Total,103.95,Output Per Worker
+2017.0,Netherlands,Total,103.982,Output Per Worker
+2017.25,Netherlands,Total,103.868,Output Per Worker
+2017.5,Netherlands,Total,103.949,Output Per Worker
+2017.75,Netherlands,Total,103.91,Output Per Worker
+2018.0,Netherlands,Total,103.86,Output Per Worker
+2018.25,Netherlands,Total,103.675,Output Per Worker
+2018.5,Netherlands,Total,103.282,Output Per Worker
+2018.75,Netherlands,Total,102.959,Output Per Worker
+2019.0,Netherlands,Total,103.6,Output Per Worker
+2019.25,Netherlands,Total,103.609,Output Per Worker
+2019.5,Netherlands,Total,103.743,Output Per Worker
+2019.75,Netherlands,Total,103.492,Output Per Worker
 2020.0,Netherlands,Total,102.26,Output Per Worker
-2020.25,Netherlands,Total,95.835,Output Per Worker
-2020.5,Netherlands,Total,100.727,Output Per Worker
-2020.75,Netherlands,Total,101.178,Output Per Worker
-2021.0,Netherlands,Total,102.271,Output Per Worker
-2021.25,Netherlands,Total,105.023,Output Per Worker
-2021.5,Netherlands,Total,105.476,Output Per Worker
-2021.75,Netherlands,Total,105.017,Output Per Worker
-2022.0,Netherlands,Total,104.809,Output Per Worker
-2022.25,Netherlands,Total,106.608,Output Per Worker
-2022.5,Netherlands,Total,105.853,Output Per Worker
-2022.75,Netherlands,Total,105.111,Output Per Worker
-2023.0,Netherlands,Total,104.634,Output Per Worker
-2023.25,Netherlands,Total,104.305,Output Per Worker
-2023.5,Netherlands,Total,103.529,Output Per Worker
-2023.75,Netherlands,Total,103.422,Output Per Worker
-2024.0,Netherlands,Total,102.79,Output Per Worker
-2024.25,Netherlands,Total,103.733,Output Per Worker
-2024.5,Netherlands,Total,104.469,Output Per Worker
-2024.75,Netherlands,Total,104.611,Output Per Worker
-1997.0,Norway,Total,87.022,Output Per Worker
-1997.25,Norway,Total,87.921,Output Per Worker
-1997.5,Norway,Total,87.527,Output Per Worker
-1997.75,Norway,Total,87.806,Output Per Worker
-1998.0,Norway,Total,88.169,Output Per Worker
-1998.25,Norway,Total,88.609,Output Per Worker
-1998.5,Norway,Total,86.75,Output Per Worker
-1998.75,Norway,Total,86.891,Output Per Worker
-1999.0,Norway,Total,87.701,Output Per Worker
-1999.25,Norway,Total,87.696,Output Per Worker
-1999.5,Norway,Total,89.075,Output Per Worker
-1999.75,Norway,Total,89.882,Output Per Worker
-2000.0,Norway,Total,91.797,Output Per Worker
-2000.25,Norway,Total,90.224,Output Per Worker
-2000.5,Norway,Total,90.873,Output Per Worker
-2000.75,Norway,Total,91.059,Output Per Worker
-2001.0,Norway,Total,92.331,Output Per Worker
-2001.25,Norway,Total,92.155,Output Per Worker
-2001.5,Norway,Total,93.258,Output Per Worker
-2001.75,Norway,Total,93.406,Output Per Worker
-2002.0,Norway,Total,92.788,Output Per Worker
-2002.25,Norway,Total,94.507,Output Per Worker
-2002.5,Norway,Total,93.582,Output Per Worker
-2002.75,Norway,Total,95.032,Output Per Worker
-2003.0,Norway,Total,95.672,Output Per Worker
-2003.25,Norway,Total,95.754,Output Per Worker
-2003.5,Norway,Total,96.824,Output Per Worker
-2003.75,Norway,Total,96.85,Output Per Worker
-2004.0,Norway,Total,100.388,Output Per Worker
-2004.25,Norway,Total,100.077,Output Per Worker
-2004.5,Norway,Total,99.077,Output Per Worker
-2004.75,Norway,Total,99.882,Output Per Worker
-2005.0,Norway,Total,101.177,Output Per Worker
-2005.25,Norway,Total,101.221,Output Per Worker
-2005.5,Norway,Total,101.478,Output Per Worker
-2005.75,Norway,Total,101.362,Output Per Worker
-2006.0,Norway,Total,100.871,Output Per Worker
-2006.25,Norway,Total,99.961,Output Per Worker
-2006.5,Norway,Total,100.014,Output Per Worker
-2006.75,Norway,Total,101.194,Output Per Worker
-2007.0,Norway,Total,100.583,Output Per Worker
-2007.25,Norway,Total,99.202,Output Per Worker
-2007.5,Norway,Total,99.056,Output Per Worker
-2007.75,Norway,Total,99.277,Output Per Worker
-2008.0,Norway,Total,97.621,Output Per Worker
-2008.25,Norway,Total,96.488,Output Per Worker
-2008.5,Norway,Total,96.755,Output Per Worker
-2008.75,Norway,Total,96.854,Output Per Worker
-2009.0,Norway,Total,95.601,Output Per Worker
-2009.25,Norway,Total,95.721,Output Per Worker
-2009.5,Norway,Total,95.435,Output Per Worker
-2009.75,Norway,Total,94.994,Output Per Worker
-2010.0,Norway,Total,97.668,Output Per Worker
-2010.25,Norway,Total,96.996,Output Per Worker
-2010.5,Norway,Total,94.518,Output Per Worker
-2010.75,Norway,Total,96.444,Output Per Worker
-2011.0,Norway,Total,96.142,Output Per Worker
-2011.25,Norway,Total,95.627,Output Per Worker
-2011.5,Norway,Total,96.491,Output Per Worker
-2011.75,Norway,Total,96.124,Output Per Worker
-2012.0,Norway,Total,97.413,Output Per Worker
-2012.25,Norway,Total,97.16,Output Per Worker
-2012.5,Norway,Total,95.957,Output Per Worker
-2012.75,Norway,Total,96.459,Output Per Worker
-2013.0,Norway,Total,96.045,Output Per Worker
-2013.25,Norway,Total,96.582,Output Per Worker
-2013.5,Norway,Total,97.221,Output Per Worker
-2013.75,Norway,Total,96.68,Output Per Worker
-2014.0,Norway,Total,96.674,Output Per Worker
-2014.25,Norway,Total,97.482,Output Per Worker
-2014.5,Norway,Total,97.785,Output Per Worker
-2014.75,Norway,Total,98.448,Output Per Worker
-2015.0,Norway,Total,98.394,Output Per Worker
-2015.25,Norway,Total,98.862,Output Per Worker
-2015.5,Norway,Total,99.822,Output Per Worker
-2015.75,Norway,Total,99.021,Output Per Worker
+2020.25,Netherlands,Total,95.84,Output Per Worker
+2020.5,Netherlands,Total,100.725,Output Per Worker
+2020.75,Netherlands,Total,101.175,Output Per Worker
+2021.0,Netherlands,Total,102.267,Output Per Worker
+2021.25,Netherlands,Total,105.048,Output Per Worker
+2021.5,Netherlands,Total,105.491,Output Per Worker
+2021.75,Netherlands,Total,104.989,Output Per Worker
+2022.0,Netherlands,Total,104.812,Output Per Worker
+2022.25,Netherlands,Total,106.642,Output Per Worker
+2022.5,Netherlands,Total,105.888,Output Per Worker
+2022.75,Netherlands,Total,105.051,Output Per Worker
+2023.0,Netherlands,Total,104.642,Output Per Worker
+2023.25,Netherlands,Total,104.345,Output Per Worker
+2023.5,Netherlands,Total,103.58,Output Per Worker
+2023.75,Netherlands,Total,103.325,Output Per Worker
+2024.0,Netherlands,Total,102.886,Output Per Worker
+2024.25,Netherlands,Total,103.783,Output Per Worker
+2024.5,Netherlands,Total,104.48,Output Per Worker
+2024.75,Netherlands,Total,104.429,Output Per Worker
+2025.0,Netherlands,Total,104.651,Output Per Worker
+1997.0,Norway,Total,87.34,Output Per Worker
+1997.25,Norway,Total,87.854,Output Per Worker
+1997.5,Norway,Total,87.478,Output Per Worker
+1997.75,Norway,Total,87.531,Output Per Worker
+1998.0,Norway,Total,88.16,Output Per Worker
+1998.25,Norway,Total,88.417,Output Per Worker
+1998.5,Norway,Total,86.851,Output Per Worker
+1998.75,Norway,Total,86.91,Output Per Worker
+1999.0,Norway,Total,87.922,Output Per Worker
+1999.25,Norway,Total,87.91,Output Per Worker
+1999.5,Norway,Total,88.958,Output Per Worker
+1999.75,Norway,Total,89.485,Output Per Worker
+2000.0,Norway,Total,91.676,Output Per Worker
+2000.25,Norway,Total,90.346,Output Per Worker
+2000.5,Norway,Total,90.834,Output Per Worker
+2000.75,Norway,Total,91.014,Output Per Worker
+2001.0,Norway,Total,92.429,Output Per Worker
+2001.25,Norway,Total,92.283,Output Per Worker
+2001.5,Norway,Total,93.177,Output Per Worker
+2001.75,Norway,Total,93.178,Output Per Worker
+2002.0,Norway,Total,92.951,Output Per Worker
+2002.25,Norway,Total,94.316,Output Per Worker
+2002.5,Norway,Total,93.65,Output Per Worker
+2002.75,Norway,Total,94.905,Output Per Worker
+2003.0,Norway,Total,95.711,Output Per Worker
+2003.25,Norway,Total,95.877,Output Per Worker
+2003.5,Norway,Total,96.702,Output Per Worker
+2003.75,Norway,Total,96.722,Output Per Worker
+2004.0,Norway,Total,100.332,Output Per Worker
+2004.25,Norway,Total,99.984,Output Per Worker
+2004.5,Norway,Total,99.195,Output Per Worker
+2004.75,Norway,Total,99.822,Output Per Worker
+2005.0,Norway,Total,101.315,Output Per Worker
+2005.25,Norway,Total,101.261,Output Per Worker
+2005.5,Norway,Total,101.365,Output Per Worker
+2005.75,Norway,Total,101.207,Output Per Worker
+2006.0,Norway,Total,101.045,Output Per Worker
+2006.25,Norway,Total,100.111,Output Per Worker
+2006.5,Norway,Total,99.977,Output Per Worker
+2006.75,Norway,Total,100.823,Output Per Worker
+2007.0,Norway,Total,100.729,Output Per Worker
+2007.25,Norway,Total,99.346,Output Per Worker
+2007.5,Norway,Total,98.968,Output Per Worker
+2007.75,Norway,Total,98.993,Output Per Worker
+2008.0,Norway,Total,97.603,Output Per Worker
+2008.25,Norway,Total,96.461,Output Per Worker
+2008.5,Norway,Total,96.76,Output Per Worker
+2008.75,Norway,Total,96.805,Output Per Worker
+2009.0,Norway,Total,95.471,Output Per Worker
+2009.25,Norway,Total,95.746,Output Per Worker
+2009.5,Norway,Total,95.449,Output Per Worker
+2009.75,Norway,Total,94.998,Output Per Worker
+2010.0,Norway,Total,97.404,Output Per Worker
+2010.25,Norway,Total,96.923,Output Per Worker
+2010.5,Norway,Total,94.884,Output Per Worker
+2010.75,Norway,Total,96.326,Output Per Worker
+2011.0,Norway,Total,96.209,Output Per Worker
+2011.25,Norway,Total,95.767,Output Per Worker
+2011.5,Norway,Total,96.349,Output Per Worker
+2011.75,Norway,Total,95.974,Output Per Worker
+2012.0,Norway,Total,97.329,Output Per Worker
+2012.25,Norway,Total,97.035,Output Per Worker
+2012.5,Norway,Total,96.09,Output Per Worker
+2012.75,Norway,Total,96.448,Output Per Worker
+2013.0,Norway,Total,96.197,Output Per Worker
+2013.25,Norway,Total,96.607,Output Per Worker
+2013.5,Norway,Total,97.072,Output Per Worker
+2013.75,Norway,Total,96.564,Output Per Worker
+2014.0,Norway,Total,96.842,Output Per Worker
+2014.25,Norway,Total,97.519,Output Per Worker
+2014.5,Norway,Total,97.747,Output Per Worker
+2014.75,Norway,Total,98.191,Output Per Worker
+2015.0,Norway,Total,98.509,Output Per Worker
+2015.25,Norway,Total,98.882,Output Per Worker
+2015.5,Norway,Total,99.629,Output Per Worker
+2015.75,Norway,Total,98.99,Output Per Worker
 2016.0,Norway,Total,99.516,Output Per Worker
 2016.25,Norway,Total,99.301,Output Per Worker
 2016.5,Norway,Total,98.887,Output Per Worker
@@ -20132,140 +20152,143 @@ Quarter,Country,Industry,Value,Variable
 2020.25,Norway,Total,97.727,Output Per Worker
 2020.5,Norway,Total,101.293,Output Per Worker
 2020.75,Norway,Total,100.807,Output Per Worker
-2021.0,Norway,Total,101.86,Output Per Worker
-2021.25,Norway,Total,102.591,Output Per Worker
-2021.5,Norway,Total,104.318,Output Per Worker
-2021.75,Norway,Total,102.592,Output Per Worker
-2022.0,Norway,Total,101.303,Output Per Worker
-2022.25,Norway,Total,102.021,Output Per Worker
-2022.5,Norway,Total,103.216,Output Per Worker
-2022.75,Norway,Total,101.817,Output Per Worker
-2023.0,Norway,Total,101.718,Output Per Worker
-2023.25,Norway,Total,101.427,Output Per Worker
-2023.5,Norway,Total,100.588,Output Per Worker
-2023.75,Norway,Total,102.118,Output Per Worker
-2024.0,Norway,Total,102.08,Output Per Worker
-2024.25,Norway,Total,103.5,Output Per Worker
+2021.0,Norway,Total,103.126,Output Per Worker
+2021.25,Norway,Total,101.85,Output Per Worker
+2021.5,Norway,Total,104.269,Output Per Worker
+2021.75,Norway,Total,102.281,Output Per Worker
+2022.0,Norway,Total,101.604,Output Per Worker
+2022.25,Norway,Total,102.103,Output Per Worker
+2022.5,Norway,Total,103.985,Output Per Worker
+2022.75,Norway,Total,101.946,Output Per Worker
+2023.0,Norway,Total,101.803,Output Per Worker
+2023.25,Norway,Total,100.788,Output Per Worker
+2023.5,Norway,Total,99.858,Output Per Worker
+2023.75,Norway,Total,102.507,Output Per Worker
+2024.0,Norway,Total,102.479,Output Per Worker
+2024.25,Norway,Total,104.311,Output Per Worker
+2024.5,Norway,Total,102.537,Output Per Worker
+2024.75,Norway,Total,101.691,Output Per Worker
 1997.0,Poland,Total,47.91,Output Per Worker
-1997.25,Poland,Total,48.443,Output Per Worker
-1997.5,Poland,Total,48.461,Output Per Worker
-1997.75,Poland,Total,49.009,Output Per Worker
-1998.0,Poland,Total,49.596,Output Per Worker
-1998.25,Poland,Total,49.686,Output Per Worker
-1998.5,Poland,Total,50.204,Output Per Worker
-1998.75,Poland,Total,50.61,Output Per Worker
+1997.25,Poland,Total,48.444,Output Per Worker
+1997.5,Poland,Total,48.464,Output Per Worker
+1997.75,Poland,Total,49.011,Output Per Worker
+1998.0,Poland,Total,49.595,Output Per Worker
+1998.25,Poland,Total,49.688,Output Per Worker
+1998.5,Poland,Total,50.208,Output Per Worker
+1998.75,Poland,Total,50.614,Output Per Worker
 1999.0,Poland,Total,51.416,Output Per Worker
-1999.25,Poland,Total,53.253,Output Per Worker
-1999.5,Poland,Total,55.061,Output Per Worker
-1999.75,Poland,Total,56.538,Output Per Worker
-2000.0,Poland,Total,57.177,Output Per Worker
-2000.25,Poland,Total,57.857,Output Per Worker
-2000.5,Poland,Total,58.05,Output Per Worker
-2000.75,Poland,Total,59.181,Output Per Worker
-2001.0,Poland,Total,59.616,Output Per Worker
-2001.25,Poland,Total,59.844,Output Per Worker
-2001.5,Poland,Total,60.488,Output Per Worker
-2001.75,Poland,Total,61.161,Output Per Worker
-2002.0,Poland,Total,61.915,Output Per Worker
-2002.25,Poland,Total,62.726,Output Per Worker
-2002.5,Poland,Total,63.934,Output Per Worker
-2002.75,Poland,Total,64.333,Output Per Worker
-2003.0,Poland,Total,65.099,Output Per Worker
-2003.25,Poland,Total,65.807,Output Per Worker
-2003.5,Poland,Total,67.147,Output Per Worker
-2003.75,Poland,Total,67.084,Output Per Worker
-2004.0,Poland,Total,68.842,Output Per Worker
-2004.25,Poland,Total,69.275,Output Per Worker
-2004.5,Poland,Total,68.662,Output Per Worker
-2004.75,Poland,Total,68.464,Output Per Worker
-2005.0,Poland,Total,69.066,Output Per Worker
-2005.25,Poland,Total,69.245,Output Per Worker
-2005.5,Poland,Total,69.591,Output Per Worker
-2005.75,Poland,Total,70.136,Output Per Worker
-2006.0,Poland,Total,71.264,Output Per Worker
-2006.25,Poland,Total,72.117,Output Per Worker
-2006.5,Poland,Total,72.192,Output Per Worker
-2006.75,Poland,Total,70.596,Output Per Worker
-2007.0,Poland,Total,72.523,Output Per Worker
-2007.25,Poland,Total,72.702,Output Per Worker
-2007.5,Poland,Total,73.57,Output Per Worker
-2007.75,Poland,Total,73.639,Output Per Worker
-2008.0,Poland,Total,73.532,Output Per Worker
-2008.25,Poland,Total,73.916,Output Per Worker
-2008.5,Poland,Total,73.463,Output Per Worker
-2008.75,Poland,Total,73.451,Output Per Worker
-2009.0,Poland,Total,73.864,Output Per Worker
-2009.25,Poland,Total,74.223,Output Per Worker
-2009.5,Poland,Total,75.206,Output Per Worker
-2009.75,Poland,Total,76.811,Output Per Worker
-2010.0,Poland,Total,78.146,Output Per Worker
-2010.25,Poland,Total,79.063,Output Per Worker
-2010.5,Poland,Total,79.9,Output Per Worker
-2010.75,Poland,Total,80.569,Output Per Worker
-2011.0,Poland,Total,82.072,Output Per Worker
-2011.25,Poland,Total,82.891,Output Per Worker
-2011.5,Poland,Total,83.781,Output Per Worker
-2011.75,Poland,Total,84.527,Output Per Worker
-2012.0,Poland,Total,84.848,Output Per Worker
+1999.25,Poland,Total,53.254,Output Per Worker
+1999.5,Poland,Total,55.062,Output Per Worker
+1999.75,Poland,Total,56.534,Output Per Worker
+2000.0,Poland,Total,57.193,Output Per Worker
+2000.25,Poland,Total,57.862,Output Per Worker
+2000.5,Poland,Total,58.041,Output Per Worker
+2000.75,Poland,Total,59.158,Output Per Worker
+2001.0,Poland,Total,59.642,Output Per Worker
+2001.25,Poland,Total,59.861,Output Per Worker
+2001.5,Poland,Total,60.495,Output Per Worker
+2001.75,Poland,Total,61.149,Output Per Worker
+2002.0,Poland,Total,61.841,Output Per Worker
+2002.25,Poland,Total,62.739,Output Per Worker
+2002.5,Poland,Total,64.072,Output Per Worker
+2002.75,Poland,Total,64.316,Output Per Worker
+2003.0,Poland,Total,65.0,Output Per Worker
+2003.25,Poland,Total,65.847,Output Per Worker
+2003.5,Poland,Total,67.15,Output Per Worker
+2003.75,Poland,Total,67.093,Output Per Worker
+2004.0,Poland,Total,68.843,Output Per Worker
+2004.25,Poland,Total,69.3,Output Per Worker
+2004.5,Poland,Total,68.614,Output Per Worker
+2004.75,Poland,Total,68.476,Output Per Worker
+2005.0,Poland,Total,69.083,Output Per Worker
+2005.25,Poland,Total,69.261,Output Per Worker
+2005.5,Poland,Total,69.573,Output Per Worker
+2005.75,Poland,Total,70.14,Output Per Worker
+2006.0,Poland,Total,71.265,Output Per Worker
+2006.25,Poland,Total,72.12,Output Per Worker
+2006.5,Poland,Total,72.198,Output Per Worker
+2006.75,Poland,Total,70.601,Output Per Worker
+2007.0,Poland,Total,72.524,Output Per Worker
+2007.25,Poland,Total,72.707,Output Per Worker
+2007.5,Poland,Total,73.568,Output Per Worker
+2007.75,Poland,Total,73.638,Output Per Worker
+2008.0,Poland,Total,73.537,Output Per Worker
+2008.25,Poland,Total,73.914,Output Per Worker
+2008.5,Poland,Total,73.471,Output Per Worker
+2008.75,Poland,Total,73.461,Output Per Worker
+2009.0,Poland,Total,73.865,Output Per Worker
+2009.25,Poland,Total,74.217,Output Per Worker
+2009.5,Poland,Total,75.21,Output Per Worker
+2009.75,Poland,Total,76.818,Output Per Worker
+2010.0,Poland,Total,78.14,Output Per Worker
+2010.25,Poland,Total,79.064,Output Per Worker
+2010.5,Poland,Total,79.902,Output Per Worker
+2010.75,Poland,Total,80.572,Output Per Worker
+2011.0,Poland,Total,82.077,Output Per Worker
+2011.25,Poland,Total,82.897,Output Per Worker
+2011.5,Poland,Total,83.78,Output Per Worker
+2011.75,Poland,Total,84.531,Output Per Worker
+2012.0,Poland,Total,84.852,Output Per Worker
 2012.25,Poland,Total,84.372,Output Per Worker
-2012.5,Poland,Total,84.518,Output Per Worker
-2012.75,Poland,Total,84.686,Output Per Worker
-2013.0,Poland,Total,84.602,Output Per Worker
-2013.25,Poland,Total,84.913,Output Per Worker
-2013.5,Poland,Total,85.546,Output Per Worker
-2013.75,Poland,Total,85.67,Output Per Worker
-2014.0,Poland,Total,86.043,Output Per Worker
-2014.25,Poland,Total,86.843,Output Per Worker
+2012.5,Poland,Total,84.521,Output Per Worker
+2012.75,Poland,Total,84.691,Output Per Worker
+2013.0,Poland,Total,84.598,Output Per Worker
+2013.25,Poland,Total,84.916,Output Per Worker
+2013.5,Poland,Total,85.553,Output Per Worker
+2013.75,Poland,Total,85.678,Output Per Worker
+2014.0,Poland,Total,86.048,Output Per Worker
+2014.25,Poland,Total,86.84,Output Per Worker
 2014.5,Poland,Total,87.165,Output Per Worker
-2014.75,Poland,Total,87.738,Output Per Worker
-2015.0,Poland,Total,88.687,Output Per Worker
-2015.25,Poland,Total,89.084,Output Per Worker
-2015.5,Poland,Total,89.597,Output Per Worker
-2015.75,Poland,Total,89.744,Output Per Worker
-2016.0,Poland,Total,90.192,Output Per Worker
-2016.25,Poland,Total,91.346,Output Per Worker
-2016.5,Poland,Total,91.594,Output Per Worker
-2016.75,Poland,Total,92.689,Output Per Worker
-2017.0,Poland,Total,93.466,Output Per Worker
-2017.25,Poland,Total,93.978,Output Per Worker
-2017.5,Poland,Total,95.471,Output Per Worker
-2017.75,Poland,Total,97.109,Output Per Worker
-2018.0,Poland,Total,98.656,Output Per Worker
-2018.25,Poland,Total,99.188,Output Per Worker
-2018.5,Poland,Total,100.646,Output Per Worker
-2018.75,Poland,Total,102.76,Output Per Worker
-2019.0,Poland,Total,102.307,Output Per Worker
-2019.25,Poland,Total,101.747,Output Per Worker
-2019.5,Poland,Total,102.218,Output Per Worker
-2019.75,Poland,Total,103.227,Output Per Worker
-2020.0,Poland,Total,103.759,Output Per Worker
-2020.25,Poland,Total,95.314,Output Per Worker
-2020.5,Poland,Total,100.807,Output Per Worker
-2020.75,Poland,Total,100.121,Output Per Worker
-2021.0,Poland,Total,101.885,Output Per Worker
+2014.75,Poland,Total,87.741,Output Per Worker
+2015.0,Poland,Total,88.691,Output Per Worker
+2015.25,Poland,Total,89.086,Output Per Worker
+2015.5,Poland,Total,89.593,Output Per Worker
+2015.75,Poland,Total,89.746,Output Per Worker
+2016.0,Poland,Total,90.196,Output Per Worker
+2016.25,Poland,Total,91.349,Output Per Worker
+2016.5,Poland,Total,91.595,Output Per Worker
+2016.75,Poland,Total,92.688,Output Per Worker
+2017.0,Poland,Total,93.469,Output Per Worker
+2017.25,Poland,Total,93.988,Output Per Worker
+2017.5,Poland,Total,95.474,Output Per Worker
+2017.75,Poland,Total,97.111,Output Per Worker
+2018.0,Poland,Total,98.666,Output Per Worker
+2018.25,Poland,Total,99.184,Output Per Worker
+2018.5,Poland,Total,100.643,Output Per Worker
+2018.75,Poland,Total,102.763,Output Per Worker
+2019.0,Poland,Total,102.314,Output Per Worker
+2019.25,Poland,Total,101.757,Output Per Worker
+2019.5,Poland,Total,102.216,Output Per Worker
+2019.75,Poland,Total,103.233,Output Per Worker
+2020.0,Poland,Total,103.762,Output Per Worker
+2020.25,Poland,Total,95.313,Output Per Worker
+2020.5,Poland,Total,100.801,Output Per Worker
+2020.75,Poland,Total,100.125,Output Per Worker
+2021.0,Poland,Total,101.904,Output Per Worker
 2021.25,Poland,Total,103.142,Output Per Worker
-2021.5,Poland,Total,104.347,Output Per Worker
-2021.75,Poland,Total,106.289,Output Per Worker
-2022.0,Poland,Total,109.759,Output Per Worker
-2022.25,Poland,Total,108.011,Output Per Worker
-2022.5,Poland,Total,109.248,Output Per Worker
-2022.75,Poland,Total,106.862,Output Per Worker
-2023.0,Poland,Total,107.814,Output Per Worker
-2023.25,Poland,Total,107.145,Output Per Worker
-2023.5,Poland,Total,109.358,Output Per Worker
-2023.75,Poland,Total,109.089,Output Per Worker
-2024.0,Poland,Total,110.583,Output Per Worker
-2024.25,Poland,Total,112.322,Output Per Worker
-2024.5,Poland,Total,112.441,Output Per Worker
-2024.75,Poland,Total,113.767,Output Per Worker
-1997.0,Romania,Total,37.6,Output Per Worker
+2021.5,Poland,Total,104.327,Output Per Worker
+2021.75,Poland,Total,106.281,Output Per Worker
+2022.0,Poland,Total,109.808,Output Per Worker
+2022.25,Poland,Total,108.006,Output Per Worker
+2022.5,Poland,Total,109.233,Output Per Worker
+2022.75,Poland,Total,106.865,Output Per Worker
+2023.0,Poland,Total,107.848,Output Per Worker
+2023.25,Poland,Total,107.215,Output Per Worker
+2023.5,Poland,Total,109.459,Output Per Worker
+2023.75,Poland,Total,109.272,Output Per Worker
+2024.0,Poland,Total,110.632,Output Per Worker
+2024.25,Poland,Total,112.492,Output Per Worker
+2024.5,Poland,Total,112.591,Output Per Worker
+2024.75,Poland,Total,114.177,Output Per Worker
+2025.0,Poland,Total,115.681,Output Per Worker
+1997.0,Romania,Total,37.601,Output Per Worker
 1997.25,Romania,Total,36.062,Output Per Worker
-1997.5,Romania,Total,36.454,Output Per Worker
-1997.75,Romania,Total,35.705,Output Per Worker
+1997.5,Romania,Total,36.455,Output Per Worker
+1997.75,Romania,Total,35.706,Output Per Worker
 1998.0,Romania,Total,35.078,Output Per Worker
 1998.25,Romania,Total,35.735,Output Per Worker
 1998.5,Romania,Total,37.882,Output Per Worker
-1998.75,Romania,Total,38.631,Output Per Worker
+1998.75,Romania,Total,38.632,Output Per Worker
 1999.0,Romania,Total,37.948,Output Per Worker
 1999.25,Romania,Total,37.241,Output Per Worker
 1999.5,Romania,Total,36.958,Output Per Worker
@@ -20273,214 +20296,216 @@ Quarter,Country,Industry,Value,Variable
 2000.0,Romania,Total,37.234,Output Per Worker
 2000.25,Romania,Total,40.048,Output Per Worker
 2000.5,Romania,Total,37.915,Output Per Worker
-2000.75,Romania,Total,38.192,Output Per Worker
-2001.0,Romania,Total,40.019,Output Per Worker
-2001.25,Romania,Total,40.112,Output Per Worker
+2000.75,Romania,Total,38.193,Output Per Worker
+2001.0,Romania,Total,40.02,Output Per Worker
+2001.25,Romania,Total,40.113,Output Per Worker
 2001.5,Romania,Total,40.995,Output Per Worker
 2001.75,Romania,Total,42.016,Output Per Worker
 2002.0,Romania,Total,47.995,Output Per Worker
-2002.25,Romania,Total,48.268,Output Per Worker
-2002.5,Romania,Total,47.492,Output Per Worker
+2002.25,Romania,Total,48.269,Output Per Worker
+2002.5,Romania,Total,47.493,Output Per Worker
 2002.75,Romania,Total,48.335,Output Per Worker
 2003.0,Romania,Total,48.925,Output Per Worker
 2003.25,Romania,Total,49.231,Output Per Worker
-2003.5,Romania,Total,49.206,Output Per Worker
-2003.75,Romania,Total,49.337,Output Per Worker
-2004.0,Romania,Total,54.534,Output Per Worker
-2004.25,Romania,Total,54.969,Output Per Worker
-2004.5,Romania,Total,57.794,Output Per Worker
+2003.5,Romania,Total,49.207,Output Per Worker
+2003.75,Romania,Total,49.338,Output Per Worker
+2004.0,Romania,Total,54.535,Output Per Worker
+2004.25,Romania,Total,54.97,Output Per Worker
+2004.5,Romania,Total,57.795,Output Per Worker
 2004.75,Romania,Total,58.755,Output Per Worker
 2005.0,Romania,Total,57.91,Output Per Worker
 2005.25,Romania,Total,57.916,Output Per Worker
-2005.5,Romania,Total,60.499,Output Per Worker
+2005.5,Romania,Total,60.501,Output Per Worker
 2005.75,Romania,Total,61.133,Output Per Worker
 2006.0,Romania,Total,61.895,Output Per Worker
 2006.25,Romania,Total,61.601,Output Per Worker
-2006.5,Romania,Total,63.018,Output Per Worker
-2006.75,Romania,Total,64.688,Output Per Worker
-2007.0,Romania,Total,65.306,Output Per Worker
-2007.25,Romania,Total,66.268,Output Per Worker
-2007.5,Romania,Total,64.726,Output Per Worker
+2006.5,Romania,Total,63.02,Output Per Worker
+2006.75,Romania,Total,64.689,Output Per Worker
+2007.0,Romania,Total,65.307,Output Per Worker
+2007.25,Romania,Total,66.269,Output Per Worker
+2007.5,Romania,Total,64.728,Output Per Worker
 2007.75,Romania,Total,69.475,Output Per Worker
-2008.0,Romania,Total,70.803,Output Per Worker
-2008.25,Romania,Total,73.319,Output Per Worker
-2008.5,Romania,Total,75.133,Output Per Worker
-2008.75,Romania,Total,74.947,Output Per Worker
-2009.0,Romania,Total,69.266,Output Per Worker
+2008.0,Romania,Total,70.805,Output Per Worker
+2008.25,Romania,Total,73.321,Output Per Worker
+2008.5,Romania,Total,75.134,Output Per Worker
+2008.75,Romania,Total,74.945,Output Per Worker
+2009.0,Romania,Total,69.269,Output Per Worker
 2009.25,Romania,Total,69.846,Output Per Worker
-2009.5,Romania,Total,73.585,Output Per Worker
-2009.75,Romania,Total,76.112,Output Per Worker
-2010.0,Romania,Total,72.454,Output Per Worker
-2010.25,Romania,Total,71.591,Output Per Worker
+2009.5,Romania,Total,73.586,Output Per Worker
+2009.75,Romania,Total,76.11,Output Per Worker
+2010.0,Romania,Total,72.456,Output Per Worker
+2010.25,Romania,Total,71.592,Output Per Worker
 2010.5,Romania,Total,69.741,Output Per Worker
 2010.75,Romania,Total,72.95,Output Per Worker
-2011.0,Romania,Total,74.462,Output Per Worker
+2011.0,Romania,Total,74.464,Output Per Worker
 2011.25,Romania,Total,77.245,Output Per Worker
 2011.5,Romania,Total,79.548,Output Per Worker
 2011.75,Romania,Total,75.277,Output Per Worker
-2012.0,Romania,Total,78.209,Output Per Worker
+2012.0,Romania,Total,78.21,Output Per Worker
 2012.25,Romania,Total,78.05,Output Per Worker
 2012.5,Romania,Total,76.421,Output Per Worker
 2012.75,Romania,Total,75.34,Output Per Worker
-2013.0,Romania,Total,76.268,Output Per Worker
-2013.25,Romania,Total,77.479,Output Per Worker
-2013.5,Romania,Total,78.7,Output Per Worker
-2013.75,Romania,Total,79.101,Output Per Worker
-2014.0,Romania,Total,79.339,Output Per Worker
-2014.25,Romania,Total,80.017,Output Per Worker
+2013.0,Romania,Total,76.269,Output Per Worker
+2013.25,Romania,Total,77.48,Output Per Worker
+2013.5,Romania,Total,78.701,Output Per Worker
+2013.75,Romania,Total,79.102,Output Per Worker
+2014.0,Romania,Total,79.341,Output Per Worker
+2014.25,Romania,Total,80.018,Output Per Worker
 2014.5,Romania,Total,81.266,Output Per Worker
 2014.75,Romania,Total,81.256,Output Per Worker
-2015.0,Romania,Total,84.271,Output Per Worker
+2015.0,Romania,Total,84.275,Output Per Worker
 2015.25,Romania,Total,84.057,Output Per Worker
-2015.5,Romania,Total,84.041,Output Per Worker
-2015.75,Romania,Total,83.975,Output Per Worker
-2016.0,Romania,Total,87.214,Output Per Worker
+2015.5,Romania,Total,84.043,Output Per Worker
+2015.75,Romania,Total,83.976,Output Per Worker
+2016.0,Romania,Total,87.22,Output Per Worker
 2016.25,Romania,Total,87.509,Output Per Worker
-2016.5,Romania,Total,87.409,Output Per Worker
-2016.75,Romania,Total,87.76,Output Per Worker
-2017.0,Romania,Total,91.531,Output Per Worker
-2017.25,Romania,Total,90.465,Output Per Worker
-2017.5,Romania,Total,93.483,Output Per Worker
-2017.75,Romania,Total,94.472,Output Per Worker
-2018.0,Romania,Total,95.842,Output Per Worker
-2018.25,Romania,Total,97.13,Output Per Worker
-2018.5,Romania,Total,99.382,Output Per Worker
-2018.75,Romania,Total,99.66,Output Per Worker
-2019.0,Romania,Total,100.023,Output Per Worker
-2019.25,Romania,Total,100.86,Output Per Worker
-2019.5,Romania,Total,102.152,Output Per Worker
-2019.75,Romania,Total,103.837,Output Per Worker
-2020.0,Romania,Total,101.731,Output Per Worker
-2020.25,Romania,Total,95.732,Output Per Worker
-2020.5,Romania,Total,99.125,Output Per Worker
-2020.75,Romania,Total,103.412,Output Per Worker
-2021.0,Romania,Total,104.371,Output Per Worker
-2021.25,Romania,Total,104.057,Output Per Worker
-2021.5,Romania,Total,105.485,Output Per Worker
-2021.75,Romania,Total,105.239,Output Per Worker
-2022.0,Romania,Total,107.753,Output Per Worker
-2022.25,Romania,Total,106.458,Output Per Worker
-2022.5,Romania,Total,108.611,Output Per Worker
-2022.75,Romania,Total,109.693,Output Per Worker
-2023.0,Romania,Total,111.026,Output Per Worker
-2023.25,Romania,Total,113.212,Output Per Worker
-2023.5,Romania,Total,113.586,Output Per Worker
-2023.75,Romania,Total,111.86,Output Per Worker
-2024.0,Romania,Total,109.07,Output Per Worker
-2024.25,Romania,Total,110.09,Output Per Worker
-2024.5,Romania,Total,113.722,Output Per Worker
-1997.0,Sweden,Total,75.104,Output Per Worker
-1997.25,Sweden,Total,76.293,Output Per Worker
-1997.5,Sweden,Total,76.69,Output Per Worker
-1997.75,Sweden,Total,77.875,Output Per Worker
-1998.0,Sweden,Total,77.854,Output Per Worker
-1998.25,Sweden,Total,78.289,Output Per Worker
+2016.5,Romania,Total,87.41,Output Per Worker
+2016.75,Romania,Total,87.759,Output Per Worker
+2017.0,Romania,Total,91.534,Output Per Worker
+2017.25,Romania,Total,90.466,Output Per Worker
+2017.5,Romania,Total,93.484,Output Per Worker
+2017.75,Romania,Total,94.47,Output Per Worker
+2018.0,Romania,Total,95.846,Output Per Worker
+2018.25,Romania,Total,97.132,Output Per Worker
+2018.5,Romania,Total,99.381,Output Per Worker
+2018.75,Romania,Total,99.655,Output Per Worker
+2019.0,Romania,Total,100.035,Output Per Worker
+2019.25,Romania,Total,100.864,Output Per Worker
+2019.5,Romania,Total,102.151,Output Per Worker
+2019.75,Romania,Total,103.822,Output Per Worker
+2020.0,Romania,Total,101.766,Output Per Worker
+2020.25,Romania,Total,95.742,Output Per Worker
+2020.5,Romania,Total,99.113,Output Per Worker
+2020.75,Romania,Total,103.379,Output Per Worker
+2021.0,Romania,Total,104.448,Output Per Worker
+2021.25,Romania,Total,104.075,Output Per Worker
+2021.5,Romania,Total,105.462,Output Per Worker
+2021.75,Romania,Total,105.162,Output Per Worker
+2022.0,Romania,Total,107.899,Output Per Worker
+2022.25,Romania,Total,106.53,Output Per Worker
+2022.5,Romania,Total,108.52,Output Per Worker
+2022.75,Romania,Total,109.551,Output Per Worker
+2023.0,Romania,Total,111.282,Output Per Worker
+2023.25,Romania,Total,113.371,Output Per Worker
+2023.5,Romania,Total,113.383,Output Per Worker
+2023.75,Romania,Total,111.648,Output Per Worker
+2024.0,Romania,Total,109.24,Output Per Worker
+2024.25,Romania,Total,110.358,Output Per Worker
+2024.5,Romania,Total,113.714,Output Per Worker
+2024.75,Romania,Total,112.05,Output Per Worker
+1997.0,Sweden,Total,75.016,Output Per Worker
+1997.25,Sweden,Total,76.329,Output Per Worker
+1997.5,Sweden,Total,76.692,Output Per Worker
+1997.75,Sweden,Total,77.83,Output Per Worker
+1998.0,Sweden,Total,77.84,Output Per Worker
+1998.25,Sweden,Total,78.258,Output Per Worker
 1998.5,Sweden,Total,78.419,Output Per Worker
-1998.75,Sweden,Total,78.897,Output Per Worker
-1999.0,Sweden,Total,79.231,Output Per Worker
-1999.25,Sweden,Total,79.276,Output Per Worker
-1999.5,Sweden,Total,79.991,Output Per Worker
-1999.75,Sweden,Total,80.725,Output Per Worker
-2000.0,Sweden,Total,80.471,Output Per Worker
-2000.25,Sweden,Total,81.919,Output Per Worker
-2000.5,Sweden,Total,82.458,Output Per Worker
-2000.75,Sweden,Total,81.804,Output Per Worker
-2001.0,Sweden,Total,81.264,Output Per Worker
-2001.25,Sweden,Total,80.798,Output Per Worker
-2001.5,Sweden,Total,81.271,Output Per Worker
-2001.75,Sweden,Total,81.678,Output Per Worker
-2002.0,Sweden,Total,82.34,Output Per Worker
-2002.25,Sweden,Total,83.262,Output Per Worker
-2002.5,Sweden,Total,83.153,Output Per Worker
-2002.75,Sweden,Total,83.303,Output Per Worker
-2003.0,Sweden,Total,84.369,Output Per Worker
-2003.25,Sweden,Total,84.365,Output Per Worker
-2003.5,Sweden,Total,85.318,Output Per Worker
-2003.75,Sweden,Total,86.205,Output Per Worker
-2004.0,Sweden,Total,87.572,Output Per Worker
-2004.25,Sweden,Total,88.268,Output Per Worker
-2004.5,Sweden,Total,88.883,Output Per Worker
-2004.75,Sweden,Total,89.46,Output Per Worker
-2005.0,Sweden,Total,90.005,Output Per Worker
-2005.25,Sweden,Total,90.646,Output Per Worker
-2005.5,Sweden,Total,91.765,Output Per Worker
-2005.75,Sweden,Total,91.71,Output Per Worker
-2006.0,Sweden,Total,92.891,Output Per Worker
-2006.25,Sweden,Total,93.72,Output Per Worker
-2006.5,Sweden,Total,93.82,Output Per Worker
-2006.75,Sweden,Total,94.4,Output Per Worker
-2007.0,Sweden,Total,94.145,Output Per Worker
-2007.25,Sweden,Total,94.523,Output Per Worker
-2007.5,Sweden,Total,94.63,Output Per Worker
-2007.75,Sweden,Total,95.445,Output Per Worker
-2008.0,Sweden,Total,94.633,Output Per Worker
-2008.25,Sweden,Total,94.07,Output Per Worker
-2008.5,Sweden,Total,93.516,Output Per Worker
-2008.75,Sweden,Total,90.606,Output Per Worker
-2009.0,Sweden,Total,90.461,Output Per Worker
-2009.25,Sweden,Total,90.853,Output Per Worker
-2009.5,Sweden,Total,91.311,Output Per Worker
-2009.75,Sweden,Total,91.947,Output Per Worker
-2010.0,Sweden,Total,93.481,Output Per Worker
-2010.25,Sweden,Total,95.337,Output Per Worker
-2010.5,Sweden,Total,96.21,Output Per Worker
-2010.75,Sweden,Total,96.845,Output Per Worker
-2011.0,Sweden,Total,96.841,Output Per Worker
-2011.25,Sweden,Total,96.65,Output Per Worker
-2011.5,Sweden,Total,96.946,Output Per Worker
-2011.75,Sweden,Total,95.107,Output Per Worker
-2012.0,Sweden,Total,95.571,Output Per Worker
-2012.25,Sweden,Total,95.569,Output Per Worker
-2012.5,Sweden,Total,95.881,Output Per Worker
-2012.75,Sweden,Total,95.212,Output Per Worker
-2013.0,Sweden,Total,95.357,Output Per Worker
-2013.25,Sweden,Total,95.19,Output Per Worker
-2013.5,Sweden,Total,95.772,Output Per Worker
-2013.75,Sweden,Total,96.286,Output Per Worker
-2014.0,Sweden,Total,96.482,Output Per Worker
-2014.25,Sweden,Total,96.295,Output Per Worker
-2014.5,Sweden,Total,96.386,Output Per Worker
-2014.75,Sweden,Total,96.956,Output Per Worker
-2015.0,Sweden,Total,97.836,Output Per Worker
-2015.25,Sweden,Total,99.422,Output Per Worker
-2015.5,Sweden,Total,99.137,Output Per Worker
-2015.75,Sweden,Total,99.614,Output Per Worker
-2016.0,Sweden,Total,99.16,Output Per Worker
-2016.25,Sweden,Total,99.198,Output Per Worker
-2016.5,Sweden,Total,99.372,Output Per Worker
-2016.75,Sweden,Total,98.83,Output Per Worker
-2017.0,Sweden,Total,98.836,Output Per Worker
-2017.25,Sweden,Total,98.519,Output Per Worker
-2017.5,Sweden,Total,98.604,Output Per Worker
-2017.75,Sweden,Total,98.97,Output Per Worker
-2018.0,Sweden,Total,98.697,Output Per Worker
-2018.25,Sweden,Total,99.091,Output Per Worker
-2018.5,Sweden,Total,98.814,Output Per Worker
-2018.75,Sweden,Total,99.645,Output Per Worker
-2019.0,Sweden,Total,100.048,Output Per Worker
-2019.25,Sweden,Total,100.997,Output Per Worker
-2019.5,Sweden,Total,100.907,Output Per Worker
-2019.75,Sweden,Total,101.907,Output Per Worker
-2020.0,Sweden,Total,102.152,Output Per Worker
-2020.25,Sweden,Total,95.667,Output Per Worker
-2020.5,Sweden,Total,100.244,Output Per Worker
-2020.75,Sweden,Total,101.937,Output Per Worker
-2021.0,Sweden,Total,104.488,Output Per Worker
-2021.25,Sweden,Total,104.824,Output Per Worker
-2021.5,Sweden,Total,103.376,Output Per Worker
-2021.75,Sweden,Total,105.017,Output Per Worker
-2022.0,Sweden,Total,102.83,Output Per Worker
-2022.25,Sweden,Total,103.092,Output Per Worker
-2022.5,Sweden,Total,102.571,Output Per Worker
-2022.75,Sweden,Total,101.461,Output Per Worker
-2023.0,Sweden,Total,101.863,Output Per Worker
-2023.25,Sweden,Total,101.162,Output Per Worker
-2023.5,Sweden,Total,101.221,Output Per Worker
-2023.75,Sweden,Total,101.029,Output Per Worker
-2024.0,Sweden,Total,101.767,Output Per Worker
-2024.25,Sweden,Total,101.929,Output Per Worker
-2024.5,Sweden,Total,102.422,Output Per Worker
-2024.75,Sweden,Total,102.807,Output Per Worker
+1998.75,Sweden,Total,78.885,Output Per Worker
+1999.0,Sweden,Total,79.21,Output Per Worker
+1999.25,Sweden,Total,79.289,Output Per Worker
+1999.5,Sweden,Total,79.995,Output Per Worker
+1999.75,Sweden,Total,80.75,Output Per Worker
+2000.0,Sweden,Total,80.516,Output Per Worker
+2000.25,Sweden,Total,81.895,Output Per Worker
+2000.5,Sweden,Total,82.426,Output Per Worker
+2000.75,Sweden,Total,81.8,Output Per Worker
+2001.0,Sweden,Total,81.297,Output Per Worker
+2001.25,Sweden,Total,80.774,Output Per Worker
+2001.5,Sweden,Total,81.24,Output Per Worker
+2001.75,Sweden,Total,81.648,Output Per Worker
+2002.0,Sweden,Total,82.299,Output Per Worker
+2002.25,Sweden,Total,83.266,Output Per Worker
+2002.5,Sweden,Total,83.154,Output Per Worker
+2002.75,Sweden,Total,83.278,Output Per Worker
+2003.0,Sweden,Total,84.33,Output Per Worker
+2003.25,Sweden,Total,84.329,Output Per Worker
+2003.5,Sweden,Total,85.319,Output Per Worker
+2003.75,Sweden,Total,86.174,Output Per Worker
+2004.0,Sweden,Total,87.577,Output Per Worker
+2004.25,Sweden,Total,88.271,Output Per Worker
+2004.5,Sweden,Total,88.891,Output Per Worker
+2004.75,Sweden,Total,89.494,Output Per Worker
+2005.0,Sweden,Total,89.932,Output Per Worker
+2005.25,Sweden,Total,90.739,Output Per Worker
+2005.5,Sweden,Total,91.788,Output Per Worker
+2005.75,Sweden,Total,91.734,Output Per Worker
+2006.0,Sweden,Total,92.919,Output Per Worker
+2006.25,Sweden,Total,93.706,Output Per Worker
+2006.5,Sweden,Total,93.822,Output Per Worker
+2006.75,Sweden,Total,94.362,Output Per Worker
+2007.0,Sweden,Total,94.143,Output Per Worker
+2007.25,Sweden,Total,94.54,Output Per Worker
+2007.5,Sweden,Total,94.658,Output Per Worker
+2007.75,Sweden,Total,95.328,Output Per Worker
+2008.0,Sweden,Total,94.504,Output Per Worker
+2008.25,Sweden,Total,94.276,Output Per Worker
+2008.5,Sweden,Total,93.626,Output Per Worker
+2008.75,Sweden,Total,90.455,Output Per Worker
+2009.0,Sweden,Total,90.253,Output Per Worker
+2009.25,Sweden,Total,91.078,Output Per Worker
+2009.5,Sweden,Total,91.435,Output Per Worker
+2009.75,Sweden,Total,91.813,Output Per Worker
+2010.0,Sweden,Total,93.123,Output Per Worker
+2010.25,Sweden,Total,95.71,Output Per Worker
+2010.5,Sweden,Total,96.351,Output Per Worker
+2010.75,Sweden,Total,96.8,Output Per Worker
+2011.0,Sweden,Total,96.606,Output Per Worker
+2011.25,Sweden,Total,96.835,Output Per Worker
+2011.5,Sweden,Total,97.015,Output Per Worker
+2011.75,Sweden,Total,95.119,Output Per Worker
+2012.0,Sweden,Total,95.501,Output Per Worker
+2012.25,Sweden,Total,95.619,Output Per Worker
+2012.5,Sweden,Total,95.867,Output Per Worker
+2012.75,Sweden,Total,95.161,Output Per Worker
+2013.0,Sweden,Total,95.265,Output Per Worker
+2013.25,Sweden,Total,95.237,Output Per Worker
+2013.5,Sweden,Total,95.78,Output Per Worker
+2013.75,Sweden,Total,96.243,Output Per Worker
+2014.0,Sweden,Total,96.427,Output Per Worker
+2014.25,Sweden,Total,96.267,Output Per Worker
+2014.5,Sweden,Total,96.387,Output Per Worker
+2014.75,Sweden,Total,96.915,Output Per Worker
+2015.0,Sweden,Total,97.805,Output Per Worker
+2015.25,Sweden,Total,99.417,Output Per Worker
+2015.5,Sweden,Total,99.144,Output Per Worker
+2015.75,Sweden,Total,99.612,Output Per Worker
+2016.0,Sweden,Total,99.092,Output Per Worker
+2016.25,Sweden,Total,99.282,Output Per Worker
+2016.5,Sweden,Total,99.39,Output Per Worker
+2016.75,Sweden,Total,98.869,Output Per Worker
+2017.0,Sweden,Total,98.888,Output Per Worker
+2017.25,Sweden,Total,98.475,Output Per Worker
+2017.5,Sweden,Total,98.584,Output Per Worker
+2017.75,Sweden,Total,98.961,Output Per Worker
+2018.0,Sweden,Total,98.694,Output Per Worker
+2018.25,Sweden,Total,99.1,Output Per Worker
+2018.5,Sweden,Total,98.793,Output Per Worker
+2018.75,Sweden,Total,99.59,Output Per Worker
+2019.0,Sweden,Total,100.043,Output Per Worker
+2019.25,Sweden,Total,100.973,Output Per Worker
+2019.5,Sweden,Total,100.919,Output Per Worker
+2019.75,Sweden,Total,101.837,Output Per Worker
+2020.0,Sweden,Total,102.155,Output Per Worker
+2020.25,Sweden,Total,95.709,Output Per Worker
+2020.5,Sweden,Total,100.25,Output Per Worker
+2020.75,Sweden,Total,101.886,Output Per Worker
+2021.0,Sweden,Total,104.465,Output Per Worker
+2021.25,Sweden,Total,104.929,Output Per Worker
+2021.5,Sweden,Total,103.383,Output Per Worker
+2021.75,Sweden,Total,104.964,Output Per Worker
+2022.0,Sweden,Total,102.887,Output Per Worker
+2022.25,Sweden,Total,103.184,Output Per Worker
+2022.5,Sweden,Total,102.56,Output Per Worker
+2022.75,Sweden,Total,101.338,Output Per Worker
+2023.0,Sweden,Total,102.052,Output Per Worker
+2023.25,Sweden,Total,101.365,Output Per Worker
+2023.5,Sweden,Total,101.384,Output Per Worker
+2023.75,Sweden,Total,100.781,Output Per Worker
+2024.0,Sweden,Total,102.08,Output Per Worker
+2024.25,Sweden,Total,102.243,Output Per Worker
+2024.5,Sweden,Total,102.831,Output Per Worker
+2024.75,Sweden,Total,103.406,Output Per Worker
+2025.0,Sweden,Total,103.117,Output Per Worker
 1997.0,UK,Total,70.73876844068579,Gross Value Added
 1997.25,UK,Total,71.41536689201601,Gross Value Added
 1997.5,UK,Total,71.9430336132309,Gross Value Added

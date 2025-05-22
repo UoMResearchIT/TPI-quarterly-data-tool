@@ -433,14 +433,14 @@ def apply_size(fig, size_factor=1.0):
 def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
     st.sidebar.divider()
     st.sidebar.subheader("Select data to plot")
-    multiY_option = st.sidebar.radio(
-        label="Select visualisation mode:",
-        options=["Multiple Countries", "Single Country"],
-        key=f"MultiY_{key}"
-    )
-    if multiY_option == "Single Country":
-        QorY, quarter, country_selection, base_year = multi_y_mode(quarterly_data, key)
-        return QorY, quarter, None, None, None, None, country_selection, "multiY", base_year
+    # multiY_option = st.sidebar.radio(  # Changed my mind about this
+    #     label="Select visualisation mode:",
+    #     options=["Multiple Countries", "Single Country"],
+    #     key=f"MultiY_{key}"
+    # )
+    # if multiY_option == "Single Country":
+    #     QorY, quarter, country_selection, base_year = multi_y_mode(quarterly_data, key)
+    #     return QorY, quarter, None, None, None, None, country_selection, "multiY", base_year
 
     if lock_quarterly:
         QorY = st.sidebar.radio(
