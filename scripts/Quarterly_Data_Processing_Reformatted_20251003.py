@@ -57,9 +57,8 @@ def SIC_Code_Combine(dataset, letters):
     filtered_data[f"{combined}"] = (filtered_data["Summed"] / ref_value) * 100
     return filtered_data[[f"{combined}"]]
 
-# Load LFS reweighted data:
-ONS_OPH = pd.read_excel('../src/ONS Reweighted productivity.xlsx', sheet_name='Table_2', usecols='A,C', skiprows=6, header=None, names=["Quarter", "OPH"])
-ONS_OPW = pd.read_excel('../src/ONS Reweighted productivity.xlsx', sheet_name='Table_3', usecols='A,C', skiprows=6, header=None, names=["Quarter", "OPW"])
+ONS_OPH = pd.read_excel('../src/OPH May release.xlsx', sheet_name='Table_18', usecols='A,B', skiprows=7, names=["Quarter", "OPH"])
+ONS_OPW = pd.read_excel('../src/OPW May release.xlsx', sheet_name='Table_18', usecols='A,B', skiprows=7, names=["Quarter", "OPW"])
 ONS_Data = ONS_OPH.merge(ONS_OPW, on=["Quarter"])
 # Rebase to 2020
 ONS_Data["Year"] = ONS_Data["Quarter"].str[:4].astype(int)
@@ -75,6 +74,8 @@ ONS_Data = ONS_Data.drop("Year", axis=1)
 ONS_Data = ONS_Data.melt(id_vars=["Quarter"], var_name="Variable", value_name="Value")
 ONS_Data["Country"] = "UK"
 ONS_Data = ONS_Data[["Quarter", "Country", "Variable", "Value"]]
+
+print(ONS_Data)
 
 EU_OPH_OPW = pd.read_csv('../src/EU OPH OPW.csv')
 EU_OPH_OPW = EU_OPH_OPW.rename(columns={"TIME_PERIOD": "Quarter", "na_item": "Variable", "geo": "Country", "OBS_VALUE": "Value"})
@@ -141,7 +142,6 @@ US_data = US_data.melt(id_vars=['Quarter'], var_name='Variable', value_name='Val
 US_data["Value"] = pd.to_numeric(US_data["Value"], errors="coerce")
 US_data['Country'] = 'US'
 US_data = US_data[['Quarter', 'Variable', 'Country', 'Value', ]] # doesnt matter what order !
-print(US_data)
 Dataset = pd.concat([Dataset, US_data])
 
 # GDPPH Calculations
