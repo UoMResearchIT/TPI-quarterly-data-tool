@@ -75,8 +75,6 @@ ONS_Data = ONS_Data.melt(id_vars=["Quarter"], var_name="Variable", value_name="V
 ONS_Data["Country"] = "UK"
 ONS_Data = ONS_Data[["Quarter", "Country", "Variable", "Value"]]
 
-print(ONS_Data)
-
 EU_OPH_OPW = pd.read_csv('../src/EU OPH OPW.csv')
 EU_OPH_OPW = EU_OPH_OPW.rename(columns={"TIME_PERIOD": "Quarter", "na_item": "Variable", "geo": "Country", "OBS_VALUE": "Value"})
 EU_OPH_OPW["Quarter"] = EU_OPH_OPW["Quarter"].str.replace("-", " ", regex=False)
@@ -112,13 +110,11 @@ SIC_Code_Data = SIC_Code_Data.drop("Year", axis=1)
 SIC_Code_Data = SIC_Code_Data.melt(id_vars=["Quarter"], var_name="Industry", value_name="Value").dropna()
 SIC_Code_Data["Country"] = "UK"
 SIC_Code_Data["Variable"] = "GVA"
-# SIC_Code_Data['Quarter'] = SIC_Code_Data['Quarter'].apply(quarter_to_numeric)
 Dataset = pd.concat([Dataset, SIC_Code_Data])
 
 # Import all Quarterly US productivity data since Q1 1997 (consistent with ONS data)
-# Need to change cause this is only one specific industry
 US_data = pd.read_excel('../src/US Labour Productivity.xlsx', sheet_name='Quarterly', usecols='A,C,D, GW:LE', skiprows=2) # Need to change LE every data release, this is silly
-US_data = US_data.loc[US_data['Sector'] == 'Business sector']
+US_data = US_data.loc[US_data['Sector'] == 'Business sector']  # Most representative of total economy
 US_data = US_data.loc[US_data['Units'] == 'Index (2017=100)']
 
 # Reformat data
@@ -141,36 +137,40 @@ US_data = US_data.rename(columns={"Real value-added output": "GVA", "Output per 
 US_data = US_data.melt(id_vars=['Quarter'], var_name='Variable', value_name='Value')
 US_data["Value"] = pd.to_numeric(US_data["Value"], errors="coerce")
 US_data['Country'] = 'US'
-US_data = US_data[['Quarter', 'Variable', 'Country', 'Value', ]] # doesnt matter what order !
+US_data = US_data[['Quarter', 'Variable', 'Country', 'Value']] # doesnt matter what order !
 Dataset = pd.concat([Dataset, US_data])
 
-# GDPPH Calculations
-# GDPPH = GDPPH_Calculation()
-# Dataset = pd.concat([Dataset, GDPPH])
+# Flash Estimate ONS Data
+# OPH:
+Flash_Estimate_OPH = pd.read_csv('../src/OPH Q1 Flash Estimate.csv', skiprows=7, usecols=[0,3], names=["Quarter", "Output Per Hour"])
+Flash_Estimate_OPH["Quarter"] = Flash_Estimate_OPH["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
 
+# Change to 2020 = 100
+Flash_Estimate_OPH["Year"] = Flash_Estimate_OPH["Quarter"].str[:4].astype(int)
+base_2020 = Flash_Estimate_OPH[Flash_Estimate_OPH["Year"] == 2020].iloc[:, 1:-1].mean()
+Flash_Estimate_OPH.iloc[:, 1:-1] = (Flash_Estimate_OPH.iloc[:, 1:-1] / base_2020) * 100
+Flash_Estimate_OPH = Flash_Estimate_OPH.drop("Year", axis=1)
+
+# OPW:
+Flash_Estimate_OPW = pd.read_csv('../src/OPW Q1 Flash Estimate.csv', skiprows=7, usecols=[0,3], names=["Quarter", "Output Per Worker"])
+Flash_Estimate_OPW["Quarter"] = Flash_Estimate_OPW["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
+
+# Change to 2020 = 100
+Flash_Estimate_OPW["Year"] = Flash_Estimate_OPW["Quarter"].str[:4].astype(int)
+base_2020 = Flash_Estimate_OPW[Flash_Estimate_OPW["Year"] == 2020].iloc[:, 1:-1].mean()
+Flash_Estimate_OPW.iloc[:, 1:-1] = (Flash_Estimate_OPW.iloc[:, 1:-1] / base_2020) * 100
+Flash_Estimate_OPW = Flash_Estimate_OPW.drop("Year", axis=1)
+
+Flash_Estimate_Data = Flash_Estimate_OPH.merge(Flash_Estimate_OPW, on='Quarter')
+Flash_Estimate_Data = Flash_Estimate_Data.melt(id_vars=["Quarter"], var_name="Variable", value_name="Value")
+Flash_Estimate_Data['Country'] = 'UK Flash Estimate'
+Flash_Estimate_Data['Industry'] = 'Total'
+Dataset = pd.concat([Dataset, Flash_Estimate_Data])
+
+# Replace all with full indicator titles
 Dataset["Variable"] = Dataset['Variable'].replace('OPH', 'Output Per Hour')
 Dataset["Variable"] = Dataset['Variable'].replace('OPW', 'Output Per Worker')
 Dataset["Variable"] = Dataset['Variable'].replace('GVA', 'Gross Value Added')
 Dataset["Quarter"] = Dataset["Quarter"].apply(quarter_to_numeric) 
 Dataset["Industry"] = Dataset["Industry"].fillna("Total")
 Dataset.to_csv("../out/Long_Dataset.csv", index=False)
-
-# Testing using SQL
-# conn = sqlite3.connect("../out/Quarterly_dataset.db")
-# df_long.to_sql("economic_data", conn, if_exists="replace", index=False)
-# df_from_db = pd.read_sql("SELECT * FROM economic_data", conn)
-# conn.close()
-# print(df_from_db)
-
-# Remove - need to remember to rebase UK data
-# ONS_Data["Year"] = ONS_Data["Quarter"].str[:4].astype(int)
-
-# # Find the rebasing factor (Average of 2020 values)
-# base_2020 = ONS_Data[ONS_Data["Year"] == 2020].iloc[:, 1:-1].mean()
-
-# # Rebase all values so that 2020 = 100
-# ONS_Data.iloc[:, 1:-1] = (ONS_Data.iloc[:, 1:-1] / base_2020) * 100
-# ONS_Data = ONS_Data.drop("Year", axis=1)
-# Dataset = ONS_Data
-
-# Dataset.to_csv("../out/Dataset.csv", index=False)
