@@ -16,6 +16,11 @@ def quarter_to_numeric(q):
         year, qtr = q.split(" ")
     return int(year) + (int(qtr[1]) - 1) / 4  # Converts "1997 Q3" → 1997.5
 
+def numeric_to_quarter(n): # Converts 1997.5 → "1997 Q3"
+    year = int(n)
+    qtr = int((n - year) * 4) + 1
+    return f"{year} Q{qtr}"
+
 def EU_GVA_Process():
     EU_GVA = pd.read_csv('../src/EU GVA with industries.csv')
     EU_GVA["TIME_PERIOD"] = EU_GVA["TIME_PERIOD"].str.replace("-", " ", regex=False)
@@ -57,7 +62,7 @@ def SIC_Code_Combine(dataset, letters):
     filtered_data[f"{combined}"] = (filtered_data["Summed"] / ref_value) * 100
     return filtered_data[[f"{combined}"]]
 
-ONS_OPH = pd.read_excel('../src/OPH May release.xlsx', sheet_name='Table_18', usecols='A,B', skiprows=7, names=["Quarter", "OPH"])
+ONS_OPH = pd.read_excel('../src/OPH May release.xlsx', sheet_name='Table_18', usecols='A,B', skiprows=110, names=["Quarter", "OPH"])
 ONS_OPW = pd.read_excel('../src/OPW May release.xlsx', sheet_name='Table_18', usecols='A,B', skiprows=7, names=["Quarter", "OPW"])
 ONS_Data = ONS_OPH.merge(ONS_OPW, on=["Quarter"])
 # Rebase to 2020
