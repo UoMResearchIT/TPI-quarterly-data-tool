@@ -62,23 +62,24 @@ def SIC_Code_Combine(dataset, letters):
     filtered_data[f"{combined}"] = (filtered_data["Summed"] / ref_value) * 100
     return filtered_data[[f"{combined}"]]
 
-ONS_OPH = pd.read_excel('../src/OPH May release.xlsx', sheet_name='Table_18', usecols='A,B', skiprows=110, names=["Quarter", "OPH"])
-ONS_OPW = pd.read_excel('../src/OPW May release.xlsx', sheet_name='Table_17', usecols='A,B', skiprows=7, names=["Quarter", "OPW"])
-ONS_Data = ONS_OPH.merge(ONS_OPW, on=["Quarter"])
-# Rebase to 2020
-ONS_Data["Year"] = ONS_Data["Quarter"].str[:4].astype(int)
+# Using the Flash estimate data instead
+# ONS_OPH = pd.read_excel('../src/OPH May release.xlsx', sheet_name='Table_18', usecols='A,B', skiprows=110, names=["Quarter", "OPH"])
+# ONS_OPW = pd.read_excel('../src/OPW May release.xlsx', sheet_name='Table_17', usecols='A,B', skiprows=7, names=["Quarter", "OPW"])
+# ONS_Data = ONS_OPH.merge(ONS_OPW, on=["Quarter"])
+# # Rebase to 2020
+# ONS_Data["Year"] = ONS_Data["Quarter"].str[:4].astype(int)
 
-# Find the rebasing factor (Average of 2020 values)
-base_2020 = ONS_Data[ONS_Data["Year"] == 2020].iloc[:, 1:-1].mean()
+# # Find the rebasing factor (Average of 2020 values)
+# base_2020 = ONS_Data[ONS_Data["Year"] == 2020].iloc[:, 1:-1].mean()
 
-# Rebase all values so that 2020 = 100
-ONS_Data.iloc[:, 1:-1] = (ONS_Data.iloc[:, 1:-1] / base_2020) * 100
-ONS_Data = ONS_Data.drop("Year", axis=1)
+# # Rebase all values so that 2020 = 100
+# ONS_Data.iloc[:, 1:-1] = (ONS_Data.iloc[:, 1:-1] / base_2020) * 100
+# ONS_Data = ONS_Data.drop("Year", axis=1)
 
-# Reformat dataframe
-ONS_Data = ONS_Data.melt(id_vars=["Quarter"], var_name="Variable", value_name="Value")
-ONS_Data["Country"] = "UK"
-ONS_Data = ONS_Data[["Quarter", "Country", "Variable", "Value"]]
+# # Reformat dataframe
+# ONS_Data = ONS_Data.melt(id_vars=["Quarter"], var_name="Variable", value_name="Value")
+# ONS_Data["Country"] = "UK"
+# ONS_Data = ONS_Data[["Quarter", "Country", "Variable", "Value"]]
 
 EU_OPH_OPW = pd.read_csv('../src/EU OPH OPW.csv')
 EU_OPH_OPW = EU_OPH_OPW.rename(columns={"TIME_PERIOD": "Quarter", "na_item": "Variable", "geo": "Country", "OBS_VALUE": "Value"})
@@ -89,7 +90,7 @@ EU_OPH_OPW["Country"] = EU_OPH_OPW["Country"].str.replace("Euro area (EA11-1999,
 EU_OPH_OPW["Country"] = EU_OPH_OPW["Country"].str.replace("European Union - 27 countries (from 2020)", "European Union", regex=False)
 
 Dataset = EU_GVA_Process()
-Dataset = pd.concat([Dataset, ONS_Data])
+# Dataset = pd.concat([Dataset, ONS_Data])
 Dataset = pd.concat([Dataset, EU_OPH_OPW])
 
 UK_GVA_Division = pd.read_excel('../src/ONS GVA May 2025 release.xlsx', sheet_name='Table_23', header=4)
@@ -168,7 +169,8 @@ Flash_Estimate_OPW = Flash_Estimate_OPW.drop("Year", axis=1)
 
 Flash_Estimate_Data = Flash_Estimate_OPH.merge(Flash_Estimate_OPW, on='Quarter')
 Flash_Estimate_Data = Flash_Estimate_Data.melt(id_vars=["Quarter"], var_name="Variable", value_name="Value")
-Flash_Estimate_Data['Country'] = 'UK Flash Estimate'
+# Flash_Estimate_Data['Country'] = 'UK Flash Estimate'
+Flash_Estimate_Data['Country'] = 'UK'
 Flash_Estimate_Data['Industry'] = 'Total'
 Dataset = pd.concat([Dataset, Flash_Estimate_Data])
 

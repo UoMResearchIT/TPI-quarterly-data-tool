@@ -17519,230 +17519,6 @@ Quarter,Country,Industry,Value,Variable
 2024.25,Sweden,Total,108.778,Gross Value Added
 2024.5,Sweden,Total,109.469,Gross Value Added
 2024.75,Sweden,Total,110.321,Gross Value Added
-1997.0,UK,Total,76.15580332328872,Output Per Hour
-1997.25,UK,Total,76.47898725645987,Output Per Hour
-1997.5,UK,Total,76.88320075762446,Output Per Hour
-1997.75,UK,Total,77.98324650825394,Output Per Hour
-1998.0,UK,Total,78.23531390127896,Output Per Hour
-1998.25,UK,Total,78.78571482447532,Output Per Hour
-1998.5,UK,Total,78.79237020186342,Output Per Hour
-1998.75,UK,Total,79.82022755090406,Output Per Hour
-1999.0,UK,Total,79.88571766343388,Output Per Hour
-1999.25,UK,Total,80.02216001052224,Output Per Hour
-1999.5,UK,Total,81.00961847205042,Output Per Hour
-1999.75,UK,Total,82.00804953794955,Output Per Hour
-2000.0,UK,Total,84.10094506348004,Output Per Hour
-2000.25,UK,Total,83.7681803175523,Output Per Hour
-2000.5,UK,Total,84.28901381997763,Output Per Hour
-2000.75,UK,Total,84.21591657821116,Output Per Hour
-2001.0,UK,Total,85.21707956484376,Output Per Hour
-2001.25,UK,Total,84.97187098679781,Output Per Hour
-2001.5,UK,Total,85.47767110839698,Output Per Hour
-2001.75,UK,Total,85.80016579801641,Output Per Hour
-2002.0,UK,Total,86.16352312559891,Output Per Hour
-2002.25,UK,Total,86.8952831067256,Output Per Hour
-2002.5,UK,Total,86.95585959052325,Output Per Hour
-2002.75,UK,Total,87.51528982073111,Output Per Hour
-2003.0,UK,Total,88.11690575378964,Output Per Hour
-2003.25,UK,Total,88.69200209397764,Output Per Hour
-2003.5,UK,Total,89.40215361696951,Output Per Hour
-2003.75,UK,Total,90.5814061569385,Output Per Hour
-2004.0,UK,Total,89.93233678182015,Output Per Hour
-2004.25,UK,Total,90.69782659036966,Output Per Hour
-2004.5,UK,Total,90.73564588007392,Output Per Hour
-2004.75,UK,Total,90.21748572605264,Output Per Hour
-2005.0,UK,Total,90.88034432605794,Output Per Hour
-2005.25,UK,Total,91.81424054928962,Output Per Hour
-2005.5,UK,Total,92.00974207918237,Output Per Hour
-2005.75,UK,Total,92.97327083517946,Output Per Hour
-2006.0,UK,Total,93.27230750826756,Output Per Hour
-2006.25,UK,Total,93.70286788255207,Output Per Hour
-2006.5,UK,Total,93.72690291559411,Output Per Hour
-2006.75,UK,Total,93.81660687274558,Output Per Hour
-2007.0,UK,Total,94.62972183269653,Output Per Hour
-2007.25,UK,Total,94.97314683357565,Output Per Hour
-2007.5,UK,Total,95.38917169578475,Output Per Hour
-2007.75,UK,Total,95.88944758698538,Output Per Hour
-2008.0,UK,Total,95.27879289848283,Output Per Hour
-2008.25,UK,Total,95.97610307862477,Output Per Hour
-2008.5,UK,Total,94.42371815475278,Output Per Hour
-2008.75,UK,Total,92.93687951421076,Output Per Hour
-2009.0,UK,Total,92.67678560270723,Output Per Hour
-2009.25,UK,Total,92.63859880049377,Output Per Hour
-2009.5,UK,Total,93.18455796725483,Output Per Hour
-2009.75,UK,Total,93.46408647431159,Output Per Hour
-2010.0,UK,Total,94.55695189664156,Output Per Hour
-2010.25,UK,Total,94.82181592373318,Output Per Hour
-2010.5,UK,Total,94.88071738443952,Output Per Hour
-2010.75,UK,Total,94.56420493300753,Output Per Hour
-2011.0,UK,Total,94.77283670053689,Output Per Hour
-2011.25,UK,Total,95.85734066497639,Output Per Hour
-2011.5,UK,Total,95.61359381455357,Output Per Hour
-2011.75,UK,Total,95.91245298352464,Output Per Hour
-2012.0,UK,Total,95.8668384713896,Output Per Hour
-2012.25,UK,Total,95.10362686223516,Output Per Hour
-2012.5,UK,Total,95.08475971768759,Output Per Hour
-2012.75,UK,Total,94.68856596682568,Output Per Hour
-2013.0,UK,Total,94.81201077096559,Output Per Hour
-2013.25,UK,Total,95.22519559768168,Output Per Hour
-2013.5,UK,Total,94.7564076294395,Output Per Hour
-2013.75,UK,Total,95.18193831234989,Output Per Hour
-2014.0,UK,Total,95.13706219687646,Output Per Hour
-2014.25,UK,Total,95.14847069902979,Output Per Hour
-2014.5,UK,Total,95.65193443199104,Output Per Hour
-2014.75,UK,Total,95.70198877222683,Output Per Hour
-2015.0,UK,Total,95.5986486022585,Output Per Hour
-2015.25,UK,Total,96.21813581663365,Output Per Hour
-2015.5,UK,Total,96.44696046901878,Output Per Hour
-2015.75,UK,Total,95.0395661990732,Output Per Hour
-2016.0,UK,Total,95.97089437472651,Output Per Hour
-2016.25,UK,Total,96.36195449639237,Output Per Hour
-2016.5,UK,Total,96.62790047514598,Output Per Hour
-2016.75,UK,Total,96.95907129425619,Output Per Hour
-2017.0,UK,Total,97.18216095909007,Output Per Hour
-2017.25,UK,Total,97.25186603880218,Output Per Hour
-2017.5,UK,Total,98.75799715822625,Output Per Hour
-2017.75,UK,Total,99.14112307039667,Output Per Hour
-2018.0,UK,Total,98.7491925969461,Output Per Hour
-2018.25,UK,Total,98.78381937274364,Output Per Hour
-2018.5,UK,Total,98.25860643808551,Output Per Hour
-2018.75,UK,Total,98.43951731083138,Output Per Hour
-2019.0,UK,Total,97.76526970563745,Output Per Hour
-2019.25,UK,Total,98.15145283744585,Output Per Hour
-2019.5,UK,Total,99.44074708138496,Output Per Hour
-2019.75,UK,Total,99.7381299350776,Output Per Hour
-2020.0,UK,Total,99.4192600348392,Output Per Hour
-2020.25,UK,Total,96.49827189204248,Output Per Hour
-2020.5,UK,Total,104.5859625682465,Output Per Hour
-2020.75,UK,Total,99.4965055048718,Output Per Hour
-2021.0,UK,Total,100.614521807272,Output Per Hour
-2021.25,UK,Total,102.05820734393683,Output Per Hour
-2021.5,UK,Total,100.89897521252367,Output Per Hour
-2021.75,UK,Total,101.94681165944428,Output Per Hour
-2022.0,UK,Total,102.09141516262336,Output Per Hour
-2022.25,UK,Total,101.85916978819213,Output Per Hour
-2022.5,UK,Total,101.89653714691251,Output Per Hour
-2022.75,UK,Total,101.85959187100424,Output Per Hour
-2023.0,UK,Total,101.28878212628938,Output Per Hour
-2023.25,UK,Total,101.55028037079698,Output Per Hour
-2023.5,UK,Total,102.03001784222168,Output Per Hour
-2023.75,UK,Total,101.14338026711143,Output Per Hour
-2024.0,UK,Total,101.10848445909042,Output Per Hour
-2024.25,UK,Total,101.0765805799162,Output Per Hour
-2024.5,UK,Total,99.8864283805691,Output Per Hour
-2024.75,UK,Total,100.6237830134517,Output Per Hour
-1997.0,UK,Total,87.30664188823913,Output Per Worker
-1997.25,UK,Total,87.70185475262392,Output Per Worker
-1997.5,UK,Total,88.15819309003655,Output Per Worker
-1997.75,UK,Total,89.16968707278478,Output Per Worker
-1998.0,UK,Total,89.7586815244045,Output Per Worker
-1998.25,UK,Total,90.26273217953509,Output Per Worker
-1998.5,UK,Total,90.21916739318127,Output Per Worker
-1998.75,UK,Total,90.5303720697019,Output Per Worker
-1999.0,UK,Total,90.85890495777431,Output Per Worker
-1999.25,UK,Total,91.0470522516708,Output Per Worker
-1999.5,UK,Total,92.19047132236098,Output Per Worker
-1999.75,UK,Total,93.19871668773573,Output Per Worker
-2000.0,UK,Total,94.09843968388036,Output Per Worker
-2000.25,UK,Total,94.51521090937122,Output Per Worker
-2000.5,UK,Total,94.87856109289268,Output Per Worker
-2000.75,UK,Total,95.59455996414185,Output Per Worker
-2001.0,UK,Total,96.16685320617844,Output Per Worker
-2001.25,UK,Total,96.22747057684418,Output Per Worker
-2001.5,UK,Total,96.60269249690488,Output Per Worker
-2001.75,UK,Total,96.52034806152085,Output Per Worker
-2002.0,UK,Total,96.7306467047663,Output Per Worker
-2002.25,UK,Total,96.63441847073706,Output Per Worker
-2002.5,UK,Total,97.39767367736204,Output Per Worker
-2002.75,UK,Total,97.56267445091873,Output Per Worker
-2003.0,UK,Total,98.19235827722285,Output Per Worker
-2003.25,UK,Total,98.67700787930752,Output Per Worker
-2003.5,UK,Total,99.48439652059695,Output Per Worker
-2003.75,UK,Total,100.13651907516352,Output Per Worker
-2004.0,UK,Total,99.88504869785677,Output Per Worker
-2004.25,UK,Total,100.33284887200504,Output Per Worker
-2004.5,UK,Total,100.4386320558202,Output Per Worker
-2004.75,UK,Total,100.53130974110131,Output Per Worker
-2005.0,UK,Total,100.9546798439488,Output Per Worker
-2005.25,UK,Total,101.84157722219985,Output Per Worker
-2005.5,UK,Total,102.33487908161865,Output Per Worker
-2005.75,UK,Total,103.5578547360368,Output Per Worker
-2006.0,UK,Total,103.56068937994065,Output Per Worker
-2006.25,UK,Total,103.69849410362029,Output Per Worker
-2006.5,UK,Total,103.59592286209076,Output Per Worker
-2006.75,UK,Total,104.00461326744899,Output Per Worker
-2007.0,UK,Total,105.15024103154438,Output Per Worker
-2007.25,UK,Total,105.53264549379821,Output Per Worker
-2007.5,UK,Total,105.8547127916056,Output Per Worker
-2007.75,UK,Total,105.84646101906523,Output Per Worker
-2008.0,UK,Total,106.11871552543137,Output Per Worker
-2008.25,UK,Total,105.58475541615819,Output Per Worker
-2008.5,UK,Total,104.44042247072566,Output Per Worker
-2008.75,UK,Total,102.35469632725118,Output Per Worker
-2009.0,UK,Total,100.89136009578299,Output Per Worker
-2009.25,UK,Total,101.43599078710679,Output Per Worker
-2009.5,UK,Total,101.56103983658716,Output Per Worker
-2009.75,UK,Total,101.78906026831733,Output Per Worker
-2010.0,UK,Total,103.16628765995739,Output Per Worker
-2010.25,UK,Total,103.70056534947429,Output Per Worker
-2010.5,UK,Total,103.6051748068008,Output Per Worker
-2010.75,UK,Total,103.91173154988458,Output Per Worker
-2011.0,UK,Total,103.77580742688932,Output Per Worker
-2011.25,UK,Total,103.82597373882909,Output Per Worker
-2011.5,UK,Total,104.78266793136703,Output Per Worker
-2011.75,UK,Total,104.78247889929119,Output Per Worker
-2012.0,UK,Total,105.3308332810962,Output Per Worker
-2012.25,UK,Total,104.45855143426654,Output Per Worker
-2012.5,UK,Total,105.16692709567896,Output Per Worker
-2012.75,UK,Total,104.51833158525143,Output Per Worker
-2013.0,UK,Total,104.9881055241511,Output Per Worker
-2013.25,UK,Total,105.37954046403128,Output Per Worker
-2013.5,UK,Total,105.50973049191607,Output Per Worker
-2013.75,UK,Total,105.52488552625594,Output Per Worker
-2014.0,UK,Total,105.59153020961429,Output Per Worker
-2014.25,UK,Total,106.02098909558279,Output Per Worker
-2014.5,UK,Total,106.48726182827974,Output Per Worker
-2014.75,UK,Total,106.7933728662015,Output Per Worker
-2015.0,UK,Total,106.24565984623561,Output Per Worker
-2015.25,UK,Total,106.95074734080565,Output Per Worker
-2015.5,UK,Total,106.48198030549993,Output Per Worker
-2015.75,UK,Total,106.29524886641404,Output Per Worker
-2016.0,UK,Total,106.69083293706065,Output Per Worker
-2016.25,UK,Total,106.80733777086256,Output Per Worker
-2016.5,UK,Total,107.13387352652643,Output Per Worker
-2016.75,UK,Total,107.8051850223083,Output Per Worker
-2017.0,UK,Total,108.38859482491175,Output Per Worker
-2017.25,UK,Total,108.6375052076187,Output Per Worker
-2017.5,UK,Total,109.23631046473406,Output Per Worker
-2017.75,UK,Total,109.60103256855878,Output Per Worker
-2018.0,UK,Total,109.05910350112215,Output Per Worker
-2018.25,UK,Total,109.13450434883003,Output Per Worker
-2018.5,UK,Total,109.3602155594981,Output Per Worker
-2018.75,UK,Total,108.92308946647411,Output Per Worker
-2019.0,UK,Total,109.35557241769958,Output Per Worker
-2019.25,UK,Total,109.11181628269651,Output Per Worker
-2019.5,UK,Total,110.2596988045373,Output Per Worker
-2019.75,UK,Total,109.81346624224302,Output Per Worker
-2020.0,UK,Total,107.38483193608657,Output Per Worker
-2020.25,UK,Total,86.59001047505696,Output Per Worker
-2020.5,UK,Total,102.08280035391451,Output Per Worker
-2020.75,UK,Total,103.94235723494192,Output Per Worker
-2021.0,UK,Total,102.66989463756909,Output Per Worker
-2021.25,UK,Total,109.5796678722699,Output Per Worker
-2021.5,UK,Total,110.340851092145,Output Per Worker
-2021.75,UK,Total,111.7815807348177,Output Per Worker
-2022.0,UK,Total,112.3313349465739,Output Per Worker
-2022.25,UK,Total,111.8429908973415,Output Per Worker
-2022.5,UK,Total,112.09983914162294,Output Per Worker
-2022.75,UK,Total,111.87467951695358,Output Per Worker
-2023.0,UK,Total,111.26862332604122,Output Per Worker
-2023.25,UK,Total,111.20759689694182,Output Per Worker
-2023.5,UK,Total,111.14116520699639,Output Per Worker
-2023.75,UK,Total,110.81505395095297,Output Per Worker
-2024.0,UK,Total,111.96388933989203,Output Per Worker
-2024.25,UK,Total,111.96464789964162,Output Per Worker
-2024.5,UK,Total,111.0165864321583,Output Per Worker
-2024.75,UK,Total,110.80017053708289,Output Per Worker
 1997.0,Germany,Total,78.047,Output Per Hour
 1997.25,Germany,Total,78.326,Output Per Hour
 1997.5,Germany,Total,78.543,Output Per Hour
@@ -22127,229 +21903,229 @@ Quarter,Country,Industry,Value,Variable
 2024.5,US,Total,105.86713395781535,Output Per Hour
 2024.75,US,Total,106.43595695294366,Output Per Hour
 2025.0,US,Total,106.12952650072938,Output Per Hour
-1997.0,UK Flash Estimate,Total,76.17596648257474,Output Per Hour
-1997.25,UK Flash Estimate,Total,76.48067034850506,Output Per Hour
-1997.5,UK Flash Estimate,Total,76.93772614740048,Output Per Hour
-1997.75,UK Flash Estimate,Total,78.00418967815655,Output Per Hour
-1998.0,UK Flash Estimate,Total,78.23271757760426,Output Per Hour
-1998.25,UK Flash Estimate,Total,78.84212530946486,Output Per Hour
-1998.5,UK Flash Estimate,Total,78.84212530946486,Output Per Hour
-1998.75,UK Flash Estimate,Total,79.83241287373833,Output Per Hour
-1999.0,UK Flash Estimate,Total,79.9085888402209,Output Per Hour
-1999.25,UK Flash Estimate,Total,80.06094077318605,Output Per Hour
-1999.5,UK Flash Estimate,Total,81.05122833745953,Output Per Hour
-1999.75,UK Flash Estimate,Total,82.04151590173299,Output Per Hour
-2000.0,UK Flash Estimate,Total,84.09826699676253,Output Per Hour
-2000.25,UK Flash Estimate,Total,83.79356313083221,Output Per Hour
-2000.5,UK Flash Estimate,Total,84.32679489621025,Output Per Hour
-2000.75,UK Flash Estimate,Total,84.25061892972766,Output Per Hour
-2001.0,UK Flash Estimate,Total,85.24090649400115,Output Per Hour
-2001.25,UK Flash Estimate,Total,85.01237859455341,Output Per Hour
-2001.5,UK Flash Estimate,Total,85.46943439344886,Output Per Hour
-2001.75,UK Flash Estimate,Total,85.85031422586174,Output Per Hour
-2002.0,UK Flash Estimate,Total,86.15501809179203,Output Per Hour
-2002.25,UK Flash Estimate,Total,86.91677775661778,Output Per Hour
-2002.5,UK Flash Estimate,Total,86.99295372310036,Output Per Hour
-2002.75,UK Flash Estimate,Total,87.52618548847838,Output Per Hour
-2003.0,UK Flash Estimate,Total,88.13559322033898,Output Per Hour
-2003.25,UK Flash Estimate,Total,88.74500095219958,Output Per Hour
-2003.5,UK Flash Estimate,Total,89.43058465054276,Output Per Hour
-2003.75,UK Flash Estimate,Total,90.57322414778137,Output Per Hour
-2004.0,UK Flash Estimate,Total,89.96381641592077,Output Per Hour
-2004.25,UK Flash Estimate,Total,90.72557608074652,Output Per Hour
-2004.5,UK Flash Estimate,Total,90.72557608074652,Output Per Hour
-2004.75,UK Flash Estimate,Total,90.26852028185107,Output Per Hour
-2005.0,UK Flash Estimate,Total,90.87792801371167,Output Per Hour
-2005.25,UK Flash Estimate,Total,91.86821557798514,Output Per Hour
-2005.5,UK Flash Estimate,Total,92.02056751095029,Output Per Hour
-2005.75,UK Flash Estimate,Total,93.01085507522376,Output Per Hour
-2006.0,UK Flash Estimate,Total,93.31555894115407,Output Per Hour
-2006.25,UK Flash Estimate,Total,93.69643877356694,Output Per Hour
-2006.5,UK Flash Estimate,Total,93.7726147400495,Output Per Hour
-2006.75,UK Flash Estimate,Total,93.8487907065321,Output Per Hour
-2007.0,UK Flash Estimate,Total,94.68672633784041,Output Per Hour
-2007.25,UK Flash Estimate,Total,94.9914302037707,Output Per Hour
-2007.5,UK Flash Estimate,Total,95.44848600266616,Output Per Hour
-2007.75,UK Flash Estimate,Total,95.90554180156161,Output Per Hour
-2008.0,UK Flash Estimate,Total,95.296134069701,Output Per Hour
-2008.25,UK Flash Estimate,Total,95.98171776804418,Output Per Hour
-2008.5,UK Flash Estimate,Total,94.45819843839269,Output Per Hour
-2008.75,UK Flash Estimate,Total,92.9346791087412,Output Per Hour
-2009.0,UK Flash Estimate,Total,92.70615120929347,Output Per Hour
-2009.25,UK Flash Estimate,Total,92.62997524281089,Output Per Hour
-2009.5,UK Flash Estimate,Total,93.23938297467149,Output Per Hour
-2009.75,UK Flash Estimate,Total,93.46791087411921,Output Per Hour
-2010.0,UK Flash Estimate,Total,94.61055037135783,Output Per Hour
-2010.25,UK Flash Estimate,Total,94.83907827080556,Output Per Hour
-2010.5,UK Flash Estimate,Total,94.91525423728812,Output Per Hour
-2010.75,UK Flash Estimate,Total,94.61055037135783,Output Per Hour
-2011.0,UK Flash Estimate,Total,94.76290230432298,Output Per Hour
-2011.25,UK Flash Estimate,Total,95.90554180156161,Output Per Hour
-2011.5,UK Flash Estimate,Total,95.6008379356313,Output Per Hour
-2011.75,UK Flash Estimate,Total,95.90554180156161,Output Per Hour
-2012.0,UK Flash Estimate,Total,95.90554180156161,Output Per Hour
-2012.25,UK Flash Estimate,Total,95.14378213673585,Output Per Hour
-2012.5,UK Flash Estimate,Total,95.14378213673585,Output Per Hour
-2012.75,UK Flash Estimate,Total,94.68672633784041,Output Per Hour
-2013.0,UK Flash Estimate,Total,94.83907827080556,Output Per Hour
-2013.25,UK Flash Estimate,Total,95.21995810321843,Output Per Hour
-2013.5,UK Flash Estimate,Total,94.76290230432298,Output Per Hour
-2013.75,UK Flash Estimate,Total,95.21995810321843,Output Per Hour
-2014.0,UK Flash Estimate,Total,95.14378213673585,Output Per Hour
-2014.25,UK Flash Estimate,Total,95.14378213673585,Output Per Hour
-2014.5,UK Flash Estimate,Total,95.67701390211387,Output Per Hour
-2014.75,UK Flash Estimate,Total,95.75318986859645,Output Per Hour
-2015.0,UK Flash Estimate,Total,95.6008379356313,Output Per Hour
-2015.25,UK Flash Estimate,Total,96.2102456674919,Output Per Hour
-2015.5,UK Flash Estimate,Total,96.43877356693962,Output Per Hour
-2015.75,UK Flash Estimate,Total,95.06760617025328,Output Per Hour
-2016.0,UK Flash Estimate,Total,95.98171776804418,Output Per Hour
-2016.25,UK Flash Estimate,Total,96.36259760045705,Output Per Hour
-2016.5,UK Flash Estimate,Total,96.66730146638736,Output Per Hour
-2016.75,UK Flash Estimate,Total,96.97200533231765,Output Per Hour
-2017.0,UK Flash Estimate,Total,97.20053323176538,Output Per Hour
-2017.25,UK Flash Estimate,Total,97.27670919824794,Output Per Hour
-2017.5,UK Flash Estimate,Total,98.80022852789943,Output Per Hour
-2017.75,UK Flash Estimate,Total,99.18110836031231,Output Per Hour
-2018.0,UK Flash Estimate,Total,98.80022852789943,Output Per Hour
-2018.25,UK Flash Estimate,Total,98.80022852789943,Output Per Hour
-2018.5,UK Flash Estimate,Total,98.26699676252142,Output Per Hour
-2018.75,UK Flash Estimate,Total,98.49552466196916,Output Per Hour
-2019.0,UK Flash Estimate,Total,97.80994096362598,Output Per Hour
-2019.25,UK Flash Estimate,Total,98.19082079603885,Output Per Hour
-2019.5,UK Flash Estimate,Total,99.48581222624261,Output Per Hour
-2019.75,UK Flash Estimate,Total,99.79051609217292,Output Per Hour
-2020.0,UK Flash Estimate,Total,99.40963625976003,Output Per Hour
-2020.25,UK Flash Estimate,Total,96.5149495334222,Output Per Hour
-2020.5,UK Flash Estimate,Total,104.58960198057514,Output Per Hour
-2020.75,UK Flash Estimate,Total,99.48581222624261,Output Per Hour
-2021.0,UK Flash Estimate,Total,100.62845172348122,Output Per Hour
-2021.25,UK Flash Estimate,Total,102.07579508665017,Output Per Hour
-2021.5,UK Flash Estimate,Total,100.93315558941154,Output Per Hour
-2021.75,UK Flash Estimate,Total,101.9996191201676,Output Per Hour
-2022.0,UK Flash Estimate,Total,102.15197105313271,Output Per Hour
-2022.25,UK Flash Estimate,Total,101.92344315368503,Output Per Hour
-2022.5,UK Flash Estimate,Total,101.92344315368503,Output Per Hour
-2022.75,UK Flash Estimate,Total,101.92344315368503,Output Per Hour
-2023.0,UK Flash Estimate,Total,101.3140354218244,Output Per Hour
-2023.25,UK Flash Estimate,Total,101.54256332127214,Output Per Hour
-2023.5,UK Flash Estimate,Total,102.07579508665017,Output Per Hour
-2023.75,UK Flash Estimate,Total,101.16168348885928,Output Per Hour
-2024.0,UK Flash Estimate,Total,101.16168348885928,Output Per Hour
-2024.25,UK Flash Estimate,Total,101.08550752237669,Output Per Hour
-2024.5,UK Flash Estimate,Total,99.94286802513805,Output Per Hour
-2024.75,UK Flash Estimate,Total,100.62845172348122,Output Per Hour
-2025.0,UK Flash Estimate,Total,100.93315558941154,Output Per Hour
-1997.0,UK Flash Estimate,Total,87.29812309035356,Output Per Worker
-1997.25,UK Flash Estimate,Total,87.73461370580532,Output Per Worker
-1997.5,UK Flash Estimate,Total,88.17110432125709,Output Per Worker
-1997.75,UK Flash Estimate,Total,89.13138367525096,Output Per Worker
-1998.0,UK Flash Estimate,Total,89.74247053688345,Output Per Worker
-1998.25,UK Flash Estimate,Total,90.26625927542557,Output Per Worker
-1998.5,UK Flash Estimate,Total,90.17896115233522,Output Per Worker
-1998.75,UK Flash Estimate,Total,90.52815364469663,Output Per Worker
-1999.0,UK Flash Estimate,Total,90.87734613705804,Output Per Worker
-1999.25,UK Flash Estimate,Total,91.05194238323875,Output Per Worker
-1999.5,UK Flash Estimate,Total,92.18681798341333,Output Per Worker
-1999.75,UK Flash Estimate,Total,93.14709733740723,Output Per Worker
-2000.0,UK Flash Estimate,Total,94.10737669140113,Output Per Worker
-2000.25,UK Flash Estimate,Total,94.54386730685289,Output Per Worker
-2000.5,UK Flash Estimate,Total,94.89305979921431,Output Per Worker
-2000.75,UK Flash Estimate,Total,95.59144478393713,Output Per Worker
-2001.0,UK Flash Estimate,Total,96.11523352247924,Output Per Worker
-2001.25,UK Flash Estimate,Total,96.20253164556961,Output Per Worker
-2001.5,UK Flash Estimate,Total,96.55172413793102,Output Per Worker
-2001.75,UK Flash Estimate,Total,96.55172413793102,Output Per Worker
-2002.0,UK Flash Estimate,Total,96.72632038411173,Output Per Worker
-2002.25,UK Flash Estimate,Total,96.63902226102138,Output Per Worker
-2002.5,UK Flash Estimate,Total,97.42470536883455,Output Per Worker
-2002.75,UK Flash Estimate,Total,97.51200349192492,Output Per Worker
-2003.0,UK Flash Estimate,Total,98.21038847664775,Output Per Worker
-2003.25,UK Flash Estimate,Total,98.64687909209951,Output Per Worker
-2003.5,UK Flash Estimate,Total,99.4325621999127,Output Per Worker
-2003.75,UK Flash Estimate,Total,100.13094718463553,Output Per Worker
-2004.0,UK Flash Estimate,Total,99.86905281536447,Output Per Worker
-2004.25,UK Flash Estimate,Total,100.30554343081623,Output Per Worker
-2004.5,UK Flash Estimate,Total,100.39284155390658,Output Per Worker
-2004.75,UK Flash Estimate,Total,100.48013967699694,Output Per Worker
-2005.0,UK Flash Estimate,Total,100.9166302924487,Output Per Worker
-2005.25,UK Flash Estimate,Total,101.78961152335224,Output Per Worker
-2005.5,UK Flash Estimate,Total,102.31340026189437,Output Per Worker
-2005.75,UK Flash Estimate,Total,103.53557398515932,Output Per Worker
-2006.0,UK Flash Estimate,Total,103.53557398515932,Output Per Worker
-2006.25,UK Flash Estimate,Total,103.71017023134002,Output Per Worker
-2006.5,UK Flash Estimate,Total,103.62287210824968,Output Per Worker
-2006.75,UK Flash Estimate,Total,103.97206460061108,Output Per Worker
-2007.0,UK Flash Estimate,Total,105.10694020078569,Output Per Worker
-2007.25,UK Flash Estimate,Total,105.54343081623745,Output Per Worker
-2007.5,UK Flash Estimate,Total,105.80532518550851,Output Per Worker
-2007.75,UK Flash Estimate,Total,105.80532518550851,Output Per Worker
-2008.0,UK Flash Estimate,Total,106.06721955477956,Output Per Worker
-2008.25,UK Flash Estimate,Total,105.54343081623745,Output Per Worker
-2008.5,UK Flash Estimate,Total,104.40855521606285,Output Per Worker
-2008.75,UK Flash Estimate,Total,102.31340026189437,Output Per Worker
-2009.0,UK Flash Estimate,Total,100.9166302924487,Output Per Worker
-2009.25,UK Flash Estimate,Total,101.44041903099084,Output Per Worker
-2009.5,UK Flash Estimate,Total,101.52771715408117,Output Per Worker
-2009.75,UK Flash Estimate,Total,101.78961152335224,Output Per Worker
-2010.0,UK Flash Estimate,Total,103.1863814927979,Output Per Worker
-2010.25,UK Flash Estimate,Total,103.71017023134002,Output Per Worker
-2010.5,UK Flash Estimate,Total,103.62287210824968,Output Per Worker
-2010.75,UK Flash Estimate,Total,103.88476647752071,Output Per Worker
-2011.0,UK Flash Estimate,Total,103.79746835443038,Output Per Worker
-2011.25,UK Flash Estimate,Total,103.79746835443038,Output Per Worker
-2011.5,UK Flash Estimate,Total,104.75774770842425,Output Per Worker
-2011.75,UK Flash Estimate,Total,104.75774770842425,Output Per Worker
-2012.0,UK Flash Estimate,Total,105.28153644696638,Output Per Worker
-2012.25,UK Flash Estimate,Total,104.40855521606285,Output Per Worker
-2012.5,UK Flash Estimate,Total,105.19423832387602,Output Per Worker
-2012.75,UK Flash Estimate,Total,104.49585333915321,Output Per Worker
-2013.0,UK Flash Estimate,Total,105.01964207769532,Output Per Worker
-2013.25,UK Flash Estimate,Total,105.36883457005675,Output Per Worker
-2013.5,UK Flash Estimate,Total,105.45613269314708,Output Per Worker
-2013.75,UK Flash Estimate,Total,105.54343081623745,Output Per Worker
-2014.0,UK Flash Estimate,Total,105.54343081623745,Output Per Worker
-2014.25,UK Flash Estimate,Total,105.97992143168922,Output Per Worker
-2014.5,UK Flash Estimate,Total,106.50371017023133,Output Per Worker
-2014.75,UK Flash Estimate,Total,106.76560453950239,Output Per Worker
-2015.0,UK Flash Estimate,Total,106.24181580096028,Output Per Worker
-2015.25,UK Flash Estimate,Total,106.94020078568309,Output Per Worker
-2015.5,UK Flash Estimate,Total,106.50371017023133,Output Per Worker
-2015.75,UK Flash Estimate,Total,106.24181580096028,Output Per Worker
-2016.0,UK Flash Estimate,Total,106.67830641641206,Output Per Worker
-2016.25,UK Flash Estimate,Total,106.76560453950239,Output Per Worker
-2016.5,UK Flash Estimate,Total,107.11479703186382,Output Per Worker
-2016.75,UK Flash Estimate,Total,107.81318201658662,Output Per Worker
-2017.0,UK Flash Estimate,Total,108.33697075512876,Output Per Worker
-2017.25,UK Flash Estimate,Total,108.59886512439982,Output Per Worker
-2017.5,UK Flash Estimate,Total,109.2099519860323,Output Per Worker
-2017.75,UK Flash Estimate,Total,109.5591444783937,Output Per Worker
-2018.0,UK Flash Estimate,Total,109.0353557398516,Output Per Worker
-2018.25,UK Flash Estimate,Total,109.12265386294193,Output Per Worker
-2018.5,UK Flash Estimate,Total,109.38454823221299,Output Per Worker
-2018.75,UK Flash Estimate,Total,108.94805761676123,Output Per Worker
-2019.0,UK Flash Estimate,Total,109.38454823221299,Output Per Worker
-2019.25,UK Flash Estimate,Total,109.12265386294193,Output Per Worker
-2019.5,UK Flash Estimate,Total,110.25752946311653,Output Per Worker
-2019.75,UK Flash Estimate,Total,109.82103884766477,Output Per Worker
-2020.0,UK Flash Estimate,Total,107.37669140113486,Output Per Worker
-2020.25,UK Flash Estimate,Total,86.59973810563072,Output Per Worker
-2020.5,UK Flash Estimate,Total,102.05150589262331,Output Per Worker
-2020.75,UK Flash Estimate,Total,103.97206460061108,Output Per Worker
-2021.0,UK Flash Estimate,Total,102.66259275425578,Output Per Worker
-2021.25,UK Flash Estimate,Total,109.5591444783937,Output Per Worker
-2021.5,UK Flash Estimate,Total,110.34482758620689,Output Per Worker
-2021.75,UK Flash Estimate,Total,111.74159755565253,Output Per Worker
-2022.0,UK Flash Estimate,Total,112.352684417285,Output Per Worker
-2022.25,UK Flash Estimate,Total,111.8288956787429,Output Per Worker
-2022.5,UK Flash Estimate,Total,112.09079004801397,Output Per Worker
-2022.75,UK Flash Estimate,Total,111.8288956787429,Output Per Worker
-2023.0,UK Flash Estimate,Total,111.21780881711044,Output Per Worker
-2023.25,UK Flash Estimate,Total,111.21780881711044,Output Per Worker
-2023.5,UK Flash Estimate,Total,111.13051069402007,Output Per Worker
-2023.75,UK Flash Estimate,Total,110.78131820165866,Output Per Worker
-2024.0,UK Flash Estimate,Total,111.91619380183324,Output Per Worker
-2024.25,UK Flash Estimate,Total,111.91619380183324,Output Per Worker
-2024.5,UK Flash Estimate,Total,111.04321257092971,Output Per Worker
-2024.75,UK Flash Estimate,Total,110.78131820165866,Output Per Worker
-2025.0,UK Flash Estimate,Total,111.21780881711044,Output Per Worker
+1997.0,UK,Total,76.17596648257474,Output Per Hour
+1997.25,UK,Total,76.48067034850506,Output Per Hour
+1997.5,UK,Total,76.93772614740048,Output Per Hour
+1997.75,UK,Total,78.00418967815655,Output Per Hour
+1998.0,UK,Total,78.23271757760426,Output Per Hour
+1998.25,UK,Total,78.84212530946486,Output Per Hour
+1998.5,UK,Total,78.84212530946486,Output Per Hour
+1998.75,UK,Total,79.83241287373833,Output Per Hour
+1999.0,UK,Total,79.9085888402209,Output Per Hour
+1999.25,UK,Total,80.06094077318605,Output Per Hour
+1999.5,UK,Total,81.05122833745953,Output Per Hour
+1999.75,UK,Total,82.04151590173299,Output Per Hour
+2000.0,UK,Total,84.09826699676253,Output Per Hour
+2000.25,UK,Total,83.79356313083221,Output Per Hour
+2000.5,UK,Total,84.32679489621025,Output Per Hour
+2000.75,UK,Total,84.25061892972766,Output Per Hour
+2001.0,UK,Total,85.24090649400115,Output Per Hour
+2001.25,UK,Total,85.01237859455341,Output Per Hour
+2001.5,UK,Total,85.46943439344886,Output Per Hour
+2001.75,UK,Total,85.85031422586174,Output Per Hour
+2002.0,UK,Total,86.15501809179203,Output Per Hour
+2002.25,UK,Total,86.91677775661778,Output Per Hour
+2002.5,UK,Total,86.99295372310036,Output Per Hour
+2002.75,UK,Total,87.52618548847838,Output Per Hour
+2003.0,UK,Total,88.13559322033898,Output Per Hour
+2003.25,UK,Total,88.74500095219958,Output Per Hour
+2003.5,UK,Total,89.43058465054276,Output Per Hour
+2003.75,UK,Total,90.57322414778137,Output Per Hour
+2004.0,UK,Total,89.96381641592077,Output Per Hour
+2004.25,UK,Total,90.72557608074652,Output Per Hour
+2004.5,UK,Total,90.72557608074652,Output Per Hour
+2004.75,UK,Total,90.26852028185107,Output Per Hour
+2005.0,UK,Total,90.87792801371167,Output Per Hour
+2005.25,UK,Total,91.86821557798514,Output Per Hour
+2005.5,UK,Total,92.02056751095029,Output Per Hour
+2005.75,UK,Total,93.01085507522376,Output Per Hour
+2006.0,UK,Total,93.31555894115407,Output Per Hour
+2006.25,UK,Total,93.69643877356694,Output Per Hour
+2006.5,UK,Total,93.7726147400495,Output Per Hour
+2006.75,UK,Total,93.8487907065321,Output Per Hour
+2007.0,UK,Total,94.68672633784041,Output Per Hour
+2007.25,UK,Total,94.9914302037707,Output Per Hour
+2007.5,UK,Total,95.44848600266616,Output Per Hour
+2007.75,UK,Total,95.90554180156161,Output Per Hour
+2008.0,UK,Total,95.296134069701,Output Per Hour
+2008.25,UK,Total,95.98171776804418,Output Per Hour
+2008.5,UK,Total,94.45819843839269,Output Per Hour
+2008.75,UK,Total,92.9346791087412,Output Per Hour
+2009.0,UK,Total,92.70615120929347,Output Per Hour
+2009.25,UK,Total,92.62997524281089,Output Per Hour
+2009.5,UK,Total,93.23938297467149,Output Per Hour
+2009.75,UK,Total,93.46791087411921,Output Per Hour
+2010.0,UK,Total,94.61055037135783,Output Per Hour
+2010.25,UK,Total,94.83907827080556,Output Per Hour
+2010.5,UK,Total,94.91525423728812,Output Per Hour
+2010.75,UK,Total,94.61055037135783,Output Per Hour
+2011.0,UK,Total,94.76290230432298,Output Per Hour
+2011.25,UK,Total,95.90554180156161,Output Per Hour
+2011.5,UK,Total,95.6008379356313,Output Per Hour
+2011.75,UK,Total,95.90554180156161,Output Per Hour
+2012.0,UK,Total,95.90554180156161,Output Per Hour
+2012.25,UK,Total,95.14378213673585,Output Per Hour
+2012.5,UK,Total,95.14378213673585,Output Per Hour
+2012.75,UK,Total,94.68672633784041,Output Per Hour
+2013.0,UK,Total,94.83907827080556,Output Per Hour
+2013.25,UK,Total,95.21995810321843,Output Per Hour
+2013.5,UK,Total,94.76290230432298,Output Per Hour
+2013.75,UK,Total,95.21995810321843,Output Per Hour
+2014.0,UK,Total,95.14378213673585,Output Per Hour
+2014.25,UK,Total,95.14378213673585,Output Per Hour
+2014.5,UK,Total,95.67701390211387,Output Per Hour
+2014.75,UK,Total,95.75318986859645,Output Per Hour
+2015.0,UK,Total,95.6008379356313,Output Per Hour
+2015.25,UK,Total,96.2102456674919,Output Per Hour
+2015.5,UK,Total,96.43877356693962,Output Per Hour
+2015.75,UK,Total,95.06760617025328,Output Per Hour
+2016.0,UK,Total,95.98171776804418,Output Per Hour
+2016.25,UK,Total,96.36259760045705,Output Per Hour
+2016.5,UK,Total,96.66730146638736,Output Per Hour
+2016.75,UK,Total,96.97200533231765,Output Per Hour
+2017.0,UK,Total,97.20053323176538,Output Per Hour
+2017.25,UK,Total,97.27670919824794,Output Per Hour
+2017.5,UK,Total,98.80022852789943,Output Per Hour
+2017.75,UK,Total,99.18110836031231,Output Per Hour
+2018.0,UK,Total,98.80022852789943,Output Per Hour
+2018.25,UK,Total,98.80022852789943,Output Per Hour
+2018.5,UK,Total,98.26699676252142,Output Per Hour
+2018.75,UK,Total,98.49552466196916,Output Per Hour
+2019.0,UK,Total,97.80994096362598,Output Per Hour
+2019.25,UK,Total,98.19082079603885,Output Per Hour
+2019.5,UK,Total,99.48581222624261,Output Per Hour
+2019.75,UK,Total,99.79051609217292,Output Per Hour
+2020.0,UK,Total,99.40963625976003,Output Per Hour
+2020.25,UK,Total,96.5149495334222,Output Per Hour
+2020.5,UK,Total,104.58960198057514,Output Per Hour
+2020.75,UK,Total,99.48581222624261,Output Per Hour
+2021.0,UK,Total,100.62845172348122,Output Per Hour
+2021.25,UK,Total,102.07579508665017,Output Per Hour
+2021.5,UK,Total,100.93315558941154,Output Per Hour
+2021.75,UK,Total,101.9996191201676,Output Per Hour
+2022.0,UK,Total,102.15197105313271,Output Per Hour
+2022.25,UK,Total,101.92344315368503,Output Per Hour
+2022.5,UK,Total,101.92344315368503,Output Per Hour
+2022.75,UK,Total,101.92344315368503,Output Per Hour
+2023.0,UK,Total,101.3140354218244,Output Per Hour
+2023.25,UK,Total,101.54256332127214,Output Per Hour
+2023.5,UK,Total,102.07579508665017,Output Per Hour
+2023.75,UK,Total,101.16168348885928,Output Per Hour
+2024.0,UK,Total,101.16168348885928,Output Per Hour
+2024.25,UK,Total,101.08550752237669,Output Per Hour
+2024.5,UK,Total,99.94286802513805,Output Per Hour
+2024.75,UK,Total,100.62845172348122,Output Per Hour
+2025.0,UK,Total,100.93315558941154,Output Per Hour
+1997.0,UK,Total,87.29812309035356,Output Per Worker
+1997.25,UK,Total,87.73461370580532,Output Per Worker
+1997.5,UK,Total,88.17110432125709,Output Per Worker
+1997.75,UK,Total,89.13138367525096,Output Per Worker
+1998.0,UK,Total,89.74247053688345,Output Per Worker
+1998.25,UK,Total,90.26625927542557,Output Per Worker
+1998.5,UK,Total,90.17896115233522,Output Per Worker
+1998.75,UK,Total,90.52815364469663,Output Per Worker
+1999.0,UK,Total,90.87734613705804,Output Per Worker
+1999.25,UK,Total,91.05194238323875,Output Per Worker
+1999.5,UK,Total,92.18681798341333,Output Per Worker
+1999.75,UK,Total,93.14709733740723,Output Per Worker
+2000.0,UK,Total,94.10737669140113,Output Per Worker
+2000.25,UK,Total,94.54386730685289,Output Per Worker
+2000.5,UK,Total,94.89305979921431,Output Per Worker
+2000.75,UK,Total,95.59144478393713,Output Per Worker
+2001.0,UK,Total,96.11523352247924,Output Per Worker
+2001.25,UK,Total,96.20253164556961,Output Per Worker
+2001.5,UK,Total,96.55172413793102,Output Per Worker
+2001.75,UK,Total,96.55172413793102,Output Per Worker
+2002.0,UK,Total,96.72632038411173,Output Per Worker
+2002.25,UK,Total,96.63902226102138,Output Per Worker
+2002.5,UK,Total,97.42470536883455,Output Per Worker
+2002.75,UK,Total,97.51200349192492,Output Per Worker
+2003.0,UK,Total,98.21038847664775,Output Per Worker
+2003.25,UK,Total,98.64687909209951,Output Per Worker
+2003.5,UK,Total,99.4325621999127,Output Per Worker
+2003.75,UK,Total,100.13094718463553,Output Per Worker
+2004.0,UK,Total,99.86905281536447,Output Per Worker
+2004.25,UK,Total,100.30554343081623,Output Per Worker
+2004.5,UK,Total,100.39284155390658,Output Per Worker
+2004.75,UK,Total,100.48013967699694,Output Per Worker
+2005.0,UK,Total,100.9166302924487,Output Per Worker
+2005.25,UK,Total,101.78961152335224,Output Per Worker
+2005.5,UK,Total,102.31340026189437,Output Per Worker
+2005.75,UK,Total,103.53557398515932,Output Per Worker
+2006.0,UK,Total,103.53557398515932,Output Per Worker
+2006.25,UK,Total,103.71017023134002,Output Per Worker
+2006.5,UK,Total,103.62287210824968,Output Per Worker
+2006.75,UK,Total,103.97206460061108,Output Per Worker
+2007.0,UK,Total,105.10694020078569,Output Per Worker
+2007.25,UK,Total,105.54343081623745,Output Per Worker
+2007.5,UK,Total,105.80532518550851,Output Per Worker
+2007.75,UK,Total,105.80532518550851,Output Per Worker
+2008.0,UK,Total,106.06721955477956,Output Per Worker
+2008.25,UK,Total,105.54343081623745,Output Per Worker
+2008.5,UK,Total,104.40855521606285,Output Per Worker
+2008.75,UK,Total,102.31340026189437,Output Per Worker
+2009.0,UK,Total,100.9166302924487,Output Per Worker
+2009.25,UK,Total,101.44041903099084,Output Per Worker
+2009.5,UK,Total,101.52771715408117,Output Per Worker
+2009.75,UK,Total,101.78961152335224,Output Per Worker
+2010.0,UK,Total,103.1863814927979,Output Per Worker
+2010.25,UK,Total,103.71017023134002,Output Per Worker
+2010.5,UK,Total,103.62287210824968,Output Per Worker
+2010.75,UK,Total,103.88476647752071,Output Per Worker
+2011.0,UK,Total,103.79746835443038,Output Per Worker
+2011.25,UK,Total,103.79746835443038,Output Per Worker
+2011.5,UK,Total,104.75774770842425,Output Per Worker
+2011.75,UK,Total,104.75774770842425,Output Per Worker
+2012.0,UK,Total,105.28153644696638,Output Per Worker
+2012.25,UK,Total,104.40855521606285,Output Per Worker
+2012.5,UK,Total,105.19423832387602,Output Per Worker
+2012.75,UK,Total,104.49585333915321,Output Per Worker
+2013.0,UK,Total,105.01964207769532,Output Per Worker
+2013.25,UK,Total,105.36883457005675,Output Per Worker
+2013.5,UK,Total,105.45613269314708,Output Per Worker
+2013.75,UK,Total,105.54343081623745,Output Per Worker
+2014.0,UK,Total,105.54343081623745,Output Per Worker
+2014.25,UK,Total,105.97992143168922,Output Per Worker
+2014.5,UK,Total,106.50371017023133,Output Per Worker
+2014.75,UK,Total,106.76560453950239,Output Per Worker
+2015.0,UK,Total,106.24181580096028,Output Per Worker
+2015.25,UK,Total,106.94020078568309,Output Per Worker
+2015.5,UK,Total,106.50371017023133,Output Per Worker
+2015.75,UK,Total,106.24181580096028,Output Per Worker
+2016.0,UK,Total,106.67830641641206,Output Per Worker
+2016.25,UK,Total,106.76560453950239,Output Per Worker
+2016.5,UK,Total,107.11479703186382,Output Per Worker
+2016.75,UK,Total,107.81318201658662,Output Per Worker
+2017.0,UK,Total,108.33697075512876,Output Per Worker
+2017.25,UK,Total,108.59886512439982,Output Per Worker
+2017.5,UK,Total,109.2099519860323,Output Per Worker
+2017.75,UK,Total,109.5591444783937,Output Per Worker
+2018.0,UK,Total,109.0353557398516,Output Per Worker
+2018.25,UK,Total,109.12265386294193,Output Per Worker
+2018.5,UK,Total,109.38454823221299,Output Per Worker
+2018.75,UK,Total,108.94805761676123,Output Per Worker
+2019.0,UK,Total,109.38454823221299,Output Per Worker
+2019.25,UK,Total,109.12265386294193,Output Per Worker
+2019.5,UK,Total,110.25752946311653,Output Per Worker
+2019.75,UK,Total,109.82103884766477,Output Per Worker
+2020.0,UK,Total,107.37669140113486,Output Per Worker
+2020.25,UK,Total,86.59973810563072,Output Per Worker
+2020.5,UK,Total,102.05150589262331,Output Per Worker
+2020.75,UK,Total,103.97206460061108,Output Per Worker
+2021.0,UK,Total,102.66259275425578,Output Per Worker
+2021.25,UK,Total,109.5591444783937,Output Per Worker
+2021.5,UK,Total,110.34482758620689,Output Per Worker
+2021.75,UK,Total,111.74159755565253,Output Per Worker
+2022.0,UK,Total,112.352684417285,Output Per Worker
+2022.25,UK,Total,111.8288956787429,Output Per Worker
+2022.5,UK,Total,112.09079004801397,Output Per Worker
+2022.75,UK,Total,111.8288956787429,Output Per Worker
+2023.0,UK,Total,111.21780881711044,Output Per Worker
+2023.25,UK,Total,111.21780881711044,Output Per Worker
+2023.5,UK,Total,111.13051069402007,Output Per Worker
+2023.75,UK,Total,110.78131820165866,Output Per Worker
+2024.0,UK,Total,111.91619380183324,Output Per Worker
+2024.25,UK,Total,111.91619380183324,Output Per Worker
+2024.5,UK,Total,111.04321257092971,Output Per Worker
+2024.75,UK,Total,110.78131820165866,Output Per Worker
+2025.0,UK,Total,111.21780881711044,Output Per Worker
