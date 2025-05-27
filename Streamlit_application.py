@@ -189,7 +189,7 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
                 x="Quarter", 
                 y="Value", 
                 color="Country",
-                title="Quarter on quarter Comparison (2020 = 100)",
+                title=f"Quarter on quarter Comparison ({data_option.base_year} = 100)", 
                 labels={"value": f"{data_option}", "variable": "Countries", "industry": f"{industry}"})
             for trace in figs.data:
                 trace.showlegend = i == 0  # Show legend only for first subplot
@@ -204,7 +204,7 @@ def create_quarterly_fig(data, show_legend, data_option, show_dip_lines, visType
                         font=dict(size=12),
                     ),
                     height=300 * rows)
-        fig.update_layout(title=f"Gross Value Added by industry (2020 = 100)")  # remove
+        fig.update_layout(title=f"Gross Value Added by industry ({data_option.base_year} = 100)")  
         # fig.update_xaxes(showticklabels=False)
     elif second_plot:
         if visType == "3D line graph":  # Has to be "scene" instead of "xy" for 3d plot
@@ -480,7 +480,7 @@ def visualisation_selection(quarterly_data, yearly_data, key, lock_quarterly):
         if quarterly_option == "Gross Value Added":
             industry_options = quarterly_data["Industry"].unique()
             industry_options = industry_options[~pd.isna(industry_options)] 
-            industry_selection = st.sidebar.multiselect(label="Select industry selection", options=industry_options, default=["Total"], key=f"Industry_Selection_{key}")
+            industry_selection = st.sidebar.multiselect(label="Select industry", options=industry_options, default=["Total"], key=f"Industry_Selection_{key}")
 
     # Year time series selection
     yearly_option = None
