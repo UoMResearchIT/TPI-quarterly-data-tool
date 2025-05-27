@@ -634,7 +634,8 @@ def main_code():
             show_dip_lines = st.sidebar.toggle(label="Show verticle lines for major dips in productivity", value=False)
         else:
             show_dip_lines = False
-        if not show_dip_lines:
+        if not show_dip_lines and QorY == "Quarterly" and visType != '3D line graph':
+            print(visType)
             show_years = st.sidebar.toggle(label="Show years instead of quarters", value=False)
         else:
             show_years = False
