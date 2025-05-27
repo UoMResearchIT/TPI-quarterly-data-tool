@@ -63,7 +63,7 @@ def SIC_Code_Combine(dataset, letters):
     return filtered_data[[f"{combined}"]]
 
 ONS_OPH = pd.read_excel('../src/OPH May release.xlsx', sheet_name='Table_18', usecols='A,B', skiprows=110, names=["Quarter", "OPH"])
-ONS_OPW = pd.read_excel('../src/OPW May release.xlsx', sheet_name='Table_18', usecols='A,B', skiprows=7, names=["Quarter", "OPW"])
+ONS_OPW = pd.read_excel('../src/OPW May release.xlsx', sheet_name='Table_17', usecols='A,B', skiprows=7, names=["Quarter", "OPW"])
 ONS_Data = ONS_OPH.merge(ONS_OPW, on=["Quarter"])
 # Rebase to 2020
 ONS_Data["Year"] = ONS_Data["Quarter"].str[:4].astype(int)
