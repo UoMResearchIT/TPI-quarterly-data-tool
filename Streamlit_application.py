@@ -685,12 +685,15 @@ def main_code():
         with st.spinner("Loading visualisation"):
             st.session_state.fig = fig
             figure.plotly_chart(st.session_state.fig, use_container_width=True,                 
-                    config = {
-                        "toImageButtonOptions": {
-                            "filename": "Downloaded_file",
-                            "scale": 2
-                        }
-                    })
+                config={
+                    "toImageButtonOptions": {
+                        "format": "png",
+                        "filename": f"{visType}",
+                        "height": 600,
+                        "width": 800,
+                        "scale": 5
+                    }
+                })
 
 def main():
     # Initialise app
