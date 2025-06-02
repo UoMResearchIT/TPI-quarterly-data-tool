@@ -169,6 +169,7 @@ def make_fig(data, visType, data_option, second_plot, second_data, show_legend):
             highlighted_quarters = ["2007 Q4", "2009 Q2", "2019 Q4", "2021 Q1"]  # Quarters highlighted with verticle lines
             for quarter in highlighted_quarters:
                 fig.add_vline(x=quarter, line_dash="dash", line_color="red")
+                print("search", quarter)
     elif visType == "Dummy bar graph":
         fig = px.bar(data, x="Quarter", y="Value", color="Country", title="")
 
@@ -642,6 +643,8 @@ def main_code():
             show_dip_lines = False
         if not show_dip_lines and QorY == "Quarterly" and visType != '3D line graph':
             show_years = st.sidebar.toggle(label="Show years instead of quarters", value=False)
+            hide_grid_lines = st.sidebar.toggle(label="Hide grid lines", value=False)
+            hide_grid_lines = not hide_grid_lines  # Has to be the other way round
         else:
             show_years = False
         if show_years:
@@ -681,6 +684,7 @@ def main_code():
     figure = st.empty()
     # Display the figure
     if fig:
+        fig.update_yaxes(showgrid=hide_grid_lines)
         # Save session state variables and load figure
         with st.spinner("Loading visualisation"):
             st.session_state.fig = fig
