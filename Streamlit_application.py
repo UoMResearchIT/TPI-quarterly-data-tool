@@ -116,12 +116,12 @@ def multi_data_format(data, industry):
 def make_fig(data, visType, data_option, second_plot, second_data, show_legend):
     if second_plot:  # remove - could move colour code to quarterly fig function and put in as a parameter, so it is run less
         countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
-        colour_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
-        country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
     else: # Need this to account for if second plot isn"t selected
-        countries = data["Country"]
-        colour_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
-        country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
+        countries = list(data["Country"].unique())
+    print(countries)
+    colour_palette = px.colors.qualitative.Dark24  # Choose a Plotly color set
+    country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
+    print(country_colors)
 
     if visType == "QoQ":
         fig = px.bar(data, x="Quarter", y="QoQ Growth (%)", color="Country",
