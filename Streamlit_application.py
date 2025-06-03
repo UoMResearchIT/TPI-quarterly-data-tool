@@ -118,10 +118,8 @@ def make_fig(data, visType, data_option, second_plot, second_data, show_legend):
         countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
     else: # Need this to account for if second plot isn"t selected
         countries = list(data["Country"].unique())
-    print(countries)
     colour_palette = px.colors.qualitative.Dark24  # Choose a Plotly color set
     country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
-    print(country_colors)
 
     if visType == "QoQ":
         fig = px.bar(data, x="Quarter", y="QoQ Growth (%)", color="Country",
@@ -166,10 +164,14 @@ def make_fig(data, visType, data_option, second_plot, second_data, show_legend):
             xaxis_title=f"{data_option.x_axis_title}"
         )
         if data_option.show_dip_lines:
-            highlighted_quarters = ["2007 Q4", "2009 Q2", "2019 Q4", "2021 Q1"]  # Quarters highlighted with verticle lines
+            visible_quarters = data["Quarter"].unique().tolist() 
+            if not data_option.show_years:
+                highlighted_quarters = ["2007 Q4", "2009 Q2", "2019 Q4", "2021 Q1"]  # Quarters highlighted with verticle lines
+            else:
+                highlighted_quarters = ["2007.75", "2009.25", "2019.75", "2021"]  # Quarters highlighted with verticle lines
             for quarter in highlighted_quarters:
-                fig.add_vline(x=quarter, line_dash="dash", line_color="red")
-                print("search", quarter)
+                if quarter in visible_quarters:
+                    fig.add_vline(x=quarter, line_dash="dash", line_color="red")
     elif visType == "Dummy bar graph":
         fig = px.bar(data, x="Quarter", y="Value", color="Country", title="")
 
@@ -260,10 +262,17 @@ def create_quarterly_fig(data, show_legend, data_option, visType, second_plot, s
                     )
                     fig.add_trace(trace, row=1, col=1)
                 if data_option.show_dip_lines:
-                    highlighted_quarters = ["2007 Q4", "2009 Q2", "2019 Q4", "2021 Q1"]
+                    visible_quarters = data["Quarter"].unique().tolist() 
+                    visible_quarters_two = second_data["Quarter"].unique().tolist() 
+                    if not data_option.show_years:
+                        highlighted_quarters = ["2007 Q4", "2009 Q2", "2019 Q4", "2021 Q1"]  # Quarters highlighted with verticle lines
+                    else:
+                        highlighted_quarters = ["2007.75", "2009.25", "2019.75", "2021"]  # Quarters highlighted with verticle lines
                     for quarter in highlighted_quarters:
-                        fig.add_vline(x=quarter, line_dash="dash", line_color="red", row=1, col=1)
-                        fig.add_vline(x=quarter, line_dash="dash", line_color="red", row=1, col=2)
+                        if quarter in visible_quarters:
+                            fig.add_vline(x=quarter, line_dash="dash", line_color="red", row=1, col=1)
+                        if quarter in visible_quarters_two:
+                            fig.add_vline(x=quarter, line_dash="dash", line_color="red", row=1, col=2)
     else:
         fig = make_fig(data, visType, data_option, second_plot, second_data, show_legend)
     if not second_plot:
@@ -637,11 +646,12 @@ def main_code():
         st.sidebar.divider()
         st.sidebar.subheader("Configure layout")
         show_legend = st.sidebar.toggle(label="Show legend", value=True)
+        hide_grid_lines = True
         if visType == "2D line graph" and QorY == "Quarterly":
             show_dip_lines = st.sidebar.toggle(label="Show verticle lines for major dips in productivity", value=False)
         else:
             show_dip_lines = False
-        if not show_dip_lines and QorY == "Quarterly" and visType != '3D line graph':
+        if QorY == "Quarterly" and visType != '3D line graph':
             show_years = st.sidebar.toggle(label="Show years instead of quarters", value=False)
             hide_grid_lines = st.sidebar.toggle(label="Hide grid lines", value=False)
             hide_grid_lines = not hide_grid_lines  # Has to be the other way round
