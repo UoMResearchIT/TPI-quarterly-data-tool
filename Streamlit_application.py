@@ -114,6 +114,20 @@ def multi_data_format(data, industry):
     return plot_data
 
 def make_fig(data, visType, data_option, second_plot, second_data, show_legend):
+    if data_option.show_years:
+        def decimal_to_quarter_label(value):
+            if isinstance(value, (float, int)):
+                year = int(value)
+                fraction = round((value - year) * 4)
+                quarter = {0: "Q1", 1: "Q2", 2: "Q3", 3: "Q4"}.get(fraction, "Q?")
+                return f"{year} {quarter}"
+            elif isinstance(value, str) and "Q" in value:
+                return value  
+            else:
+                return str(value)  
+        data["QuarterLabel"] = data["Quarter"].apply(decimal_to_quarter_label)
+    else:
+        data["QuarterLabel"] = data["Quarter"]
     TPI_colours = ["#eb5e5e", "#03979d","#6C2283", "#39A7DF"]
     if second_plot:  # remove - could move colour code to quarterly fig function and put in as a parameter, so it is run less
         countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
@@ -126,20 +140,28 @@ def make_fig(data, visType, data_option, second_plot, second_data, show_legend):
         country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
     if visType == "QoQ":
         fig = px.bar(data, 
-                     x="Quarter", 
-                     y="QoQ Growth (%)", 
-                     color="Country",
-                     barmode="group", 
-                     title=f"Quarter on quarter comparison of {data_option.data_option} (chain linked values {data_option.base_year} = 100)")
+                    x="Quarter", 
+                    y="QoQ Growth (%)", 
+                    color="Country",
+                    barmode="group", 
+                    title=f"Quarter on quarter comparison of {data_option.data_option} (chain linked values {data_option.base_year} = 100)",
+                    custom_data=["QuarterLabel"])
         fig.update_layout(xaxis_title=f"{data_option.x_axis_title}")
+        fig.update_traces(
+            hovertemplate="%{customdata[0]}<br>Country: %{fullData.name}<br>Value: %{y:.2f}<extra></extra>"
+        )
     elif visType == "YoY":
         fig = px.bar(data, 
-                     x="Quarter", 
-                     y="YoY Growth (%)", 
-                     color="Country",
-                     barmode="group", 
-                     title=f"Year on year comparison of {data_option.data_option} for Q{data_option.YoY_year} of each year selected (chain linked values {data_option.base_year} = 100)")
+                    x="Quarter", 
+                    y="YoY Growth (%)", 
+                    color="Country",
+                    barmode="group", 
+                    title=f"Year on year comparison of {data_option.data_option} for Q{data_option.YoY_year} of each year selected (chain linked values {data_option.base_year} = 100)",
+                    custom_data=["QuarterLabel"])
         fig.update_layout(xaxis_title=f"{data_option.x_axis_title}")
+        fig.update_traces(
+            hovertemplate="%{customdata[0]}<br>Country: %{fullData.name}<br>Value: %{y:.2f}<extra></extra>"
+        )
 
     elif visType == "3D line graph":
         # Extract years from quarters
@@ -165,7 +187,8 @@ def make_fig(data, visType, data_option, second_plot, second_data, show_legend):
                 color="Country",
                 color_discrete_map=country_colors,
                 title=f"{data_option.QorY} comparison of {data_option.data_option} ({data_option.base_year} = 100)",
-                labels={"value": f"{data_option.data_option}", "variable": "Countries"})
+                labels={"value": f"{data_option.data_option}", "variable": "Countries"},
+                custom_data=["QuarterLabel"])
         fig.update_layout(
             yaxis=dict(
                 title=dict(
@@ -174,6 +197,10 @@ def make_fig(data, visType, data_option, second_plot, second_data, show_legend):
             ),
             xaxis_title=f"{data_option.x_axis_title}"
         )
+        fig.update_traces(
+            hovertemplate="%{customdata[0]}<br>Country: %{fullData.name}<br>Value: %{y:.2f}<extra></extra>"
+        )
+
         if data_option.show_dip_lines:
             visible_quarters = data["Quarter"].unique().tolist() 
             if not data_option.show_years:
