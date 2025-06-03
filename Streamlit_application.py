@@ -114,20 +114,31 @@ def multi_data_format(data, industry):
     return plot_data
 
 def make_fig(data, visType, data_option, second_plot, second_data, show_legend):
+    TPI_colours = ["#eb5e5e", "#03979d","#6C2283", "#39A7DF"]
     if second_plot:  # remove - could move colour code to quarterly fig function and put in as a parameter, so it is run less
         countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
     else: # Need this to account for if second plot isn"t selected
         countries = list(data["Country"].unique())
-    colour_palette = px.colors.qualitative.Dark24  # Choose a Plotly color set
-    country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
-
+    if len(countries) <= 4:
+        country_colors = {country: TPI_colours[i % len(TPI_colours)] for i, country in enumerate(countries)}
+    else:
+        colour_palette = px.colors.qualitative.Dark2  # Choose a Plotly color set
+        country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
     if visType == "QoQ":
-        fig = px.bar(data, x="Quarter", y="QoQ Growth (%)", color="Country",
-                barmode="group", title=f"Quarter on quarter comparison of {data_option.data_option} (chain linked values {data_option.base_year} = 100)")
+        fig = px.bar(data, 
+                     x="Quarter", 
+                     y="QoQ Growth (%)", 
+                     color="Country",
+                     barmode="group", 
+                     title=f"Quarter on quarter comparison of {data_option.data_option} (chain linked values {data_option.base_year} = 100)")
         fig.update_layout(xaxis_title=f"{data_option.x_axis_title}")
     elif visType == "YoY":
-        fig = px.bar(data, x="Quarter", y="YoY Growth (%)", color="Country",
-             barmode="group", title=f"Year on year comparison of {data_option.data_option} for Q{data_option.YoY_year} of each year selected (chain linked values {data_option.base_year} = 100)")
+        fig = px.bar(data, 
+                     x="Quarter", 
+                     y="YoY Growth (%)", 
+                     color="Country",
+                     barmode="group", 
+                     title=f"Year on year comparison of {data_option.data_option} for Q{data_option.YoY_year} of each year selected (chain linked values {data_option.base_year} = 100)")
         fig.update_layout(xaxis_title=f"{data_option.x_axis_title}")
 
     elif visType == "3D line graph":
@@ -747,6 +758,7 @@ def main():
             - **Show legend**: choose whether the legend is to be shown in the visualisation
             - **Show verticle lines for major dips in productivity**: choose whether to show verticle lines positioned before and after the 2008 recession and covid-19
             - **Show years instead of quarters**: Choose to show the x-axis of the visualisation as years instead of quarters - the data represented is still quarterly data but it can make the visualisation clearer
+            - **Hide grid lines**: Choose to not display horizontal grid lines in the visualisation
             """
         )
 
