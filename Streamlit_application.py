@@ -128,21 +128,38 @@ def make_fig(data, visType, data_option, second_plot, second_data, show_legend):
         data["QuarterLabel"] = data["Quarter"].apply(decimal_to_quarter_label)
     else:
         data["QuarterLabel"] = data["Quarter"]
-    TPI_colours = ["#eb5e5e", "#03979d","#6C2283", "#39A7DF"]
+    TPI_colours = ["#eb5e5e", "#39A7DF","#6C2283", "#03969D"]
     if second_plot:  # remove - could move colour code to quarterly fig function and put in as a parameter, so it is run less
         countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
+        print(data["Country"])
+        print(second_data["Country"])
     else: # Need this to account for if second plot isn"t selected
         countries = list(data["Country"].unique())
+
     if len(countries) <= 4:
-        country_colors = {country: TPI_colours[i % len(TPI_colours)] for i, country in enumerate(countries)}
+        country_colours = {country: TPI_colours[i % len(TPI_colours)] for i, country in enumerate(countries)}
     else:
         colour_palette = px.colors.qualitative.Dark2  # Choose a Plotly color set
-        country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
+        country_colours = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
+    # if second_plot:  # remove - could move colour code to quarterly fig function and put in as a parameter, so it is run less
+    #     countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
+    #     colour_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
+    #     country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
+    # else: # Need this to account for if second plot isn"t selected
+    #     countries = data["Country"]
+    #     colour_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
+    #     country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
+
+    print(country_colours)
+    print(countries)
+    print(second_plot)
+    
     if visType == "QoQ":
         fig = px.bar(data, 
                     x="Quarter", 
                     y="QoQ Growth (%)", 
                     color="Country",
+                    color_discrete_map=country_colours,
                     barmode="group", 
                     title=f"Quarter on quarter comparison of {data_option.data_option} (chain linked values {data_option.base_year} = 100)",
                     custom_data=["QuarterLabel"])
@@ -155,6 +172,7 @@ def make_fig(data, visType, data_option, second_plot, second_data, show_legend):
                     x="Quarter", 
                     y="YoY Growth (%)", 
                     color="Country",
+                    color_discrete_map=country_colours,
                     barmode="group", 
                     title=f"Year on year comparison of {data_option.data_option} for Q{data_option.YoY_year} of each year selected (chain linked values {data_option.base_year} = 100)",
                     custom_data=["QuarterLabel"])
@@ -185,7 +203,7 @@ def make_fig(data, visType, data_option, second_plot, second_data, show_legend):
                 x="Quarter", 
                 y="Value", 
                 color="Country",
-                color_discrete_map=country_colors,
+                color_discrete_map=country_colours,
                 title=f"{data_option.QorY} comparison of {data_option.data_option} ({data_option.base_year} = 100)",
                 labels={"value": f"{data_option.data_option}", "variable": "Countries"},
                 custom_data=["QuarterLabel"])
@@ -211,7 +229,12 @@ def make_fig(data, visType, data_option, second_plot, second_data, show_legend):
                 if quarter in visible_quarters:
                     fig.add_vline(x=quarter, line_dash="dash", line_color="red")
     elif visType == "Dummy bar graph":
-        fig = px.bar(data, x="Quarter", y="Value", color="Country", title="")
+        fig = px.bar(data, 
+                    x="Quarter",
+                    y="Value",
+                    color="Country",
+                    color_discrete_map=country_colours,
+                    title="")
 
     if not show_legend:
         for trace in fig.data:
@@ -247,36 +270,47 @@ def create_quarterly_fig(data, show_legend, data_option, visType, second_plot, s
                     ),
                     height=300 * rows)
         fig.update_layout(title=f"Gross Value Added by industry ({data_option.base_year} = 100)")  
-        # fig.update_xaxes(showticklabels=False)
     elif second_plot:
         if visType == "3D line graph":  # Has to be "scene" instead of "xy" for 3d plot
             fig=make_subplots(rows=1, cols=2, specs=[[{"type": "scene"}, {"type": "scene"}]])
         else:
             fig=make_subplots(rows=1, cols=2, specs=[[{"type": "xy"}, {"type": "xy"}]])
 
-        # fig=make_subplots(rows=1, cols=2)
         for trace in make_fig(data, visType, data_option, second_plot, second_data, True):
             # trace.showlegend = False
             fig.add_trace(trace, row=1, col=1)
-        for trace in make_fig(second_data, visType, data_option, second_plot, second_data, False):
+        for trace in make_fig(second_data, visType, data_option, second_plot, data, False):
             # trace.showlegend = False
             fig.add_trace(trace, row=1, col=2)
         
         if visType != "3D line graph":
             # Determine missing countries (ones in second plot but not first)
             missing_countries = list(set(second_data["Country"]) - set(data["Country"]))
-
-            # Create a dummy dataframe with missing countries
-            dummy_df = pd.DataFrame({
-                "Quarter": ["1900 Q1"] * len(missing_countries),  # Some old date unlikely to be in range
-                "Value": [0] * len(missing_countries),
-                "Country": missing_countries
-            })
             
             if visType == "QoQ" or visType == "YoY":  # If it is displaying a bar graph
                 # Generate hidden traces for missing countries
-                for trace in make_fig(dummy_df, "Dummy bar graph", data_option, second_plot, second_data, show_legend):
-                    trace.visible = "legendonly"  # Hide from graph but keep in legend
+                # for trace in make_fig(dummy_df, "Dummy bar graph", data_option, second_plot, second_data, show_legend):
+                #     trace.visible = "legendonly"  # Hide from graph but keep in legend
+                #     fig.add_trace(trace, row=1, col=1)
+
+                countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
+                TPI_colours = ["#eb5e5e", "#39A7DF","#6C2283", "#03969D"]
+                if len(countries) <= 4:
+                    country_colours = {country: TPI_colours[i % len(TPI_colours)] for i, country in enumerate(countries)}
+                else:
+                    colour_palette = px.colors.qualitative.Dark2  # Choose a Plotly color set
+                    country_colours = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
+
+                selected_quarter = list(data["Quarter"])
+                for country in missing_countries:
+                    trace = go.Bar(
+                        x=[selected_quarter[0]],  # Temp fix - if its in the data selected, it isnt visible on x axis
+                        y=[0],
+                        name=country,
+                        marker=dict(color=country_colours[country]),
+                        visible="legendonly",
+                        showlegend=True
+                    )
                     fig.add_trace(trace, row=1, col=1)
                 fig.update_layout( 
                     xaxis_title=f"{data_option.x_axis_title}",
@@ -286,19 +320,26 @@ def create_quarterly_fig(data, show_legend, data_option, visType, second_plot, s
                 )
             else:  # If it is displaying a 2d line graph
                 countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
-                colour_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
-                country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
+                TPI_colours = ["#eb5e5e", "#39A7DF","#6C2283", "#03969D"]
+                if len(countries) <= 4:
+                    country_colours = {country: TPI_colours[i % len(TPI_colours)] for i, country in enumerate(countries)}
+                else:
+                    colour_palette = px.colors.qualitative.Dark2  # Choose a Plotly color set
+                    country_colours = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
+                selected_quarter = list(data["Quarter"])
+
                 for country in missing_countries:
                     trace = go.Scatter(
-                        x=["1900 Q1"],  # Fake data
-                        y=[0],
+                        x=[selected_quarter[0]],  # Temp fix - if its in the data selected, it isnt visible on x axis
+                        y=[100],
                         mode="lines",
                         name=country,
-                        line=dict(color=country_colors.get(country, "#000000")),
+                        line=dict(color=country_colours.get(country, "#000000")),
                         visible="legendonly",
                         showlegend=True
                     )
                     fig.add_trace(trace, row=1, col=1)
+                    
                 if data_option.show_dip_lines:
                     visible_quarters = data["Quarter"].unique().tolist() 
                     visible_quarters_two = second_data["Quarter"].unique().tolist() 
@@ -327,9 +368,14 @@ def create_yearly_fig(data, show_legend, second_plot, second_data, data_option):
         title="GDP per Hour Worked Over Time (2015=100)").data
     if second_plot:
         countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
-        colour_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
-        country_colours = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
-            
+        TPI_colours = ["#eb5e5e", "#39A7DF","#6C2283", "#03969D"]
+        # country_colours = {}
+        if len(countries) <= 4:
+            country_colours = {country: TPI_colours[i % len(TPI_colours)] for i, country in enumerate(countries)}
+        else:
+            colour_palette = px.colors.qualitative.Dark2  # Choose a Plotly color set
+            country_colours = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
+
         fig=make_subplots(rows=1, cols=2)
         for trace in yearly_line_graph(data, country_colours):
             fig.add_trace(trace, row=1, col=1)
@@ -341,7 +387,7 @@ def create_yearly_fig(data, show_legend, second_plot, second_data, data_option):
         missing_countries = list(set(second_data["Country"]) - set(data["Country"]))
         for country in missing_countries:
             trace = go.Scatter(
-                x=["1900 Q1"],  # Fake data
+                x=["2020 Q1"],  # Fake data
                 y=[0],
                 mode="lines",
                 name=country,
@@ -685,7 +731,7 @@ def main_code():
         st.sidebar.subheader("Configure layout")
         show_legend = st.sidebar.toggle(label="Show legend", value=True)
         hide_grid_lines = True
-        if visType == "2D line graph" and QorY == "Quarterly":
+        if visType == "2D line graph" and QorY == "Quarterly" and len(industry_selection) == 1:
             show_dip_lines = st.sidebar.toggle(label="Show verticle lines for major dips in productivity", value=False)
         else:
             show_dip_lines = False
@@ -783,7 +829,7 @@ def main():
             - Allows for selection of the specific quarter to be compared (if the 4th quarter is selected, it will show percentage change of the measure selected between the 4th quarters of the years selected)
             #### Formatting
             - **Show legend**: choose whether the legend is to be shown in the visualisation
-            - **Show verticle lines for major dips in productivity**: choose whether to show verticle lines positioned before and after the 2008 recession and covid-19
+            - **Show verticle lines for major dips in productivity**: choose whether to show verticle lines positioned before and after the 2007 recession and covid-19
             - **Show years instead of quarters**: Choose to show the x-axis of the visualisation as years instead of quarters - the data represented is still quarterly data but it can make the visualisation clearer
             - **Hide grid lines**: Choose to not display horizontal grid lines in the visualisation
             """
