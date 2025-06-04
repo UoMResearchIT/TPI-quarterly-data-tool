@@ -141,18 +141,6 @@ def make_fig(data, visType, data_option, second_plot, second_data, show_legend):
     else:
         colour_palette = px.colors.qualitative.Dark2  # Choose a Plotly color set
         country_colours = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
-    # if second_plot:  # remove - could move colour code to quarterly fig function and put in as a parameter, so it is run less
-    #     countries = list(set(data["Country"]).union(set(second_data["Country"]))) # All countries in both lists
-    #     colour_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
-    #     country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
-    # else: # Need this to account for if second plot isn"t selected
-    #     countries = data["Country"]
-    #     colour_palette = px.colors.qualitative.Set1  # Choose a Plotly color set
-    #     country_colors = {country: colour_palette[i % len(colour_palette)] for i, country in enumerate(countries)}
-
-    print(country_colours)
-    print(countries)
-    print(second_plot)
     
     if visType == "QoQ":
         fig = px.bar(data, 
@@ -778,6 +766,7 @@ def main_code():
     figure = st.empty()
     # Display the figure
     if fig:
+        fig.update_layout(showlegend=show_legend)
         fig.update_yaxes(showgrid=hide_grid_lines)
         # Save session state variables and load figure
         with st.spinner("Loading visualisation"):
@@ -804,8 +793,9 @@ def main():
         st.markdown(
             """
             ## TPI Quarterly Data Tool
-            ###### Developed by the [TPI Productivity Lab](https://lab.productivity.ac.uk/), this tool allows for the quick creation of graphs of quarterly and yearly productivity data on a national scale.
-            ###### US Quarterly total economy data represents most of the US economy but leaves out certain sectors - read the sources and methods document that accompanies this tool for more information
+            **Developed by the [TPI Productivity Lab](https://lab.productivity.ac.uk/), this tool allows for the quick creation of graphs of quarterly and yearly productivity data on a national scale.**
+
+            **For more information about the sources and methods for this tool, read the accompanying document linked [here](https://doi.org/10.48420/29230796/)**
 
             ### Customisation Options
             #### Data options
@@ -817,7 +807,7 @@ def main():
             ##### Quarterly 2D line graph
             - Plots all selected data as a line graph
             - GVA provides data options for multiple sectors:
-                - If only sector is selected, a single line graph will be displayed
+                - If only sector is selected, a single graph will be displayed
                 - If multiple are selected, multiple plots will be displayed side by side
                 - More information about the sectoral options is shown in the sources and methods and document
             ##### Quarterly 3D line graph
@@ -826,10 +816,10 @@ def main():
             - Plots all selected data as a bar graph showing Quarter on Quarter (QoQ) change as a percentage
             ##### YOY bar graph
             - Plots all selected data as a bar graph showing Year on Year (YoY) change as a percentage
-            - Allows for selection of the specific quarter to be compared (if the 4th quarter is selected, it will show percentage change of the measure selected between the 4th quarters of the years selected)
+            - Allows for selection of the specific quarter to be compared (if the 4th quarter is selected, it will show percentage change of the indicator selected between the 4th quarters of the years selected)
             #### Formatting
-            - **Show legend**: choose whether the legend is to be shown in the visualisation
-            - **Show verticle lines for major dips in productivity**: choose whether to show verticle lines positioned before and after the 2007 recession and covid-19
+            - **Show legend**: Choose whether the legend is to be shown in the visualisation
+            - **Show verticle lines for major dips in productivity**: Choose whether to show verticle lines positioned before and after the 2007 recession and covid-19
             - **Show years instead of quarters**: Choose to show the x-axis of the visualisation as years instead of quarters - the data represented is still quarterly data but it can make the visualisation clearer
             - **Hide grid lines**: Choose to not display horizontal grid lines in the visualisation
             """
