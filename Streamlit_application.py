@@ -746,7 +746,7 @@ def main_code():
                 formatted_data_two = data_format(data, QorY_two, quarter_two, plot_two_data_option, country_selection_two, visType_two, quarterly_selection_two, industry_selection_two)
             fig = create_quarterly_fig(formatted_data, show_legend, plot_one_data_option, visType, second_plot, formatted_data_two)
             if second_plot:
-                fig.update_layout(title=f"{plot_one_data_option.data_option} against {plot_two_data_option.data_option}")  # remove - change this
+                fig.update_layout(title=f"Side-by-side comparison of {plot_one_data_option.data_option} against {plot_two_data_option.data_option}")  # remove - change this
         else:
             formatted_data = data_format(data, QorY, year, plot_one_data_option, country_selection, False)
             formatted_data_two = None
