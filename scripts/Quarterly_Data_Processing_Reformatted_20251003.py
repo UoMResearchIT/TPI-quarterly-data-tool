@@ -3,6 +3,54 @@ import numpy as np
 # from GDP_Data_Processing_20250602 import GDPPH_Calculation
 import sqlite3
 
+country_code_map = {
+    "EU27_2020": "European Union",
+    "EA": "Euro Area",  
+    "BE": "Belgium",
+    "BG": "Bulgaria",
+    "CZ": "Czechia",
+    "DK": "Denmark",
+    "DE": "Germany",
+    "EE": "Estonia",
+    "IE": "Ireland",
+    "EL": "Greece",  
+    "ES": "Spain",
+    "FR": "France",
+    "HR": "Croatia",
+    "IT": "Italy",
+    "CY": "Cyprus",
+    "LV": "Latvia",
+    "LT": "Lithuania",
+    "LU": "Luxembourg",
+    "HU": "Hungary",
+    "MT": "Malta",
+    "NL": "Netherlands",
+    "AT": "Austria",
+    "PL": "Poland",
+    "PT": "Portugal",
+    "RO": "Romania",
+    "SI": "Slovenia",
+    "SK": "Slovakia",
+    "FI": "Finland",
+    "SE": "Sweden",
+    "NO": "Norway"  
+}
+
+sector_code_map = {
+    "TOTAL": "Total - all NACE activities",
+    "A": "Agriculture, forestry and fishing",
+    "B-E": "Industry (except construction)",
+    "C": "Manufacturing",
+    "F": "Construction",
+    "G-I": "Wholesale and retail trade, transport, accommodation and food service activities",
+    "J": "Information and communication",
+    "K": "Financial and insurance activities",
+    "L": "Real estate activities",
+    "M_N": "Professional, scientific and technical activities; administrative and support service activities",
+    "O-Q": "Public administration, defence, education, human health and social work activities",
+    "R-U": "Arts, entertainment and recreation; other service activities; activities of household and extra-territorial organizations and bodies"
+}
+
 pd.set_option('future.no_silent_downcasting', True)
 def quarter_to_numeric(q):
     if not isinstance(q, str) or "Q" not in q:
@@ -16,11 +64,15 @@ def quarter_to_numeric(q):
         year, qtr = q.split(" ")
     return int(year) + (int(qtr[1]) - 1) / 4  # Converts "1997 Q3" → 1997.5
 
-def EU_GVA_Process():
-    EU_GVA = pd.read_csv('../src/EU GVA with industries.csv')
+def EU_GVA_Process(country_code_map, sector_code_map):
+    url = 'https://ec.europa.eu/eurostat/api/dissemination/sdmx/3.0/data/dataflow/ESTAT/namq_10_a10/1.0?format=csvdata&compress=false&,POPTRT&c[GEO]=EU27_2020,EA,DK,DE,IE,ES,FR,IT,NL,PL,RO,FI,NO&c[UNIT]=CLV_I20&c[S_ADJ]=SCA&c[TIME_PERIOD]=ge:2012+le:2030'
+    EU_GVA = pd.read_csv(url)
+    # EU_GVA = pd.read_csv('../src/EU GVA with industries.csv')
     EU_GVA["TIME_PERIOD"] = EU_GVA["TIME_PERIOD"].str.replace("-", " ", regex=False)
     EU_GVA = EU_GVA[["TIME_PERIOD", "geo", "nace_r2", "OBS_VALUE"]]
     EU_GVA = EU_GVA.rename(columns={"TIME_PERIOD": "Quarter", "geo": "Country", "nace_r2": "Industry", "OBS_VALUE": "Value"})
+    EU_GVA["Country"] = EU_GVA["Country"].replace(country_code_map)
+    EU_GVA["Industry"] = EU_GVA["Industry"].replace(sector_code_map)
     EU_GVA["Variable"] = "GVA"
     EU_GVA["Industry"] = EU_GVA["Industry"].str.replace("Total - all NACE activities", "Total", regex=False)
     EU_GVA["Industry"] = EU_GVA["Industry"].str.replace("Wholesale and retail trade, transport, accommodation and food service activities", "Trade & Hospitality", regex=False)
@@ -76,39 +128,6 @@ ONS_Data = ONS_Data.melt(id_vars=["Quarter"], var_name="Variable", value_name="V
 ONS_Data["Country"] = "UK"
 ONS_Data = ONS_Data[["Quarter", "Country", "Variable", "Value"]]
 
-country_code_map = {
-    "EU27_2020": "European Union",
-    "EA": "Euro Area",  
-    "BE": "Belgium",
-    "BG": "Bulgaria",
-    "CZ": "Czechia",
-    "DK": "Denmark",
-    "DE": "Germany",
-    "EE": "Estonia",
-    "IE": "Ireland",
-    "EL": "Greece",  
-    "ES": "Spain",
-    "FR": "France",
-    "HR": "Croatia",
-    "IT": "Italy",
-    "CY": "Cyprus",
-    "LV": "Latvia",
-    "LT": "Lithuania",
-    "LU": "Luxembourg",
-    "HU": "Hungary",
-    "MT": "Malta",
-    "NL": "Netherlands",
-    "AT": "Austria",
-    "PL": "Poland",
-    "PT": "Portugal",
-    "RO": "Romania",
-    "SI": "Slovenia",
-    "SK": "Slovakia",
-    "FI": "Finland",
-    "SE": "Sweden",
-    "NO": "Norway"  
-}
-
 url = 'https://ec.europa.eu/eurostat/api/dissemination/sdmx/3.0/data/dataflow/ESTAT/namq_10_lp_ulc/1.0?format=csvdata&compress=false&,POPTRT&c[GEO]=EU27_2020,EA,DK,DE,IE,ES,FR,IT,NL,PL,RO,FI,NO&c[UNIT]=I20&c[S_ADJ]=SCA&c[TIME_PERIOD]=ge:1997+le:2030'
 EU_OPH_OPW = pd.read_csv(url)
 EU_OPH_OPW = EU_OPH_OPW.rename(columns={"TIME_PERIOD": "Quarter", "na_item": "Variable", "geo": "Country", "OBS_VALUE": "Value"})
@@ -116,7 +135,6 @@ EU_OPH_OPW["Quarter"] = EU_OPH_OPW["Quarter"].str.replace("-", " ", regex=False)
 EU_OPH_OPW["Country"] = EU_OPH_OPW["Country"].replace(country_code_map)
 EU_OPH_OPW["Variable"] = EU_OPH_OPW["Variable"].replace({"RLPR_HW": "Output Per Hour", "RLPR_PER": "Output Per Worker"})
 EU_OPH_OPW = EU_OPH_OPW[["Quarter", "Variable", "Country", "Value"]]
-print(EU_OPH_OPW)
 
 # EU_OPH_OPW = pd.read_csv('../src/EU OPH OPW extended.csv')
 # EU_OPH_OPW = EU_OPH_OPW.rename(columns={"TIME_PERIOD": "Quarter", "na_item": "Variable", "geo": "Country", "OBS_VALUE": "Value"})
@@ -126,7 +144,7 @@ print(EU_OPH_OPW)
 # EU_OPH_OPW["Country"] = EU_OPH_OPW["Country"].str.replace("Euro area (EA11-1999, EA12-2001, EA13-2007, EA15-2008, EA16-2009, EA17-2011, EA18-2014, EA19-2015, EA20-2023)", "Euro area", regex=False)
 # EU_OPH_OPW["Country"] = EU_OPH_OPW["Country"].str.replace("European Union - 27 countries (from 2020)", "European Union", regex=False)
 
-Dataset = EU_GVA_Process()
+Dataset = EU_GVA_Process(country_code_map, sector_code_map)
 Dataset = pd.concat([Dataset, ONS_Data])
 Dataset = pd.concat([Dataset, EU_OPH_OPW])
 
