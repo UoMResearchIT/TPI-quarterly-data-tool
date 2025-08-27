@@ -65,7 +65,7 @@ def quarter_to_numeric(q):
     return int(year) + (int(qtr[1]) - 1) / 4  # Converts "1997 Q3" → 1997.5
 
 def EU_GVA_Process(country_code_map, sector_code_map):
-    url = 'https://ec.europa.eu/eurostat/api/dissemination/sdmx/3.0/data/dataflow/ESTAT/namq_10_a10/1.0?format=csvdata&compress=false&,POPTRT&c[GEO]=EU27_2020,EA,DK,DE,IE,ES,FR,IT,NL,PL,RO,FI,NO&c[UNIT]=CLV_I20&c[S_ADJ]=SCA&c[TIME_PERIOD]=ge:2012+le:2030'
+    url = 'https://ec.europa.eu/eurostat/api/dissemination/sdmx/3.0/data/dataflow/ESTAT/namq_10_a10/1.0?format=csvdata&compress=false&,POPTRT&c[GEO]=EU27_2020,EA,DK,DE,IE,ES,FR,IT,NL,PL,RO,FI,NO&c[UNIT]=CLV_I20&c[S_ADJ]=SCA&c[TIME_PERIOD]=ge:1997+le:2030'
     EU_GVA = pd.read_csv(url)
     # EU_GVA = pd.read_csv('../src/EU GVA with industries.csv')
     EU_GVA["TIME_PERIOD"] = EU_GVA["TIME_PERIOD"].str.replace("-", " ", regex=False)
