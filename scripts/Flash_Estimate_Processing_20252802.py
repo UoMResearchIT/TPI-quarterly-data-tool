@@ -46,14 +46,6 @@ def numeric_to_quarter(n):
     return f"{year} Q{qtr}"
 
 def line_graph(data, year, title, yAxisTitle, legendTitle):
-        # base = data.loc[data["Quarter"] == f"{year} Q1", ["GVA", "Hours Worked", "OPH"]].iloc[0].to_numpy()
-        # cols = ["GVA", "Hours Worked", "OPH"]
-        # data[cols] = (data[cols] / base) * 100
-
-        # data["quarter_numeric"] = data["Quarter"].apply(quarter_to_numeric)
-        # data = data[(data["quarter_numeric"] >= year) & (data["quarter_numeric"] <= 2024.75)]
-        # data = data.drop(["quarter_numeric"], axis=1)
-
         fig = px.line(
         data, 
         x="Quarter", 
@@ -62,7 +54,7 @@ def line_graph(data, year, title, yAxisTitle, legendTitle):
         labels={"value": f"{yAxisTitle}", "variable": f"{legendTitle}"},
         color_discrete_sequence=TPI_colours)
 
-        tickvals = [q for q in data['Quarter'] if q.endswith("Q1")]
+        tickvals = [q for q in data['Quarter'] if q.endswith("Q2")]
 
         fig.update_xaxes(tickvals=tickvals)
 
@@ -241,7 +233,6 @@ def horizontal_bar(data, title):
     return fig
 
 def OPH(data, title):
-    print(data)
     data['Output per hour worked'] *= 100
     data['GVA'] *= 100
     data['Hours worked (sign reversed)'] *= 100
@@ -339,7 +330,6 @@ fig.write_image("../out/visualisations/Figure 1 - Contribution to OPH by Industr
 
 # Figure 2
 OPH_Breakdown = pd.read_excel('../src/New-release/GVA OPH HW.xlsx', skiprows=6, usecols=[0,1,2,3])
-print(OPH_Breakdown)
 fig = OPH(OPH_Breakdown, "")
 fig.write_image("../out/visualisations/Figure 2 - OPH GVA HW.png", width=1200, height=800, scale=2)
 # fig.show()
@@ -354,7 +344,7 @@ preCovidOPW = preCovidOPW[(preCovidOPW['Quarter'] >= 2014.75) & (preCovidOPW['Qu
 preCovidOPW['Quarter'] = preCovidOPW['Quarter'].apply(numeric_to_quarter)
 
 postCovidOPW = OPW_Comparison.copy()
-postCovidOPW = postCovidOPW[(postCovidOPW['Quarter'] >= 2021) & (postCovidOPW['Quarter'] <= 2025)]
+postCovidOPW = postCovidOPW[(postCovidOPW['Quarter'] >= 2021.25) & (postCovidOPW['Quarter'] <= 2025.25)]
 postCovidOPW['Quarter'] = postCovidOPW['Quarter'].apply(numeric_to_quarter)
 
 fig = double_qoq(preCovidOPW, postCovidOPW, "", "legend", "Output per worker pre-COVID", "Output per worker post-COVID")
@@ -371,7 +361,7 @@ preCovidOPH = preCovidOPH[(preCovidOPH['Quarter'] >= 2014.75) & (preCovidOPH['Qu
 preCovidOPH['Quarter'] = preCovidOPH['Quarter'].apply(numeric_to_quarter)
 
 postCovidOPH = OPH_Comparison.copy()
-postCovidOPH = postCovidOPH[(postCovidOPH['Quarter'] >= 2021) & (postCovidOPH['Quarter'] <= 2025)]
+postCovidOPH = postCovidOPH[(postCovidOPH['Quarter'] >= 2021) & (postCovidOPH['Quarter'] <= 2025.25)]
 postCovidOPH['Quarter'] = postCovidOPH['Quarter'].apply(numeric_to_quarter)
 
 fig = double_qoq(preCovidOPH, postCovidOPH, "", "legend", "Output per hour worked pre-COVID", "Output per hour worked post-COVID")
@@ -391,11 +381,11 @@ base_value = Flash_Estimate_OPH.loc[Flash_Estimate_OPH["Quarter"] == "2007 Q1", 
 Flash_Estimate_OPH["Output Per Hour"] = (Flash_Estimate_OPH["Output Per Hour"] / base_value) * 100
 
 Flash_Estimate_OPH["Quarter"] = Flash_Estimate_OPH["Quarter"].apply(quarter_to_numeric)
-Flash_Estimate_OPH = Flash_Estimate_OPH[(Flash_Estimate_OPH['Quarter'] >= 2007) & (Flash_Estimate_OPH['Quarter'] <= 2025)]
+Flash_Estimate_OPH = Flash_Estimate_OPH[(Flash_Estimate_OPH['Quarter'] >= 2007) & (Flash_Estimate_OPH['Quarter'] <= 2025.25)]
 Flash_Estimate_OPH["Quarter"] = Flash_Estimate_OPH["Quarter"].apply(numeric_to_quarter)
 fig = line_graph(Flash_Estimate_OPH, 2007, "", "", "")
 # fig.show()
-fig.write_image("../out/visualisations/Figure 5 - Q1 2025 Flash Estimate.png", width=1200, height=800, scale=2)
+fig.write_image("../out/visualisations/Figure 5 - 2025 Flash Estimate.png", width=1200, height=800, scale=2)
 
 # GDPdata = {
 #     "Country": ["UK", "Canada", "Italy", "Germany", "France", "Japan", "US"],
