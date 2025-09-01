@@ -141,7 +141,7 @@ Dataset = pd.concat([Dataset, EU_OPH_OPW])
 UK_GVA_Division = pd.read_excel('../src/ONS GVA Aug 2025 release.xlsx', sheet_name='Table_23', header=4)
 UK_GVA_Division = UK_GVA_Division.drop([0,1])
 SIC_Codes = ['C', 'F', ['G', 'H', 'I'], 'J', 'K', ['M', 'N'], ['O', 'P', 'Q'], ['B', 'C', 'D', 'E']]
-SIC_Codes_Dict = {'A to T': 'Total', 'C': 'Manufacturing', 'F': 'Construction', 'GHI': 'Trade & Hospitality', 'J': 'Information and communication', 'K': 'Finance and insurance', 'MN': 'Professional & Admin Services', 'OPQ': 'Public Services', 'BCDE': 'Industry (except construction)'}
+SIC_Codes_Dict = {'A to T (excluding imputed rental)': 'Total', 'C': 'Manufacturing', 'F': 'Construction', 'GHI': 'Trade & Hospitality', 'J': 'Information and communication', 'K': 'Finance and insurance', 'MN': 'Professional & Admin Services', 'OPQ': 'Public Services', 'BCDE': 'Industry (except construction)'}
 # Putting A and L in seperate and using previous release data, as Feb 2025 release doesn't contain it !!!
 # in SIC_Codes 'A', , 'L', in Sic_Codes_Dict 'A': 'Agriculture, forestry and fishing', 'L': 'Real estate',
 # A to T = Total
