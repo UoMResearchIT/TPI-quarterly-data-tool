@@ -140,9 +140,9 @@ Dataset = pd.concat([Dataset, EU_OPH_OPW])
 
 UK_GVA_Division = pd.read_excel('../src/ONS GVA Aug 2025 release.xlsx', sheet_name='Table_23', header=4)
 UK_GVA_Division = UK_GVA_Division.drop([0,1])
-SIC_Codes = ['C', 'F', ['G', 'H', 'I'], 'J', 'K', ['M', 'N'], ['O', 'P', 'Q'], ['B', 'C', 'D', 'E']]
-SIC_Codes_Dict = {'A to T (excluding imputed rental)': 'Total', 'C': 'Manufacturing', 'F': 'Construction', 'GHI': 'Trade & Hospitality', 'J': 'Information and communication', 'K': 'Finance and insurance', 'MN': 'Professional & Admin Services', 'OPQ': 'Public Services', 'BCDE': 'Industry (except construction)'}
-# Putting A and L in seperate and using previous release data, as Feb 2025 release doesn't contain it !!!
+SIC_Codes = ['A', 'L', 'C', 'F', ['G', 'H', 'I'], 'J', 'K', ['M', 'N'], ['O', 'P', 'Q'], ['B', 'C', 'D', 'E']]
+SIC_Codes_Dict = {'A to T (excluding imputed rental)': 'Total', 'A': 'Agriculture, forestry and fishing', 'L': 'Real estate', 'C': 'Manufacturing', 'F': 'Construction', 'GHI': 'Trade & Hospitality', 'J': 'Information and communication', 'K': 'Finance and insurance', 'MN': 'Professional & Admin Services', 'OPQ': 'Public Services', 'BCDE': 'Industry (except construction)'}
+# Putting A and L in seperate and using previous release data, as Feb 2025 release doesn't contain it !!! 
 # in SIC_Codes 'A', , 'L', in Sic_Codes_Dict 'A': 'Agriculture, forestry and fishing', 'L': 'Real estate',
 # A to T = Total
 SIC_Code_Data = UK_GVA_Division.filter(like='A to T', axis=1)
@@ -165,6 +165,8 @@ SIC_Code_Data = SIC_Code_Data.drop("Year", axis=1)
 SIC_Code_Data = SIC_Code_Data.melt(id_vars=["Quarter"], var_name="Industry", value_name="Value").dropna()
 SIC_Code_Data["Country"] = "UK"
 SIC_Code_Data["Variable"] = "GVA"
+print(SIC_Code_Data)
+SIC_Code_Data.to_csv('GVA.csv')
 # SIC_Code_Data['Quarter'] = SIC_Code_Data['Quarter'].apply(quarter_to_numeric)
 Dataset = pd.concat([Dataset, SIC_Code_Data])
 
