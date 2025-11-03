@@ -735,7 +735,7 @@ def main_code():
             x_axis_title = 'Quarter'
         
         # Load main content (not in sidebars)
-        st.header("TPI Quarterly data tool for US, UK and European labour productivity")
+        st.header("TPI Quarterly Data Tool for US, UK and European labour productivity")
         plot_one_data_option = data_options(QorY, data_option, base_year, quarterly_selection, show_years, show_dip_lines, x_axis_title)
         if second_plot:
             plot_two_data_option = data_options(QorY_two, data_option_two, base_year_two, quarterly_selection_two, show_years, show_dip_lines, x_axis_title)
