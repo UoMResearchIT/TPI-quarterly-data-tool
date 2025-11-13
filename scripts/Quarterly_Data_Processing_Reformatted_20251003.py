@@ -1,7 +1,5 @@
 import pandas as pd
 import numpy as np
-# from GDP_Data_Processing_20250602 import GDPPH_Calculation
-import sqlite3
 
 country_code_map = {
     "EU27_2020": "European Union",
@@ -92,23 +90,49 @@ def SIC_Code_Combine(dataset, letters):
     else:
         x = True
         combined = "".join(letters)
+
     letter = letters[0]
-    filtered_data = dataset.filter(like=f'Part of {letter}', axis=1).copy()
+    filtered_data = dataset.filter(like=f'Part of {letter}', axis=1)
     if filtered_data.empty:
         filtered_data = dataset.filter(like=f'{letter}', axis=1)
+
+    filtered_data = filtered_data.copy()
     filtered_data.insert(0, 'Quarter', dataset['SIC 2007 section'])
+
     if x:
         for letter in letters[1:]:
             temp = dataset.filter(like=f'Part of {letter}', axis=1)
             if temp.empty:
                 temp = dataset.filter(like=f'{letter}', axis=1)
-            filtered_data = pd.concat([filtered_data, temp], axis=1, ignore_index=False)
+            # Ensure we’re concatenating full copies
+            filtered_data = pd.concat([filtered_data, temp.copy()], axis=1, ignore_index=False)
+
+    filtered_data = filtered_data.copy()
     filtered_data.set_index("Quarter", inplace=True)
+
+    # Perform calculations
     filtered_data["Summed"] = filtered_data.sum(axis=1)
     ref_value = filtered_data.loc[filtered_data.index.str.startswith("2022"), "Summed"].mean()
     filtered_data[f"{combined}"] = (filtered_data["Summed"] / ref_value) * 100
+
     return filtered_data[[f"{combined}"]]
 
+# All data imports:
+# UK
+# https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/labourproductivity/datasets/outputperhourworkedbydivisionuk
+UK_GVA_Division = pd.read_excel('../src/prodbydivoph.xlsx', sheet_name='Table_23', header=4)
+# Data from figure 1 and 3 from https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/labourproductivity/articles/ukproductivityintroduction/julytoseptember2025andapriltojune2025
+# , Respectively
+Flash_Estimate_OPH = pd.read_csv('../src/OPH Q3 Flash Estimate.csv', skiprows=7, usecols=[0,3], names=["Quarter", "Output Per Hour"])
+Flash_Estimate_OPW = pd.read_csv('../src/OPW Q3 Flash Estimate.csv', skiprows=7, usecols=[0,3], names=["Quarter", "Output Per Worker"])
+
+# US
+# https://www.bls.gov/productivity/
+# 'Major sectors labor productivity' in the bottom right in most requested tables
+# When updating data remember to update columns used (usecols) because new quarter column will be added
+US_data = pd.read_excel('../src/labor-productivity-major-sectors.xlsx', sheet_name='Quarterly', usecols='A,C,D, GW:LF', skiprows=2)
+
+# European data API call
 url = 'https://ec.europa.eu/eurostat/api/dissemination/sdmx/3.0/data/dataflow/ESTAT/namq_10_lp_ulc/1.0?format=csvdata&compress=false&,POPTRT&c[GEO]=EU27_2020,EA,DK,DE,IE,ES,FR,IT,NL,PL,RO,FI,NO&c[UNIT]=I20&c[S_ADJ]=SCA&c[TIME_PERIOD]=ge:1997+le:2030'
 EU_OPH_OPW = pd.read_csv(url)
 EU_OPH_OPW = EU_OPH_OPW.rename(columns={"TIME_PERIOD": "Quarter", "na_item": "Variable", "geo": "Country", "OBS_VALUE": "Value"})
@@ -120,31 +144,10 @@ EU_OPH_OPW = EU_OPH_OPW[["Quarter", "Variable", "Country", "Value"]]
 Dataset = EU_GVA_Process(country_code_map, sector_code_map)
 Dataset = pd.concat([Dataset, EU_OPH_OPW])
 
-# Import industry GVA data
-# This is all the ones not in the most recent release
-# UK_GVA_Division_previous = pd.read_excel('../src/ONS GVA Nov 2024 release.xlsx', sheet_name='Table_23', header=4)
-# UK_GVA_Division_previous = UK_GVA_Division_previous.drop([0,1])
-# SIC_Codes_prev = ['A', 'L']
-# SIC_Codes_Dict_prev = {'A': 'Agriculture, forestry and fishing', 'L': 'Real estate'}
-# # Putting A and L in seperate and using previous release data, as Feb 2025 release doesn't contain it !!!
-# # in SIC_Codes 'A', , 'L', in Sic_Codes_Dict 'A': 'Agriculture, forestry and fishing', 'L': 'Real estate',
-# # A to T = Total
-# SIC_Code_Data_prev = UK_GVA_Division_previous.filter(like='A to T', axis=1)
-# SIC_Code_Data_prev.insert(0, 'Quarter', UK_GVA_Division_previous['SIC 2007 section'])
-# for code in SIC_Codes_prev:
-#     temp = SIC_Code_Combine(UK_GVA_Division_previous, code)
-#     SIC_Code_Data_prev = SIC_Code_Data_prev.merge(temp, on='Quarter', how='left')
-# SIC_Code_Data_prev = SIC_Code_Data_prev.rename(columns=SIC_Codes_Dict_prev)
-# SIC_Code_Data_prev["Year"] = SIC_Code_Data_prev["Quarter"].str[:4].astype(int)
-# SIC_Code_Data_prev = SIC_Code_Data_prev.dropna().drop(["A to T"], axis=1)
-
-UK_GVA_Division = pd.read_excel('../src/ONS GVA Aug 2025 release.xlsx', sheet_name='Table_23', header=4)
+# UK GVA
 UK_GVA_Division = UK_GVA_Division.drop([0,1])
 SIC_Codes = ['A', 'L', 'C', 'F', ['G', 'H', 'I'], 'J', 'K', ['M', 'N'], ['O', 'P', 'Q'], ['B', 'C', 'D', 'E']]
 SIC_Codes_Dict = {'A to T (excluding imputed rental)': 'Total', 'A': 'Agriculture, forestry and fishing', 'L': 'Real estate', 'C': 'Manufacturing', 'F': 'Construction', 'GHI': 'Trade & Hospitality', 'J': 'Information and communication', 'K': 'Finance and insurance', 'MN': 'Professional & Admin Services', 'OPQ': 'Public Services', 'BCDE': 'Industry (except construction)'}
-# Putting A and L in seperate and using previous release data, as Feb 2025 release doesn't contain it !!! 
-# in SIC_Codes 'A', , 'L', in Sic_Codes_Dict 'A': 'Agriculture, forestry and fishing', 'L': 'Real estate',
-# A to T = Total
 SIC_Code_Data = UK_GVA_Division.filter(like='A to T', axis=1)
 SIC_Code_Data.insert(0, 'Quarter', UK_GVA_Division['SIC 2007 section'])
 for code in SIC_Codes:
@@ -152,7 +155,6 @@ for code in SIC_Codes:
     SIC_Code_Data = SIC_Code_Data.merge(temp, on='Quarter', how='left')
 SIC_Code_Data = SIC_Code_Data.rename(columns=SIC_Codes_Dict)
 SIC_Code_Data["Year"] = SIC_Code_Data["Quarter"].str[:4].astype(int)
-# SIC_Code_Data = pd.concat([SIC_Code_Data, SIC_Code_Data_prev])
 
 # Find the rebasing factor (Average of 2020 values)
 base_2020 = SIC_Code_Data[SIC_Code_Data["Year"] == 2020].iloc[:, 1:-1].mean()
@@ -165,16 +167,33 @@ SIC_Code_Data = SIC_Code_Data.drop("Year", axis=1)
 SIC_Code_Data = SIC_Code_Data.melt(id_vars=["Quarter"], var_name="Industry", value_name="Value").dropna()
 SIC_Code_Data["Country"] = "UK"
 SIC_Code_Data["Variable"] = "GVA"
-print(SIC_Code_Data)
-SIC_Code_Data.to_csv('GVA.csv')
-# SIC_Code_Data['Quarter'] = SIC_Code_Data['Quarter'].apply(quarter_to_numeric)
-Dataset = pd.concat([Dataset, SIC_Code_Data])
+
+# Flash Estimate ONS Data
+# OPH:
+Flash_Estimate_OPH["Quarter"] = Flash_Estimate_OPH["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
+
+# Change to 2020 = 100
+Flash_Estimate_OPH["Year"] = Flash_Estimate_OPH["Quarter"].str[:4].astype(int)
+base_2020 = Flash_Estimate_OPH[Flash_Estimate_OPH["Year"] == 2020].iloc[:, 1:-1].mean()
+Flash_Estimate_OPH.iloc[:, 1:-1] = (Flash_Estimate_OPH.iloc[:, 1:-1] / base_2020) * 100
+Flash_Estimate_OPH = Flash_Estimate_OPH.drop("Year", axis=1)
+
+# OPW:
+Flash_Estimate_OPW["Quarter"] = Flash_Estimate_OPW["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
+
+# Change to 2020 = 100
+Flash_Estimate_OPW["Year"] = Flash_Estimate_OPW["Quarter"].str[:4].astype(int)
+base_2020 = Flash_Estimate_OPW[Flash_Estimate_OPW["Year"] == 2020].iloc[:, 1:-1].mean()
+Flash_Estimate_OPW.iloc[:, 1:-1] = (Flash_Estimate_OPW.iloc[:, 1:-1] / base_2020) * 100
+Flash_Estimate_OPW = Flash_Estimate_OPW.drop("Year", axis=1)
+
+Flash_Estimate_Data = Flash_Estimate_OPH.merge(Flash_Estimate_OPW, on='Quarter')
+Flash_Estimate_Data = Flash_Estimate_Data.melt(id_vars=["Quarter"], var_name="Variable", value_name="Value")
+Flash_Estimate_Data['Country'] = 'UK'
+Flash_Estimate_Data['Industry'] = 'Total'
 
 # Import all Quarterly US productivity data since Q1 1997 (consistent with ONS data)
-# Need to change cause this is only one specific industry
 # Skip rows may need to be 2 or 3 depending on a note being added
-# When updating data remember to update columns used (usecols) because new quarter column will be added
-US_data = pd.read_excel('../src/US Labour Productivity.xlsx', sheet_name='Quarterly', usecols='A,C,D, GW:LF', skiprows=3)
 US_data = US_data.loc[US_data['Sector'] == 'Business sector']
 US_data = US_data.loc[US_data['Units'] == 'Index (2017=100)']
 
@@ -199,64 +218,16 @@ US_data = US_data.melt(id_vars=['Quarter'], var_name='Variable', value_name='Val
 US_data["Value"] = pd.to_numeric(US_data["Value"], errors="coerce")
 US_data['Country'] = 'US'
 US_data = US_data[['Quarter', 'Variable', 'Country', 'Value', ]] # doesnt matter what order !
-Dataset = pd.concat([Dataset, US_data])
 
-# GDPPH Calculations
-# GDPPH = GDPPH_Calculation()
-# Dataset = pd.concat([Dataset, GDPPH])
+# Concatenate all data together
+Dataset = pd.concat([Dataset, SIC_Code_Data, Flash_Estimate_Data, US_data])
 
-# Flash Estimate ONS Data
-# OPH:
-Flash_Estimate_OPH = pd.read_csv('../src/OPH Q2 Flash Estimate.csv', skiprows=7, usecols=[0,3], names=["Quarter", "Output Per Hour"])
-Flash_Estimate_OPH["Quarter"] = Flash_Estimate_OPH["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
+Dataset["Variable"] = (
+    Dataset['Variable']
+    .replace('OPH', 'Output Per Hour')
+    .replace('OPW', 'Output Per Worker')
+    .replace('GVA', 'Gross Value Added'))
 
-# Change to 2020 = 100
-Flash_Estimate_OPH["Year"] = Flash_Estimate_OPH["Quarter"].str[:4].astype(int)
-base_2020 = Flash_Estimate_OPH[Flash_Estimate_OPH["Year"] == 2020].iloc[:, 1:-1].mean()
-Flash_Estimate_OPH.iloc[:, 1:-1] = (Flash_Estimate_OPH.iloc[:, 1:-1] / base_2020) * 100
-Flash_Estimate_OPH = Flash_Estimate_OPH.drop("Year", axis=1)
-
-# OPW:
-Flash_Estimate_OPW = pd.read_csv('../src/OPW Q2 Flash Estimate.csv', skiprows=7, usecols=[0,3], names=["Quarter", "Output Per Worker"])
-Flash_Estimate_OPW["Quarter"] = Flash_Estimate_OPW["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
-
-# Change to 2020 = 100
-Flash_Estimate_OPW["Year"] = Flash_Estimate_OPW["Quarter"].str[:4].astype(int)
-base_2020 = Flash_Estimate_OPW[Flash_Estimate_OPW["Year"] == 2020].iloc[:, 1:-1].mean()
-Flash_Estimate_OPW.iloc[:, 1:-1] = (Flash_Estimate_OPW.iloc[:, 1:-1] / base_2020) * 100
-Flash_Estimate_OPW = Flash_Estimate_OPW.drop("Year", axis=1)
-
-Flash_Estimate_Data = Flash_Estimate_OPH.merge(Flash_Estimate_OPW, on='Quarter')
-Flash_Estimate_Data = Flash_Estimate_Data.melt(id_vars=["Quarter"], var_name="Variable", value_name="Value")
-# Flash_Estimate_Data['Country'] = 'UK Flash Estimate'
-Flash_Estimate_Data['Country'] = 'UK'
-Flash_Estimate_Data['Industry'] = 'Total'
-Dataset = pd.concat([Dataset, Flash_Estimate_Data])
-
-
-Dataset["Variable"] = Dataset['Variable'].replace('OPH', 'Output Per Hour')
-Dataset["Variable"] = Dataset['Variable'].replace('OPW', 'Output Per Worker')
-Dataset["Variable"] = Dataset['Variable'].replace('GVA', 'Gross Value Added')
 Dataset["Quarter"] = Dataset["Quarter"].apply(quarter_to_numeric) 
 Dataset["Industry"] = Dataset["Industry"].fillna("Total")
 Dataset.to_csv("../out/Long_Dataset.csv", index=False)
-
-# Testing using SQL
-# conn = sqlite3.connect("../out/Quarterly_dataset.db")
-# df_long.to_sql("economic_data", conn, if_exists="replace", index=False)
-# df_from_db = pd.read_sql("SELECT * FROM economic_data", conn)
-# conn.close()
-# print(df_from_db)
-
-# Remove - need to remember to rebase UK data
-# ONS_Data["Year"] = ONS_Data["Quarter"].str[:4].astype(int)
-
-# # Find the rebasing factor (Average of 2020 values)
-# base_2020 = ONS_Data[ONS_Data["Year"] == 2020].iloc[:, 1:-1].mean()
-
-# # Rebase all values so that 2020 = 100
-# ONS_Data.iloc[:, 1:-1] = (ONS_Data.iloc[:, 1:-1] / base_2020) * 100
-# ONS_Data = ONS_Data.drop("Year", axis=1)
-# Dataset = ONS_Data
-
-# Dataset.to_csv("../out/Dataset.csv", index=False)
