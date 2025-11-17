@@ -297,8 +297,8 @@ def OPH(data, title):
     )
 
     # Center x-axes at zero
-    fig.update_xaxes(title_text="", range=[-35, 35], row=1, col=1, zeroline=True)
-    fig.update_xaxes(title_text="", range=[-35, 35], row=1, col=2, zeroline=True)
+    fig.update_xaxes(title_text="", zeroline=True, row=1, col=1)
+    fig.update_xaxes(title_text="", zeroline=True, row=1, col=2)
 
     # Reverse y-axis for top-to-bottom sorting (optional)
     fig.update_yaxes(autorange='reversed')
@@ -341,12 +341,12 @@ GDP_data = pd.read_csv('../src/New-release/OECD GDP.csv')
 # Figure 1
 fig = horizontal_bar(OPH_Industries, "")
 fig.write_image("../out/visualisations/Figure 1 - Contribution to OPH by Industry.png", width=1200, height=800, scale=2)
-fig.show()
+#fig.show()
 
 # Figure 2
 fig = OPH(OPH_Breakdown, "")
 fig.write_image("../out/visualisations/Figure 2 - OPH GVA HW.png", width=1200, height=800, scale=2)
-fig.show()
+#fig.show()
 
 # Figure 3
 OPW_Comparison["Quarter"] = OPW_Comparison["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
@@ -362,7 +362,7 @@ postCovidOPW['Quarter'] = postCovidOPW['Quarter'].apply(numeric_to_quarter)
 
 fig = double_qoq(preCovidOPW, postCovidOPW, "", "legend", "Output per worker pre-COVID", "Output per worker post-COVID")
 fig.write_image("../out/visualisations/Figure 3 - OPW - LFS vs RTI - double.png", width=1200, height=800, scale=2)
-fig.show()
+#fig.show()
 
 # Figure 4
 OPH_Comparison["Quarter"] = OPH_Comparison["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
@@ -378,7 +378,7 @@ postCovidOPH['Quarter'] = postCovidOPH['Quarter'].apply(numeric_to_quarter)
 
 fig = double_qoq(preCovidOPH, postCovidOPH, "", "legend", "Output per hour worked pre-COVID", "Output per hour worked post-COVID")
 fig.write_image("../out/visualisations/Figure 4 - OPH - LFS vs RTI - double.png", width=1200, height=800, scale=2)
-fig.show()
+#fig.show()
 
 # Figure 5 
 Flash_Estimate_OPH["Quarter"] = Flash_Estimate_OPH["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
@@ -395,7 +395,7 @@ Flash_Estimate_OPH["Quarter"] = Flash_Estimate_OPH["Quarter"].apply(quarter_to_n
 Flash_Estimate_OPH = Flash_Estimate_OPH[(Flash_Estimate_OPH['Quarter'] >= 2007) & (Flash_Estimate_OPH['Quarter'] <= 2025.25)]
 Flash_Estimate_OPH["Quarter"] = Flash_Estimate_OPH["Quarter"].apply(numeric_to_quarter)
 fig = line_graph(Flash_Estimate_OPH, 2007, "", "", "")
-fig.show()
+#fig.show()
 fig.write_image("../out/visualisations/Figure 5 - 2025 Flash Estimate.png", width=1200, height=800, scale=2)
 
 # Figure 6 and 7 are international comparison - can't be done until all data is released
@@ -408,5 +408,5 @@ fig.write_image("../out/visualisations/Figure 5 - 2025 Flash Estimate.png", widt
 # GDP_data = GDP_data.sort_values(by="Growth", ascending=True).round(1)
 # GDP_data["Sign"] = GDP_data["Growth"].apply(lambda x: "Negative" if x < 0 else "Positive")
 # fig = New_GDP(GDP_data)
-# fig.show()
+# #fig.show()
 # fig.write_image("../out/visualisations/Figure 7 - Q2 G7 GDP.png", width=1200, height=800, scale=2)
