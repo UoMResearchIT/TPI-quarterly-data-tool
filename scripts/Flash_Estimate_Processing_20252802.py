@@ -334,6 +334,10 @@ OPW_Comparison = pd.read_csv('../src/New-release/Figure4.csv', skiprows=7, useco
 OPH_Comparison = pd.read_csv('../src/New-release/Figure5.csv', skiprows=7, usecols=[0,1,2], names=["Quarter", "LFS Output per hour worked", "RTI + SE (exc working proprietors) Output per hour worked"])
 # Figure 1
 Flash_Estimate_OPH = pd.read_csv('../src/New-release/Figure1.csv', skiprows=7, usecols=[0,1,2,3], names=["Quarter", "Gross Value Added", "Hours Worked", "Output Per Hour"])
+# UK GDP data for figure 7
+# Data taken from https://www.ons.gov.uk/economy/grossdomesticproductgdp/datasets/uksecondestimateofgdpdatatables
+# Gross domestic product at market prices: Chained volume measure in A2 AGGREGATES sheet
+UK_GDP = pd.read_excel('../src/New-release/Q3_GDP.xlsx')
 # Data from:
 # https://data-explorer.oecd.org/vis?df[ds]=DisseminateFinalDMZ&df[id]=DSD_NAMAIN1%40DF_QNA_EXPENDITURE_GROWTH_OECD&df[ag]=OECD.SDD.NAD&dq=Q..CAN%2BDEU%2BFRA%2BGBR%2BITA%2BJPN%2BUSA%2BOECD%2BG7%2BEA20.S1..B1GQ......G1.&pd=2024-Q1%2C&to[TIME_PERIOD]=false&ly[cl]=TIME_PERIOD&ly[rw]=REF_AREA&vw=tb
 GDP_data = pd.read_csv('../src/New-release/OECD GDP.csv')
@@ -402,11 +406,20 @@ fig.write_image("../out/visualisations/Figure 5 - 2025 Flash Estimate.png", widt
 
 # Figure 6 - from QDT
 
-# Figure 7 
+# Figure 7
+
+fig = px.bar(UK_GDP, x='Quarter', y='GDP', color_discrete_sequence=[TPI_One])
+fig.update_traces(
+    hovertemplate="%{x} GDP growth: %{y}%"
+)
+fig.show()
+fig.write_image("../out/visualisations/Figure 7 - UK Quarterly GDP.png", width=1200, height=600, scale=2)
+
+# Figure 8
 # GDP_data = GDP_data[['Reference area', 'TIME_PERIOD', 'OBS_VALUE']].rename(columns={'TIME_PERIOD': 'Quarter', 'Reference area': 'Country', 'OBS_VALUE': 'Growth'})
 # GDP_data = GDP_data[GDP_data['Quarter'] == '2025-Q3']
 # GDP_data = GDP_data.sort_values(by="Growth", ascending=True).round(1)
 # GDP_data["Sign"] = GDP_data["Growth"].apply(lambda x: "Negative" if x < 0 else "Positive")
 # fig = New_GDP(GDP_data)
 # #fig.show()
-# fig.write_image("../out/visualisations/Figure 7 - Q2 G7 GDP.png", width=1200, height=800, scale=2)
+# fig.write_image("../out/visualisations/Figure 8 - Q2 G7 GDP.png", width=1200, height=800, scale=2)
