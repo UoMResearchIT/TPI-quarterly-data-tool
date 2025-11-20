@@ -54,7 +54,7 @@ def line_graph(data, year, title, yAxisTitle, legendTitle):
         labels={"value": f"{yAxisTitle}", "variable": f"{legendTitle}"},
         color_discrete_sequence=TPI_colours)
 
-        tickvals = [q for q in data['Quarter'] if q.endswith("Q2")]
+        tickvals = [q for q in data['Quarter'] if q.endswith("Q3")]
 
         fig.update_xaxes(tickvals=tickvals)
 
@@ -361,7 +361,7 @@ preCovidOPW = preCovidOPW[(preCovidOPW['Quarter'] >= 2014.75) & (preCovidOPW['Qu
 preCovidOPW['Quarter'] = preCovidOPW['Quarter'].apply(numeric_to_quarter)
 
 postCovidOPW = OPW_Comparison.copy()
-postCovidOPW = postCovidOPW[(postCovidOPW['Quarter'] >= 2021.25) & (postCovidOPW['Quarter'] <= 2025.25)]
+postCovidOPW = postCovidOPW[(postCovidOPW['Quarter'] >= 2021.25) & (postCovidOPW['Quarter'] <= 2025.5)]
 postCovidOPW['Quarter'] = postCovidOPW['Quarter'].apply(numeric_to_quarter)
 
 fig = double_qoq(preCovidOPW, postCovidOPW, "", "legend", "Output per worker pre-COVID", "Output per worker post-COVID")
@@ -377,7 +377,7 @@ preCovidOPH = preCovidOPH[(preCovidOPH['Quarter'] >= 2014.75) & (preCovidOPH['Qu
 preCovidOPH['Quarter'] = preCovidOPH['Quarter'].apply(numeric_to_quarter)
 
 postCovidOPH = OPH_Comparison.copy()
-postCovidOPH = postCovidOPH[(postCovidOPH['Quarter'] >= 2021) & (postCovidOPH['Quarter'] <= 2025.25)]
+postCovidOPH = postCovidOPH[(postCovidOPH['Quarter'] >= 2021.25) & (postCovidOPH['Quarter'] <= 2025.5)]
 postCovidOPH['Quarter'] = postCovidOPH['Quarter'].apply(numeric_to_quarter)
 
 fig = double_qoq(preCovidOPH, postCovidOPH, "", "legend", "Output per hour worked pre-COVID", "Output per hour worked post-COVID")
@@ -396,7 +396,7 @@ base_value = Flash_Estimate_OPH.loc[Flash_Estimate_OPH["Quarter"] == "2007 Q1", 
 Flash_Estimate_OPH["Output Per Hour"] = (Flash_Estimate_OPH["Output Per Hour"] / base_value) * 100
 
 Flash_Estimate_OPH["Quarter"] = Flash_Estimate_OPH["Quarter"].apply(quarter_to_numeric)
-Flash_Estimate_OPH = Flash_Estimate_OPH[(Flash_Estimate_OPH['Quarter'] >= 2007) & (Flash_Estimate_OPH['Quarter'] <= 2025.25)]
+Flash_Estimate_OPH = Flash_Estimate_OPH[(Flash_Estimate_OPH['Quarter'] >= 2007) & (Flash_Estimate_OPH['Quarter'] <= 2025.5)]
 Flash_Estimate_OPH["Quarter"] = Flash_Estimate_OPH["Quarter"].apply(numeric_to_quarter)
 fig = line_graph(Flash_Estimate_OPH, 2007, "", "", "")
 #fig.show()
@@ -412,7 +412,7 @@ fig = px.bar(UK_GDP, x='Quarter', y='GDP', color_discrete_sequence=[TPI_One])
 fig.update_traces(
     hovertemplate="%{x} GDP growth: %{y}%"
 )
-fig.show()
+#fig.show()
 fig.write_image("../out/visualisations/Figure 7 - UK Quarterly GDP.png", width=1200, height=600, scale=2)
 
 # Figure 8
