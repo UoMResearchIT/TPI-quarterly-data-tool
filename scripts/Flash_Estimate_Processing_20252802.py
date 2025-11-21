@@ -304,24 +304,40 @@ def OPH(data, title):
     fig.update_yaxes(autorange='reversed')
     return fig
 
-def New_GDP(data):
+def New_GDP(data, provisional_countries=None):
+    if provisional_countries is None:
+        provisional_countries = []
+
     fig = px.bar(
-            data,
-            x="Growth",
-            y="Country",
-            orientation="h",
-            color="Sign",  # categorical
-            color_discrete_map={"Negative": "red", "Positive": "teal"},
-            text="Growth"
-        )
+        data,
+        x="Growth",
+        y="Country",
+        orientation="h",
+        color="Sign",
+        color_discrete_map={"Negative": "red", "Positive": "teal"},
+        text="Growth"
+    )
+
+    # Add star to provisional countries
+    tickvals = data["Country"].tolist()
+    ticktext = [
+        country + "*" if country in provisional_countries else country
+        for country in tickvals
+    ]
 
     fig.update_traces(texttemplate="%{text:.1f}%", textposition="inside")
+
     fig.update_layout(
         xaxis_title="Growth Rate (%)",
         yaxis_title="",
-        showlegend=False  # optional: hide legend
-        )
+        showlegend=False
+    )
+
+    # Override y-axis labels
+    fig.update_yaxes(tickvals=tickvals, ticktext=ticktext)
+
     return fig
+
 
 # Imports - the figure number is the figure number from the ONS blog
 # Figure 6
@@ -412,14 +428,15 @@ fig = px.bar(UK_GDP, x='Quarter', y='GDP', color_discrete_sequence=[TPI_One])
 fig.update_traces(
     hovertemplate="%{x} GDP growth: %{y}%"
 )
-fig.show()
+#fig.show()
 fig.write_image("../out/visualisations/Figure 7 - UK Quarterly GDP.png", width=1200, height=600, scale=2)
 
 # Figure 8
-# GDP_data = GDP_data[['Reference area', 'TIME_PERIOD', 'OBS_VALUE']].rename(columns={'TIME_PERIOD': 'Quarter', 'Reference area': 'Country', 'OBS_VALUE': 'Growth'})
-# GDP_data = GDP_data[GDP_data['Quarter'] == '2025-Q3']
-# GDP_data = GDP_data.sort_values(by="Growth", ascending=True).round(1)
-# GDP_data["Sign"] = GDP_data["Growth"].apply(lambda x: "Negative" if x < 0 else "Positive")
-# fig = New_GDP(GDP_data)
-# #fig.show()
-# fig.write_image("../out/visualisations/Figure 8 - Q2 G7 GDP.png", width=1200, height=800, scale=2)
+GDP_data = GDP_data[['Reference area', 'TIME_PERIOD', 'OBS_VALUE']].rename(columns={'TIME_PERIOD': 'Quarter', 'Reference area': 'Country', 'OBS_VALUE': 'Growth'})
+GDP_data = GDP_data[GDP_data['Quarter'] == '2025-Q3']
+GDP_data = GDP_data.sort_values(by="Growth", ascending=True).round(1)
+GDP_data["Sign"] = GDP_data["Growth"].apply(lambda x: "Negative" if x < 0 else "Positive")
+provisional_countries = ['Canada', 'Germany']
+fig = New_GDP(GDP_data, provisional_countries)
+#fig.show()
+fig.write_image("../out/visualisations/Figure 8 - Q2 G7 GDP.png", width=1200, height=800, scale=2)
