@@ -217,16 +217,17 @@ Quarter,Country,Industry,Value,Variable
 2022.25,Denmark,"Agriculture, forestry and fishing",107.248,Gross Value Added
 2022.5,Denmark,"Agriculture, forestry and fishing",99.207,Gross Value Added
 2022.75,Denmark,"Agriculture, forestry and fishing",85.54,Gross Value Added
-2023.0,Denmark,"Agriculture, forestry and fishing",74.918,Gross Value Added
-2023.25,Denmark,"Agriculture, forestry and fishing",68.495,Gross Value Added
-2023.5,Denmark,"Agriculture, forestry and fishing",67.369,Gross Value Added
-2023.75,Denmark,"Agriculture, forestry and fishing",66.335,Gross Value Added
-2024.0,Denmark,"Agriculture, forestry and fishing",70.669,Gross Value Added
-2024.25,Denmark,"Agriculture, forestry and fishing",68.92,Gross Value Added
-2024.5,Denmark,"Agriculture, forestry and fishing",67.449,Gross Value Added
-2024.75,Denmark,"Agriculture, forestry and fishing",72.463,Gross Value Added
-2025.0,Denmark,"Agriculture, forestry and fishing",72.952,Gross Value Added
-2025.25,Denmark,"Agriculture, forestry and fishing",66.868,Gross Value Added
+2023.0,Denmark,"Agriculture, forestry and fishing",74.69,Gross Value Added
+2023.25,Denmark,"Agriculture, forestry and fishing",68.032,Gross Value Added
+2023.5,Denmark,"Agriculture, forestry and fishing",68.073,Gross Value Added
+2023.75,Denmark,"Agriculture, forestry and fishing",66.321,Gross Value Added
+2024.0,Denmark,"Agriculture, forestry and fishing",70.399,Gross Value Added
+2024.25,Denmark,"Agriculture, forestry and fishing",68.102,Gross Value Added
+2024.5,Denmark,"Agriculture, forestry and fishing",68.652,Gross Value Added
+2024.75,Denmark,"Agriculture, forestry and fishing",72.347,Gross Value Added
+2025.0,Denmark,"Agriculture, forestry and fishing",72.14,Gross Value Added
+2025.25,Denmark,"Agriculture, forestry and fishing",66.235,Gross Value Added
+2025.5,Denmark,"Agriculture, forestry and fishing",67.781,Gross Value Added
 1997.0,Euro Area,"Agriculture, forestry and fishing",88.387,Gross Value Added
 1997.25,Euro Area,"Agriculture, forestry and fishing",87.898,Gross Value Added
 1997.5,Euro Area,"Agriculture, forestry and fishing",88.331,Gross Value Added
@@ -1702,16 +1703,17 @@ Quarter,Country,Industry,Value,Variable
 2022.25,Denmark,Industry (except construction),128.44,Gross Value Added
 2022.5,Denmark,Industry (except construction),131.258,Gross Value Added
 2022.75,Denmark,Industry (except construction),131.038,Gross Value Added
-2023.0,Denmark,Industry (except construction),136.808,Gross Value Added
-2023.25,Denmark,Industry (except construction),138.222,Gross Value Added
-2023.5,Denmark,Industry (except construction),139.326,Gross Value Added
-2023.75,Denmark,Industry (except construction),146.131,Gross Value Added
-2024.0,Denmark,Industry (except construction),148.953,Gross Value Added
-2024.25,Denmark,Industry (except construction),159.692,Gross Value Added
-2024.5,Denmark,Industry (except construction),167.348,Gross Value Added
-2024.75,Denmark,Industry (except construction),172.391,Gross Value Added
-2025.0,Denmark,Industry (except construction),161.79,Gross Value Added
-2025.25,Denmark,Industry (except construction),168.804,Gross Value Added
+2023.0,Denmark,Industry (except construction),137.242,Gross Value Added
+2023.25,Denmark,Industry (except construction),138.391,Gross Value Added
+2023.5,Denmark,Industry (except construction),138.623,Gross Value Added
+2023.75,Denmark,Industry (except construction),146.232,Gross Value Added
+2024.0,Denmark,Industry (except construction),149.773,Gross Value Added
+2024.25,Denmark,Industry (except construction),159.997,Gross Value Added
+2024.5,Denmark,Industry (except construction),165.9,Gross Value Added
+2024.75,Denmark,Industry (except construction),172.714,Gross Value Added
+2025.0,Denmark,Industry (except construction),164.349,Gross Value Added
+2025.25,Denmark,Industry (except construction),173.141,Gross Value Added
+2025.5,Denmark,Industry (except construction),186.594,Gross Value Added
 1997.0,Euro Area,Industry (except construction),77.904,Gross Value Added
 1997.25,Euro Area,Industry (except construction),79.102,Gross Value Added
 1997.5,Euro Area,Industry (except construction),79.963,Gross Value Added
@@ -3187,16 +3189,17 @@ Quarter,Country,Industry,Value,Variable
 2022.25,Denmark,Manufacturing,130.457,Gross Value Added
 2022.5,Denmark,Manufacturing,132.945,Gross Value Added
 2022.75,Denmark,Manufacturing,133.153,Gross Value Added
-2023.0,Denmark,Manufacturing,144.513,Gross Value Added
-2023.25,Denmark,Manufacturing,145.595,Gross Value Added
-2023.5,Denmark,Manufacturing,146.221,Gross Value Added
-2023.75,Denmark,Manufacturing,157.39,Gross Value Added
-2024.0,Denmark,Manufacturing,158.328,Gross Value Added
-2024.25,Denmark,Manufacturing,170.296,Gross Value Added
-2024.5,Denmark,Manufacturing,180.471,Gross Value Added
-2024.75,Denmark,Manufacturing,185.86,Gross Value Added
-2025.0,Denmark,Manufacturing,173.526,Gross Value Added
-2025.25,Denmark,Manufacturing,182.249,Gross Value Added
+2023.0,Denmark,Manufacturing,145.083,Gross Value Added
+2023.25,Denmark,Manufacturing,145.834,Gross Value Added
+2023.5,Denmark,Manufacturing,145.201,Gross Value Added
+2023.75,Denmark,Manufacturing,157.601,Gross Value Added
+2024.0,Denmark,Manufacturing,159.354,Gross Value Added
+2024.25,Denmark,Manufacturing,170.757,Gross Value Added
+2024.5,Denmark,Manufacturing,178.534,Gross Value Added
+2024.75,Denmark,Manufacturing,186.311,Gross Value Added
+2025.0,Denmark,Manufacturing,176.773,Gross Value Added
+2025.25,Denmark,Manufacturing,187.495,Gross Value Added
+2025.5,Denmark,Manufacturing,203.292,Gross Value Added
 1997.0,Euro Area,Manufacturing,75.426,Gross Value Added
 1997.25,Euro Area,Manufacturing,76.81,Gross Value Added
 1997.5,Euro Area,Manufacturing,77.912,Gross Value Added
@@ -4672,16 +4675,17 @@ Quarter,Country,Industry,Value,Variable
 2022.25,Denmark,Construction,101.942,Gross Value Added
 2022.5,Denmark,Construction,99.814,Gross Value Added
 2022.75,Denmark,Construction,98.165,Gross Value Added
-2023.0,Denmark,Construction,96.86,Gross Value Added
-2023.25,Denmark,Construction,92.405,Gross Value Added
-2023.5,Denmark,Construction,89.548,Gross Value Added
-2023.75,Denmark,Construction,88.81,Gross Value Added
-2024.0,Denmark,Construction,85.721,Gross Value Added
-2024.25,Denmark,Construction,84.862,Gross Value Added
-2024.5,Denmark,Construction,86.289,Gross Value Added
-2024.75,Denmark,Construction,82.261,Gross Value Added
-2025.0,Denmark,Construction,83.476,Gross Value Added
-2025.25,Denmark,Construction,83.552,Gross Value Added
+2023.0,Denmark,Construction,96.872,Gross Value Added
+2023.25,Denmark,Construction,92.663,Gross Value Added
+2023.5,Denmark,Construction,89.259,Gross Value Added
+2023.75,Denmark,Construction,88.828,Gross Value Added
+2024.0,Denmark,Construction,85.715,Gross Value Added
+2024.25,Denmark,Construction,85.282,Gross Value Added
+2024.5,Denmark,Construction,85.756,Gross Value Added
+2024.75,Denmark,Construction,82.38,Gross Value Added
+2025.0,Denmark,Construction,83.366,Gross Value Added
+2025.25,Denmark,Construction,82.828,Gross Value Added
+2025.5,Denmark,Construction,82.765,Gross Value Added
 1997.0,Euro Area,Construction,113.375,Gross Value Added
 1997.25,Euro Area,Construction,115.189,Gross Value Added
 1997.5,Euro Area,Construction,114.93,Gross Value Added
@@ -6157,16 +6161,17 @@ Quarter,Country,Industry,Value,Variable
 2022.25,Denmark,Trade & Hospitality,106.886,Gross Value Added
 2022.5,Denmark,Trade & Hospitality,109.473,Gross Value Added
 2022.75,Denmark,Trade & Hospitality,105.613,Gross Value Added
-2023.0,Denmark,Trade & Hospitality,108.454,Gross Value Added
-2023.25,Denmark,Trade & Hospitality,102.074,Gross Value Added
-2023.5,Denmark,Trade & Hospitality,101.515,Gross Value Added
-2023.75,Denmark,Trade & Hospitality,104.808,Gross Value Added
-2024.0,Denmark,Trade & Hospitality,101.555,Gross Value Added
-2024.25,Denmark,Trade & Hospitality,104.433,Gross Value Added
-2024.5,Denmark,Trade & Hospitality,104.002,Gross Value Added
-2024.75,Denmark,Trade & Hospitality,107.234,Gross Value Added
-2025.0,Denmark,Trade & Hospitality,109.686,Gross Value Added
-2025.25,Denmark,Trade & Hospitality,108.11,Gross Value Added
+2023.0,Denmark,Trade & Hospitality,108.478,Gross Value Added
+2023.25,Denmark,Trade & Hospitality,102.016,Gross Value Added
+2023.5,Denmark,Trade & Hospitality,101.594,Gross Value Added
+2023.75,Denmark,Trade & Hospitality,104.763,Gross Value Added
+2024.0,Denmark,Trade & Hospitality,101.557,Gross Value Added
+2024.25,Denmark,Trade & Hospitality,104.288,Gross Value Added
+2024.5,Denmark,Trade & Hospitality,104.212,Gross Value Added
+2024.75,Denmark,Trade & Hospitality,107.168,Gross Value Added
+2025.0,Denmark,Trade & Hospitality,109.37,Gross Value Added
+2025.25,Denmark,Trade & Hospitality,108.329,Gross Value Added
+2025.5,Denmark,Trade & Hospitality,108.599,Gross Value Added
 1997.0,Euro Area,Trade & Hospitality,76.853,Gross Value Added
 1997.25,Euro Area,Trade & Hospitality,77.802,Gross Value Added
 1997.5,Euro Area,Trade & Hospitality,78.531,Gross Value Added
@@ -7642,16 +7647,17 @@ Quarter,Country,Industry,Value,Variable
 2022.25,Denmark,Information and communication,107.812,Gross Value Added
 2022.5,Denmark,Information and communication,109.04,Gross Value Added
 2022.75,Denmark,Information and communication,106.492,Gross Value Added
-2023.0,Denmark,Information and communication,110.184,Gross Value Added
-2023.25,Denmark,Information and communication,115.377,Gross Value Added
-2023.5,Denmark,Information and communication,114.35,Gross Value Added
-2023.75,Denmark,Information and communication,117.569,Gross Value Added
-2024.0,Denmark,Information and communication,116.189,Gross Value Added
-2024.25,Denmark,Information and communication,118.453,Gross Value Added
-2024.5,Denmark,Information and communication,122.188,Gross Value Added
-2024.75,Denmark,Information and communication,127.915,Gross Value Added
-2025.0,Denmark,Information and communication,129.638,Gross Value Added
-2025.25,Denmark,Information and communication,124.272,Gross Value Added
+2023.0,Denmark,Information and communication,110.189,Gross Value Added
+2023.25,Denmark,Information and communication,115.483,Gross Value Added
+2023.5,Denmark,Information and communication,114.233,Gross Value Added
+2023.75,Denmark,Information and communication,117.575,Gross Value Added
+2024.0,Denmark,Information and communication,116.163,Gross Value Added
+2024.25,Denmark,Information and communication,118.645,Gross Value Added
+2024.5,Denmark,Information and communication,122.017,Gross Value Added
+2024.75,Denmark,Information and communication,127.92,Gross Value Added
+2025.0,Denmark,Information and communication,129.018,Gross Value Added
+2025.25,Denmark,Information and communication,122.092,Gross Value Added
+2025.5,Denmark,Information and communication,130.347,Gross Value Added
 1997.0,Euro Area,Information and communication,33.265,Gross Value Added
 1997.25,Euro Area,Information and communication,34.124,Gross Value Added
 1997.5,Euro Area,Information and communication,34.716,Gross Value Added
@@ -9127,16 +9133,17 @@ Quarter,Country,Industry,Value,Variable
 2022.25,Denmark,Finance and insurance,91.514,Gross Value Added
 2022.5,Denmark,Finance and insurance,83.598,Gross Value Added
 2022.75,Denmark,Finance and insurance,81.944,Gross Value Added
-2023.0,Denmark,Finance and insurance,85.087,Gross Value Added
-2023.25,Denmark,Finance and insurance,84.251,Gross Value Added
-2023.5,Denmark,Finance and insurance,87.098,Gross Value Added
-2023.75,Denmark,Finance and insurance,89.439,Gross Value Added
-2024.0,Denmark,Finance and insurance,89.928,Gross Value Added
-2024.25,Denmark,Finance and insurance,93.399,Gross Value Added
-2024.5,Denmark,Finance and insurance,95.375,Gross Value Added
-2024.75,Denmark,Finance and insurance,89.504,Gross Value Added
-2025.0,Denmark,Finance and insurance,91.186,Gross Value Added
-2025.25,Denmark,Finance and insurance,90.242,Gross Value Added
+2023.0,Denmark,Finance and insurance,85.142,Gross Value Added
+2023.25,Denmark,Finance and insurance,84.25,Gross Value Added
+2023.5,Denmark,Finance and insurance,87.023,Gross Value Added
+2023.75,Denmark,Finance and insurance,89.46,Gross Value Added
+2024.0,Denmark,Finance and insurance,90.013,Gross Value Added
+2024.25,Denmark,Finance and insurance,93.393,Gross Value Added
+2024.5,Denmark,Finance and insurance,95.246,Gross Value Added
+2024.75,Denmark,Finance and insurance,89.555,Gross Value Added
+2025.0,Denmark,Finance and insurance,91.239,Gross Value Added
+2025.25,Denmark,Finance and insurance,90.338,Gross Value Added
+2025.5,Denmark,Finance and insurance,90.266,Gross Value Added
 1997.0,Euro Area,Finance and insurance,77.37,Gross Value Added
 1997.25,Euro Area,Finance and insurance,77.392,Gross Value Added
 1997.5,Euro Area,Finance and insurance,77.661,Gross Value Added
@@ -10612,16 +10619,17 @@ Quarter,Country,Industry,Value,Variable
 2022.25,Denmark,Real estate,105.874,Gross Value Added
 2022.5,Denmark,Real estate,108.044,Gross Value Added
 2022.75,Denmark,Real estate,109.548,Gross Value Added
-2023.0,Denmark,Real estate,108.39,Gross Value Added
-2023.25,Denmark,Real estate,108.667,Gross Value Added
-2023.5,Denmark,Real estate,109.039,Gross Value Added
-2023.75,Denmark,Real estate,109.101,Gross Value Added
-2024.0,Denmark,Real estate,110.78,Gross Value Added
-2024.25,Denmark,Real estate,110.194,Gross Value Added
-2024.5,Denmark,Real estate,109.689,Gross Value Added
-2024.75,Denmark,Real estate,109.577,Gross Value Added
-2025.0,Denmark,Real estate,109.437,Gross Value Added
-2025.25,Denmark,Real estate,110.292,Gross Value Added
+2023.0,Denmark,Real estate,108.393,Gross Value Added
+2023.25,Denmark,Real estate,108.595,Gross Value Added
+2023.5,Denmark,Real estate,109.09,Gross Value Added
+2023.75,Denmark,Real estate,109.119,Gross Value Added
+2024.0,Denmark,Real estate,110.776,Gross Value Added
+2024.25,Denmark,Real estate,110.069,Gross Value Added
+2024.5,Denmark,Real estate,109.797,Gross Value Added
+2024.75,Denmark,Real estate,109.598,Gross Value Added
+2025.0,Denmark,Real estate,109.341,Gross Value Added
+2025.25,Denmark,Real estate,110.091,Gross Value Added
+2025.5,Denmark,Real estate,109.748,Gross Value Added
 1997.0,Euro Area,Real estate,69.479,Gross Value Added
 1997.25,Euro Area,Real estate,70.497,Gross Value Added
 1997.5,Euro Area,Real estate,70.99,Gross Value Added
@@ -12097,16 +12105,17 @@ Quarter,Country,Industry,Value,Variable
 2022.25,Denmark,Professional & Admin Services,106.526,Gross Value Added
 2022.5,Denmark,Professional & Admin Services,115.561,Gross Value Added
 2022.75,Denmark,Professional & Admin Services,112.948,Gross Value Added
-2023.0,Denmark,Professional & Admin Services,114.994,Gross Value Added
-2023.25,Denmark,Professional & Admin Services,114.376,Gross Value Added
-2023.5,Denmark,Professional & Admin Services,115.029,Gross Value Added
-2023.75,Denmark,Professional & Admin Services,117.529,Gross Value Added
-2024.0,Denmark,Professional & Admin Services,117.648,Gross Value Added
-2024.25,Denmark,Professional & Admin Services,115.708,Gross Value Added
-2024.5,Denmark,Professional & Admin Services,115.778,Gross Value Added
-2024.75,Denmark,Professional & Admin Services,118.944,Gross Value Added
-2025.0,Denmark,Professional & Admin Services,121.783,Gross Value Added
-2025.25,Denmark,Professional & Admin Services,124.205,Gross Value Added
+2023.0,Denmark,Professional & Admin Services,115.073,Gross Value Added
+2023.25,Denmark,Professional & Admin Services,114.236,Gross Value Added
+2023.5,Denmark,Professional & Admin Services,115.039,Gross Value Added
+2023.75,Denmark,Professional & Admin Services,117.58,Gross Value Added
+2024.0,Denmark,Professional & Admin Services,117.708,Gross Value Added
+2024.25,Denmark,Professional & Admin Services,115.538,Gross Value Added
+2024.5,Denmark,Professional & Admin Services,115.841,Gross Value Added
+2024.75,Denmark,Professional & Admin Services,118.99,Gross Value Added
+2025.0,Denmark,Professional & Admin Services,121.876,Gross Value Added
+2025.25,Denmark,Professional & Admin Services,124.859,Gross Value Added
+2025.5,Denmark,Professional & Admin Services,124.742,Gross Value Added
 1997.0,Euro Area,Professional & Admin Services,61.329,Gross Value Added
 1997.25,Euro Area,Professional & Admin Services,62.719,Gross Value Added
 1997.5,Euro Area,Professional & Admin Services,63.27,Gross Value Added
@@ -13582,16 +13591,17 @@ Quarter,Country,Industry,Value,Variable
 2022.25,Denmark,Public Services,102.195,Gross Value Added
 2022.5,Denmark,Public Services,102.483,Gross Value Added
 2022.75,Denmark,Public Services,102.855,Gross Value Added
-2023.0,Denmark,Public Services,103.264,Gross Value Added
-2023.25,Denmark,Public Services,104.418,Gross Value Added
-2023.5,Denmark,Public Services,102.814,Gross Value Added
-2023.75,Denmark,Public Services,102.347,Gross Value Added
-2024.0,Denmark,Public Services,104.946,Gross Value Added
-2024.25,Denmark,Public Services,104.728,Gross Value Added
-2024.5,Denmark,Public Services,101.467,Gross Value Added
-2024.75,Denmark,Public Services,101.843,Gross Value Added
-2025.0,Denmark,Public Services,97.835,Gross Value Added
-2025.25,Denmark,Public Services,100.342,Gross Value Added
+2023.0,Denmark,Public Services,103.031,Gross Value Added
+2023.25,Denmark,Public Services,103.969,Gross Value Added
+2023.5,Denmark,Public Services,103.167,Gross Value Added
+2023.75,Denmark,Public Services,102.676,Gross Value Added
+2024.0,Denmark,Public Services,104.623,Gross Value Added
+2024.25,Denmark,Public Services,104.194,Gross Value Added
+2024.5,Denmark,Public Services,101.941,Gross Value Added
+2024.75,Denmark,Public Services,102.226,Gross Value Added
+2025.0,Denmark,Public Services,97.455,Gross Value Added
+2025.25,Denmark,Public Services,99.761,Gross Value Added
+2025.5,Denmark,Public Services,101.437,Gross Value Added
 1997.0,Euro Area,Public Services,81.511,Gross Value Added
 1997.25,Euro Area,Public Services,81.726,Gross Value Added
 1997.5,Euro Area,Public Services,82.03,Gross Value Added
@@ -15067,16 +15077,17 @@ Quarter,Country,Industry,Value,Variable
 2022.25,Denmark,Arts & Other Services,108.641,Gross Value Added
 2022.5,Denmark,Arts & Other Services,107.963,Gross Value Added
 2022.75,Denmark,Arts & Other Services,110.108,Gross Value Added
-2023.0,Denmark,Arts & Other Services,113.763,Gross Value Added
-2023.25,Denmark,Arts & Other Services,116.486,Gross Value Added
-2023.5,Denmark,Arts & Other Services,111.68,Gross Value Added
-2023.75,Denmark,Arts & Other Services,110.024,Gross Value Added
-2024.0,Denmark,Arts & Other Services,110.725,Gross Value Added
-2024.25,Denmark,Arts & Other Services,112.43,Gross Value Added
-2024.5,Denmark,Arts & Other Services,113.615,Gross Value Added
-2024.75,Denmark,Arts & Other Services,114.258,Gross Value Added
-2025.0,Denmark,Arts & Other Services,113.876,Gross Value Added
-2025.25,Denmark,Arts & Other Services,111.607,Gross Value Added
+2023.0,Denmark,Arts & Other Services,113.842,Gross Value Added
+2023.25,Denmark,Arts & Other Services,116.479,Gross Value Added
+2023.5,Denmark,Arts & Other Services,111.579,Gross Value Added
+2023.75,Denmark,Arts & Other Services,110.054,Gross Value Added
+2024.0,Denmark,Arts & Other Services,110.865,Gross Value Added
+2024.25,Denmark,Arts & Other Services,112.487,Gross Value Added
+2024.5,Denmark,Arts & Other Services,113.328,Gross Value Added
+2024.75,Denmark,Arts & Other Services,114.349,Gross Value Added
+2025.0,Denmark,Arts & Other Services,114.029,Gross Value Added
+2025.25,Denmark,Arts & Other Services,112.247,Gross Value Added
+2025.5,Denmark,Arts & Other Services,114.393,Gross Value Added
 1997.0,Euro Area,Arts & Other Services,98.468,Gross Value Added
 1997.25,Euro Area,Arts & Other Services,98.947,Gross Value Added
 1997.5,Euro Area,Arts & Other Services,99.14,Gross Value Added
@@ -16552,16 +16563,17 @@ Quarter,Country,Industry,Value,Variable
 2022.25,Denmark,Total,108.283,Gross Value Added
 2022.5,Denmark,Total,109.861,Gross Value Added
 2022.75,Denmark,Total,108.532,Gross Value Added
-2023.0,Denmark,Total,110.47,Gross Value Added
-2023.25,Denmark,Total,109.113,Gross Value Added
-2023.5,Denmark,Total,108.728,Gross Value Added
-2023.75,Denmark,Total,110.967,Gross Value Added
-2024.0,Denmark,Total,111.403,Gross Value Added
-2024.25,Denmark,Total,113.795,Gross Value Added
-2024.5,Denmark,Total,114.661,Gross Value Added
-2024.75,Denmark,Total,116.208,Gross Value Added
-2025.0,Denmark,Total,114.614,Gross Value Added
-2025.25,Denmark,Total,115.793,Gross Value Added
+2023.0,Denmark,Total,110.507,Gross Value Added
+2023.25,Denmark,Total,109.027,Gross Value Added
+2023.5,Denmark,Total,108.697,Gross Value Added
+2023.75,Denmark,Total,111.045,Gross Value Added
+2024.0,Denmark,Total,111.482,Gross Value Added
+2024.25,Denmark,Total,113.698,Gross Value Added
+2024.5,Denmark,Total,114.542,Gross Value Added
+2024.75,Denmark,Total,116.347,Gross Value Added
+2025.0,Denmark,Total,114.829,Gross Value Added
+2025.25,Denmark,Total,116.311,Gross Value Added
+2025.5,Denmark,Total,119.248,Gross Value Added
 1997.0,Euro Area,Total,74.507,Gross Value Added
 1997.25,Euro Area,Total,75.394,Gross Value Added
 1997.5,Euro Area,Total,75.952,Gross Value Added
@@ -18038,16 +18050,17 @@ Quarter,Country,Industry,Value,Variable
 2022.25,Denmark,Total,97.075,Output Per Hour
 2022.5,Denmark,Total,98.319,Output Per Hour
 2022.75,Denmark,Total,96.765,Output Per Hour
-2023.0,Denmark,Total,98.076,Output Per Hour
-2023.25,Denmark,Total,97.923,Output Per Hour
-2023.5,Denmark,Total,96.104,Output Per Hour
-2023.75,Denmark,Total,98.211,Output Per Hour
-2024.0,Denmark,Total,98.524,Output Per Hour
-2024.25,Denmark,Total,100.5,Output Per Hour
-2024.5,Denmark,Total,101.107,Output Per Hour
-2024.75,Denmark,Total,101.884,Output Per Hour
-2025.0,Denmark,Total,100.252,Output Per Hour
-2025.25,Denmark,Total,101.037,Output Per Hour
+2023.0,Denmark,Total,98.102,Output Per Hour
+2023.25,Denmark,Total,97.843,Output Per Hour
+2023.5,Denmark,Total,96.073,Output Per Hour
+2023.75,Denmark,Total,98.295,Output Per Hour
+2024.0,Denmark,Total,98.577,Output Per Hour
+2024.25,Denmark,Total,100.407,Output Per Hour
+2024.5,Denmark,Total,101.011,Output Per Hour
+2024.75,Denmark,Total,102.02,Output Per Hour
+2025.0,Denmark,Total,100.414,Output Per Hour
+2025.25,Denmark,Total,101.369,Output Per Hour
+2025.5,Denmark,Total,103.299,Output Per Hour
 1997.0,Euro Area,Total,79.62,Output Per Hour
 1997.25,Euro Area,Total,80.119,Output Per Hour
 1997.5,Euro Area,Total,80.501,Output Per Hour
@@ -19524,17 +19537,17 @@ Quarter,Country,Industry,Value,Variable
 2022.25,Denmark,Total,100.819,Output Per Worker
 2022.5,Denmark,Total,101.697,Output Per Worker
 2022.75,Denmark,Total,100.117,Output Per Worker
-2023.0,Denmark,Total,100.835,Output Per Worker
-2023.25,Denmark,Total,99.529,Output Per Worker
-2023.5,Denmark,Total,99.007,Output Per Worker
-2023.75,Denmark,Total,100.84,Output Per Worker
-2024.0,Denmark,Total,101.193,Output Per Worker
-2024.25,Denmark,Total,102.811,Output Per Worker
-2024.5,Denmark,Total,103.199,Output Per Worker
-2024.75,Denmark,Total,104.16,Output Per Worker
-2025.0,Denmark,Total,102.343,Output Per Worker
-2025.25,Denmark,Total,103.192,Output Per Worker
-2025.5,Denmark,Total,104.735,Output Per Worker
+2023.0,Denmark,Total,100.877,Output Per Worker
+2023.25,Denmark,Total,99.465,Output Per Worker
+2023.5,Denmark,Total,98.953,Output Per Worker
+2023.75,Denmark,Total,100.916,Output Per Worker
+2024.0,Denmark,Total,101.272,Output Per Worker
+2024.25,Denmark,Total,102.745,Output Per Worker
+2024.5,Denmark,Total,103.065,Output Per Worker
+2024.75,Denmark,Total,104.281,Output Per Worker
+2025.0,Denmark,Total,102.533,Output Per Worker
+2025.25,Denmark,Total,103.617,Output Per Worker
+2025.5,Denmark,Total,105.656,Output Per Worker
 1997.0,Euro Area,Total,91.178,Output Per Worker
 1997.25,Euro Area,Total,91.962,Output Per Worker
 1997.5,Euro Area,Total,92.342,Output Per Worker

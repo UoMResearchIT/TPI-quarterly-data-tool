@@ -45,20 +45,29 @@ def numeric_to_quarter(n):
     qtr = int((n - year) * 4) + 1
     return f"{year} Q{qtr}"
 
-def line_graph(data, year, title, yAxisTitle, legendTitle):
-        fig = px.line(
+def line_graph(data, yAxisTitle, legendTitle):
+    fig = px.line(
         data, 
         x="Quarter", 
         y=data.columns.drop("Quarter").tolist(), 
         title="",
         labels={"value": f"{yAxisTitle}", "variable": f"{legendTitle}"},
-        color_discrete_sequence=TPI_colours)
+        color_discrete_sequence=TPI_colours
+    )
 
-        tickvals = [q for q in data['Quarter'] if q.endswith("Q3")]
+    tickvals = [q for q in data['Quarter'] if q.endswith("Q3")]
+    fig.update_xaxes(tickvals=tickvals)
 
-        fig.update_xaxes(tickvals=tickvals)
+    # Add variable (trace name) to hovertemplate
+    for trace in fig.data:
+        trace.hovertemplate = (
+            "<b>%{fullData.name}</b><br>"
+            "<b>Quarter</b>: %{x}<br>"
+            "<b>Value</b>: %{y:.2f}"
+            "<extra></extra>"
+        )
 
-        return fig
+    return fig
 
 def qoq(data, title, legendTitle):
         # data = data[['Quarter', 'OPH']]
@@ -126,6 +135,13 @@ def double_qoq(data, data_two, title, legendTitle, leftTitle, rightTitle):
             else:
                 legend_labels.add(trace.name)
             fig.add_trace(trace, row=1, col=2)
+
+        for trace in fig.data:
+            trace.hovertemplate = (
+                "<b>Quarter</b>: %{x}<br>"
+                "<b>QoQ Growth</b>: %{y:.2f}%"
+                "<extra></extra>"
+            )
 
         # Update layout for the subplots
         fig.update_layout(
@@ -233,12 +249,13 @@ def horizontal_bar(data, title):
     )
     return fig
 
-def OPH(data, title):
+def OPH(data, title, inside_threshold_frac=0.5):
+    data = data.copy()
     data['Output per hour worked'] *= 100
     data['GVA'] *= 100
     data['Hours worked (sign reversed)'] *= 100
-    # data.drop(data.index[0], inplace=True)
-     # Create subplots with shared y-axis
+
+    # Prepare figure
     fig = make_subplots(
         rows=1, cols=2,
         shared_yaxes=True,
@@ -248,8 +265,22 @@ def OPH(data, title):
             "Change in <b>GVA</b> and <b>hours worked</b>"
         )
     )
-    left_chart_data = data.sort_values(by='Output per hour worked', ascending=False)
-    # Left chart: Productivity
+
+    left_chart_data = data.sort_values(by='Output per hour worked', ascending=False).reset_index(drop=True)
+
+    # Compute threshold based on max absolute value (so threshold is data-driven)
+    max_abs_left = left_chart_data['Output per hour worked'].abs().max() if not left_chart_data.empty else 1.0
+    threshold_value = inside_threshold_frac * max_abs_left
+
+    # Build text, textposition and font color arrays per-point
+    left_text = left_chart_data['Output per hour worked'].map(lambda x: f"{x:.1f}%")
+    left_textposition = [
+        'inside' if abs(x) >= threshold_value else 'outside'
+        for x in left_chart_data['Output per hour worked']
+    ]
+
+    left_textfont_color = ['white' if pos == 'inside' else 'black' for pos in left_textposition]
+
     fig.add_trace(
         go.Bar(
             x=left_chart_data['Output per hour worked'],
@@ -257,20 +288,29 @@ def OPH(data, title):
             orientation='h',
             name='Productivity',
             marker_color=TPI_colours[0],
-            text=left_chart_data['Output per hour worked'].map(lambda x: f"{x:.1f}%"),
-            textposition='auto'
+            text=left_text,
+            textposition=left_textposition,
+            textfont=dict(color=left_textfont_color, size=12),
+            textangle=0,
+            hovertemplate=(
+                "<b>%{y}<br></b>"
+                "<b>Productivity</b>: %{x:.1f}%<extra></extra>"
+            )
         ),
         row=1, col=1
     )
 
-    # Right chart: GVA and Hours Worked
     fig.add_trace(
         go.Bar(
             x=data['GVA'],
             y=data['Industry'],
             orientation='h',
             name='GVA',
-            marker_color=TPI_colours[1]
+            marker_color=TPI_colours[1],
+            hovertemplate=(
+                "<b>%{y}<br></b>"
+                "<b>GVA</b>: %{x:.1f}%<extra></extra>"
+            )
         ),
         row=1, col=2
     )
@@ -281,12 +321,16 @@ def OPH(data, title):
             y=data['Industry'],
             orientation='h',
             name='Hours Worked',
-            marker_color=TPI_colours[2]
+            marker_color=TPI_colours[2],
+            hovertemplate=(
+                "<b>%{y}<br></b>"
+                "<b>Hours worked</b>: %{x:.1f}%<extra></extra>"
+            )
         ),
         row=1, col=2
     )
 
-    # Update layout
+    # Layout
     fig.update_layout(
         height=1000,
         barmode='group',
@@ -294,14 +338,16 @@ def OPH(data, title):
         showlegend=True,
         legend=dict(x=0.65, y=1.1, orientation='h'),
         margin=dict(l=120, r=20, t=60, b=20),
+        template='simple_white'
     )
 
     # Center x-axes at zero
-    fig.update_xaxes(title_text="", zeroline=True, row=1, col=1)
-    fig.update_xaxes(title_text="", zeroline=True, row=1, col=2)
+    fig.update_xaxes(title_text="", zeroline=True, row=1, col=1, tickformat=".1f")
+    fig.update_xaxes(title_text="", zeroline=True, row=1, col=2, tickformat=".1f")
 
-    # Reverse y-axis for top-to-bottom sorting (optional)
+    # Reverse y so highest is on top
     fig.update_yaxes(autorange='reversed')
+
     return fig
 
 def New_GDP(data, provisional_countries=None):
@@ -325,7 +371,15 @@ def New_GDP(data, provisional_countries=None):
         for country in tickvals
     ]
 
-    fig.update_traces(texttemplate="%{text:.1f}%", textposition="inside")
+    fig.update_traces(
+        texttemplate="%{text:.1f}%",
+        textposition="inside",
+        hovertemplate=(
+            "<b>%{y}</b><br>"
+            "<b>Growth</b>: %{x:.1f}%"
+            "<extra></extra>"
+        )
+    )
 
     fig.update_layout(
         xaxis_title="Growth Rate (%)",
@@ -358,85 +412,93 @@ UK_GDP = pd.read_excel('../src/New-release/Q3_GDP.xlsx')
 # https://data-explorer.oecd.org/vis?df[ds]=DisseminateFinalDMZ&df[id]=DSD_NAMAIN1%40DF_QNA_EXPENDITURE_GROWTH_OECD&df[ag]=OECD.SDD.NAD&dq=Q..CAN%2BDEU%2BFRA%2BGBR%2BITA%2BJPN%2BUSA%2BOECD%2BG7%2BEA20.S1..B1GQ......G1.&pd=2024-Q1%2C&to[TIME_PERIOD]=false&ly[cl]=TIME_PERIOD&ly[rw]=REF_AREA&vw=tb
 GDP_data = pd.read_csv('../src/New-release/OECD GDP.csv')
 
-# Figure 1
-fig = horizontal_bar(OPH_Industries, "")
-fig.write_image("../out/visualisations/Figure 1 - Contribution to OPH by Industry.png", width=1200, height=800, scale=2)
-#fig.show()
+# # Figure 1
+# fig = horizontal_bar(OPH_Industries, "")
+# fig.update_layout(hovermode=False)
+# fig.write_image("../out/figures-images/Figure 1 - Contribution to OPH by Industry.png", width=1200, height=800, scale=2)
+# fig.write_html("../out/figures-html/2025-Q3-Figure-1.html")
+# #fig.show()
 
 # Figure 2
 fig = OPH(OPH_Breakdown, "")
-fig.write_image("../out/visualisations/Figure 2 - OPH GVA HW.png", width=1200, height=800, scale=2)
+fig.write_image("../out/figures-images/Figure 2 - OPH GVA HW.png", width=1200, height=800, scale=2)
+fig.write_html("../out/figures-html/2025-Q3-Figure-2.html")
 #fig.show()
 
-# Figure 3
-OPW_Comparison["Quarter"] = OPW_Comparison["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
-OPW_Comparison['Quarter'] = OPW_Comparison['Quarter'].apply(quarter_to_numeric)
+# # Figure 3
+# OPW_Comparison["Quarter"] = OPW_Comparison["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
+# OPW_Comparison['Quarter'] = OPW_Comparison['Quarter'].apply(quarter_to_numeric)
 
-preCovidOPW = OPW_Comparison.copy()
-preCovidOPW = preCovidOPW[(preCovidOPW['Quarter'] >= 2014.75) & (preCovidOPW['Quarter'] <= 2019)]
-preCovidOPW['Quarter'] = preCovidOPW['Quarter'].apply(numeric_to_quarter)
+# preCovidOPW = OPW_Comparison.copy()
+# preCovidOPW = preCovidOPW[(preCovidOPW['Quarter'] >= 2014.75) & (preCovidOPW['Quarter'] <= 2019)]
+# preCovidOPW['Quarter'] = preCovidOPW['Quarter'].apply(numeric_to_quarter)
 
-postCovidOPW = OPW_Comparison.copy()
-postCovidOPW = postCovidOPW[(postCovidOPW['Quarter'] >= 2021.25) & (postCovidOPW['Quarter'] <= 2025.5)]
-postCovidOPW['Quarter'] = postCovidOPW['Quarter'].apply(numeric_to_quarter)
+# postCovidOPW = OPW_Comparison.copy()
+# postCovidOPW = postCovidOPW[(postCovidOPW['Quarter'] >= 2021.25) & (postCovidOPW['Quarter'] <= 2025.5)]
+# postCovidOPW['Quarter'] = postCovidOPW['Quarter'].apply(numeric_to_quarter)
 
-fig = double_qoq(preCovidOPW, postCovidOPW, "", "legend", "Output per worker pre-COVID", "Output per worker post-COVID")
-fig.write_image("../out/visualisations/Figure 3 - OPW - LFS vs RTI - double.png", width=1200, height=800, scale=2)
-#fig.show()
+# fig = double_qoq(preCovidOPW, postCovidOPW, "", "legend", "Output per worker pre-COVID", "Output per worker post-COVID")
+# fig.write_image("../out/figures-images/Figure 3 - OPW - LFS vs RTI - double.png", width=1200, height=800, scale=2)
+# fig.write_html("../out/figures-html/2025-Q3-Figure-3.html")
+# #fig.show()
 
-# Figure 4
-OPH_Comparison["Quarter"] = OPH_Comparison["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
-OPH_Comparison['Quarter'] = OPH_Comparison['Quarter'].apply(quarter_to_numeric)
+# # Figure 4
+# OPH_Comparison["Quarter"] = OPH_Comparison["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
+# OPH_Comparison['Quarter'] = OPH_Comparison['Quarter'].apply(quarter_to_numeric)
 
-preCovidOPH = OPH_Comparison.copy()
-preCovidOPH = preCovidOPH[(preCovidOPH['Quarter'] >= 2014.75) & (preCovidOPH['Quarter'] <= 2019)]
-preCovidOPH['Quarter'] = preCovidOPH['Quarter'].apply(numeric_to_quarter)
+# preCovidOPH = OPH_Comparison.copy()
+# preCovidOPH = preCovidOPH[(preCovidOPH['Quarter'] >= 2014.75) & (preCovidOPH['Quarter'] <= 2019)]
+# preCovidOPH['Quarter'] = preCovidOPH['Quarter'].apply(numeric_to_quarter)
 
-postCovidOPH = OPH_Comparison.copy()
-postCovidOPH = postCovidOPH[(postCovidOPH['Quarter'] >= 2021.25) & (postCovidOPH['Quarter'] <= 2025.5)]
-postCovidOPH['Quarter'] = postCovidOPH['Quarter'].apply(numeric_to_quarter)
+# postCovidOPH = OPH_Comparison.copy()
+# postCovidOPH = postCovidOPH[(postCovidOPH['Quarter'] >= 2021.25) & (postCovidOPH['Quarter'] <= 2025.5)]
+# postCovidOPH['Quarter'] = postCovidOPH['Quarter'].apply(numeric_to_quarter)
 
-fig = double_qoq(preCovidOPH, postCovidOPH, "", "legend", "Output per hour worked pre-COVID", "Output per hour worked post-COVID")
-fig.write_image("../out/visualisations/Figure 4 - OPH - LFS vs RTI - double.png", width=1200, height=800, scale=2)
-#fig.show()
+# fig = double_qoq(preCovidOPH, postCovidOPH, "", "legend", "Output per hour worked pre-COVID", "Output per hour worked post-COVID")
+# fig.write_image("../out/figures-images/Figure 4 - OPH - LFS vs RTI - double.png", width=1200, height=800, scale=2)
+# fig.write_html("../out/figures-html/2025-Q3-Figure-4.html")
+# #fig.show()
 
-# Figure 5 
-Flash_Estimate_OPH["Quarter"] = Flash_Estimate_OPH["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
-base_value = Flash_Estimate_OPH.loc[Flash_Estimate_OPH["Quarter"] == "2007 Q1", "Gross Value Added"].iloc[0]
-Flash_Estimate_OPH["Gross Value Added"] = (Flash_Estimate_OPH["Gross Value Added"] / base_value) * 100
+# # Figure 5 
+# Flash_Estimate_OPH["Quarter"] = Flash_Estimate_OPH["Quarter"].str.replace(r"(Q\d) (\d{4})", r"\2 \1", regex=True)
+# base_value = Flash_Estimate_OPH.loc[Flash_Estimate_OPH["Quarter"] == "2007 Q1", "Gross Value Added"].iloc[0]
+# Flash_Estimate_OPH["Gross Value Added"] = (Flash_Estimate_OPH["Gross Value Added"] / base_value) * 100
 
-base_value = Flash_Estimate_OPH.loc[Flash_Estimate_OPH["Quarter"] == "2007 Q1", "Hours Worked"].iloc[0]
-Flash_Estimate_OPH["Hours Worked"] = (Flash_Estimate_OPH["Hours Worked"] / base_value) * 100
+# base_value = Flash_Estimate_OPH.loc[Flash_Estimate_OPH["Quarter"] == "2007 Q1", "Hours Worked"].iloc[0]
+# Flash_Estimate_OPH["Hours Worked"] = (Flash_Estimate_OPH["Hours Worked"] / base_value) * 100
 
-base_value = Flash_Estimate_OPH.loc[Flash_Estimate_OPH["Quarter"] == "2007 Q1", "Output Per Hour"].iloc[0]
-Flash_Estimate_OPH["Output Per Hour"] = (Flash_Estimate_OPH["Output Per Hour"] / base_value) * 100
+# base_value = Flash_Estimate_OPH.loc[Flash_Estimate_OPH["Quarter"] == "2007 Q1", "Output Per Hour"].iloc[0]
+# Flash_Estimate_OPH["Output Per Hour"] = (Flash_Estimate_OPH["Output Per Hour"] / base_value) * 100
 
-Flash_Estimate_OPH["Quarter"] = Flash_Estimate_OPH["Quarter"].apply(quarter_to_numeric)
-Flash_Estimate_OPH = Flash_Estimate_OPH[(Flash_Estimate_OPH['Quarter'] >= 2007) & (Flash_Estimate_OPH['Quarter'] <= 2025.5)]
-Flash_Estimate_OPH["Quarter"] = Flash_Estimate_OPH["Quarter"].apply(numeric_to_quarter)
-fig = line_graph(Flash_Estimate_OPH, 2007, "", "", "")
-#fig.show()
-fig.write_image("../out/visualisations/Figure 5 - 2025 Flash Estimate.png", width=1200, height=800, scale=2)
+# Flash_Estimate_OPH["Quarter"] = Flash_Estimate_OPH["Quarter"].apply(quarter_to_numeric)
+# Flash_Estimate_OPH = Flash_Estimate_OPH[(Flash_Estimate_OPH['Quarter'] >= 2007) & (Flash_Estimate_OPH['Quarter'] <= 2025.5)]
+# Flash_Estimate_OPH["Quarter"] = Flash_Estimate_OPH["Quarter"].apply(numeric_to_quarter)
+# fig = line_graph(Flash_Estimate_OPH, "", "")
+# #fig.show()
+# fig.write_image("../out/figures-images/Figure 5 - 2025 Flash Estimate.png", width=1200, height=800, scale=2)
+# fig.write_html("../out/figures-html/2025-Q3-Figure-5.html")
 
-# Figure 6 and 7 are international comparison - can't be done until all data is released
+# # Figure 6 and 7 are international comparison - can't be done until all data is released
 
-# Figure 6 - from QDT
+# # Figure 6 - from QDT
 
-# Figure 7
+# # Figure 7
 
-fig = px.bar(UK_GDP, x='Quarter', y='GDP', color_discrete_sequence=[TPI_One])
-fig.update_traces(
-    hovertemplate="%{x} GDP growth: %{y}%"
-)
-#fig.show()
-fig.write_image("../out/visualisations/Figure 7 - UK Quarterly GDP.png", width=1200, height=600, scale=2)
+# fig = px.bar(UK_GDP, x='Quarter', y='GDP', color_discrete_sequence=[TPI_One])
+# fig.update_traces(
+#     hovertemplate="<b>%{x} GDP growth</b>: %{y}%"
+# )
+# #fig.show()
+# fig.write_image("../out/figures-images/Figure 7 - UK Quarterly GDP.png", width=1200, height=600, scale=2)
+# fig.write_html("../out/figures-html/2025-Q3-Figure-6.html")
 
-# Figure 8
-GDP_data = GDP_data[['Reference area', 'TIME_PERIOD', 'OBS_VALUE']].rename(columns={'TIME_PERIOD': 'Quarter', 'Reference area': 'Country', 'OBS_VALUE': 'Growth'})
-GDP_data = GDP_data[GDP_data['Quarter'] == '2025-Q3']
-GDP_data = GDP_data.sort_values(by="Growth", ascending=True).round(1)
-GDP_data["Sign"] = GDP_data["Growth"].apply(lambda x: "Negative" if x < 0 else "Positive")
-provisional_countries = ['Canada', 'Germany']
-fig = New_GDP(GDP_data, provisional_countries)
-#fig.show()
-fig.write_image("../out/visualisations/Figure 8 - Q2 G7 GDP.png", width=1200, height=800, scale=2)
+# # Figure 8
+# GDP_data = GDP_data[['Reference area', 'TIME_PERIOD', 'OBS_VALUE']].rename(columns={'TIME_PERIOD': 'Quarter', 'Reference area': 'Country', 'OBS_VALUE': 'Growth'})
+# GDP_data = GDP_data[GDP_data['Quarter'] == '2025-Q3']
+# GDP_data = GDP_data.sort_values(by="Growth", ascending=True).round(1)
+# GDP_data["Sign"] = GDP_data["Growth"].apply(lambda x: "Negative" if x < 0 else "Positive")
+# provisional_countries = ['Canada', 'Germany']
+# fig = New_GDP(GDP_data, provisional_countries)
+# #fig.show()
+# fig.write_image("../out/figures-images/Figure 8 - Q2 G7 GDP.png", width=1200, height=800, scale=2)
+# fig.write_html("../out/figures-html/2025-Q3-Figure-7.html")
