@@ -1,8 +1,8 @@
-"Figure 4: Output per worker using RTI data grew by 1.7%, while output per worker using LFS data grew by 1.4% in January to March 2025, compared with 2019 (average level)",""
-"Output per worker using Labour Force Survey (LFS), output per worker using Real Time Information (RTI), UK, index 2022 equals 100, Quarter 3 (July to Sept) 2014 to Quarter 1 (Jan to Mar) 2025",""
+"Figure 4: Output per worker using RTI data grew by 2.5%, while output per worker using LFS data grew by 1.1% in April to June 2025, compared with 2019 (average) ",""
+"Output per worker using Labour Force Survey (LFS), output per worker using Real Time Information (RTI), UK, index 2022 equals 100, Quarter 3 (July to Sept) 2014 to Quarter 2 (Apr to June) 2025 ",""
 "",""
-"Notes","1. Real Time Information (RTI) worker estimate supplemented by Labour Force Survey (LFS) self-employed data.
-2. No adjustment is made for those that are employed but not part of Pay As You Earn (PAYE).
+"Notes","1. Real Time Information (RTI) worker estimate supplemented by Labour Force Survey (LFS) self-employed data. 
+2. No adjustment is made for those that are employed but not part of Pay As You Earn (PAYE). 
 3. Any individual who has a main job outside of the PAYE scheme and a second job on the PAYE scheme will be categorised as only having a main job."
 "Unit","Index 2022 = 100"
 "",""
@@ -17,7 +17,7 @@
 "Q2 2016","95.3","95.7"
 "Q3 2016","95.6","96.0"
 "Q4 2016","96.2","96.4"
-"Q1 2017","96.7","97.0"
+"Q1 2017","96.7","97.1"
 "Q2 2017","97.0","97.4"
 "Q3 2017","97.5","97.6"
 "Q4 2017","97.8","97.9"
@@ -47,6 +47,7 @@
 "Q4 2023","98.9","98.0"
 "Q1 2024","99.9","98.7"
 "Q2 2024","99.9","99.0"
-"Q3 2024","99.1","99.0"
+"Q3 2024","99.1","98.9"
 "Q4 2024","98.9","99.0"
 "Q1 2025","99.3","99.8"
+"Q2 2025","98.9","100.7"
