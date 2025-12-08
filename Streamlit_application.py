@@ -117,6 +117,7 @@ def multi_data_format(data, industry):
     return plot_data
 
 def make_fig(data, visType, data_option, second_plot, second_data, show_legend):
+    data = data.copy()
     if data_option.show_years:
         def decimal_to_quarter_label(value):
             if isinstance(value, (float, int)):
