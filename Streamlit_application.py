@@ -52,23 +52,26 @@ def rebase_chain_linked_quarters(df, new_base_year):
 
 def rebase_chain_linked_years(df, new_base_year):
     df = df.copy()
-    
+
     def rebase_group(group):
         base_year_values = group[group["Year"] == new_base_year]["Value"]
         if base_year_values.empty or base_year_values.mean() == 0:
-            return group  # Skip group if base year is missing or zero
+            return group
         base_mean = base_year_values.mean()
         group["Value"] = (group["Value"] / base_mean) * 100
         return group
 
-    # Apply rebase per group
-    df = df.groupby(["Country", "Variable"], group_keys=False).apply(rebase_group)
+    # Move grouping columns to index to avoid future warnings
+    df = df.set_index(["Country", "Variable"])
 
-    return df
+    df = df.groupby(level=[0,1], group_keys=False).apply(rebase_group)
+
+    return df.reset_index()
 
 
 # @st.cache_data
 def data_format(data, QorY, time_period, data_option, country_options, visType = "2D line graph", quarterly_selection =False, industry_selection = ["Total"]):
+    data = data.copy()
     # Filter for time selection
     if QorY == "Quarterly":
         if data_option.base_year != 2020:
